@@ -1,0 +1,970 @@
+{
+"A": [
+{
+"mdrm": "RCFD2151",
+"caption": "OTHER ASSETS (CLAIMS ON NON-RELATED PARTIES)",
+"item": "2151",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFD2171",
+"caption": "CLAIMS ON NON-AFFILIATES",
+"item": "2171",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFD3536",
+"caption": "TRADING ASSETS - ALL OTHER MORTGAGE-BACKED SECURITIES",
+"item": "3536",
+"depth": 1,
+"order": 2
+},
+{
+"mdrm": "RCFD0010",
+"caption": "CASH AND BALANCES DUE FROM DEPOSITORY INSTITUTIONS",
+"item": "1.a",
+"depth": 2,
+"order": 3
+},
+{
+"mdrm": "RCFD2122",
+"caption": "TOTAL LOANS AND LEASES; NET OF UNEARNED INCOME",
+"item": "1.e",
+"depth": 2,
+"order": 4
+},
+{
+"mdrm": "RCFD0020",
+"caption": "CASH ITEMS IN PROCESS OF COLLECTION AND UNPOSTED DEBITS",
+"item": "1",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFD0080",
+"caption": "CURRENCY AND COIN",
+"item": "2",
+"depth": 1,
+"order": 6
+},
+{
+"mdrm": "RCFD0082",
+"caption": "BALANCES DUE FROM DEPOSITORY INSTITUTIONS IN THE U.S.",
+"item": "3",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFD0090",
+"caption": "BALANCES DUE FROM FEDERAL RESERVE BANKS",
+"item": "5",
+"depth": 1,
+"order": 8
+}
+],
+"RAL": [
+{
+"mdrm": "RCFD2170",
+"caption": "TOTAL ASSETS",
+"item": "3",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFD2205",
+"caption": "TOTAL DEPOSITS AND CREDIT BALANCES",
+"item": "4.a",
+"depth": 2,
+"order": 1
+},
+{
+"mdrm": "RCFD3190",
+"caption": "OTHER BORROWED MONEY",
+"item": "4.c",
+"depth": 2,
+"order": 2
+},
+{
+"mdrm": "RCFD3548",
+"caption": "TRADING LIABILITIES; TOTAL",
+"item": "4.e",
+"depth": 2,
+"order": 3
+},
+{
+"mdrm": "RCFD2916",
+"caption": "OTHER LIABILITIES (TO NONRELATED PARTIES)",
+"item": "4.f",
+"depth": 2,
+"order": 4
+},
+{
+"mdrm": "RCFD2927",
+"caption": "TOTAL LIABILITIES TO NONRELATED PARTIES",
+"item": "4.g",
+"depth": 2,
+"order": 5
+},
+{
+"mdrm": "RCFD2944",
+"caption": "NET DUE TO HEAD OFFICE AND OTHER RELATED INSTITUTIONS IN THE U.S. AND IN FOREIGN COUNTRIES",
+"item": "5.a",
+"depth": 2,
+"order": 6
+},
+{
+"mdrm": "RCFD2950",
+"caption": "TOTAL LIABILITIES",
+"item": "6",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFD3312",
+"caption": "OTHER BORROWED MONEY OWED TO U.S. OFFICES OF NONRELATED U.S. BANKS",
+"item": "3312",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFD3313",
+"caption": "OTHER BORROWED MONEY OWED TO U.S. BRANCHES AND AGENCIES OF NONRELATED FOREIGN BANKS",
+"item": "3313",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFD3314",
+"caption": "OTHER BORROWED MONEY OWED TO FOREIGN BRANCHES OF NONRELATED U.S. BANKS",
+"item": "3314",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFD3315",
+"caption": "OTHER BORROWED MONEY OWED TO FOREIGN OFFICES OF NONRELATED FOREIGN BANKS",
+"item": "3315",
+"depth": 1,
+"order": 11
+},
+{
+"mdrm": "RCFD2869",
+"caption": "TOTAL OTHER BORROWED MONEY OWED TO OTHERS",
+"item": "2869",
+"depth": 1,
+"order": 12
+}
+],
+"C": [
+{
+"mdrm": "RCFD1415",
+"caption": "CONSTRUCTION AND LAND DEVELOPMENT LOANS",
+"item": "1.a",
+"depth": 2,
+"order": 0
+},
+{
+"mdrm": "RCFD1420",
+"caption": "REAL ESTATE LOANS SECURED BY FARMLAND",
+"item": "1.b",
+"depth": 2,
+"order": 1
+},
+{
+"mdrm": "RCFD1460",
+"caption": "REAL ESTATE LOANS SECURED BY MULTI-FAMILY (5 OR MORE) RESIDENTIAL PROPERTIES",
+"item": "1.d",
+"depth": 2,
+"order": 2
+},
+{
+"mdrm": "RCFD1480",
+"caption": "REAL ESTATE LOANS SECURED BY NONFARM NONRESIDENTIAL PROPERTIES",
+"item": "1.e",
+"depth": 2,
+"order": 3
+},
+{
+"mdrm": "RCFDB534",
+"caption": "LOANS TO OTHER DEPOSITORY INSTITUTIONS IN THE U.S.",
+"item": "2.b",
+"depth": 2,
+"order": 4
+},
+{
+"mdrm": "RCFD1520",
+"caption": "LOANS TO OTHER FINANCIAL INSTITUTIONS",
+"item": "3",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFD1763",
+"caption": "COMMERCIAL AND INDUSTRIAL LOANS TO U.S. ADDRESSEES",
+"item": "4.a",
+"depth": 2,
+"order": 6
+},
+{
+"mdrm": "RCFD1764",
+"caption": "COMMERCIAL AND INDUSTRIAL LOANS TO NON-U.S. ADDRESSEES",
+"item": "4.b",
+"depth": 2,
+"order": 7
+},
+{
+"mdrm": "RCFD2081",
+"caption": "LOANS TO FOREIGN GOVERNMENTS AND OFFICIAL INSTITUTIONS",
+"item": "6",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFD1545",
+"caption": "Loans for purchasing or carrying securities; including margin loans",
+"item": "7",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFD1885",
+"caption": "ALL OTHER LOANS",
+"item": "8",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFD2182",
+"caption": "LEASE FINANCING RECEIVABLES (NET OF UNEARNED INCOME) OF U.S. ADDRESSEES (DOMICILE)",
+"item": "9.a",
+"depth": 2,
+"order": 11
+},
+{
+"mdrm": "RCFD2183",
+"caption": "LEASE FINANCING RECEIVABLES (NET OF UNEARNED INCOME) OF NON-U.S. ADDRESSEES (DOMICILE)",
+"item": "9.b",
+"depth": 2,
+"order": 12
+},
+{
+"mdrm": "RCFD2123",
+"caption": "UNEARNED INCOME ON LOANS",
+"item": "10",
+"depth": 1,
+"order": 13
+},
+{
+"mdrm": "RCFD2122",
+"caption": "TOTAL LOANS AND LEASES; NET OF UNEARNED INCOME",
+"item": "11",
+"depth": 1,
+"order": 14
+},
+{
+"mdrm": "RCON5564",
+"caption": "NUMBER OF LOANS SECURED BY NONFARM NONRESIDENTIAL PROPERTIES (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF $100;000 OR LESS",
+"item": "2.a",
+"depth": 2,
+"order": 15
+},
+{
+"mdrm": "RCON5566",
+"caption": "NUMBER OF LOANS SECURED BY NONFARM NONRESIDENTIAL PROPERTIES (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $100;000 THROUGH $250;000",
+"item": "2.b",
+"depth": 2,
+"order": 16
+},
+{
+"mdrm": "RCON5568",
+"caption": "NUMBER OF LOANS SECURED BY NONFARM NONRESIDENTIAL PROPERTIES (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $250;000 THROUGH $1;000;000",
+"item": "2.c",
+"depth": 2,
+"order": 17
+},
+{
+"mdrm": "RCON5570",
+"caption": "NUMBER OF COMMERCIAL AND INDUSTRIAL LOANS TO U.S. ADDRESSEES (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF $100;000 OR LESS",
+"item": "3.a",
+"depth": 2,
+"order": 18
+},
+{
+"mdrm": "RCON5572",
+"caption": "NUMBER OF COMMERCIAL AND INDUSTRIAL LOANS TO U.S. ADDRESSEES (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $100;000 THROUGH $250;000",
+"item": "3.b",
+"depth": 2,
+"order": 19
+},
+{
+"mdrm": "RCON5574",
+"caption": "NUMBER OF COMMERCIAL AND INDUSTRIAL LOANS TO U.S. ADDRESSEES (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $250;000 THROUGH $1;000;000",
+"item": "3.c",
+"depth": 2,
+"order": 20
+},
+{
+"mdrm": "RCON5578",
+"caption": "NUMBER OF LOANS SECURED BY FARMLAND (INCLUDING FARM RESIDENTIAL AND OTHER IMPROVEMENTS) (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF $100;000 OR LESS",
+"item": "4.a",
+"depth": 2,
+"order": 21
+},
+{
+"mdrm": "RCON5580",
+"caption": "NUMBER OF LOANS SECURED BY FARMLAND (INCLUDING FARM RESIDENTIAL AND OTHER IMPROVEMENTS) (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $100;000 THROUGH $250;000",
+"item": "4.b",
+"depth": 2,
+"order": 22
+},
+{
+"mdrm": "RCON5582",
+"caption": "NUMBER OF LOANS SECURED BY FARMLAND (INCLUDING FARM RESIDENTIAL AND OTHER IMPROVEMENTS) (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $250;000 THROUGH $500;000",
+"item": "4.c",
+"depth": 2,
+"order": 23
+},
+{
+"mdrm": "RCON5584",
+"caption": "NUMBER OF LOANS TO FINANCE AGRICULTURAL PRODUCTION AND OTHER LOANS TO FARMERS (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF $100;000 OR LESS",
+"item": "5.a",
+"depth": 2,
+"order": 24
+},
+{
+"mdrm": "RCON5586",
+"caption": "NUMBER OF LOANS TO FINANCE AGRICULTURAL PRODUCTION AND OTHER LOANS TO FARMERS (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $100;000 THROUGH $250;000",
+"item": "5.b",
+"depth": 2,
+"order": 25
+},
+{
+"mdrm": "RCON5588",
+"caption": "NUMBER OF LOANS TO FINANCE AGRICULTURAL PRODUCTION AND OTHER LOANS TO FARMERS (IN DOMESTIC OFFICES) WITH ORIGINAL AMOUNTS OF MORE THAN $250;000 THROUGH $500;000",
+"item": "5589",
+"depth": 1,
+"order": 26
+}
+],
+"E": [
+{
+"mdrm": "RCONC040",
+"caption": "TOTAL TRANSACTION ACCOUNTS  - INDIVIDUALS; PARTNERSHIPS; AND CORPORATIONS INCLUDE ALL CERTIFIED AND OFFICIAL CHECKS: U.S. ADDRESSES (DOMICILE)",
+"item": "1.a",
+"depth": 2,
+"order": 0
+},
+{
+"mdrm": "RCONC043",
+"caption": "TOTAL TRANSACTION ACCOUNTS - INDIVIDUALS; PARTNERSHIPS; AND CORPORATIONS (INCLUDE ALL CERTIFIED AND OFFICIAL CHECKS): NON-U.S. ADDRESSEES (DOMICILE)",
+"item": "1.b",
+"depth": 2,
+"order": 1
+},
+{
+"mdrm": "RCON1643",
+"caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - DEPOSITS OF U.S. BRANCHES AND AGENCIES OF OTHER FOREIGN BANKS",
+"item": "2.a",
+"depth": 2,
+"order": 2
+},
+{
+"mdrm": "RCON1645",
+"caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - DEPOSITS OF OTHER COMMERCIAL BANKS IN THE U.S.",
+"item": "2.b",
+"depth": 2,
+"order": 3
+},
+{
+"mdrm": "RCON1646",
+"caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - DEPOSITS OF FOREIGN BRANCHES OF U.S. BANKS",
+"item": "3.a",
+"depth": 2,
+"order": 4
+},
+{
+"mdrm": "RCON1647",
+"caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - DEPOSITS OF OTHER BANKS IN FOREIGN COUNTRIES",
+"item": "3.b",
+"depth": 2,
+"order": 5
+},
+{
+"mdrm": "RCON1649",
+"caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - DEPOSITS OF FOREIGN GOVERNMENTS AND OFFICIAL INSTITUTIONS",
+"item": "4",
+"depth": 1,
+"order": 6
+},
+{
+"mdrm": "RCON1650",
+"caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - ALL OTHER DEPOSITS AND CREDIT BALANCES",
+"item": "5",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCON1653",
+"caption": "TOTAL DEPOSITS AND CREDIT BALANCES",
+"item": "7",
+"depth": 1,
+"order": 8
+}
+],
+"K": [
+{
+"mdrm": "RCFD3381",
+"caption": "QUARTERLY AVERAGE OF INTEREST-BEARING BALANCES DUE FROM DEPOSITORY INSTITUTIONS",
+"item": "1",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFD3365",
+"caption": "QUARTERLY AVERAGE OF FEDERAL FUNDS SOLD AND SECURITIES PURCHASED UNDER AGREEMENTS TO RESELL",
+"item": "2",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFD3360",
+"caption": "QUARTERLY AVERAGE OF TOTAL LOANS",
+"item": "3",
+"depth": 1,
+"order": 2
+},
+{
+"mdrm": "RCFD3105",
+"caption": "AVERAGE OF LOANS TO BANKS IN FOREIGN COUNTRIES",
+"item": "4",
+"depth": 1,
+"order": 3
+},
+{
+"mdrm": "RCFD3106",
+"caption": "QUARTERLY AVERAGE OF TOTAL CLAIMS ON NONRELATED PARTIES",
+"item": "5",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFD3345",
+"caption": "QUARTERLY AVERAGE OF TIME CERTIFICATES OF DEPOSIT IN DENOMINATIONS OF $100;000 OR MORE IN DOMESTIC OFFICES",
+"item": "6",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFD3107",
+"caption": "AVERAGE OF INTEREST-BEARING DEPOSITS AND CREDIT BALANCES",
+"item": "7",
+"depth": 1,
+"order": 6
+},
+{
+"mdrm": "RCFD3353",
+"caption": "QUARTERLY AVERAGE OF FEDERAL FUNDS PURCHASED AND SECURITIES SOLD UNDER AGREEMENTS TO REPURCHASE",
+"item": "8",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFD3355",
+"caption": "QUARTERLY AVERAGE OF OTHER BORROWED MONEY",
+"item": "9",
+"depth": 1,
+"order": 8
+}
+],
+"L": [
+{
+"mdrm": "RCFD3423",
+"caption": "UNUSED COMMITMENTS - TOTAL",
+"item": "1",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFD8765",
+"caption": "SPOT FOREIGN EXCHANGE CONTRACTS",
+"item": "2",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFD3375",
+"caption": "STANDBY LETTERS OF CREDIT AND FOREIGN OFFICE GUARANTEES",
+"item": "3.a",
+"depth": 2,
+"order": 2
+},
+{
+"mdrm": "RCFD3378",
+"caption": "STANDBY LETTERS OF CREDIT CONVEYED TO OTHERS THROUGH PARTICIPATIONS",
+"item": "3.b",
+"depth": 2,
+"order": 3
+},
+{
+"mdrm": "RCFD3411",
+"caption": "COMMERCIAL AND SIMILAR LETTERS OF CREDIT",
+"item": "4",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFD5602",
+"caption": "ALL OTHER OFF-BALANCE SHEET CONTINGENT LIABILITIES GREATER THAN OR EQUAL TO 1/2 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "7",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFD5598",
+"caption": "FIRST COMPONENT OF ALL OTHER OFF-BALANCE SHEET LIABILITIES GREATER THAN OR EQUAL TO 1 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "7.a",
+"depth": 2,
+"order": 6
+},
+{
+"mdrm": "RCFD5600",
+"caption": "SECOND COMPONENT OF ALL OTHER OFF-BALANCE SHEET LIABILITIES GREATER THAN OR EQUAL TO 1 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "7.b",
+"depth": 2,
+"order": 7
+},
+{
+"mdrm": "RCFD5601",
+"caption": "THIRD COMPONENT OF ALL OTHER OFF-BALANCE SHEET LIABILITIES GREATER THAN OR EQUAL TO 1 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "7.c",
+"depth": 2,
+"order": 8
+},
+{
+"mdrm": "RCFD5603",
+"caption": "ALL OTHER OFF-BALANCE SHEET CONTINGENT CLAIMS (ASSETS) GREATER THAN OR EQUAL TO 1/2 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "8",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFD5604",
+"caption": "FIRST COMPONENT OF ALL OTHER OFF-BALANCE SHEET ASSETS GREATER THAN OR EQUAL TO 1 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "8.a",
+"depth": 2,
+"order": 10
+},
+{
+"mdrm": "RCFD5605",
+"caption": "SECOND COMPONENT OF ALL OTHER OFF-BALANCE SHEET ASSETS GREATER THAN OR EQUAL TO 1 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "8.b",
+"depth": 2,
+"order": 11
+},
+{
+"mdrm": "RCFD5606",
+"caption": "THIRD COMPONENT OF ALL OTHER OFF-BALANCE SHEET ASSETS GREATER THAN OR EQUAL TO 1 PERCENT OF TOTAL CLAIMS ON NONRELATED PARTIES (2171)",
+"item": "8.c",
+"depth": 2,
+"order": 12
+},
+{
+"mdrm": "RCFD8693",
+"caption": "INTEREST RATE FUTURES CONTRACTS",
+"item": "9.a",
+"depth": 2,
+"order": 13
+},
+{
+"mdrm": "RCFD8697",
+"caption": "INTEREST RATE FORWARD CONTRACTS",
+"item": "9.b",
+"depth": 2,
+"order": 14
+},
+{
+"mdrm": "RCFD3450",
+"caption": "INTEREST RATE CONTRACTS - NOTIONAL VALUE OF ALL OUTSTANDING INTEREST RATE SWAPS",
+"item": "9.e",
+"depth": 2,
+"order": 15
+},
+{
+"mdrm": "RCFDA126",
+"caption": "TOTAL GROSS NOTIONAL AMOUNT OF INTEREST RATE DERIVATIVE CONTRACTS HELD FOR TRADING",
+"item": "10",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFD8725",
+"caption": "TOTAL GROSS NOTIONAL AMOUNT OF INTEREST RATE DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING: CONTRACTS MARKED TO MARKET",
+"item": "11",
+"depth": 1,
+"order": 17
+}
+],
+"M": [
+{
+"mdrm": "RCFD3171",
+"caption": "companies)",
+"item": "1.b",
+"depth": 2,
+"order": 0
+},
+{
+"mdrm": "RCFD3173",
+"caption": "Head office of parent bank",
+"item": "2.a",
+"depth": 2,
+"order": 1
+},
+{
+"mdrm": "RCFD3179",
+"caption": "Other non-U.S. offices of related depository institutions",
+"item": "2.c",
+"depth": 2,
+"order": 2
+},
+{
+"mdrm": "RCFD3002",
+"caption": "Total (sum of items 1.a, 1.b, and 2.a through 2.c)",
+"item": "3",
+"depth": 1,
+"order": 3
+},
+{
+"mdrm": "RCFD3035",
+"caption": "RCFD3035",
+"item": "4",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFN3004",
+"caption": "domiciled in the U.S. (included in Part I, item 1)",
+"item": "1.a",
+"depth": 2,
+"order": 5
+},
+{
+"mdrm": "RCFN3002",
+"caption": "Total (sum of items 1.a and 1.b.(1) through 1.b.(3) above)",
+"item": "1.c",
+"depth": 2,
+"order": 6
+},
+{
+"mdrm": "RCFN3193",
+"caption": "greater than Column A",
+"item": "1.d",
+"depth": 2,
+"order": 7
+},
+{
+"mdrm": "RCFN1888",
+"caption": "to, enter the amount with a minus sign (–))",
+"item": "2",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFN3194",
+"caption": "RCFN3194",
+"item": "3",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFN3030",
+"caption": "Related nondepository majority-owned subsidiaries in the U.S",
+"item": "1",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFN3032",
+"caption": "Related nondepository majority-owned subsidiaries in foreign countries",
+"item": "2",
+"depth": 1,
+"order": 11
+},
+{
+"mdrm": "RCFD3195",
+"caption": "reporting branch or agency including its IBF",
+"item": "1",
+"depth": 1,
+"order": 12
+},
+{
+"mdrm": "RCFD2150",
+"caption": "Other real estate owned",
+"item": "2",
+"depth": 1,
+"order": 13
+},
+{
+"mdrm": "RCFD5766",
+"caption": "Commitments to make or purchase loans",
+"item": "1",
+"depth": 1,
+"order": 14
+},
+{
+"mdrm": "RCFDA125",
+"caption": "Spot foreign exchange contracts",
+"item": "2",
+"depth": 1,
+"order": 15
+},
+{
+"mdrm": "RCFD5770",
+"caption": "Total standby letters of credit",
+"item": "3",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFD5771",
+"caption": "Commercial and similar letters of credit",
+"item": "4",
+"depth": 1,
+"order": 17
+},
+{
+"mdrm": "RCFD8569",
+"caption": "RCFD8569",
+"item": "7",
+"depth": 1,
+"order": 18
+},
+{
+"mdrm": "RCFD8570",
+"caption": "RCFD8570",
+"item": "7.a",
+"depth": 2,
+"order": 19
+},
+{
+"mdrm": "RCFD8571",
+"caption": "RCFD8571",
+"item": "7.b",
+"depth": 2,
+"order": 20
+},
+{
+"mdrm": "RCFD8572",
+"caption": "RCFD8572",
+"item": "7.c",
+"depth": 2,
+"order": 21
+},
+{
+"mdrm": "RCFD8573",
+"caption": "claims on related depository institutions as reported in Schedule M, Part I, Item 3, Column A",
+"item": "8",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCFD8574",
+"caption": "RCFD8574",
+"item": "8.a",
+"depth": 2,
+"order": 23
+},
+{
+"mdrm": "RCFD8575",
+"caption": "RCFD8575",
+"item": "8.b",
+"depth": 2,
+"order": 24
+},
+{
+"mdrm": "RCFD8576",
+"caption": "RCFD8576",
+"item": "8.c",
+"depth": 2,
+"order": 25
+},
+{
+"mdrm": "RCFDA008",
+"caption": "Futures contracts",
+"item": "9.a",
+"depth": 2,
+"order": 26
+},
+{
+"mdrm": "RCFDA038",
+"caption": "Forward contracts",
+"item": "9.b",
+"depth": 2,
+"order": 27
+},
+{
+"mdrm": "RCFDA058",
+"caption": "Swaps",
+"item": "9.e",
+"depth": 2,
+"order": 28
+},
+{
+"mdrm": "RCFDA062",
+"caption": "contracts held for trading",
+"item": "10",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCFDA066",
+"caption": "trading",
+"item": "11",
+"depth": 1,
+"order": 30
+}
+],
+"N": [
+{
+"mdrm": "RCFD3529",
+"caption": "INTEREST RATE; FOREIGN EXCHANGE RATE; AND OTHER COMMODITY AND EQUITY CONTRACTS: FAIR VALUE OF AMOUNTS CARRIED AS ASSETS - PAST DUE 30 THROUGH 89 DAYS",
+"item": "3530",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFD1606",
+"caption": "COMMERCIAL AND INDUSTRIAL LOANS - PAST DUE 30-89 DAYS AND STILL ACCRUING",
+"item": "1.a",
+"depth": 2,
+"order": 1
+},
+{
+"mdrm": "RCFD1421",
+"caption": "LOANS SECURED BY REAL ESTATE - PAST DUE 30-89 DAYS AND STILL ACCRUING",
+"item": "1.b",
+"depth": 2,
+"order": 2
+},
+{
+"mdrm": "RCFD3183",
+"caption": "ALL OTHER LOANS (INCLUDING ALL LEASE FINANCING RECEIVABLES) - PAST DUE 30-89 DAYS AND STILL ACCRUING",
+"item": "1.c",
+"depth": 2,
+"order": 3
+},
+{
+"mdrm": "RCFD1623",
+"caption": "TOTAL LOANS TO NON-U.S. ADDRESSEES (DOMICILE) - PAST DUE 30-89 DAYS AND STILL ACCRUING",
+"item": "2",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFD1406",
+"caption": "TOTAL LOANS AND LEASE FINANCING RECEIVABLES: PAST DUE 30-89 DAYS AND STILL ACCRUING",
+"item": "3",
+"depth": 1,
+"order": 5
+}
+],
+"O": [
+{
+"mdrm": "RCFDF236",
+"caption": "TOTAL DEPOSIT LIABILITIES AS DEFINED IN SECTION 3(1) OF THE FEDERAL DEPOSIT INSURANCE ACT BEFORE EXCLUSIONS",
+"item": "1",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFDF237",
+"caption": "TOTAL ALLOWABLE EXCLUSIONS; INCLUDING INTEREST ACCRUED AND UNPAID ON ALLOWABLE EXCLUSIONS (INCLUDING FOREIGN DEPOSITS)",
+"item": "2",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFDF234",
+"caption": "RCFDF234",
+"item": "3",
+"depth": 1,
+"order": 2
+},
+{
+"mdrm": "RCFDK652",
+"caption": "AVERAGE CONSOLIDATED TOTAL ASSETS FOR THE CALENDAR QUARTER",
+"item": "4",
+"depth": 1,
+"order": 3
+},
+{
+"mdrm": "RCFDK654",
+"caption": "AVERAGE TANGIBLE EQUITY FOR THE CALENDAR QUARTER",
+"item": "5",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFDK655",
+"caption": "HOLDINGS OF LONG-TERM UNSECURED DEBT ISSUED BY OTHER FDIC INSURED INSTITUTIONS",
+"item": "6",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFDK653",
+"caption": "AVERAGING METHOD USED",
+"item": "4.a",
+"depth": 2,
+"order": 6
+}
+],
+"Q": [
+{
+"mdrm": "RCFDG478",
+"caption": "FEDERAL FUNDS SOLD AND SECURITIES PURCHASED UNDER AGREEMENTS TO RESELL - TOTAL FAIR VALUE REPORTED ON SCHEDULE RC",
+"item": "2",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFDG497",
+"caption": "OTHER TRADING ASSETS - TOTAL FAIR VALUE REPORTED ON SCHEDULE RC",
+"item": "5.b",
+"depth": 2,
+"order": 1
+},
+{
+"mdrm": "RCFDJA36",
+"caption": "Available-for-sale debt securities and equity securities with readily determinable fair values not held for trading purposes",
+"item": "1",
+"depth": 1,
+"order": 2
+}
+],
+"S": [],
+"T": [
+{
+"mdrm": "RCFDA345",
+"caption": "FIDUCIARY POWERS GRANTED BUT NOT EXERCISED",
+"item": "1",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFDA346",
+"caption": "FIDUCIARY POWERS GRANTED AND EXERCISED BUT NO DOLLAR VALUES TO REPORT",
+"item": "2",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFDB867",
+"caption": "DOES THE BANK HAVE ANY FIDUCIARY OR RELATED ACTIVITY (IN THE FORM OF ASSETS OR ACCOUNTS) TO REPORT IN THIS SCHEDULE?",
+"item": "3",
+"depth": 1,
+"order": 2
+}
+]
+}
