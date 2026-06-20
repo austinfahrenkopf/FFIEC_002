@@ -73,6 +73,13 @@
 "order": 0
 },
 {
+"mdrm": "",
+"caption": "LIABILITIES TO NONRELATED PARTIES",
+"item": "4",
+"depth": 1,
+"order": 0.5
+},
+{
 "mdrm": "RCFD2205",
 "caption": "TOTAL DEPOSITS AND CREDIT BALANCES",
 "item": "4.a",
@@ -106,6 +113,13 @@
 "item": "4.g",
 "depth": 2,
 "order": 5
+},
+{
+"mdrm": "",
+"caption": "NET AMOUNTS DUE TO RELATED INSTITUTIONS",
+"item": "5",
+"depth": 1,
+"order": 5.5
 },
 {
 "mdrm": "RCFD2944",
@@ -155,9 +169,1780 @@
 "item": "2869",
 "depth": 1,
 "order": 12
+},
+{
+"mdrm": "RCFD0070",
+"caption": "Balances Due From Banks In Foreign Countries And Foreign Central Banks",
+"item": "0070",
+"depth": 1,
+"order": 15
+},
+{
+"mdrm": "RCFD0371",
+"caption": "Obligations Of Other U.S. Government Agencies And Corporations",
+"item": "0371",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFD2154",
+"caption": "Net Due From Head Office And Other Related Institutions In The U.S. And Foreign Countries",
+"item": "2154",
+"depth": 1,
+"order": 17
+},
+{
+"mdrm": "RCFD2334",
+"caption": "Average Liabilities For The Preceding Calendar Year",
+"item": "2334",
+"depth": 1,
+"order": 18
+},
+{
+"mdrm": "RCFD2387",
+"caption": "Eligible Assets As Of The Report Date",
+"item": "2387",
+"depth": 1,
+"order": 19
+},
+{
+"mdrm": "RCFD2785",
+"caption": "Pledged U.S. Government Securities",
+"item": "2785",
+"depth": 1,
+"order": 20
+},
+{
+"mdrm": "RCFD2805",
+"caption": "Immediately Available Funds With A Maturity Greater Than One Day Included In Condition Report",
+"item": "2805",
+"depth": 1,
+"order": 21
+},
+{
+"mdrm": "RCFD3343",
+"caption": "Statutory Or Regulatory Asset Maintenance Requirement",
+"item": "3343",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCFD3349",
+"caption": "Statutory Or Regulatory Asset Pledge Requirement/Capital Equivalency Deposit",
+"item": "3349",
+"depth": 1,
+"order": 23
+},
+{
+"mdrm": "RCFD4150",
+"caption": "Number Of Full Time Equivalent Employees On Payroll At End Of Current Period",
+"item": "4150",
+"depth": 1,
+"order": 24
+},
+{
+"mdrm": "RCFD6724",
+"caption": "Audit Indicator",
+"item": "6724",
+"depth": 1,
+"order": 25
+},
+{
+"mdrm": "RCFD8723",
+"caption": "Total Gross Notional Amount Of Equity Derivative Contracts Held For Trading",
+"item": "8723",
+"depth": 1,
+"order": 26
+},
+{
+"mdrm": "RCFD8724",
+"caption": "Total Gross Notional Amount Of Commodity And Other Derivative Contracts Held For Trading",
+"item": "8724",
+"depth": 1,
+"order": 27
+},
+{
+"mdrm": "RCFD8726",
+"caption": "Total Gross Notional Amount Of Foreign Exchange Derivative Contracts Held For Purposes Other Than Trading: Contracts Marked To Market",
+"item": "8726",
+"depth": 1,
+"order": 28
+},
+{
+"mdrm": "RCFD8727",
+"caption": "Total Gross Notional Amount Of Equity Derivative Contracts Held For Purposes Other Than Trading: Contracts Marked To Market",
+"item": "8727",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCFD8728",
+"caption": "Total Gross Notional Amount Of Commodity And Other Derivative Contracts Held For Purposes Other Than Trading: Contracts Marked To Market",
+"item": "8728",
+"depth": 1,
+"order": 30
+},
+{
+"mdrm": "RCFD8733",
+"caption": "Gross Positive Fair Value Of Interest Rate Derivative Contracts Held For Trading",
+"item": "8733",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCFD8734",
+"caption": "Gross Positive Fair Value Of Foreign Exchange Derivative Contracts Held For Trading",
+"item": "8734",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCFD8735",
+"caption": "Gross Positive Fair Value Of Equity Derivative Contracts Held For Trading",
+"item": "8735",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCFD8736",
+"caption": "Gross Positive Fair Value Of Commodity And Other Derivative Contracts Held For Trading",
+"item": "8736",
+"depth": 1,
+"order": 34
+},
+{
+"mdrm": "RCFD8737",
+"caption": "Gross Negative Fair Value Of Interest Rate Derivative Contracts Held For Trading",
+"item": "8737",
+"depth": 1,
+"order": 35
+},
+{
+"mdrm": "RCFD8738",
+"caption": "Gross Negative Fair Value Of Foreign Exchange Derivative Contracts Held For Trading",
+"item": "8738",
+"depth": 1,
+"order": 36
+},
+{
+"mdrm": "RCFD8739",
+"caption": "Gross Negative Fair Value Of Equity Derivative Contracts Held For Trading",
+"item": "8739",
+"depth": 1,
+"order": 37
+},
+{
+"mdrm": "RCFD8740",
+"caption": "Gross Negative Fair Value Of Commodity And Other Derivative Contracts Held For Trading",
+"item": "8740",
+"depth": 1,
+"order": 38
+},
+{
+"mdrm": "RCFD8741",
+"caption": "Gross Positive Fair Value Of Interest Rate Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8741",
+"depth": 1,
+"order": 39
+},
+{
+"mdrm": "RCFD8742",
+"caption": "Gross Positive Fair Value Of Foreign Exchange Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8742",
+"depth": 1,
+"order": 40
+},
+{
+"mdrm": "RCFD8743",
+"caption": "Gross Positive Fair Value Of Equity Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8743",
+"depth": 1,
+"order": 41
+},
+{
+"mdrm": "RCFD8744",
+"caption": "Gross Positive Fair Value Of Commodity And Other Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8744",
+"depth": 1,
+"order": 42
+},
+{
+"mdrm": "RCFD8745",
+"caption": "Gross Negative Fair Value Of Interest Rate Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8745",
+"depth": 1,
+"order": 43
+},
+{
+"mdrm": "RCFD8746",
+"caption": "Gross Negative Fair Value Of Foreign Exchange Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8746",
+"depth": 1,
+"order": 44
+},
+{
+"mdrm": "RCFD8747",
+"caption": "Gross Negative Fair Value Of Equity Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8747",
+"depth": 1,
+"order": 45
+},
+{
+"mdrm": "RCFD8748",
+"caption": "Gross Negative Fair Value Of Commodity And Other Derivative Contracts Held For Purposes Other Than Trading That Are Marked To Market",
+"item": "8748",
+"depth": 1,
+"order": 46
+},
+{
+"mdrm": "RCFD8782",
+"caption": "Amortized Cost Of Structured Notes",
+"item": "8782",
+"depth": 1,
+"order": 47
+},
+{
+"mdrm": "RCFD8783",
+"caption": "Fair Value Of Structured Notes",
+"item": "8783",
+"depth": 1,
+"order": 48
+},
+{
+"mdrm": "RCFDA127",
+"caption": "Total Gross Notional Amount Of Foreign Exchange Derivative Contracts Held For Trading",
+"item": "A127",
+"depth": 1,
+"order": 49
+},
+{
+"mdrm": "RCFDA539",
+"caption": "First Itemized Amount That Exceeds 25% Of Item 2151",
+"item": "A539",
+"depth": 1,
+"order": 50
+},
+{
+"mdrm": "RCFDA540",
+"caption": "Second Itemized Amount That Exceeds 25% Of Item 2151",
+"item": "A540",
+"depth": 1,
+"order": 51
+},
+{
+"mdrm": "RCFDA541",
+"caption": "Third Itemized Amount That Exceeds 25% Of Item 2151",
+"item": "A541",
+"depth": 1,
+"order": 52
+},
+{
+"mdrm": "RCFDA542",
+"caption": "First Itemized Amount That Exceeds 25% Of Item 2916",
+"item": "A542",
+"depth": 1,
+"order": 53
+},
+{
+"mdrm": "RCFDA543",
+"caption": "Second Itemized Amount That Exceeds 25% Of Item 2916",
+"item": "A543",
+"depth": 1,
+"order": 54
+},
+{
+"mdrm": "RCFDA544",
+"caption": "Third Itemized Amount That Exceeds 25% Of Item 2916",
+"item": "A544",
+"depth": 1,
+"order": 55
+},
+{
+"mdrm": "RCFDB570",
+"caption": "Assets Under The Reporting Bank'S Management In Proprietary Mutual Funds And Annuities",
+"item": "B570",
+"depth": 1,
+"order": 56
+},
+{
+"mdrm": "RCFDB705",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - 1-4 Family Residential Loans",
+"item": "B705",
+"depth": 1,
+"order": 57
+},
+{
+"mdrm": "RCFDB706",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - Home Equity Lines",
+"item": "B706",
+"depth": 1,
+"order": 58
+},
+{
+"mdrm": "RCFDB707",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - Credit Card Receivables",
+"item": "B707",
+"depth": 1,
+"order": 59
+},
+{
+"mdrm": "RCFDB708",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - Auto Loans",
+"item": "B708",
+"depth": 1,
+"order": 60
+},
+{
+"mdrm": "RCFDB709",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - Other Consumer Loans",
+"item": "B709",
+"depth": 1,
+"order": 61
+},
+{
+"mdrm": "RCFDB710",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - Commercial And Industrial Loans",
+"item": "B710",
+"depth": 1,
+"order": 62
+},
+{
+"mdrm": "RCFDB711",
+"caption": "Outstanding Principal Balance Of Assets Sold And Securitized With Recourse Or Other Seller-Provided Credit Enhancements - All Other Loans",
+"item": "B711",
+"depth": 1,
+"order": 63
+},
+{
+"mdrm": "RCFDB790",
+"caption": "Assets Sold With Recourse Or Other Seller-Provided Credit Enhancements And Not Securitized - 1-4 Family Residential Loans",
+"item": "B790",
+"depth": 1,
+"order": 64
+},
+{
+"mdrm": "RCFDB796",
+"caption": "Assets Sold With Recourse Or Other Seller-Provided Credit Enhancements And Not Securitized - All Other Loans",
+"item": "B796",
+"depth": 1,
+"order": 65
+},
+{
+"mdrm": "RCFDB797",
+"caption": "Maximum Amount Of Credit Exposure Arising From Recourse Or Other Seller-Provided Credit Enhancements Provided To Assets Reported In Item 11: 1-4 Family Residential Loans",
+"item": "B797",
+"depth": 1,
+"order": 66
+},
+{
+"mdrm": "RCFDB803",
+"caption": "Maximum Amount Of Credit Exposure Arising From Recourse Or Other Seller-Provided Credit Enhancements Provided To Assets Reported In Item 11: All Other Loans",
+"item": "B803",
+"depth": 1,
+"order": 67
+},
+{
+"mdrm": "RCFDB868",
+"caption": "Personal Trust And Agency Accounts - Managed Assets",
+"item": "B868",
+"depth": 1,
+"order": 68
+},
+{
+"mdrm": "RCFDB869",
+"caption": "Personal Trust And Agency Accounts - Non-Managed",
+"item": "B869",
+"depth": 1,
+"order": 69
+},
+{
+"mdrm": "RCFDB870",
+"caption": "Personal Trust And Agency Accounts - Number Of Managed Accounts",
+"item": "B870",
+"depth": 1,
+"order": 70
+},
+{
+"mdrm": "RCFDB871",
+"caption": "Personal Trust And Agency Accounts - Number Of Non-Managed Accounts",
+"item": "B871",
+"depth": 1,
+"order": 71
+},
+{
+"mdrm": "RCFDB872",
+"caption": "Employee Benefit-Defined Contribution - Managed Assets",
+"item": "B872",
+"depth": 1,
+"order": 72
+},
+{
+"mdrm": "RCFDB873",
+"caption": "Employee Benefit-Defined Contribution - Non-Managed Assets",
+"item": "B873",
+"depth": 1,
+"order": 73
+},
+{
+"mdrm": "RCFDB874",
+"caption": "Employee Benefit-Defined Contribution - Number Of Managed Accounts",
+"item": "B874",
+"depth": 1,
+"order": 74
+},
+{
+"mdrm": "RCFDB875",
+"caption": "Employee Benefit-Defined Contribution - Number Of Non-Managed Accounts",
+"item": "B875",
+"depth": 1,
+"order": 75
+},
+{
+"mdrm": "RCFDB876",
+"caption": "Employee Benefit-Defined Benefit - Managed Assets",
+"item": "B876",
+"depth": 1,
+"order": 76
+},
+{
+"mdrm": "RCFDB877",
+"caption": "Employee Benefit-Defined Benefit - Non-Managed Asssets",
+"item": "B877",
+"depth": 1,
+"order": 77
+},
+{
+"mdrm": "RCFDB878",
+"caption": "Employee Benefit-Defined Benefit - Number Of Managed Accounts",
+"item": "B878",
+"depth": 1,
+"order": 78
+},
+{
+"mdrm": "RCFDB879",
+"caption": "Employee Benefit-Defined Benefit - Number Of Non-Managed Accounts",
+"item": "B879",
+"depth": 1,
+"order": 79
+},
+{
+"mdrm": "RCFDB880",
+"caption": "Other Retirement Accounts - Managed Assets",
+"item": "B880",
+"depth": 1,
+"order": 80
+},
+{
+"mdrm": "RCFDB881",
+"caption": "Other Retirement Accounts - Non-Managed Assets",
+"item": "B881",
+"depth": 1,
+"order": 81
+},
+{
+"mdrm": "RCFDB882",
+"caption": "Other Retirement Accounts - Number Of Managed Accounts",
+"item": "B882",
+"depth": 1,
+"order": 82
+},
+{
+"mdrm": "RCFDB883",
+"caption": "Other Retirement Accounts - Number Of Non-Managed Accounts",
+"item": "B883",
+"depth": 1,
+"order": 83
+},
+{
+"mdrm": "RCFDB884",
+"caption": "Corporate Trust And Agency Accounts - Managed Assets",
+"item": "B884",
+"depth": 1,
+"order": 84
+},
+{
+"mdrm": "RCFDB885",
+"caption": "Corporate Trust And Agency Accounts - Non-Managed Assets",
+"item": "B885",
+"depth": 1,
+"order": 85
+},
+{
+"mdrm": "RCFDB886",
+"caption": "Investment Management Agency Accounts - Managed Assets",
+"item": "B886",
+"depth": 1,
+"order": 86
+},
+{
+"mdrm": "RCFDB888",
+"caption": "Investment Management Agency Accounts - Number Of Managed Accounts",
+"item": "B888",
+"depth": 1,
+"order": 87
+},
+{
+"mdrm": "RCFDB890",
+"caption": "Other Fiduciary Accounts - Managed Assets",
+"item": "B890",
+"depth": 1,
+"order": 88
+},
+{
+"mdrm": "RCFDB891",
+"caption": "Other Fiduciary Accounts - Non-Managed Assets",
+"item": "B891",
+"depth": 1,
+"order": 89
+},
+{
+"mdrm": "RCFDB892",
+"caption": "Other Fiduciary Accounts - Number Of Managed Accounts",
+"item": "B892",
+"depth": 1,
+"order": 90
+},
+{
+"mdrm": "RCFDB893",
+"caption": "Other Fiduciary Accounts - Number Of Non-Managed Accounts",
+"item": "B893",
+"depth": 1,
+"order": 91
+},
+{
+"mdrm": "RCFDB894",
+"caption": "Total Fiduciary Accounts - Managed Assets",
+"item": "B894",
+"depth": 1,
+"order": 92
+},
+{
+"mdrm": "RCFDB895",
+"caption": "Total Fiduciary Accounts - Non-Managed Assets",
+"item": "B895",
+"depth": 1,
+"order": 93
+},
+{
+"mdrm": "RCFDB896",
+"caption": "Total Fiduciary Accounts - Number Of Managed Accounts",
+"item": "B896",
+"depth": 1,
+"order": 94
+},
+{
+"mdrm": "RCFDB897",
+"caption": "Total Fiduciary Accounts - Non-Managed Accounts",
+"item": "B897",
+"depth": 1,
+"order": 95
+},
+{
+"mdrm": "RCFDB898",
+"caption": "Custody And Safekeeping Accounts - Non-Managed Assets",
+"item": "B898",
+"depth": 1,
+"order": 96
+},
+{
+"mdrm": "RCFDB899",
+"caption": "Custody And Safekeeping Accounts - Number Of Non-Managed Accounts",
+"item": "B899",
+"depth": 1,
+"order": 97
+},
+{
+"mdrm": "RCFDB916",
+"caption": "State; County And Municipal Obligations",
+"item": "B916",
+"depth": 1,
+"order": 98
+},
+{
+"mdrm": "RCFDB917",
+"caption": "Money Market Mutual Funds",
+"item": "B917",
+"depth": 1,
+"order": 99
+},
+{
+"mdrm": "RCFDB918",
+"caption": "Other Short-Term Obligations",
+"item": "B918",
+"depth": 1,
+"order": 100
+},
+{
+"mdrm": "RCFDB919",
+"caption": "Other Notes And Bonds",
+"item": "B919",
+"depth": 1,
+"order": 101
+},
+{
+"mdrm": "RCFDB920",
+"caption": "Common And Preferred Stocks",
+"item": "B920",
+"depth": 1,
+"order": 102
+},
+{
+"mdrm": "RCFDB921",
+"caption": "Real Estate Mortgages",
+"item": "B921",
+"depth": 1,
+"order": 103
+},
+{
+"mdrm": "RCFDB922",
+"caption": "Real Estate",
+"item": "B922",
+"depth": 1,
+"order": 104
+},
+{
+"mdrm": "RCFDB923",
+"caption": "Miscellaneous Assets",
+"item": "B923",
+"depth": 1,
+"order": 105
+},
+{
+"mdrm": "RCFDB927",
+"caption": "Corporate And Municipal Trusteeships - Number Of Issues",
+"item": "B927",
+"depth": 1,
+"order": 106
+},
+{
+"mdrm": "RCFDB928",
+"caption": "Corporate And Municipal Trusteeship - Principal Amount Outstanding",
+"item": "B928",
+"depth": 1,
+"order": 107
+},
+{
+"mdrm": "RCFDB929",
+"caption": "Transfer Agent; Registrar; Paying Agent; And Other Corporate Agency - Number Of Issues",
+"item": "B929",
+"depth": 1,
+"order": 108
+},
+{
+"mdrm": "RCFDB931",
+"caption": "Domestic Equity - Number Of Funds",
+"item": "B931",
+"depth": 1,
+"order": 109
+},
+{
+"mdrm": "RCFDB932",
+"caption": "Domestic Equity - Market Value Of Funds Assets",
+"item": "B932",
+"depth": 1,
+"order": 110
+},
+{
+"mdrm": "RCFDB933",
+"caption": "International/Global Equity - Number Of Funds",
+"item": "B933",
+"depth": 1,
+"order": 111
+},
+{
+"mdrm": "RCFDB934",
+"caption": "International/Global Equity - Market Value Of Fund Assets",
+"item": "B934",
+"depth": 1,
+"order": 112
+},
+{
+"mdrm": "RCFDB935",
+"caption": "Stock/Bond Blend - Number Of Funds",
+"item": "B935",
+"depth": 1,
+"order": 113
+},
+{
+"mdrm": "RCFDB936",
+"caption": "Stock/Bond Blend - Market Value Of Fund Assets",
+"item": "B936",
+"depth": 1,
+"order": 114
+},
+{
+"mdrm": "RCFDB937",
+"caption": "Taxable Bond - Number Of Funds",
+"item": "B937",
+"depth": 1,
+"order": 115
+},
+{
+"mdrm": "RCFDB938",
+"caption": "Taxable Bond - Market Value Of Fund Assets",
+"item": "B938",
+"depth": 1,
+"order": 116
+},
+{
+"mdrm": "RCFDB939",
+"caption": "Municipal Bond - Number Of Funds",
+"item": "B939",
+"depth": 1,
+"order": 117
+},
+{
+"mdrm": "RCFDB940",
+"caption": "Municipal Bond - Market Value Of Fund Assets",
+"item": "B940",
+"depth": 1,
+"order": 118
+},
+{
+"mdrm": "RCFDB941",
+"caption": "Short Term Investments/Money Market - Number Of Funds",
+"item": "B941",
+"depth": 1,
+"order": 119
+},
+{
+"mdrm": "RCFDB942",
+"caption": "Short Term Investments/Money Market - Market Value Of Fund Assets",
+"item": "B942",
+"depth": 1,
+"order": 120
+},
+{
+"mdrm": "RCFDB943",
+"caption": "Specialty/Other - Number Of Funds",
+"item": "B943",
+"depth": 1,
+"order": 121
+},
+{
+"mdrm": "RCFDB944",
+"caption": "Specialty/Other - Market Value Of Fund Assets",
+"item": "B944",
+"depth": 1,
+"order": 122
+},
+{
+"mdrm": "RCFDB945",
+"caption": "Total Collective Investment Funds - Number Of Funds",
+"item": "B945",
+"depth": 1,
+"order": 123
+},
+{
+"mdrm": "RCFDB946",
+"caption": "Total Collective Investment Funds - Market Value Of Fund Assets",
+"item": "B946",
+"depth": 1,
+"order": 124
+},
+{
+"mdrm": "RCFDC001",
+"caption": "Corporate Trust And Agency Accounts - Number Of Managed Accounts",
+"item": "C001",
+"depth": 1,
+"order": 125
+},
+{
+"mdrm": "RCFDC002",
+"caption": "Corporate Trust And Agency Accounts - Number Of Non-Managed Accounts",
+"item": "C002",
+"depth": 1,
+"order": 126
+},
+{
+"mdrm": "RCFDC036",
+"caption": "Other Asset-Backed Securities",
+"item": "C036",
+"depth": 1,
+"order": 127
+},
+{
+"mdrm": "RCFDC037",
+"caption": "Other Bonds; Notes; Debentures; And Corporate Stock (Including State And Local Securities): All Other",
+"item": "C037",
+"depth": 1,
+"order": 128
+},
+{
+"mdrm": "RCFDC219",
+"caption": "Notional Amount Of Credit Derivatives On Which The Reporting Bank Is The Guarantor:Gross Positive Fair Value",
+"item": "C219",
+"depth": 1,
+"order": 129
+},
+{
+"mdrm": "RCFDC220",
+"caption": "Notional Amount Of Credit Derivatives On Which The Reporting Bank Is The Guarantor:Gross Negative Fair Value",
+"item": "C220",
+"depth": 1,
+"order": 130
+},
+{
+"mdrm": "RCFDC221",
+"caption": "Notional Amount Of Credit Derivatives On Which The Reporting Bank Is The Beneficiary:Gross Positive Fair Value",
+"item": "C221",
+"depth": 1,
+"order": 131
+},
+{
+"mdrm": "RCFDC222",
+"caption": "Notional Amount Of Credit Derivatives On Which The Reporting Bank Is The Beneficiary:Gross Negative Fair Value",
+"item": "C222",
+"depth": 1,
+"order": 132
+},
+{
+"mdrm": "RCFDC413",
+"caption": "Federal Funds Sold - With Others",
+"item": "C413",
+"depth": 1,
+"order": 133
+},
+{
+"mdrm": "RCFDC421",
+"caption": "Federal Funds Purchased - With Others",
+"item": "C421",
+"depth": 1,
+"order": 134
+},
+{
+"mdrm": "RCFDC974",
+"caption": "Credit Derivatives: Notional Amounts- Other Credit Derivatives-Guarantor",
+"item": "C974",
+"depth": 1,
+"order": 135
+},
+{
+"mdrm": "RCFDC975",
+"caption": "Credit Derivatives: Notional Amounts-Other Credit Derivatives-Beneficiary",
+"item": "C975",
+"depth": 1,
+"order": 136
+},
+{
+"mdrm": "RCFDF684",
+"caption": "Amounts Netted In The Determination Of Total Fair Value Reported On Schedule Rc For Nontrading Securities At Fair Value With Changes In Fair Value Reported In Current Earnings.",
+"item": "F684",
+"depth": 1,
+"order": 137
+},
+{
+"mdrm": "RCFDF686",
+"caption": "Amounts Netted In The Determination Of Total Fair Value Reported On Schedule Rc For Deposits",
+"item": "F686",
+"depth": 1,
+"order": 138
+},
+{
+"mdrm": "RCFDF856",
+"caption": "Federal Funds Sold: With Nonbank Brokers And Dealers In Securities",
+"item": "F856",
+"depth": 1,
+"order": 139
+},
+{
+"mdrm": "RCFDG391",
+"caption": "All Other Assets - Total Fair Value Reported On Schedule Rc",
+"item": "G391",
+"depth": 1,
+"order": 140
+},
+{
+"mdrm": "RCFDG392",
+"caption": "All Other Assets - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G392",
+"depth": 1,
+"order": 141
+},
+{
+"mdrm": "RCFDG395",
+"caption": "All Other Assets - Level 1 Fair Value Measurements",
+"item": "G395",
+"depth": 1,
+"order": 142
+},
+{
+"mdrm": "RCFDG396",
+"caption": "All Other Assets - Level 2 Fair Value Measurements",
+"item": "G396",
+"depth": 1,
+"order": 143
+},
+{
+"mdrm": "RCFDG502",
+"caption": "Total Assets Measured At Fair Value On A Recurring Basis - Total Fair Value Reported On Schedule Rc",
+"item": "G502",
+"depth": 1,
+"order": 144
+},
+{
+"mdrm": "RCFDG503",
+"caption": "Total Assets Measured At Fair Value On A Recurring Basis - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G503",
+"depth": 1,
+"order": 145
+},
+{
+"mdrm": "RCFDG504",
+"caption": "Total Assets Measured At Fair Value On A Recurring Basis - Level 1 Fair Value Measurements",
+"item": "G504",
+"depth": 1,
+"order": 146
+},
+{
+"mdrm": "RCFDG505",
+"caption": "Total Assets Measured At Fair Value On A Recurring Basis - Level 2 Fair Value Measurements",
+"item": "G505",
+"depth": 1,
+"order": 147
+},
+{
+"mdrm": "RCFDG506",
+"caption": "Total Assets Measured At Fair Value On A Recurring Basis - Level 3 Fair Value Measurements",
+"item": "G506",
+"depth": 1,
+"order": 148
+},
+{
+"mdrm": "RCFDG521",
+"caption": "Other Borrowed Money - Total Fair Value Reported On Schedule Rc",
+"item": "G521",
+"depth": 1,
+"order": 149
+},
+{
+"mdrm": "RCFDG522",
+"caption": "Other Borrowed Money - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G522",
+"depth": 1,
+"order": 150
+},
+{
+"mdrm": "RCFDG523",
+"caption": "Other Borrowed Money - Level 1 Fair Value Measurements",
+"item": "G523",
+"depth": 1,
+"order": 151
+},
+{
+"mdrm": "RCFDG524",
+"caption": "Other Borrowed Money - Level 2 Fair Value Measurements",
+"item": "G524",
+"depth": 1,
+"order": 152
+},
+{
+"mdrm": "RCFDG525",
+"caption": "Other Borrowed Money - Level 3 Fair Value Measurements",
+"item": "G525",
+"depth": 1,
+"order": 153
+},
+{
+"mdrm": "RCFDG526",
+"caption": "Subordinated Notes And Debentures - Total Fair Value Reported On Schedule Rc",
+"item": "G526",
+"depth": 1,
+"order": 154
+},
+{
+"mdrm": "RCFDG527",
+"caption": "Subordinated Notes And Debentures - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G527",
+"depth": 1,
+"order": 155
+},
+{
+"mdrm": "RCFDG528",
+"caption": "Subordinated Notes And Debentures- Level 1 Fair Value Measurements",
+"item": "G528",
+"depth": 1,
+"order": 156
+},
+{
+"mdrm": "RCFDG529",
+"caption": "Subordinated Notes And Debentures- Level 2 Fair Value Measurements",
+"item": "G529",
+"depth": 1,
+"order": 157
+},
+{
+"mdrm": "RCFDG530",
+"caption": "Subordinated Notes And Debentures- Level 3 Fair Value Measurements",
+"item": "G530",
+"depth": 1,
+"order": 158
+},
+{
+"mdrm": "RCFDG531",
+"caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Total Fair Value Reported On Schedule Rc",
+"item": "G531",
+"depth": 1,
+"order": 159
+},
+{
+"mdrm": "RCFDG532",
+"caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G532",
+"depth": 1,
+"order": 160
+},
+{
+"mdrm": "RCFDG533",
+"caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Level 1 Fair Value Measurements",
+"item": "G533",
+"depth": 1,
+"order": 161
+},
+{
+"mdrm": "RCFDG534",
+"caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Level 2 Fair Value Measurements",
+"item": "G534",
+"depth": 1,
+"order": 162
+},
+{
+"mdrm": "RCFDG535",
+"caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Level 3 Fair Value Measurements",
+"item": "G535",
+"depth": 1,
+"order": 163
+},
+{
+"mdrm": "RCFDG536",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Total Fair Value Reported On Schedule Rc",
+"item": "G536",
+"depth": 1,
+"order": 164
+},
+{
+"mdrm": "RCFDG537",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G537",
+"depth": 1,
+"order": 165
+},
+{
+"mdrm": "RCFDG538",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Level 1 Fair Value Measurements",
+"item": "G538",
+"depth": 1,
+"order": 166
+},
+{
+"mdrm": "RCFDG539",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Level 2 Fair Value Measurements",
+"item": "G539",
+"depth": 1,
+"order": 167
+},
+{
+"mdrm": "RCFDG540",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Level 3 Fair Value Measurements",
+"item": "G540",
+"depth": 1,
+"order": 168
+},
+{
+"mdrm": "RCFDG541",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Total Fair Value Reported On Schedule Rc",
+"item": "G541",
+"depth": 1,
+"order": 169
+},
+{
+"mdrm": "RCFDG542",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G542",
+"depth": 1,
+"order": 170
+},
+{
+"mdrm": "RCFDG543",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Level 1 Fair Value Measurements",
+"item": "G543",
+"depth": 1,
+"order": 171
+},
+{
+"mdrm": "RCFDG544",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Level 2 Fair Value Measurements",
+"item": "G544",
+"depth": 1,
+"order": 172
+},
+{
+"mdrm": "RCFDG545",
+"caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Level 3 Fair Value Measurements",
+"item": "G545",
+"depth": 1,
+"order": 173
+},
+{
+"mdrm": "RCFDG546",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
+"item": "G546",
+"depth": 1,
+"order": 174
+},
+{
+"mdrm": "RCFDG547",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G547",
+"depth": 1,
+"order": 175
+},
+{
+"mdrm": "RCFDG548",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
+"item": "G548",
+"depth": 1,
+"order": 176
+},
+{
+"mdrm": "RCFDG549",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
+"item": "G549",
+"depth": 1,
+"order": 177
+},
+{
+"mdrm": "RCFDG550",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
+"item": "G550",
+"depth": 1,
+"order": 178
+},
+{
+"mdrm": "RCFDG551",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
+"item": "G551",
+"depth": 1,
+"order": 179
+},
+{
+"mdrm": "RCFDG552",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G552",
+"depth": 1,
+"order": 180
+},
+{
+"mdrm": "RCFDG553",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
+"item": "G553",
+"depth": 1,
+"order": 181
+},
+{
+"mdrm": "RCFDG554",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
+"item": "G554",
+"depth": 1,
+"order": 182
+},
+{
+"mdrm": "RCFDG555",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
+"item": "G555",
+"depth": 1,
+"order": 183
+},
+{
+"mdrm": "RCFDG556",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
+"item": "G556",
+"depth": 1,
+"order": 184
+},
+{
+"mdrm": "RCFDG557",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G557",
+"depth": 1,
+"order": 185
+},
+{
+"mdrm": "RCFDG558",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
+"item": "G558",
+"depth": 1,
+"order": 186
+},
+{
+"mdrm": "RCFDG559",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
+"item": "G559",
+"depth": 1,
+"order": 187
+},
+{
+"mdrm": "RCFDG560",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
+"item": "G560",
+"depth": 1,
+"order": 188
+},
+{
+"mdrm": "RCFDG561",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
+"item": "G561",
+"depth": 1,
+"order": 189
+},
+{
+"mdrm": "RCFDG562",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G562",
+"depth": 1,
+"order": 190
+},
+{
+"mdrm": "RCFDG563",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
+"item": "G563",
+"depth": 1,
+"order": 191
+},
+{
+"mdrm": "RCFDG564",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
+"item": "G564",
+"depth": 1,
+"order": 192
+},
+{
+"mdrm": "RCFDG565",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
+"item": "G565",
+"depth": 1,
+"order": 193
+},
+{
+"mdrm": "RCFDG566",
+"caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Total Fair Value Reported On Schedule Rc",
+"item": "G566",
+"depth": 1,
+"order": 194
+},
+{
+"mdrm": "RCFDG567",
+"caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities- Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G567",
+"depth": 1,
+"order": 195
+},
+{
+"mdrm": "RCFDG568",
+"caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Level 1 Fair Value Measurements",
+"item": "G568",
+"depth": 1,
+"order": 196
+},
+{
+"mdrm": "RCFDG569",
+"caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Level 2 Fair Value Measurements",
+"item": "G569",
+"depth": 1,
+"order": 197
+},
+{
+"mdrm": "RCFDG570",
+"caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Level 3 Fair Value Measurement",
+"item": "G570",
+"depth": 1,
+"order": 198
+},
+{
+"mdrm": "RCFDG571",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
+"item": "G571",
+"depth": 1,
+"order": 199
+},
+{
+"mdrm": "RCFDG572",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G572",
+"depth": 1,
+"order": 200
+},
+{
+"mdrm": "RCFDG573",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
+"item": "G573",
+"depth": 1,
+"order": 201
+},
+{
+"mdrm": "RCFDG574",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
+"item": "G574",
+"depth": 1,
+"order": 202
+},
+{
+"mdrm": "RCFDG575",
+"caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
+"item": "G575",
+"depth": 1,
+"order": 203
+},
+{
+"mdrm": "RCFDG576",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
+"item": "G576",
+"depth": 1,
+"order": 204
+},
+{
+"mdrm": "RCFDG577",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G577",
+"depth": 1,
+"order": 205
+},
+{
+"mdrm": "RCFDG578",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
+"item": "G578",
+"depth": 1,
+"order": 206
+},
+{
+"mdrm": "RCFDG579",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
+"item": "G579",
+"depth": 1,
+"order": 207
+},
+{
+"mdrm": "RCFDG580",
+"caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
+"item": "G580",
+"depth": 1,
+"order": 208
+},
+{
+"mdrm": "RCFDG581",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
+"item": "G581",
+"depth": 1,
+"order": 209
+},
+{
+"mdrm": "RCFDG582",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G582",
+"depth": 1,
+"order": 210
+},
+{
+"mdrm": "RCFDG583",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
+"item": "G583",
+"depth": 1,
+"order": 211
+},
+{
+"mdrm": "RCFDG584",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
+"item": "G584",
+"depth": 1,
+"order": 212
+},
+{
+"mdrm": "RCFDG585",
+"caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
+"item": "G585",
+"depth": 1,
+"order": 213
+},
+{
+"mdrm": "RCFDG586",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
+"item": "G586",
+"depth": 1,
+"order": 214
+},
+{
+"mdrm": "RCFDG587",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G587",
+"depth": 1,
+"order": 215
+},
+{
+"mdrm": "RCFDG588",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
+"item": "G588",
+"depth": 1,
+"order": 216
+},
+{
+"mdrm": "RCFDG589",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
+"item": "G589",
+"depth": 1,
+"order": 217
+},
+{
+"mdrm": "RCFDG590",
+"caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
+"item": "G590",
+"depth": 1,
+"order": 218
+},
+{
+"mdrm": "RCFDG804",
+"caption": "All Other Assets - Level 3 Fair Value Measurements",
+"item": "G804",
+"depth": 1,
+"order": 219
+},
+{
+"mdrm": "RCFDG805",
+"caption": "All Other Liabilities - Total Fair Value Reported On Balance Sheet",
+"item": "G805",
+"depth": 1,
+"order": 220
+},
+{
+"mdrm": "RCFDG806",
+"caption": "All Other Liabilities - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G806",
+"depth": 1,
+"order": 221
+},
+{
+"mdrm": "RCFDG807",
+"caption": "All Other Liabilities - Level 1 Fair Value Measurements",
+"item": "G807",
+"depth": 1,
+"order": 222
+},
+{
+"mdrm": "RCFDG808",
+"caption": "All Other Liabilities - Level 2 Fair Value Measurements",
+"item": "G808",
+"depth": 1,
+"order": 223
+},
+{
+"mdrm": "RCFDG809",
+"caption": "All Other Liabilities - Level 3 Fair Value Measurements",
+"item": "G809",
+"depth": 1,
+"order": 224
+},
+{
+"mdrm": "RCFDHU09",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; 1-4 Family Residential Loans",
+"item": "HU09",
+"depth": 1,
+"order": 225
+},
+{
+"mdrm": "RCFDHU10",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; Home Equity Lines",
+"item": "HU10",
+"depth": 1,
+"order": 226
+},
+{
+"mdrm": "RCFDHU11",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; Credit Card Receivables",
+"item": "HU11",
+"depth": 1,
+"order": 227
+},
+{
+"mdrm": "RCFDHU12",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; Auto Loans",
+"item": "HU12",
+"depth": 1,
+"order": 228
+},
+{
+"mdrm": "RCFDHU13",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; Other Consumer Loans",
+"item": "HU13",
+"depth": 1,
+"order": 229
+},
+{
+"mdrm": "RCFDHU14",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; comercial and Industrial Loans",
+"item": "HU14",
+"depth": 1,
+"order": 230
+},
+{
+"mdrm": "RCFDHU15",
+"caption": "Maximum amout of credit exposure arising from recourse or other seller provided credit enhancements provided to structures reported; All other Loans; All Leases; and All Other Assets",
+"item": "HU15",
+"depth": 1,
+"order": 231
+},
+{
+"mdrm": "RCFDHU16",
+"caption": "Total amount of ownership (or sellers) interest carried as securities or loans; Home Equity Loans",
+"item": "HU16",
+"depth": 1,
+"order": 232
+},
+{
+"mdrm": "RCFDHU17",
+"caption": "Total amount of ownership (or sellers) interest carried as securities or loans; Credit Card Receivables",
+"item": "HU17",
+"depth": 1,
+"order": 233
+},
+{
+"mdrm": "RCFDHU18",
+"caption": "Total amount of ownership (or sellers) interest carried as securities or loans; Commercial and Industrial Loans",
+"item": "HU18",
+"depth": 1,
+"order": 234
+},
+{
+"mdrm": "RCFDK479",
+"caption": "U.S. Treasury And Agency Securities",
+"item": "K479",
+"depth": 1,
+"order": 235
+},
+{
+"mdrm": "RCFN0020",
+"caption": "Cash Items In Process Of Collection And Unposted Debits",
+"item": "0020",
+"depth": 1,
+"order": 236
+},
+{
+"mdrm": "RCFN0070",
+"caption": "Balances Due From Banks In Foreign Countries And Foreign Central Banks",
+"item": "0070",
+"depth": 1,
+"order": 237
+},
+{
+"mdrm": "RCFN2151",
+"caption": "Other Assets (Claims On Non-Related Parties)",
+"item": "2151",
+"depth": 1,
+"order": 238
+},
+{
+"mdrm": "RCFN2154",
+"caption": "Net Due From Head Office And Other Related Institutions In The U.S. And Foreign Countries",
+"item": "2154",
+"depth": 1,
+"order": 239
+},
+{
+"mdrm": "RCFN2170",
+"caption": "Total Assets",
+"item": "2170",
+"depth": 1,
+"order": 240
+},
+{
+"mdrm": "RCFN2171",
+"caption": "Claims On Non-Affiliates",
+"item": "2171",
+"depth": 1,
+"order": 241
+},
+{
+"mdrm": "RCFN2869",
+"caption": "Total Other Borrowed Money Owed To Others",
+"item": "2869",
+"depth": 1,
+"order": 242
+},
+{
+"mdrm": "RCFN2916",
+"caption": "Other Liabilities (To Nonrelated Parties)",
+"item": "2916",
+"depth": 1,
+"order": 243
+},
+{
+"mdrm": "RCFN2927",
+"caption": "Total Liabilities To Nonrelated Parties",
+"item": "2927",
+"depth": 1,
+"order": 244
+},
+{
+"mdrm": "RCFN2944",
+"caption": "Net Due To Head Office And Other Related Institutions In The U.S. And In Foreign Countries",
+"item": "2944",
+"depth": 1,
+"order": 245
+},
+{
+"mdrm": "RCFN2950",
+"caption": "Total Liabilities",
+"item": "2950",
+"depth": 1,
+"order": 246
+},
+{
+"mdrm": "RCFN3190",
+"caption": "Other Borrowed Money",
+"item": "3190",
+"depth": 1,
+"order": 247
+},
+{
+"mdrm": "RCFN3312",
+"caption": "Other Borrowed Money Owed To U.S. Offices Of Nonrelated U.S. Banks",
+"item": "3312",
+"depth": 1,
+"order": 248
+},
+{
+"mdrm": "RCFN3313",
+"caption": "Other Borrowed Money Owed To U.S. Branches And Agencies Of Nonrelated Foreign Banks",
+"item": "3313",
+"depth": 1,
+"order": 249
+},
+{
+"mdrm": "RCFN3314",
+"caption": "Other Borrowed Money Owed To Foreign Branches Of Nonrelated U.S. Banks",
+"item": "3314",
+"depth": 1,
+"order": 250
+},
+{
+"mdrm": "RCFN3315",
+"caption": "Other Borrowed Money Owed To Foreign Offices Of Nonrelated Foreign Banks",
+"item": "3315",
+"depth": 1,
+"order": 251
+},
+{
+"mdrm": "RCFN8782",
+"caption": "Amortized Cost Of Structured Notes",
+"item": "8782",
+"depth": 1,
+"order": 252
+},
+{
+"mdrm": "RCFN8783",
+"caption": "Fair Value Of Structured Notes",
+"item": "8783",
+"depth": 1,
+"order": 253
+},
+{
+"mdrm": "RCFNB570",
+"caption": "Assets Under The Reporting Bank'S Management In Proprietary Mutual Funds And Annuities",
+"item": "B570",
+"depth": 1,
+"order": 254
+},
+{
+"mdrm": "RCFNC036",
+"caption": "Other Asset-Backed Securities",
+"item": "C036",
+"depth": 1,
+"order": 255
+},
+{
+"mdrm": "RCFNC037",
+"caption": "Other Bonds; Notes; Debentures; And Corporate Stock (Including State And Local Securities): All Other",
+"item": "C037",
+"depth": 1,
+"order": 256
+},
+{
+"mdrm": "RCFNC413",
+"caption": "Federal Funds Sold - With Others",
+"item": "C413",
+"depth": 1,
+"order": 257
+},
+{
+"mdrm": "RCFNC421",
+"caption": "Federal Funds Purchased - With Others",
+"item": "C421",
+"depth": 1,
+"order": 258
+},
+{
+"mdrm": "RCFNF856",
+"caption": "Federal Funds Sold: With Nonbank Brokers And Dealers In Securities",
+"item": "F856",
+"depth": 1,
+"order": 259
+},
+{
+"mdrm": "RCFNK479",
+"caption": "U.S. Treasury And Agency Securities",
+"item": "K479",
+"depth": 1,
+"order": 260
+},
+{
+"mdrm": "RCON5571",
+"caption": "Amount Currently Outstanding Of Commercial And Industrial Loans To U.S. Addressees (In Domestic Offices) With Original Amounts Of $100;000 Or Less",
+"item": "5571",
+"depth": 1,
+"order": 261
+},
+{
+"mdrm": "RCON5573",
+"caption": "Amount Currently Outstanding Of Commercial And Industrial Loans To U.S. Addressees (In Domestic Offices) With Original Amounts Of More Than $100;000 Through $250;000",
+"item": "5573",
+"depth": 1,
+"order": 262
+},
+{
+"mdrm": "RCON5575",
+"caption": "Amount Currently Outstanding Of Commercial And Industrial Loans To U.S. Addressees (In Domestic Offices) With Original Amounts Of More Than $250;000 Through $1;000;000",
+"item": "5575",
+"depth": 1,
+"order": 263
+},
+{
+"mdrm": "RCON6643",
+"caption": "Time Cd'S Of $100;000 Or More In Domestic Offices Maturing In Over 12 Months",
+"item": "6643",
+"depth": 1,
+"order": 264
+},
+{
+"mdrm": "RCON9395",
+"caption": "Consolidation Code",
+"item": "9395",
+"depth": 1,
+"order": 265
+},
+{
+"mdrm": "RCONF233",
+"caption": "Individual Retirement Accounts (Iras) And Keogh Plan Accounts Included In Memorandum Item 2.C; 'Total Time Deposits Of $100;000 Or More;' Above",
+"item": "F233",
+"depth": 1,
+"order": 266
 }
 ],
 "C": [
+{
+"mdrm": "",
+"caption": "LOANS SECURED BY REAL ESTATE",
+"item": "1",
+"depth": 1,
+"order": -1
+},
 {
 "mdrm": "RCFD1415",
 "caption": "CONSTRUCTION AND LAND DEVELOPMENT LOANS",
@@ -187,6 +1972,13 @@
 "order": 3
 },
 {
+"mdrm": "",
+"caption": "LOANS TO DEPOSITORY INSTITUTIONS AND ACCEPTANCES PURCHASED",
+"item": "2",
+"depth": 1,
+"order": 3.5
+},
+{
 "mdrm": "RCFDB534",
 "caption": "LOANS TO OTHER DEPOSITORY INSTITUTIONS IN THE U.S.",
 "item": "2.b",
@@ -199,6 +1991,13 @@
 "item": "3",
 "depth": 1,
 "order": 5
+},
+{
+"mdrm": "",
+"caption": "COMMERCIAL AND INDUSTRIAL LOANS",
+"item": "4",
+"depth": 1,
+"order": 5.5
 },
 {
 "mdrm": "RCFD1763",
@@ -234,6 +2033,13 @@
 "item": "8",
 "depth": 1,
 "order": 10
+},
+{
+"mdrm": "",
+"caption": "LEASE FINANCING RECEIVABLES (NET OF UNEARNED INCOME)",
+"item": "9",
+"depth": 1,
+"order": 10.5
 },
 {
 "mdrm": "RCFD2182",
@@ -346,9 +2152,646 @@
 "item": "5589",
 "depth": 1,
 "order": 26
+},
+{
+"mdrm": "RCFD1404",
+"caption": "Restructured Loans And Leases (See Note Below)",
+"item": "1404",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCFD1424",
+"caption": "Loans Secured By Real Estate: Restructured And In Compliance With Modified Terms",
+"item": "1424",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCFD1627",
+"caption": "Total Loans To Non-U.S. Addressees (Domicile): Restructured And In Compliance With Modified Terms",
+"item": "1627",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCFD1637",
+"caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or To Related Institutions And Still Serviced By The Reporting Branch Or Agency: Restructured And In Compliance With Modified Terms",
+"item": "1637",
+"depth": 1,
+"order": 34
+},
+{
+"mdrm": "RCFD1798",
+"caption": "All Other Loans Secured By 1-4 Family Residential Properties",
+"item": "1798",
+"depth": 1,
+"order": 35
+},
+{
+"mdrm": "RCFD3186",
+"caption": "All Other Loans (Including All Lease Financing Receivables): Restructured And In Compliance With Modified Terms",
+"item": "3186",
+"depth": 1,
+"order": 36
+},
+{
+"mdrm": "RCFDB532",
+"caption": "Loans To U.S. Branches And Agencies Of Foreign Banks",
+"item": "B532",
+"depth": 1,
+"order": 37
+},
+{
+"mdrm": "RCFDB533",
+"caption": "Loans To Other Commercial Banks In The U.S.",
+"item": "B533",
+"depth": 1,
+"order": 38
+},
+{
+"mdrm": "RCFDB536",
+"caption": "Loans To Foreign Branches Of Other U.S. Banks",
+"item": "B536",
+"depth": 1,
+"order": 39
+},
+{
+"mdrm": "RCFDB537",
+"caption": "Loans To Other Banks In Foreign Countries",
+"item": "B537",
+"depth": 1,
+"order": 40
+},
+{
+"mdrm": "RCFDG007",
+"caption": "Loans Measured At Fair Value: Other Loans",
+"item": "G007",
+"depth": 1,
+"order": 41
+},
+{
+"mdrm": "RCFDG011",
+"caption": "Loans Measured At Fair Value: Other Loans",
+"item": "G011",
+"depth": 1,
+"order": 42
+},
+{
+"mdrm": "RCFDG483",
+"caption": "Loans And Leases Held For Sale - Total Fair Value Reported On Schedule Rc",
+"item": "G483",
+"depth": 1,
+"order": 43
+},
+{
+"mdrm": "RCFDG484",
+"caption": "Loans And Leases Held For Sale - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G484",
+"depth": 1,
+"order": 44
+},
+{
+"mdrm": "RCFDG485",
+"caption": "Loans And Leases Held For Sale - Level 1 Fair Value Measurements",
+"item": "G485",
+"depth": 1,
+"order": 45
+},
+{
+"mdrm": "RCFDG486",
+"caption": "Loans And Leases Held For Sale - Level 2 Fair Value Measurements",
+"item": "G486",
+"depth": 1,
+"order": 46
+},
+{
+"mdrm": "RCFDG487",
+"caption": "Loans And Leases Held For Sale - Level 3 Fair Value Measurements",
+"item": "G487",
+"depth": 1,
+"order": 47
+},
+{
+"mdrm": "RCFDG488",
+"caption": "Loans And Leases Held For Investment - Total Fair Value Reported On Schedule Rc",
+"item": "G488",
+"depth": 1,
+"order": 48
+},
+{
+"mdrm": "RCFDG489",
+"caption": "Loans And Leases Held For Investment - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G489",
+"depth": 1,
+"order": 49
+},
+{
+"mdrm": "RCFDG490",
+"caption": "Loans And Leases Held For Investment - Level 1 Fair Value Measurements",
+"item": "G490",
+"depth": 1,
+"order": 50
+},
+{
+"mdrm": "RCFDG491",
+"caption": "Loans And Leases Held For Investment - Level 2 Fair Value Measurements",
+"item": "G491",
+"depth": 1,
+"order": 51
+},
+{
+"mdrm": "RCFDG492",
+"caption": "Loans And Leases Held For Investment - Level 3 Fair Value Measurements",
+"item": "G492",
+"depth": 1,
+"order": 52
+},
+{
+"mdrm": "RCFDHT63",
+"caption": "Assets; Loans; Loans secured by real estate; Loans secured by 1-4 family residential properties; Consolidated",
+"item": "HT63",
+"depth": 1,
+"order": 53
+},
+{
+"mdrm": "RCFDHT64",
+"caption": "Assets; Loans; Loans secured by real estate; All other loans secured by real estate; Consolidated",
+"item": "HT64",
+"depth": 1,
+"order": 54
+},
+{
+"mdrm": "RCFDHT87",
+"caption": "Loans measured at fair value; Loans secured by real estate; Secured by 1-4 family residential properties; Domestic Offices",
+"item": "HT87",
+"depth": 1,
+"order": 55
+},
+{
+"mdrm": "RCFDHT88",
+"caption": "Loans measured at fair value; Loans secured by real estate; All other loans secured by real estate; Domestic Offices",
+"item": "HT88",
+"depth": 1,
+"order": 56
+},
+{
+"mdrm": "RCFDHT91",
+"caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; Secured by 1-4 family residential properties; Domestic Offices",
+"item": "HT91",
+"depth": 1,
+"order": 57
+},
+{
+"mdrm": "RCFDHT92",
+"caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; All other loans secured by real estate; Domestic Offices",
+"item": "HT92",
+"depth": 1,
+"order": 58
+},
+{
+"mdrm": "RCFN1420",
+"caption": "Real Estate Loans Secured By Farmland",
+"item": "1420",
+"depth": 1,
+"order": 59
+},
+{
+"mdrm": "RCFN1460",
+"caption": "Real Estate Loans Secured By Multi-Family (5 Or More) Residential Properties",
+"item": "1460",
+"depth": 1,
+"order": 60
+},
+{
+"mdrm": "RCFN1480",
+"caption": "Real Estate Loans Secured By Nonfarm Nonresidential Properties",
+"item": "1480",
+"depth": 1,
+"order": 61
+},
+{
+"mdrm": "RCFN1520",
+"caption": "Loans To Other Financial Institutions",
+"item": "1520",
+"depth": 1,
+"order": 62
+},
+{
+"mdrm": "RCFN1545",
+"caption": "Loans for purchasing or carrying securities; including margin loans",
+"item": "1545",
+"depth": 1,
+"order": 63
+},
+{
+"mdrm": "RCFN1798",
+"caption": "All Other Loans Secured By 1-4 Family Residential Properties",
+"item": "1798",
+"depth": 1,
+"order": 64
+},
+{
+"mdrm": "RCFN1885",
+"caption": "All Other Loans",
+"item": "1885",
+"depth": 1,
+"order": 65
+},
+{
+"mdrm": "RCFN2081",
+"caption": "Loans To Foreign Governments And Official Institutions",
+"item": "2081",
+"depth": 1,
+"order": 66
+},
+{
+"mdrm": "RCFN2122",
+"caption": "Total Loans And Leases; Net Of Unearned Income",
+"item": "2122",
+"depth": 1,
+"order": 67
+},
+{
+"mdrm": "RCFN2182",
+"caption": "Lease Financing Receivables (Net Of Unearned Income) Of U.S. Addressees (Domicile)",
+"item": "2182",
+"depth": 1,
+"order": 68
+},
+{
+"mdrm": "RCFN2183",
+"caption": "Lease Financing Receivables (Net Of Unearned Income) Of Non-U.S. Addressees (Domicile)",
+"item": "2183",
+"depth": 1,
+"order": 69
+},
+{
+"mdrm": "RCFNB532",
+"caption": "Loans To U.S. Branches And Agencies Of Foreign Banks",
+"item": "B532",
+"depth": 1,
+"order": 70
+},
+{
+"mdrm": "RCFNB533",
+"caption": "Loans To Other Commercial Banks In The U.S.",
+"item": "B533",
+"depth": 1,
+"order": 71
+},
+{
+"mdrm": "RCFNB534",
+"caption": "Loans To Other Depository Institutions In The U.S.",
+"item": "B534",
+"depth": 1,
+"order": 72
+},
+{
+"mdrm": "RCFNB536",
+"caption": "Loans To Foreign Branches Of Other U.S. Banks",
+"item": "B536",
+"depth": 1,
+"order": 73
+},
+{
+"mdrm": "RCFNB537",
+"caption": "Loans To Other Banks In Foreign Countries",
+"item": "B537",
+"depth": 1,
+"order": 74
+},
+{
+"mdrm": "RCFNG007",
+"caption": "Loans Measured At Fair Value: Other Loans",
+"item": "G007",
+"depth": 1,
+"order": 75
+},
+{
+"mdrm": "RCFNG011",
+"caption": "Loans Measured At Fair Value: Other Loans",
+"item": "G011",
+"depth": 1,
+"order": 76
+},
+{
+"mdrm": "RCFNHT63",
+"caption": "Assets; Loans; Loans secured by real estate; Loans secured by 1-4 family residential properties; Consolidated",
+"item": "HT63",
+"depth": 1,
+"order": 77
+},
+{
+"mdrm": "RCFNHT64",
+"caption": "Assets; Loans; Loans secured by real estate; All other loans secured by real estate; Consolidated",
+"item": "HT64",
+"depth": 1,
+"order": 78
+},
+{
+"mdrm": "RCFNHT87",
+"caption": "Loans measured at fair value; Loans secured by real estate; Secured by 1-4 family residential properties; Domestic Offices",
+"item": "HT87",
+"depth": 1,
+"order": 79
+},
+{
+"mdrm": "RCFNHT88",
+"caption": "Loans measured at fair value; Loans secured by real estate; All other loans secured by real estate; Domestic Offices",
+"item": "HT88",
+"depth": 1,
+"order": 80
+},
+{
+"mdrm": "RCFNHT91",
+"caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; Secured by 1-4 family residential properties; Domestic Offices",
+"item": "HT91",
+"depth": 1,
+"order": 81
+},
+{
+"mdrm": "RCFNHT92",
+"caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; All other loans secured by real estate; Domestic Offices",
+"item": "HT92",
+"depth": 1,
+"order": 82
+},
+{
+"mdrm": "RCFD1609",
+"caption": "Commercial And Industrial Loans: Restructured And In Compliance With Modified Terms",
+"item": "1609",
+"depth": 1,
+"order": 83
+},
+{
+"mdrm": "RCFD1797",
+"caption": "Revolving; Open-End Loans Secured By 1-4 Family Residential Properties And Extended Under Lines Of Credit",
+"item": "1797",
+"depth": 1,
+"order": 84
+},
+{
+"mdrm": "RCFD6119",
+"caption": "Commercial And Industrial Loans With Remaining Maturity Of One Year Or Less With Predetermined Interest Rates",
+"item": "6119",
+"depth": 1,
+"order": 85
+},
+{
+"mdrm": "RCFD6120",
+"caption": "Commercial And Industrial Loans With Remaining Maturity Of One Year Or Less With Floating Interest Rates",
+"item": "6120",
+"depth": 1,
+"order": 86
+},
+{
+"mdrm": "RCFD6122",
+"caption": "Commercial And Industrial Loans With Remaining Maturity Of More Than One Year With Predetermined Interest Rates",
+"item": "6122",
+"depth": 1,
+"order": 87
+},
+{
+"mdrm": "RCFD6123",
+"caption": "Commercial And Industrial Loans With Remaining Maturity Of More Than One Year With Floating Interest Rates",
+"item": "6123",
+"depth": 1,
+"order": 88
+},
+{
+"mdrm": "RCFDF261",
+"caption": "Total Fair Value Of Loan Commitments (Not Accounted For As Derivatives)",
+"item": "F261",
+"depth": 1,
+"order": 89
+},
+{
+"mdrm": "RCFDF262",
+"caption": "Level 2 Fair Value Measurements Of Loan Commitments (Not Accounted For As Derivatives)",
+"item": "F262",
+"depth": 1,
+"order": 90
+},
+{
+"mdrm": "RCFDF263",
+"caption": "Level 3 Fair Value Measurements Of Loan Commitments (Not Accounted For As Derivatives)",
+"item": "F263",
+"depth": 1,
+"order": 91
+},
+{
+"mdrm": "RCFDF585",
+"caption": "Commercial And Industrial Loans Measured At Fair Value (Domestic Only)",
+"item": "F585",
+"depth": 1,
+"order": 92
+},
+{
+"mdrm": "RCFDF597",
+"caption": "Unpaid Principal Balance Of Commericial And Industrial Loans Measured At Fair Value:",
+"item": "F597",
+"depth": 1,
+"order": 93
+},
+{
+"mdrm": "RCFDF632",
+"caption": "Unpaid Principal Balances Of Loans Measured At Fair Value - Commercial And Industrial Loans",
+"item": "F632",
+"depth": 1,
+"order": 94
+},
+{
+"mdrm": "RCFDF697",
+"caption": "Level 1 Fair Value Measurements For  Loan Commitments (Not Accounted For As Derivatives",
+"item": "F697",
+"depth": 1,
+"order": 95
+},
+{
+"mdrm": "RCFDG009",
+"caption": "Unpaid Principle Balance Of Loans Measured At Fair Value: Other Loans",
+"item": "G009",
+"depth": 1,
+"order": 96
+},
+{
+"mdrm": "RCFDG013",
+"caption": "Unpaid Principal Balance Of Loans Measured At Fair Valuel Other Loans",
+"item": "G013",
+"depth": 1,
+"order": 97
+},
+{
+"mdrm": "RCFDHT66",
+"caption": "Unpaid principal balance of loans measured at fair value; Loans secured by real estate; Loans secured by 1-4 family residential properties; Consolidated",
+"item": "HT66",
+"depth": 1,
+"order": 98
+},
+{
+"mdrm": "RCFDHT67",
+"caption": "Unpaid principal balance of loans measured at fair value; Loans secured by real estate; All other loans secured by real estate; Consolidated",
+"item": "HT67",
+"depth": 1,
+"order": 99
+},
+{
+"mdrm": "RCFN1415",
+"caption": "Construction And Land Development Loans",
+"item": "1415",
+"depth": 1,
+"order": 100
+},
+{
+"mdrm": "RCFN1763",
+"caption": "Commercial And Industrial Loans To U.S. Addressees",
+"item": "1763",
+"depth": 1,
+"order": 101
+},
+{
+"mdrm": "RCFN1764",
+"caption": "Commercial And Industrial Loans To Non-U.S. Addressees",
+"item": "1764",
+"depth": 1,
+"order": 102
+},
+{
+"mdrm": "RCFN1797",
+"caption": "Revolving; Open-End Loans Secured By 1-4 Family Residential Properties And Extended Under Lines Of Credit",
+"item": "1797",
+"depth": 1,
+"order": 103
+},
+{
+"mdrm": "RCFNF585",
+"caption": "Commercial And Industrial Loans Measured At Fair Value (Domestic Only)",
+"item": "F585",
+"depth": 1,
+"order": 104
+},
+{
+"mdrm": "RCFNF597",
+"caption": "Unpaid Principal Balance Of Commericial And Industrial Loans Measured At Fair Value:",
+"item": "F597",
+"depth": 1,
+"order": 105
+},
+{
+"mdrm": "RCFNF632",
+"caption": "Unpaid Principal Balances Of Loans Measured At Fair Value - Commercial And Industrial Loans",
+"item": "F632",
+"depth": 1,
+"order": 106
+},
+{
+"mdrm": "RCFNG009",
+"caption": "Unpaid Principle Balance Of Loans Measured At Fair Value: Other Loans",
+"item": "G009",
+"depth": 1,
+"order": 107
+},
+{
+"mdrm": "RCFNG013",
+"caption": "Unpaid Principal Balance Of Loans Measured At Fair Valuel Other Loans",
+"item": "G013",
+"depth": 1,
+"order": 108
+},
+{
+"mdrm": "RCFNHT66",
+"caption": "Unpaid principal balance of loans measured at fair value; Loans secured by real estate; Loans secured by 1-4 family residential properties; Consolidated",
+"item": "HT66",
+"depth": 1,
+"order": 109
+},
+{
+"mdrm": "RCFNHT67",
+"caption": "Unpaid principal balance of loans measured at fair value; Loans secured by real estate; All other loans secured by real estate; Consolidated",
+"item": "HT67",
+"depth": 1,
+"order": 110
+},
+{
+"mdrm": "RCON5565",
+"caption": "Amount Currently Outstanding Of Loans Secured By Nonfarm Nonresidential Properties (In Domestic Offices) With Original Amounts Of $100;000 Or Less",
+"item": "5565",
+"depth": 1,
+"order": 111
+},
+{
+"mdrm": "RCON5567",
+"caption": "Amount Currently Outstanding Of Loans Secured By Nonfarm Nonresidential Properties (In Domestic Offices) With Original Amounts Of More Than $100;000 Through $250;000",
+"item": "5567",
+"depth": 1,
+"order": 112
+},
+{
+"mdrm": "RCON5569",
+"caption": "Amount Currently Outstanding Of Loans Secured By Nonfarm Nonresidential Properties (In Domestic Offices) With Original Amounts Of More Than $250;000 Through $1;000;000",
+"item": "5569",
+"depth": 1,
+"order": 113
+},
+{
+"mdrm": "RCON5579",
+"caption": "Amount Currently Outstanding Of Loans Secured By Farmland (Including Farm Residential And Other Improvements) (In Domestic Offices) With Original Amounts Of $100;000 Or Less",
+"item": "5579",
+"depth": 1,
+"order": 114
+},
+{
+"mdrm": "RCON5581",
+"caption": "Amount Currently Outstanding Of Loans Secured By Farmland (Including Farm Residential And Other Improvements) (In Domestic Offices) With Original Amounts Of More Than $100;000 Through $250;000",
+"item": "5581",
+"depth": 1,
+"order": 115
+},
+{
+"mdrm": "RCON5583",
+"caption": "Amount Currently Outstanding Of Loans Secured By Farmland (Including Farm Residential And Other Improvements) (In Domestic Offices) With Original Amounts Of More Than $250;000 Through $500;000",
+"item": "5583",
+"depth": 1,
+"order": 116
+},
+{
+"mdrm": "RCON5585",
+"caption": "Amount Currently Outstanding Of Loans To Finance Agricultural Production And Other Loans To Farmers (In Domestic Offices) With Original Amounts Of $100;000 Or Less",
+"item": "5585",
+"depth": 1,
+"order": 117
+},
+{
+"mdrm": "RCON5587",
+"caption": "Amount Currently Outstanding Of Loans To Finance Agricultural Production And Other Loans To Farmers (In Domestic Offices) With Original Amounts Of More Than $100;000 Through $250;000",
+"item": "5587",
+"depth": 1,
+"order": 118
+},
+{
+"mdrm": "RCON5589",
+"caption": "Amount Currently Outstanding Of Loans To Finance Agricultural Production And Other Loans To Farmers (In Domestic Offices) With Original Amounts Of More Than $250;000 Through $500;000",
+"item": "5589",
+"depth": 1,
+"order": 119
+},
+{
+"mdrm": "RCONLG27",
+"caption": "Outstanding balance of PPP loans",
+"item": "LG27",
+"depth": 1,
+"order": 120
 }
 ],
 "E": [
+{
+"mdrm": "",
+"caption": "DEPOSITS OF INDIVIDUALS, PARTNERSHIPS, AND CORPORATIONS",
+"item": "1",
+"depth": 1,
+"order": -1
+},
 {
 "mdrm": "RCONC040",
 "caption": "TOTAL TRANSACTION ACCOUNTS  - INDIVIDUALS; PARTNERSHIPS; AND CORPORATIONS INCLUDE ALL CERTIFIED AND OFFICIAL CHECKS: U.S. ADDRESSES (DOMICILE)",
@@ -364,6 +2807,13 @@
 "order": 1
 },
 {
+"mdrm": "",
+"caption": "DEPOSITS OF COMMERCIAL BANKS AND OTHER DEPOSITORY INSTITUTIONS IN THE U.S.",
+"item": "2",
+"depth": 1,
+"order": 1.5
+},
+{
 "mdrm": "RCON1643",
 "caption": "TOTAL TRANSACTION ACCOUNTS AND CREDIT BALANCES (EXCLUDING IBF) - DEPOSITS OF U.S. BRANCHES AND AGENCIES OF OTHER FOREIGN BANKS",
 "item": "2.a",
@@ -376,6 +2826,13 @@
 "item": "2.b",
 "depth": 2,
 "order": 3
+},
+{
+"mdrm": "",
+"caption": "DEPOSITS OF BANKS IN FOREIGN COUNTRIES",
+"item": "3",
+"depth": 1,
+"order": 3.5
 },
 {
 "mdrm": "RCON1646",
@@ -411,6 +2868,328 @@
 "item": "7",
 "depth": 1,
 "order": 8
+},
+{
+"mdrm": "RCFN0082",
+"caption": "Balances Due From Depository Institutions In The U.S.",
+"item": "0082",
+"depth": 1,
+"order": 12
+},
+{
+"mdrm": "RCFN1668",
+"caption": "Ibf Deposit Liabilities - U.S. Branches And Agencies Of Other Foreign Banks",
+"item": "1668",
+"depth": 1,
+"order": 13
+},
+{
+"mdrm": "RCFN1669",
+"caption": "Ibf Deposit Liabilities - Other Commercial Banks In The U.S.",
+"item": "1669",
+"depth": 1,
+"order": 14
+},
+{
+"mdrm": "RCFN1671",
+"caption": "Ibf Deposit Liabilities - Foreign Branches Of U.S. Banks",
+"item": "1671",
+"depth": 1,
+"order": 15
+},
+{
+"mdrm": "RCFN1672",
+"caption": "Ibf Deposit Liabilities - Other Banks In Foreign Countries",
+"item": "1672",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFN2205",
+"caption": "Total Deposits And Credit Balances",
+"item": "2205",
+"depth": 1,
+"order": 17
+},
+{
+"mdrm": "RCFN2261",
+"caption": "Total Other Deposits",
+"item": "2261",
+"depth": 1,
+"order": 18
+},
+{
+"mdrm": "RCFN2650",
+"caption": "Deposits Of Foreign Governments And Official Institutions; Central Banks; And International Institutions",
+"item": "2650",
+"depth": 1,
+"order": 19
+},
+{
+"mdrm": "RCFNC042",
+"caption": "Ibf Deposit Liabilities - Individuals; Partnerships; And Corporations Include All Certified And Official Checks: Us Addressees (Domicile)",
+"item": "C042",
+"depth": 1,
+"order": 20
+},
+{
+"mdrm": "RCFNC045",
+"caption": "Ibf Deposit Liabilities - Individuals; Partnerships And Corporations (Include All Certified And Official Checks): Non-U.S. Addresses (Domicile)",
+"item": "C045",
+"depth": 1,
+"order": 21
+},
+{
+"mdrm": "RCFNF234",
+"caption": "Total Foreign Deposits (Included In Item B Above)",
+"item": "F234",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCON2210",
+"caption": "Total Demand Deposits (See Note Below)",
+"item": "2210",
+"depth": 1,
+"order": 23
+},
+{
+"mdrm": "RCON2604",
+"caption": "Total Time Deposits Of $100;000 Or More (See Note Below)",
+"item": "2604",
+"depth": 1,
+"order": 24
+},
+{
+"mdrm": "RCON5590",
+"caption": "Preferred Deposits",
+"item": "5590",
+"depth": 1,
+"order": 25
+},
+{
+"mdrm": "RCONF049",
+"caption": "Amount Of Deposit Accounts (Excluding Retirement Accounts) Of $250;000 Or Less",
+"item": "F049",
+"depth": 1,
+"order": 26
+},
+{
+"mdrm": "RCONF050",
+"caption": "Number Of Deposit Accounts (Excluding Retirement Accounts)Of $250;000 Or Less",
+"item": "F050",
+"depth": 1,
+"order": 27
+},
+{
+"mdrm": "RCONF051",
+"caption": "Amount Of Deposit Accounts (Excluding Retirement Accounts) Of More Than $250;000",
+"item": "F051",
+"depth": 1,
+"order": 28
+},
+{
+"mdrm": "RCONF052",
+"caption": "Number Of Deposit Accounts (Excluding Retirement Accounts) Of More Than $250;000",
+"item": "F052",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCONMT87",
+"caption": "Sweep deposits: Fully insured; affiliate sweep deposits",
+"item": "MT87",
+"depth": 1,
+"order": 30
+},
+{
+"mdrm": "RCONMT89",
+"caption": "Sweep deposits: Not fully insured; affiliate sweep deposits",
+"item": "MT89",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCONMT91",
+"caption": "Sweep deposits: Fully insured; non-affiliate sweep deposits",
+"item": "MT91",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCONMT93",
+"caption": "Sweep deposits: Not fully insured; non-affiliate sweep deposits",
+"item": "MT93",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCONMT95",
+"caption": "Total sweep deposits that are not brokered deposits",
+"item": "MT95",
+"depth": 1,
+"order": 34
+},
+{
+"mdrm": "RCFDC412",
+"caption": "Federal Funds Sold - With Depository Institutions In The U.S.",
+"item": "C412",
+"depth": 1,
+"order": 35
+},
+{
+"mdrm": "RCFDC420",
+"caption": "Federal Funds Purchased - With Depository Institutions In The U.S.",
+"item": "C420",
+"depth": 1,
+"order": 36
+},
+{
+"mdrm": "RCFDF252",
+"caption": "Total Fair Value Of Deposits",
+"item": "F252",
+"depth": 1,
+"order": 37
+},
+{
+"mdrm": "RCFDF253",
+"caption": "Level 2 Fair Value Measurements Of Deposits",
+"item": "F253",
+"depth": 1,
+"order": 38
+},
+{
+"mdrm": "RCFDF254",
+"caption": "Level 3 Fair Value Measurements Of Deposits",
+"item": "F254",
+"depth": 1,
+"order": 39
+},
+{
+"mdrm": "RCFDF694",
+"caption": "Level 1 Fair Value Measurements For  Deposits",
+"item": "F694",
+"depth": 1,
+"order": 40
+},
+{
+"mdrm": "RCFN0010",
+"caption": "Cash And Balances Due From Depository Institutions",
+"item": "0010",
+"depth": 1,
+"order": 41
+},
+{
+"mdrm": "RCFNC412",
+"caption": "Federal Funds Sold - With Depository Institutions In The U.S.",
+"item": "C412",
+"depth": 1,
+"order": 42
+},
+{
+"mdrm": "RCFNC420",
+"caption": "Federal Funds Purchased - With Depository Institutions In The U.S.",
+"item": "C420",
+"depth": 1,
+"order": 43
+},
+{
+"mdrm": "RCON2259",
+"caption": "Nontransaction Accounts - Other",
+"item": "2259",
+"depth": 1,
+"order": 44
+},
+{
+"mdrm": "RCON2347",
+"caption": "Total Nontransaction Accounts - U.S. Branches And Agencies Of Foreign Banks",
+"item": "2347",
+"depth": 1,
+"order": 45
+},
+{
+"mdrm": "RCON2348",
+"caption": "Total Nontransaction Accounts - Other Commercial Banks In The U.S.",
+"item": "2348",
+"depth": 1,
+"order": 46
+},
+{
+"mdrm": "RCON2367",
+"caption": "Total Nontransaction Accounts - Foreign Branches Of Other U.S. Banks",
+"item": "2367",
+"depth": 1,
+"order": 47
+},
+{
+"mdrm": "RCON2373",
+"caption": "Total Nontransaction Accounts - Other Banks In Foreign Countries",
+"item": "2373",
+"depth": 1,
+"order": 48
+},
+{
+"mdrm": "RCON2377",
+"caption": "Total Nontransaction Accounts - Deposits Of Foreign Governments And Official Institutions",
+"item": "2377",
+"depth": 1,
+"order": 49
+},
+{
+"mdrm": "RCON2385",
+"caption": "Total Nontransaction Accounts (Including Mmda'S)",
+"item": "2385",
+"depth": 1,
+"order": 50
+},
+{
+"mdrm": "RCON5597",
+"caption": "Estimated Amount Of Uninsured Assessable Deposits In Domestic Offices Of The Bank And In Insured Branches In Puerto Rico And U.S. Territories And Possessions; Including Related Interest Accrued And Unpaid",
+"item": "5597",
+"depth": 1,
+"order": 51
+},
+{
+"mdrm": "RCONC041",
+"caption": "Total Nontransaction Accounts - Individuals; Partnerships; And Corporations (Include All Certified And Official Checks: U.S. Addressees (Domicile)",
+"item": "C041",
+"depth": 1,
+"order": 52
+},
+{
+"mdrm": "RCONC044",
+"caption": "Total Nontransaction Accounts - Individuals; Partnerships; And Corporations (Include All Certified And Official Checks): Non-U.S. Addressees (Domicile)",
+"item": "C044",
+"depth": 1,
+"order": 53
+},
+{
+"mdrm": "RCONF045",
+"caption": "Amount Of Retirement Deposits Accounts Of $250;000 Or Less",
+"item": "F045",
+"depth": 1,
+"order": 54
+},
+{
+"mdrm": "RCONF046",
+"caption": "Number Of Retirement Deposit Accounts Of $250;000 Or Less",
+"item": "F046",
+"depth": 1,
+"order": 55
+},
+{
+"mdrm": "RCONF047",
+"caption": "Amount Of Retirement Deposit Accounts Of More Than $250;000",
+"item": "F047",
+"depth": 1,
+"order": 56
+},
+{
+"mdrm": "RCONF048",
+"caption": "Number Of Retirement Deposit Accounts Of More Than $250;000",
+"item": "F048",
+"depth": 1,
+"order": 57
 }
 ],
 "K": [
@@ -494,6 +3273,13 @@
 "order": 1
 },
 {
+"mdrm": "",
+"caption": "STANDBY LETTERS OF CREDIT AND FOREIGN OFFICE GUARANTEES",
+"item": "3",
+"depth": 1,
+"order": 1.5
+},
+{
 "mdrm": "RCFD3375",
 "caption": "STANDBY LETTERS OF CREDIT AND FOREIGN OFFICE GUARANTEES",
 "item": "3.a",
@@ -571,6 +3357,13 @@
 "order": 12
 },
 {
+"mdrm": "",
+"caption": "INTEREST RATE DERIVATIVE CONTRACTS",
+"item": "9",
+"depth": 1,
+"order": 12.5
+},
+{
 "mdrm": "RCFD8693",
 "caption": "INTEREST RATE FUTURES CONTRACTS",
 "item": "9.a",
@@ -604,6 +3397,377 @@
 "item": "11",
 "depth": 1,
 "order": 17
+},
+{
+"mdrm": "RCFDB808",
+"caption": "Unused Commitments To Provide Liquidity To Conduit Structures: Conduits Sponsored By The Bank; A Bank Affiliate; Or The Bank'S Holding Company",
+"item": "B808",
+"depth": 1,
+"order": 20
+},
+{
+"mdrm": "RCFDB809",
+"caption": "Unused Commitments To Provide Liquidity To Conduit Structures: Conduits Sponsored By Other Unrelated Institutions",
+"item": "B809",
+"depth": 1,
+"order": 21
+},
+{
+"mdrm": "RCFD3376",
+"caption": "Standby Letters Of Credit And Foreign Office Guarantees To U.S. Addressees (Domicile)",
+"item": "3376",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCFD3377",
+"caption": "Standby Letters Of Credit Issued To Non-U.S. Addressees (Domicile)",
+"item": "3377",
+"depth": 1,
+"order": 23
+},
+{
+"mdrm": "RCFD3826",
+"caption": "Foreign Exchange Swaps",
+"item": "3826",
+"depth": 1,
+"order": 24
+},
+{
+"mdrm": "RCFD8694",
+"caption": "Foreign Exchange Futures Contracts",
+"item": "8694",
+"depth": 1,
+"order": 25
+},
+{
+"mdrm": "RCFD8695",
+"caption": "Equity Derivative Futures Contracts",
+"item": "8695",
+"depth": 1,
+"order": 26
+},
+{
+"mdrm": "RCFD8696",
+"caption": "Commodity And Other Futures Contracts",
+"item": "8696",
+"depth": 1,
+"order": 27
+},
+{
+"mdrm": "RCFD8698",
+"caption": "Foreign Exchange Forward Contracts",
+"item": "8698",
+"depth": 1,
+"order": 28
+},
+{
+"mdrm": "RCFD8699",
+"caption": "Equity Derivative Forward Contracts",
+"item": "8699",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCFD8700",
+"caption": "Commodity And Other Forward Contracts",
+"item": "8700",
+"depth": 1,
+"order": 30
+},
+{
+"mdrm": "RCFD8701",
+"caption": "Written Exchange-Traded Interest Rate Option Contracts",
+"item": "8701",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCFD8702",
+"caption": "Written Exchange-Traded Foreign Exchange Option Contracts",
+"item": "8702",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCFD8703",
+"caption": "Written Exchange-Traded Equity Derivative Option Contracts",
+"item": "8703",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCFD8704",
+"caption": "Written Exchange-Traded Commodity And Other Exchange-Traded Option Contracts",
+"item": "8704",
+"depth": 1,
+"order": 34
+},
+{
+"mdrm": "RCFD8705",
+"caption": "Purchased Exchange-Traded Interest Rate Option Contracts",
+"item": "8705",
+"depth": 1,
+"order": 35
+},
+{
+"mdrm": "RCFD8706",
+"caption": "Purchased Exchange-Traded Foreign Exchange Option Contracts",
+"item": "8706",
+"depth": 1,
+"order": 36
+},
+{
+"mdrm": "RCFD8707",
+"caption": "Purchased Exchange-Traded Equity Derivative Option Contracts",
+"item": "8707",
+"depth": 1,
+"order": 37
+},
+{
+"mdrm": "RCFD8708",
+"caption": "Purchased Exchange-Traded Commodity And Other Exchange-Traded Option Contracts",
+"item": "8708",
+"depth": 1,
+"order": 38
+},
+{
+"mdrm": "RCFD8710",
+"caption": "Written Otc Foreign Exchange Option Contracts",
+"item": "8710",
+"depth": 1,
+"order": 39
+},
+{
+"mdrm": "RCFD8711",
+"caption": "Written Otc Equity Derivative Option Contracts",
+"item": "8711",
+"depth": 1,
+"order": 40
+},
+{
+"mdrm": "RCFD8712",
+"caption": "Written Otc Commodity And Other Otc Option Contracts",
+"item": "8712",
+"depth": 1,
+"order": 41
+},
+{
+"mdrm": "RCFD8714",
+"caption": "Purchased Otc Foreign Exchange Option Contracts",
+"item": "8714",
+"depth": 1,
+"order": 42
+},
+{
+"mdrm": "RCFD8715",
+"caption": "Purchased Otc Equity Derivative Option Contracts",
+"item": "8715",
+"depth": 1,
+"order": 43
+},
+{
+"mdrm": "RCFD8716",
+"caption": "Purchased Otc Commodity And Other Otc Option Contracts",
+"item": "8716",
+"depth": 1,
+"order": 44
+},
+{
+"mdrm": "RCFD8719",
+"caption": "Equity Swaps",
+"item": "8719",
+"depth": 1,
+"order": 45
+},
+{
+"mdrm": "RCFD8720",
+"caption": "Commodity And Other Swaps",
+"item": "8720",
+"depth": 1,
+"order": 46
+},
+{
+"mdrm": "RCFDB726",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - 1-4 Family Residential Loans",
+"item": "B726",
+"depth": 1,
+"order": 47
+},
+{
+"mdrm": "RCFDB727",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - Home Equity Lines",
+"item": "B727",
+"depth": 1,
+"order": 48
+},
+{
+"mdrm": "RCFDB728",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - Credit Card Receivables",
+"item": "B728",
+"depth": 1,
+"order": 49
+},
+{
+"mdrm": "RCFDB729",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - Auto Loans",
+"item": "B729",
+"depth": 1,
+"order": 50
+},
+{
+"mdrm": "RCFDB730",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - Other Consumer Loans",
+"item": "B730",
+"depth": 1,
+"order": 51
+},
+{
+"mdrm": "RCFDB731",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - Commercial And Industrial Loans",
+"item": "B731",
+"depth": 1,
+"order": 52
+},
+{
+"mdrm": "RCFDB732",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Structures Reported In Item 1 - All Other Loans",
+"item": "B732",
+"depth": 1,
+"order": 53
+},
+{
+"mdrm": "RCFDB776",
+"caption": "Maximum Amount Of Credit Exposure Arising From Credit Enhancements Provided By The Reporting Bank To Other Institutions' Securitization Structures In The Form Of Standby Letters Of Credit; Etc.: 1-4 Family Residential Loans",
+"item": "B776",
+"depth": 1,
+"order": 54
+},
+{
+"mdrm": "RCFDB779",
+"caption": "Maximum Amount Of Credit Exposure Arising From Credit Enhancements Provided By The Reporting Bank To Other Institutions' Securitization Structures In The Form Of Standby Letters Of Credit;Etc: Auto Loans",
+"item": "B779",
+"depth": 1,
+"order": 55
+},
+{
+"mdrm": "RCFDB780",
+"caption": "Maximum Amount Of Credit Exposure Arising From Credit Enhancements Provided By The Reporting Bank To Other Institutions' Securitization Structures In The Form Of Standby Letters Of Credit;Etc: Other Consumer Loans",
+"item": "B780",
+"depth": 1,
+"order": 56
+},
+{
+"mdrm": "RCFDB781",
+"caption": "Maximum Amount Of Credit Exposure Arising From Credit Enhancements Provided By The Reporting Bank To Other Institutions' Securitization Structures In The Form Of Standby Letters Of Credit; Etc: Commercial And Industrial Loans",
+"item": "B781",
+"depth": 1,
+"order": 57
+},
+{
+"mdrm": "RCFDB782",
+"caption": "Maximum Amount Of Credit Exposures Arising From Credit Enhancements Provided By The Reporting Bank To Other Institutions' Securitization Structures In The Form Of Standby Letters Of Credit; Etc: All Other Loans",
+"item": "B782",
+"depth": 1,
+"order": 58
+},
+{
+"mdrm": "RCFDB783",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Other Institutions' Securitization Structures - 1-4 Family Residential Loans",
+"item": "B783",
+"depth": 1,
+"order": 59
+},
+{
+"mdrm": "RCFDB786",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Other Institutions' Securitization Structures - Auto Loans",
+"item": "B786",
+"depth": 1,
+"order": 60
+},
+{
+"mdrm": "RCFDB787",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Other Institutions' Securitization Structures - Other Consumer Loans",
+"item": "B787",
+"depth": 1,
+"order": 61
+},
+{
+"mdrm": "RCFDB788",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Other Institutions' Securitization Structures - Commercial And Industrial Loans",
+"item": "B788",
+"depth": 1,
+"order": 62
+},
+{
+"mdrm": "RCFDB789",
+"caption": "Reporting Bank'S Unused Commitments To Provide Liquidity To Other Institutions' Securitization Structures - All Other Loans",
+"item": "B789",
+"depth": 1,
+"order": 63
+},
+{
+"mdrm": "RCFDB806",
+"caption": "Maximum Amount Of Credit Exposure Arising From Credit Enhancements Provided To Conduit Structures In The Form Of Standby Letters Of Credit; Subordinated Securities; Etc: Conduits Sponsored By The Bank; A Bank Affiliate; Or The Bank'S Holding Company",
+"item": "B806",
+"depth": 1,
+"order": 64
+},
+{
+"mdrm": "RCFDB807",
+"caption": "Maximum Amount Of Credit Exposure Arising From Credit Enhancements Provided To Conduit Structures In The Form Of Standby Letters Of Credit; Subordinated Securities; Etc: Conduits Sponsored By Other Unrelated Institutions",
+"item": "B807",
+"depth": 1,
+"order": 65
+},
+{
+"mdrm": "RCFDC968",
+"caption": "Credit Derivatives: Notional Amounts-Credit Default Swaps-Guarantor",
+"item": "C968",
+"depth": 1,
+"order": 66
+},
+{
+"mdrm": "RCFDC969",
+"caption": "Credit Derivatives: Notional Amounts - Credit Defaults Swaps - Beneficiary",
+"item": "C969",
+"depth": 1,
+"order": 67
+},
+{
+"mdrm": "RCFDC970",
+"caption": "Credit Derivatives: Notional Amounts-Total Return Swaps-Guarantor",
+"item": "C970",
+"depth": 1,
+"order": 68
+},
+{
+"mdrm": "RCFDC971",
+"caption": "Credit Derivatives: Notional Amounts-Total Return Swaps-Beneficiary",
+"item": "C971",
+"depth": 1,
+"order": 69
+},
+{
+"mdrm": "RCFDC972",
+"caption": "Credit Derivatives: Notional Amounts-Credit Options-Guarantor",
+"item": "C972",
+"depth": 1,
+"order": 70
+},
+{
+"mdrm": "RCFDC973",
+"caption": "Credit Derivatives: Notional Amounts-Credit Options-Beneficiary",
+"item": "C973",
+"depth": 1,
+"order": 71
+},
+{
+"mdrm": "RCFDF689",
+"caption": "Amounts Netted In The Determination Of Total Fair Value Reported On Schedule Rc For Loan Commitments (Not Accounted For As Derivatives",
+"item": "F689",
+"depth": 1,
+"order": 72
 }
 ],
 "M": [
@@ -834,6 +3998,13 @@
 "order": 0
 },
 {
+"mdrm": "",
+"caption": "TOTAL LOANS TO U.S. ADDRESSEES (DOMICILE) - PAST DUE 30-89 DAYS AND STILL ACCRUING",
+"item": "1",
+"depth": 1,
+"order": 0.5
+},
+{
 "mdrm": "RCFD1606",
 "caption": "COMMERCIAL AND INDUSTRIAL LOANS - PAST DUE 30-89 DAYS AND STILL ACCRUING",
 "item": "1.a",
@@ -867,6 +4038,202 @@
 "item": "3",
 "depth": 1,
 "order": 5
+},
+{
+"mdrm": "RCFD1403",
+"caption": "Total Loans And Lease Finance Receivables: Nonaccrual",
+"item": "1403",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFD1407",
+"caption": "Total Loans And Lease Financing Receivables: Past Due 90 Days Or More And Still Accruing",
+"item": "1407",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFD1422",
+"caption": "Loans Secured By Real Estate - Past Due 90 Days Or More And Still Accruing",
+"item": "1422",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFD1423",
+"caption": "Loans Secured By Real Estate - Nonaccrual",
+"item": "1423",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFD1582",
+"caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or Related Institutions And Still Serviced By The Reporting Branch Or Agency - Nonaccrual",
+"item": "1582",
+"depth": 1,
+"order": 11
+},
+{
+"mdrm": "RCFD1607",
+"caption": "Commercial And Industrial Loans - Past Due 90 Days Or More And Still Accruing",
+"item": "1607",
+"depth": 1,
+"order": 12
+},
+{
+"mdrm": "RCFD1608",
+"caption": "Commercial And Industrial Loans - Nonaccrual",
+"item": "1608",
+"depth": 1,
+"order": 13
+},
+{
+"mdrm": "RCFD1624",
+"caption": "Total Loans To Non-U.S. Addressees (Domicile) - Past Due 90 Days Or More And Still Accruing",
+"item": "1624",
+"depth": 1,
+"order": 14
+},
+{
+"mdrm": "RCFD1625",
+"caption": "Total Loans To Non-U.S. Addressees (Domicile) - Nonaccrual",
+"item": "1625",
+"depth": 1,
+"order": 15
+},
+{
+"mdrm": "RCFD1628",
+"caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or To Related Institutions And Still Serviced By The Reporting Branch Or Agency - Past Due 30-89 Days And Still Accruing",
+"item": "1628",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFD1629",
+"caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or To Related Institutions And Still Serviced By The Reporting Branch Or Agency - Past Due 90 Days Or More And Still Accruing",
+"item": "1629",
+"depth": 1,
+"order": 17
+},
+{
+"mdrm": "RCFD3184",
+"caption": "All Other Loans (Including All Lease Financing Receivables) - Past Due 90 Days Or More And Still Accruing",
+"item": "3184",
+"depth": 1,
+"order": 18
+},
+{
+"mdrm": "RCFD3185",
+"caption": "All Other Loans (Including All Lease Financing Receivables) - Nonaccrual",
+"item": "3185",
+"depth": 1,
+"order": 19
+},
+{
+"mdrm": "RCFD3530",
+"caption": "Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts: Fair Value Of Amounts Carried As Assets - Past Due 90 Days Or More",
+"item": "3530",
+"depth": 1,
+"order": 20
+},
+{
+"mdrm": "RCFDB733",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Day - 1-4 Family Residential Loans",
+"item": "B733",
+"depth": 1,
+"order": 21
+},
+{
+"mdrm": "RCFDB734",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Days - Home Equity Lines",
+"item": "B734",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCFDB735",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Days - Credit Card Receivables",
+"item": "B735",
+"depth": 1,
+"order": 23
+},
+{
+"mdrm": "RCFDB736",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Days Auto Loans",
+"item": "B736",
+"depth": 1,
+"order": 24
+},
+{
+"mdrm": "RCFDB737",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Days Other Consumer Loans",
+"item": "B737",
+"depth": 1,
+"order": 25
+},
+{
+"mdrm": "RCFDB738",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Days Commercial & Industrial Loans",
+"item": "B738",
+"depth": 1,
+"order": 26
+},
+{
+"mdrm": "RCFDB739",
+"caption": "Past Due Loan Amounts Included In Item 1: 30-89 Days All Other Loans",
+"item": "B739",
+"depth": 1,
+"order": 27
+},
+{
+"mdrm": "RCFDB740",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Or More 1-4 Family Residential Loans",
+"item": "B740",
+"depth": 1,
+"order": 28
+},
+{
+"mdrm": "RCFDB741",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Or More Home Equity Lines",
+"item": "B741",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCFDB742",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Or More Credit Card Receivables",
+"item": "B742",
+"depth": 1,
+"order": 30
+},
+{
+"mdrm": "RCFDB743",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Auto Loans",
+"item": "B743",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCFDB744",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Or More Other Consumer Loans",
+"item": "B744",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCFDB745",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Or More Commercial & Industrial Loans",
+"item": "B745",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCFDB746",
+"caption": "Past Due Loan Amounts Included In Item 1: 90 Days Or More All Other Loans",
+"item": "B746",
+"depth": 1,
+"order": 34
 }
 ],
 "O": [
@@ -918,6 +4285,41 @@
 "item": "4.a",
 "depth": 2,
 "order": 6
+},
+{
+"mdrm": "RCFD8709",
+"caption": "Written Otc Interest Rate Option Contracts",
+"item": "8709",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFD8713",
+"caption": "Purchased Otc Interest Rate Option Contracts",
+"item": "8713",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFDB913",
+"caption": "Non-Interest Bearing Deposits",
+"item": "B913",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFDB914",
+"caption": "Interest-Bearing Deposits",
+"item": "B914",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFN2123",
+"caption": "Unearned Income On Loans",
+"item": "2123",
+"depth": 1,
+"order": 11
 }
 ],
 "Q": [
@@ -927,6 +4329,13 @@
 "item": "2",
 "depth": 1,
 "order": 0
+},
+{
+"mdrm": "",
+"caption": "TRADING ASSETS - TOTAL FAIR VALUE REPORTED ON SCHEDULE RC",
+"item": "5",
+"depth": 1,
+"order": 0.5
 },
 {
 "mdrm": "RCFDG497",
@@ -965,6 +4374,556 @@
 "item": "3",
 "depth": 1,
 "order": 2
+}
+],
+"B": [
+{
+"mdrm": "RCFD0260",
+"caption": "U.S. Treasury Securities",
+"item": "0260",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFDA003",
+"caption": "Securities Of Foreign Governments And Official Institutions",
+"item": "A003",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFDC414",
+"caption": "Securities Purchased Under Agreements To Resell - With Depository Institutions In The U.S.",
+"item": "C414",
+"depth": 1,
+"order": 2
+},
+{
+"mdrm": "RCFDC415",
+"caption": "Securities Purchased Under Agreements To Resell - With Others",
+"item": "C415",
+"depth": 1,
+"order": 3
+},
+{
+"mdrm": "RCFDC422",
+"caption": "Securities Sold Under Agreements To Repurchase - With Depository Institutions In The U.S.",
+"item": "C422",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFDC423",
+"caption": "Securities Sold Under Agreements To Repurchase - With Others",
+"item": "C423",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFDF857",
+"caption": "Securities Purchased Under Agreements To Resell: With Nonbank Brokers And Dealers In Securities",
+"item": "F857",
+"depth": 1,
+"order": 6
+},
+{
+"mdrm": "RCFDJA22",
+"caption": "Equity securities with readily determinable fair values not held for trading",
+"item": "JA22",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFNA003",
+"caption": "Securities Of Foreign Governments And Official Institutions",
+"item": "A003",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFNC414",
+"caption": "Securities Purchased Under Agreements To Resell - With Depository Institutions In The U.S.",
+"item": "C414",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFNC415",
+"caption": "Securities Purchased Under Agreements To Resell - With Others",
+"item": "C415",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFNC422",
+"caption": "Securities Sold Under Agreements To Repurchase - With Depository Institutions In The U.S.",
+"item": "C422",
+"depth": 1,
+"order": 11
+},
+{
+"mdrm": "RCFNC423",
+"caption": "Securities Sold Under Agreements To Repurchase - With Others",
+"item": "C423",
+"depth": 1,
+"order": 12
+},
+{
+"mdrm": "RCFNF857",
+"caption": "Securities Purchased Under Agreements To Resell: With Nonbank Brokers And Dealers In Securities",
+"item": "F857",
+"depth": 1,
+"order": 13
+},
+{
+"mdrm": "RCFNJA22",
+"caption": "Equity securities with readily determinable fair values not held for trading",
+"item": "JA22",
+"depth": 1,
+"order": 14
+},
+{
+"mdrm": "RCFD1754",
+"caption": "Held-To-Maturity Securities; Total",
+"item": "1754",
+"depth": 1,
+"order": 15
+},
+{
+"mdrm": "RCFD1771",
+"caption": "Total Fair Value Of Held-To-Maturity Securities",
+"item": "1771",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFD1772",
+"caption": "Total Amortized Cost Of Available-For-Sale Securities",
+"item": "1772",
+"depth": 1,
+"order": 17
+},
+{
+"mdrm": "RCFD1773",
+"caption": "Available-for-sale debt securities (from Schedule RC-B; column D)",
+"item": "1773",
+"depth": 1,
+"order": 18
+},
+{
+"mdrm": "RCFDB915",
+"caption": "U.S. Treasury And U.S. Government Agency Obligations",
+"item": "B915",
+"depth": 1,
+"order": 19
+},
+{
+"mdrm": "RCFDC416",
+"caption": "Mortgage-Backed Securities - Issued Or Guaranteed By U.S. Government Agencies",
+"item": "C416",
+"depth": 1,
+"order": 20
+},
+{
+"mdrm": "RCFDC417",
+"caption": "Mortgage-Backed Securities - Other",
+"item": "C417",
+"depth": 1,
+"order": 21
+},
+{
+"mdrm": "RCFDG474",
+"caption": "Available-For-Sale Securities - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G474",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCFDG475",
+"caption": "Available-For-Sale Securities - Level 1 Fair Value Measurements",
+"item": "G475",
+"depth": 1,
+"order": 23
+},
+{
+"mdrm": "RCFDG476",
+"caption": "Available-For-Sale Securities - Level 2 Fair Value Measurements",
+"item": "G476",
+"depth": 1,
+"order": 24
+},
+{
+"mdrm": "RCFDG477",
+"caption": "Available-For-Sale Securities - Level 3 Fair Value Measurements",
+"item": "G477",
+"depth": 1,
+"order": 25
+},
+{
+"mdrm": "RCFDG479",
+"caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell -Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G479",
+"depth": 1,
+"order": 26
+},
+{
+"mdrm": "RCFDG480",
+"caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell -Level 1 Fair Value Measurements",
+"item": "G480",
+"depth": 1,
+"order": 27
+},
+{
+"mdrm": "RCFDG481",
+"caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell - Level 2 Fair Value Measurements",
+"item": "G481",
+"depth": 1,
+"order": 28
+},
+{
+"mdrm": "RCFDG482",
+"caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell - Level 3 Fair Value Measurements",
+"item": "G482",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCFDG507",
+"caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Total Fair Value Reported On Schedule Rc",
+"item": "G507",
+"depth": 1,
+"order": 30
+},
+{
+"mdrm": "RCFDG508",
+"caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G508",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCFDG509",
+"caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Level 1 Fair Value Measurements",
+"item": "G509",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCFDG510",
+"caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Level 2 Fair Value Measurements",
+"item": "G510",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCFDG511",
+"caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Level 3 Fair Value Measurements",
+"item": "G511",
+"depth": 1,
+"order": 34
+},
+{
+"mdrm": "RCFN1754",
+"caption": "Held-To-Maturity Securities; Total",
+"item": "1754",
+"depth": 1,
+"order": 35
+},
+{
+"mdrm": "RCFN1771",
+"caption": "Total Fair Value Of Held-To-Maturity Securities",
+"item": "1771",
+"depth": 1,
+"order": 36
+},
+{
+"mdrm": "RCFN1772",
+"caption": "Total Amortized Cost Of Available-For-Sale Securities",
+"item": "1772",
+"depth": 1,
+"order": 37
+},
+{
+"mdrm": "RCFN1773",
+"caption": "Available-for-sale debt securities (from Schedule RC-B; column D)",
+"item": "1773",
+"depth": 1,
+"order": 38
+},
+{
+"mdrm": "RCFNC416",
+"caption": "Mortgage-Backed Securities - Issued Or Guaranteed By U.S. Government Agencies",
+"item": "C416",
+"depth": 1,
+"order": 39
+},
+{
+"mdrm": "RCFNC417",
+"caption": "Mortgage-Backed Securities - Other",
+"item": "C417",
+"depth": 1,
+"order": 40
+}
+],
+"D": [
+{
+"mdrm": "RCFDF240",
+"caption": "Total Fair Value Of Nontrading Securities At Fair Value With Changes In Fair Value Reported In Current Earnings",
+"item": "F240",
+"depth": 1,
+"order": 0
+},
+{
+"mdrm": "RCFDF614",
+"caption": "Trading Assets - Commercial And Industrial Loans",
+"item": "F614",
+"depth": 1,
+"order": 1
+},
+{
+"mdrm": "RCFDG493",
+"caption": "Trading Derivative Assets - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G493",
+"depth": 1,
+"order": 2
+},
+{
+"mdrm": "RCFDG494",
+"caption": "Trading Derivative Assets - Level 1 Fair Value Measurements",
+"item": "G494",
+"depth": 1,
+"order": 3
+},
+{
+"mdrm": "RCFDG495",
+"caption": "Trading Derivative Assets - Level 2 Fair Value Measurements",
+"item": "G495",
+"depth": 1,
+"order": 4
+},
+{
+"mdrm": "RCFDG496",
+"caption": "Trading Derivative Assets - Level 3 Fair Value Measurements",
+"item": "G496",
+"depth": 1,
+"order": 5
+},
+{
+"mdrm": "RCFDG498",
+"caption": "Other Trading Assets - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G498",
+"depth": 1,
+"order": 6
+},
+{
+"mdrm": "RCFDG499",
+"caption": "Other Trading Assets - Level 1 Fair Value Measurements",
+"item": "G499",
+"depth": 1,
+"order": 7
+},
+{
+"mdrm": "RCFDG500",
+"caption": "Other Trading Assets - Level 2 Fair Value Measurements",
+"item": "G500",
+"depth": 1,
+"order": 8
+},
+{
+"mdrm": "RCFDG501",
+"caption": "Other Trading Assets - Level 3 Fair Value Measurements",
+"item": "G501",
+"depth": 1,
+"order": 9
+},
+{
+"mdrm": "RCFDG512",
+"caption": "Trading Derivative Liabilities - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G512",
+"depth": 1,
+"order": 10
+},
+{
+"mdrm": "RCFDG513",
+"caption": "Trading Derivative Liabilities - Level 1 Fair Value Measurements",
+"item": "G513",
+"depth": 1,
+"order": 11
+},
+{
+"mdrm": "RCFDG514",
+"caption": "Trading Derivative Liabilities - Level 2 Fair Value Measurements",
+"item": "G514",
+"depth": 1,
+"order": 12
+},
+{
+"mdrm": "RCFDG515",
+"caption": "Trading Derivative Liabilities - Level 3 Fair Value Measurements",
+"item": "G515",
+"depth": 1,
+"order": 13
+},
+{
+"mdrm": "RCFDG516",
+"caption": "Other Trading Liabilities - Total Fair Value Reported On Schedule Rc",
+"item": "G516",
+"depth": 1,
+"order": 14
+},
+{
+"mdrm": "RCFDG517",
+"caption": "Other Trading Liabilities - Less Amounts Netted In The Determination Of Total Fair Value",
+"item": "G517",
+"depth": 1,
+"order": 15
+},
+{
+"mdrm": "RCFDG518",
+"caption": "Other Trading Liabilities - Level 1 Fair Value Measurements",
+"item": "G518",
+"depth": 1,
+"order": 16
+},
+{
+"mdrm": "RCFDG519",
+"caption": "Other Trading Liabilities - Level 2 Fair Value Measurements",
+"item": "G519",
+"depth": 1,
+"order": 17
+},
+{
+"mdrm": "RCFDG520",
+"caption": "Other Trading Liabilities - Level 3 Fair Value Measurements",
+"item": "G520",
+"depth": 1,
+"order": 18
+},
+{
+"mdrm": "RCFDK298",
+"caption": "Trading Assets:  Mortgage-Backed Securities Issued Or Guaranteed By U.S. Agencies",
+"item": "K298",
+"depth": 1,
+"order": 19
+},
+{
+"mdrm": "RCFDK299",
+"caption": "Trading Securities:  Other Asset-Backed Securities",
+"item": "K299",
+"depth": 1,
+"order": 20
+},
+{
+"mdrm": "RCFDK302",
+"caption": "Trading Assets: Other Trading Assets",
+"item": "K302",
+"depth": 1,
+"order": 21
+},
+{
+"mdrm": "RCFDL193",
+"caption": "Trading Assets:  Other Securities",
+"item": "L193",
+"depth": 1,
+"order": 22
+},
+{
+"mdrm": "RCFN3536",
+"caption": "Trading Assets - All Other Mortgage-Backed Securities",
+"item": "3536",
+"depth": 1,
+"order": 23
+},
+{
+"mdrm": "RCFN3548",
+"caption": "Trading Liabilities; Total",
+"item": "3548",
+"depth": 1,
+"order": 24
+},
+{
+"mdrm": "RCFNF614",
+"caption": "Trading Assets - Commercial And Industrial Loans",
+"item": "F614",
+"depth": 1,
+"order": 25
+},
+{
+"mdrm": "RCFNK298",
+"caption": "Trading Assets:  Mortgage-Backed Securities Issued Or Guaranteed By U.S. Agencies",
+"item": "K298",
+"depth": 1,
+"order": 26
+},
+{
+"mdrm": "RCFNK299",
+"caption": "Trading Securities:  Other Asset-Backed Securities",
+"item": "K299",
+"depth": 1,
+"order": 27
+},
+{
+"mdrm": "RCFNK302",
+"caption": "Trading Assets: Other Trading Assets",
+"item": "K302",
+"depth": 1,
+"order": 28
+},
+{
+"mdrm": "RCFNL193",
+"caption": "Trading Assets:  Other Securities",
+"item": "L193",
+"depth": 1,
+"order": 29
+},
+{
+"mdrm": "RCFD3543",
+"caption": "Revaluation Gains On Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts",
+"item": "3543",
+"depth": 1,
+"order": 30
+},
+{
+"mdrm": "RCFD3547",
+"caption": "Revaluation Losses On Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts",
+"item": "3547",
+"depth": 1,
+"order": 31
+},
+{
+"mdrm": "RCFDF241",
+"caption": "Level 2 Fair Value Measurements Of Nontrading Securities At Fair Value With Changes In Fair Value Reported In Current Earnings",
+"item": "F241",
+"depth": 1,
+"order": 32
+},
+{
+"mdrm": "RCFDF242",
+"caption": "Level 3 Fair Value Measurements Nontrading Securities At Fair Value With Changes In Fair Value Reported In Current Earnings",
+"item": "F242",
+"depth": 1,
+"order": 33
+},
+{
+"mdrm": "RCFDF692",
+"caption": "Level 1 Fair Value Measurements For  Nontrading Securities At Fair Value With Changes In Fair Value Reported In Current Earnings.",
+"item": "F692",
+"depth": 1,
+"order": 34
+},
+{
+"mdrm": "RCFN3543",
+"caption": "Revaluation Gains On Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts",
+"item": "3543",
+"depth": 1,
+"order": 35
+},
+{
+"mdrm": "RCFN3547",
+"caption": "Revaluation Losses On Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts",
+"item": "3547",
+"depth": 1,
+"order": 36
 }
 ]
 }
