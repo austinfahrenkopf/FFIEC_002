@@ -1,0 +1,138 @@
+{
+  "_description": "Completeness exclusion list for FFIEC 002 validate_build_002.py. excluded_codes: RCON domestic-offices variants removed in 2021 form update. sequence_exclusions: per-schedule item-number gaps to document and gate on. Gate threshold: MAX(quarter_end) >= 2022-01-01 AND n_filers >= 10.",
+  "_gate_threshold": {
+    "min_quarter": "2022-01-01",
+    "min_filers": 10
+  },
+  "excluded_codes": {
+    "RCON2154": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1763": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1420": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1480": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1885": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON2944": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON0010": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON2122": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON2205": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1797": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON2927": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1764": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1415": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON1460": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    },
+    "RCON2170": {
+      "category": "rcon_domestic_offices_discontinued",
+      "reason": "RCON domestic-offices variant; FFIEC 002 removed domestic/IBF split for these codes in Q3-2021; last panel entry 2021-06-30"
+    }
+  },
+  "sequence_exclusions": {
+    "E": {
+      "6": "known_gap_needs_pdf_verification: Schedule E item 6 between items 5 and 7; may be removed"
+    },
+    "L": {
+      "5": "known_gap_needs_pdf_verification: Schedule L item 5 between letters-of-credit (4) and derivatives (6); may be removed"
+    },
+    "O": {
+      "3": "known_gap_needs_pdf_verification: Schedule O item 3 between allowable exclusions (2) and avg assets (4); may be removed"
+    },
+    "S": {
+      "5": "known_gap_needs_pdf_verification: Schedule S securitization item 5 may be removed",
+      "7": "known_gap_needs_pdf_verification: Schedule S securitization item 7 may be removed",
+      "8": "known_gap_needs_pdf_verification: Schedule S securitization item 8 may be removed"
+    },
+    "Q -- Liabilities": {
+      "13": "known_gap_needs_pdf_verification: Schedule Q-Liabilities item 13 between items 12 and 14; may be removed"
+    },
+    "B": {
+      "2": "known_gap_needs_pdf_verification: Schedule B item 2 between debt securities (1) and trading (4); may be AFS or HTM category",
+      "3": "known_gap_needs_pdf_verification: Schedule B item 3 between debt securities (1) and trading (4); may be equity securities"
+    },
+    "C -- Part II": [
+      "1"
+    ]
+  },
+  "spurious_allowed": {},
+  "_spurious_description": "spurious_allowed: hierarchy LEAF codes legitimately absent from the panel (text/admin fields or valid-but-unfiled form lines greyed-out per C4). The bidirectional gate FAILS on any hierarchy leaf code never reported in the panel that is NOT listed here — so genuine parse artifacts must be dropped via *_hierarchy_overrides.json drop_codes, not parked here.",
+  "structure_exclusions": {
+    "C": [
+      "2.b",
+      "2.b.b",
+      "3.b",
+      "4.a",
+      "4.a.b",
+      "4.b",
+      "4.b.b",
+      "M.1",
+      "M.2.a",
+      "M.2.b",
+      "M.2.c"
+    ],
+    "Q": [
+      "5.b.1",
+      "5.b.1.c",
+      "5.b.1.d",
+      "5.b.1.e",
+      "5.b.b",
+      "5.b.c",
+      "5.b.d",
+      "5.b.e"
+    ],
+    "S": [
+      "M.1.a.1",
+      "M.1.a.2",
+      "M.1.b.1",
+      "M.1.b.2"
+    ],
+    "Q -- Liabilities": [
+      "14.b",
+      "14.c",
+      "14.d",
+      "14.e"
+    ],
+    "Q -- Memoranda": [
+      "M.1.a.b"
+    ]
+  },
+  "_structure_exclusions_note": "Pre-existing Schedule structural debt from the 2026-06-19/20 ?25/?26 RAL/Q/C buildout (depth-vs-item mismatches + cross-part duplicate item numbers). RAL was reconciled to the form 2026-06-22 and is intentionally NOT excluded (must stay clean). The rest are documented known debt scoped for per-schedule PDF reconciliation; the gate blocks any NEW structural regression beyond this list."
+}
