@@ -5,7 +5,7 @@
       "_note": "Schedule E: missing depth-1 parent rows for IPC / depository-inst / foreign-bank groups",
       "key": "E",
       "mdrm": "",
-      "caption": "DEPOSITS OF INDIVIDUALS, PARTNERSHIPS, AND CORPORATIONS",
+      "caption": "Individuals, partnerships, and corporations (include all certified and official checks)",
       "item": "1",
       "depth": 1,
       "order": -1
@@ -13,7 +13,7 @@
     {
       "key": "E",
       "mdrm": "",
-      "caption": "DEPOSITS OF COMMERCIAL BANKS AND OTHER DEPOSITORY INSTITUTIONS IN THE U.S.",
+      "caption": "Commercial banks in the U.S. (including their IBFs)",
       "item": "2",
       "depth": 1,
       "order": 1.5
@@ -21,7 +21,7 @@
     {
       "key": "E",
       "mdrm": "",
-      "caption": "DEPOSITS OF BANKS IN FOREIGN COUNTRIES",
+      "caption": "Banks in foreign countries",
       "item": "3",
       "depth": 1,
       "order": 3.5
@@ -30,7 +30,7 @@
       "_note": "Schedule L: missing depth-1 parent rows for standby-letters group and interest-rate-derivatives group",
       "key": "L",
       "mdrm": "",
-      "caption": "STANDBY LETTERS OF CREDIT AND FOREIGN OFFICE GUARANTEES",
+      "caption": "Standby letters of credit and foreign office guarantees",
       "item": "3",
       "depth": 1,
       "order": 1.5
@@ -38,19 +38,10 @@
     {
       "key": "L",
       "mdrm": "",
-      "caption": "INTEREST RATE DERIVATIVE CONTRACTS",
+      "caption": "Interest rate derivative contracts",
       "item": "9",
       "depth": 1,
       "order": 12.5
-    },
-    {
-      "_note": "Schedule N: missing depth-1 parent for domestic past-due loan sub-items 1.a/1.b/1.c",
-      "key": "N",
-      "mdrm": "",
-      "caption": "TOTAL LOANS TO U.S. ADDRESSEES (DOMICILE) - PAST DUE 30-89 DAYS AND STILL ACCRUING",
-      "item": "1",
-      "depth": 1,
-      "order": 0.5
     },
     {
       "_note": "Schedule RAL: missing depth-1 parents for liability sub-groups 4.x and 5.x",
@@ -73,7 +64,7 @@
       "_note": "Schedule C: missing depth-1 parents for loan category sub-groups 1.x / 2.x / 4.x / 9.x",
       "key": "C",
       "mdrm": "",
-      "caption": "LOANS SECURED BY REAL ESTATE",
+      "caption": "Loans secured by real estate",
       "item": "1",
       "depth": 1,
       "order": -1
@@ -81,7 +72,7 @@
     {
       "key": "C",
       "mdrm": "",
-      "caption": "LOANS TO DEPOSITORY INSTITUTIONS AND ACCEPTANCES PURCHASED",
+      "caption": "Loans to depository institutions and acceptances purchased",
       "item": "2",
       "depth": 1,
       "order": 3.5
@@ -89,7 +80,7 @@
     {
       "key": "C",
       "mdrm": "",
-      "caption": "COMMERCIAL AND INDUSTRIAL LOANS",
+      "caption": "Commercial and industrial loans",
       "item": "4",
       "depth": 1,
       "order": 5.5
@@ -97,7 +88,7 @@
     {
       "key": "C",
       "mdrm": "",
-      "caption": "LEASE FINANCING RECEIVABLES (NET OF UNEARNED INCOME)",
+      "caption": "Lease financing receivables (net of unearned income)",
       "item": "9",
       "depth": 1,
       "order": 10.5
@@ -118,72 +109,37 @@
     },
     {
       "key": "C",
-      "mdrm": "RCFD1404",
-      "caption": "Restructured Loans And Leases (See Note Below)",
-      "item": "M.1",
-      "depth": 1
-    },
-    {
-      "key": "C",
-      "mdrm": "RCFD1424",
-      "caption": "Loans Secured By Real Estate: Restructured And In Compliance With Modified Terms",
-      "item": "M.2",
-      "depth": 1
-    },
-    {
-      "key": "C",
-      "mdrm": "RCFD1627",
-      "caption": "Total Loans To Non-U.S. Addressees (Domicile): Restructured And In Compliance With Modified Terms",
-      "item": "M.2.b",
-      "depth": 2
-    },
-    {
-      "key": "C",
-      "mdrm": "RCFD1637",
-      "caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or To Related Institutions And Still Serviced By The Reporting Branch Or Agency: Restructured And In Compliance With Modified Terms",
-      "item": "M.2.c",
-      "depth": 2
-    },
-    {
-      "key": "C",
       "mdrm": "RCFD1798",
       "caption": "All Other Loans Secured By 1-4 Family Residential Properties",
-      "item": "1.c.2",
+      "item": "1.c.(2)",
       "depth": 3
-    },
-    {
-      "key": "C",
-      "mdrm": "RCFD3186",
-      "caption": "All Other Loans (Including All Lease Financing Receivables): Restructured And In Compliance With Modified Terms",
-      "item": "M.2.d",
-      "depth": 2
     },
     {
       "key": "C",
       "mdrm": "RCFDB532",
       "caption": "Loans To U.S. Branches And Agencies Of Foreign Banks",
-      "item": "2.a.1",
+      "item": "2.a.(1)",
       "depth": 3
     },
     {
       "key": "C",
       "mdrm": "RCFDB533",
       "caption": "Loans To Other Commercial Banks In The U.S.",
-      "item": "2.a.2",
+      "item": "2.a.(2)",
       "depth": 3
     },
     {
       "key": "C",
       "mdrm": "RCFDB536",
       "caption": "Loans To Foreign Branches Of Other U.S. Banks",
-      "item": "2.c.1",
+      "item": "2.c.(1)",
       "depth": 3
     },
     {
       "key": "C",
       "mdrm": "RCFDB537",
       "caption": "Loans To Other Banks In Foreign Countries",
-      "item": "2.c.2",
+      "item": "2.c.(2)",
       "depth": 3
     },
     {
@@ -194,80 +150,10 @@
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDG011",
-      "caption": "Loans Measured At Fair Value: Other Loans",
-      "item": "M.9.b",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG483",
-      "caption": "Loans And Leases Held For Sale - Total Fair Value Reported On Schedule Rc",
-      "item": "3",
-      "depth": 1
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG484",
-      "caption": "Loans And Leases Held For Sale - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "3.b",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG485",
-      "caption": "Loans And Leases Held For Sale - Level 1 Fair Value Measurements",
-      "item": "3.c",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG486",
-      "caption": "Loans And Leases Held For Sale - Level 2 Fair Value Measurements",
-      "item": "3.d",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG487",
-      "caption": "Loans And Leases Held For Sale - Level 3 Fair Value Measurements",
-      "item": "3.e",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG488",
-      "caption": "Loans And Leases Held For Investment - Total Fair Value Reported On Schedule Rc",
-      "item": "4",
-      "depth": 1
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG489",
-      "caption": "Loans And Leases Held For Investment - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "4.b",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG490",
-      "caption": "Loans And Leases Held For Investment - Level 1 Fair Value Measurements",
-      "item": "4.c",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG491",
-      "caption": "Loans And Leases Held For Investment - Level 2 Fair Value Measurements",
-      "item": "4.d",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG492",
-      "caption": "Loans And Leases Held For Investment - Level 3 Fair Value Measurements",
-      "item": "4.e",
+      "caption": "Other loans",
+      "item": "M.3.c",
       "depth": 2
     },
     {
@@ -285,31 +171,31 @@
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDHT87",
-      "caption": "Loans measured at fair value; Loans secured by real estate; Secured by 1-4 family residential properties; Domestic Offices",
-      "item": "M.6.a",
+      "caption": "Secured by 1-4 family residential properties",
+      "item": "M.3.a.(1)",
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDHT88",
-      "caption": "Loans measured at fair value; Loans secured by real estate; All other loans secured by real estate; Domestic Offices",
-      "item": "M.6.b",
+      "caption": "All other loans secured by real estate",
+      "item": "M.3.a.(2)",
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDHT91",
-      "caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; Secured by 1-4 family residential properties; Domestic Offices",
-      "item": "M.6.c",
+      "caption": "Secured by 1-4 family residential properties",
+      "item": "M.4.a.(1)",
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDHT92",
-      "caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; All other loans secured by real estate; Domestic Offices",
-      "item": "M.6.d",
+      "caption": "All other loans secured by real estate",
+      "item": "M.4.a.(2)",
       "depth": 2
     },
     {
@@ -351,7 +237,7 @@
       "key": "C",
       "mdrm": "RCFN1798",
       "caption": "All Other Loans Secured By 1-4 Family Residential Properties",
-      "item": "1.c.2.b",
+      "item": "1.c.(2).b",
       "depth": 4
     },
     {
@@ -393,14 +279,14 @@
       "key": "C",
       "mdrm": "RCFNB532",
       "caption": "Loans To U.S. Branches And Agencies Of Foreign Banks",
-      "item": "2.a.1.b",
+      "item": "2.a.(1).b",
       "depth": 4
     },
     {
       "key": "C",
       "mdrm": "RCFNB533",
       "caption": "Loans To Other Commercial Banks In The U.S.",
-      "item": "2.a.2.b",
+      "item": "2.a.(2).b",
       "depth": 4
     },
     {
@@ -414,14 +300,14 @@
       "key": "C",
       "mdrm": "RCFNB536",
       "caption": "Loans To Foreign Branches Of Other U.S. Banks",
-      "item": "2.c.1.b",
+      "item": "2.c.(1).b",
       "depth": 4
     },
     {
       "key": "C",
       "mdrm": "RCFNB537",
       "caption": "Loans To Other Banks In Foreign Countries",
-      "item": "2.c.2.b",
+      "item": "2.c.(2).b",
       "depth": 4
     },
     {
@@ -432,10 +318,10 @@
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNG011",
-      "caption": "Loans Measured At Fair Value: Other Loans",
-      "item": "M.9.b.b",
+      "caption": "Other loans (IBF)",
+      "item": "M.3.c.b",
       "depth": 3
     },
     {
@@ -453,38 +339,32 @@
       "depth": 4
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNHT87",
-      "caption": "Loans measured at fair value; Loans secured by real estate; Secured by 1-4 family residential properties; Domestic Offices",
-      "item": "M.6.a.b",
+      "caption": "Secured by 1-4 family residential properties (IBF)",
+      "item": "M.3.a.(1).b",
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNHT88",
-      "caption": "Loans measured at fair value; Loans secured by real estate; All other loans secured by real estate; Domestic Offices",
-      "item": "M.6.b.b",
+      "caption": "All other loans secured by real estate (IBF)",
+      "item": "M.3.a.(2).b",
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNHT91",
-      "caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; Secured by 1-4 family residential properties; Domestic Offices",
-      "item": "M.6.c.b",
+      "caption": "Secured by 1-4 family residential properties (IBF)",
+      "item": "M.4.a.(1).b",
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNHT92",
-      "caption": "Loans measured at fair value; Unpaid principal balance of loans measured at fair value; All other loans secured by real estate; Domestic Offices",
-      "item": "M.6.d.b",
+      "caption": "All other loans secured by real estate (IBF)",
+      "item": "M.4.a.(2).b",
       "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDF240",
-      "caption": "Nontrading securities at fair value: Total fair value",
-      "item": "5.b.(1)"
     },
     {
       "key": "RAL",
@@ -494,288 +374,11 @@
       "depth": 2
     },
     {
-      "key": "Q",
-      "mdrm": "RCFDG493",
-      "caption": "Trading Derivative Assets - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "5.a.b",
-      "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG494",
-      "caption": "Trading Derivative Assets - Level 1 Fair Value Measurements",
-      "item": "5.a.c",
-      "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG495",
-      "caption": "Trading Derivative Assets - Level 2 Fair Value Measurements",
-      "item": "5.a.d",
-      "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG496",
-      "caption": "Trading Derivative Assets - Level 3 Fair Value Measurements",
-      "item": "5.a.e",
-      "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG498",
-      "caption": "Other Trading Assets - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "5.b.b",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG499",
-      "caption": "Other Trading Assets - Level 1 Fair Value Measurements",
-      "item": "5.b.c",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG500",
-      "caption": "Other Trading Assets - Level 2 Fair Value Measurements",
-      "item": "5.b.d",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG501",
-      "caption": "Other Trading Assets - Level 3 Fair Value Measurements",
-      "item": "5.b.e",
-      "depth": 2
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG512",
-      "caption": "Trading Derivative Liabilities - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "10.a.b",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG513",
-      "caption": "Trading Derivative Liabilities - Level 1 Fair Value Measurements",
-      "item": "10.a.c",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG514",
-      "caption": "Trading Derivative Liabilities - Level 2 Fair Value Measurements",
-      "item": "10.a.d",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG515",
-      "caption": "Trading Derivative Liabilities - Level 3 Fair Value Measurements",
-      "item": "10.a.e",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG516",
-      "caption": "Other Trading Liabilities - Total Fair Value Reported On Schedule Rc",
-      "item": "10.b",
-      "depth": 2
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG517",
-      "caption": "Other Trading Liabilities - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "10.b.b",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG518",
-      "caption": "Other Trading Liabilities - Level 1 Fair Value Measurements",
-      "item": "10.b.c",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG519",
-      "caption": "Other Trading Liabilities - Level 2 Fair Value Measurements",
-      "item": "10.b.d",
-      "depth": 3
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG520",
-      "caption": "Other Trading Liabilities - Level 3 Fair Value Measurements",
-      "item": "10.b.e",
-      "depth": 3
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFDK298",
-      "caption": "Trading Assets:  Mortgage-Backed Securities Issued Or Guaranteed By U.S. Agencies",
-      "item": "4.b",
-      "depth": 2
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFDK299",
-      "caption": "Trading Securities:  Other Asset-Backed Securities",
-      "item": "4.c",
-      "depth": 2
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFDK302",
-      "caption": "Trading Assets: Other Trading Assets",
-      "item": "4.d",
-      "depth": 2
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFDL193",
-      "caption": "Trading Assets:  Other Securities",
-      "item": "4.e",
-      "depth": 2
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFN3536",
-      "caption": "Trading Assets - All Other Mortgage-Backed Securities",
-      "item": "4.f",
-      "depth": 2
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFN3548",
-      "caption": "Trading Liabilities; Total",
-      "item": "5",
-      "depth": 1
-    },
-    {
       "key": "RAL",
       "mdrm": "RCFNF614",
       "caption": "Trading Assets - Commercial And Industrial Loans",
       "item": "M.5.b.b",
       "depth": 3
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFNK298",
-      "caption": "Trading Assets:  Mortgage-Backed Securities Issued Or Guaranteed By U.S. Agencies",
-      "item": "4.b.b",
-      "depth": 3
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFNK299",
-      "caption": "Trading Securities:  Other Asset-Backed Securities",
-      "item": "4.c.b",
-      "depth": 3
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFNK302",
-      "caption": "Trading Assets: Other Trading Assets",
-      "item": "4.d.b",
-      "depth": 3
-    },
-    {
-      "key": "D",
-      "mdrm": "RCFNL193",
-      "caption": "Trading Assets:  Other Securities",
-      "item": "4.e.b",
-      "depth": 3
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN1668",
-      "caption": "Ibf Deposit Liabilities - U.S. Branches And Agencies Of Other Foreign Banks",
-      "item": "2.a.d",
-      "depth": 3,
-      "_note": "E depth assignment: RCFN1668 -> E item=2.a.d depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN1669",
-      "caption": "Ibf Deposit Liabilities - Other Commercial Banks In The U.S.",
-      "item": "2.b.d",
-      "depth": 3,
-      "_note": "E depth assignment: RCFN1669 -> E item=2.b.d depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN1671",
-      "caption": "Ibf Deposit Liabilities - Foreign Branches Of U.S. Banks",
-      "item": "3.a.d",
-      "depth": 3,
-      "_note": "E depth assignment: RCFN1671 -> E item=3.a.d depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN1672",
-      "caption": "Ibf Deposit Liabilities - Other Banks In Foreign Countries",
-      "item": "3.b.d",
-      "depth": 3,
-      "_note": "E depth assignment: RCFN1672 -> E item=3.b.d depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN2205",
-      "caption": "Total Deposits And Credit Balances",
-      "item": "7.d",
-      "depth": 2,
-      "_note": "E depth assignment: RCFN2205 -> E item=7.d depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN2261",
-      "caption": "Total Other Deposits",
-      "item": "5.d",
-      "depth": 2,
-      "_note": "E depth assignment: RCFN2261 -> E item=5.d depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFN2650",
-      "caption": "Deposits Of Foreign Governments And Official Institutions; Central Banks; And International Institutions",
-      "item": "4.d",
-      "depth": 2,
-      "_note": "E depth assignment: RCFN2650 -> E item=4.d depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFNC042",
-      "caption": "Ibf Deposit Liabilities - Individuals; Partnerships; And Corporations Include All Certified And Official Checks: Us Addressees (Domicile)",
-      "item": "1.a.d",
-      "depth": 3,
-      "_note": "E depth assignment: RCFNC042 -> E item=1.a.d depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFNC045",
-      "caption": "Ibf Deposit Liabilities - Individuals; Partnerships And Corporations (Include All Certified And Official Checks): Non-U.S. Addresses (Domicile)",
-      "item": "1.b.d",
-      "depth": 3,
-      "_note": "E depth assignment: RCFNC045 -> E item=1.b.d depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCFNF234",
-      "caption": "Total Foreign Deposits (Included In Item B Above)",
-      "item": "M.6",
-      "depth": 1,
-      "_note": "E depth assignment: RCFNF234 -> E item=M.6 depth=1"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2210",
-      "caption": "Total Demand Deposits (See Note Below)",
-      "item": "7.b",
-      "depth": 2,
-      "_note": "E depth assignment: RCON2210 -> E item=7.b depth=2"
     },
     {
       "key": "E",
@@ -786,156 +389,11 @@
       "_note": "E depth assignment: RCON2604 -> E item=M.1.a depth=2"
     },
     {
-      "key": "E",
-      "mdrm": "RCON5590",
-      "caption": "Preferred Deposits",
-      "item": "M.4",
-      "depth": 1,
-      "_note": "E depth assignment: RCON5590 -> E item=M.4 depth=1"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF049",
-      "caption": "Amount Of Deposit Accounts (Excluding Retirement Accounts) Of $250;000 Or Less",
-      "item": "M.2.a",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF049 -> E item=M.2.a depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF050",
-      "caption": "Number Of Deposit Accounts (Excluding Retirement Accounts)Of $250;000 Or Less",
-      "item": "M.2.b",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF050 -> E item=M.2.b depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF051",
-      "caption": "Amount Of Deposit Accounts (Excluding Retirement Accounts) Of More Than $250;000",
-      "item": "M.2.c",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF051 -> E item=M.2.c depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF052",
-      "caption": "Number Of Deposit Accounts (Excluding Retirement Accounts) Of More Than $250;000",
-      "item": "M.2.d",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF052 -> E item=M.2.d depth=2"
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1403",
-      "caption": "Total Loans And Lease Finance Receivables: Nonaccrual",
-      "item": "3.c",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1407",
-      "caption": "Total Loans And Lease Financing Receivables: Past Due 90 Days Or More And Still Accruing",
-      "item": "3.b",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1422",
-      "caption": "Loans Secured By Real Estate - Past Due 90 Days Or More And Still Accruing",
-      "item": "1.b.b",
-      "depth": 3
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1423",
-      "caption": "Loans Secured By Real Estate - Nonaccrual",
-      "item": "1.b.c",
-      "depth": 3
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1582",
-      "caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or Related Institutions And Still Serviced By The Reporting Branch Or Agency - Nonaccrual",
-      "item": "M.1.c",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1607",
-      "caption": "Commercial And Industrial Loans - Past Due 90 Days Or More And Still Accruing",
-      "item": "1.a.b",
-      "depth": 3
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1608",
-      "caption": "Commercial And Industrial Loans - Nonaccrual",
-      "item": "1.a.c",
-      "depth": 3
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1624",
-      "caption": "Total Loans To Non-U.S. Addressees (Domicile) - Past Due 90 Days Or More And Still Accruing",
-      "item": "2.b",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1625",
-      "caption": "Total Loans To Non-U.S. Addressees (Domicile) - Nonaccrual",
-      "item": "2.c",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1628",
-      "caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or To Related Institutions And Still Serviced By The Reporting Branch Or Agency - Past Due 30-89 Days And Still Accruing",
-      "item": "M.1.a",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD1629",
-      "caption": "Book Value Of Loans Sold Or Otherwise Transferred To Head Office Or To Related Institutions And Still Serviced By The Reporting Branch Or Agency - Past Due 90 Days Or More And Still Accruing",
-      "item": "M.1.b",
-      "depth": 2
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD3184",
-      "caption": "All Other Loans (Including All Lease Financing Receivables) - Past Due 90 Days Or More And Still Accruing",
-      "item": "1.c.b",
-      "depth": 3
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD3185",
-      "caption": "All Other Loans (Including All Lease Financing Receivables) - Nonaccrual",
-      "item": "1.c.c",
-      "depth": 3
-    },
-    {
-      "key": "N",
-      "mdrm": "RCFD3530",
-      "caption": "Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts: Fair Value Of Amounts Carried As Assets - Past Due 90 Days Or More",
-      "item": "M.2.b",
-      "depth": 2
-    },
-    {
       "key": "RAL",
       "mdrm": "RCFD0371",
       "caption": "Obligations Of Other U.S. Government Agencies And Corporations",
       "item": "1.b.(2)",
       "depth": 3
-    },
-    {
-      "key": "C",
-      "mdrm": "RCFD1609",
-      "caption": "Commercial And Industrial Loans: Restructured And In Compliance With Modified Terms",
-      "item": "M.2.a",
-      "depth": 2
     },
     {
       "key": "RAL",
@@ -969,29 +427,22 @@
       "key": "C",
       "mdrm": "RCFD1797",
       "caption": "Revolving; Open-End Loans Secured By 1-4 Family Residential Properties And Extended Under Lines Of Credit",
-      "item": "1.c.1",
+      "item": "1.c.(1)",
       "depth": 3
     },
     {
       "key": "L",
       "mdrm": "RCFD3376",
       "caption": "Standby Letters Of Credit And Foreign Office Guarantees To U.S. Addressees (Domicile)",
-      "item": "3.a.1",
+      "item": "3.a.(1)",
       "depth": 3
     },
     {
       "key": "L",
       "mdrm": "RCFD3377",
       "caption": "Standby Letters Of Credit Issued To Non-U.S. Addressees (Domicile)",
-      "item": "3.a.2",
+      "item": "3.a.(2)",
       "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFD3543",
-      "caption": "Revaluation Gains On Interest Rate; Foreign Exchange Rate; And Other Commodity And Equity Contracts",
-      "item": "5.a",
-      "depth": 2
     },
     {
       "key": "RAL",
@@ -1214,113 +665,80 @@
       "key": "L",
       "mdrm": "RCFDC968",
       "caption": "Credit Derivatives: Notional Amounts-Credit Default Swaps-Guarantor",
-      "item": "6.a.1",
+      "item": "6.a.(1)",
       "depth": 3
     },
     {
       "key": "L",
       "mdrm": "RCFDC969",
       "caption": "Credit Derivatives: Notional Amounts - Credit Defaults Swaps - Beneficiary",
-      "item": "6.a.1.b",
+      "item": "6.a.(1).b",
       "depth": 4
     },
     {
       "key": "L",
       "mdrm": "RCFDC970",
       "caption": "Credit Derivatives: Notional Amounts-Total Return Swaps-Guarantor",
-      "item": "6.a.2",
+      "item": "6.a.(2)",
       "depth": 3
     },
     {
       "key": "L",
       "mdrm": "RCFDC971",
       "caption": "Credit Derivatives: Notional Amounts-Total Return Swaps-Beneficiary",
-      "item": "6.a.2.b",
+      "item": "6.a.(2).b",
       "depth": 4
     },
     {
       "key": "L",
       "mdrm": "RCFDC972",
       "caption": "Credit Derivatives: Notional Amounts-Credit Options-Guarantor",
-      "item": "6.a.3",
+      "item": "6.a.(3)",
       "depth": 3
     },
     {
       "key": "L",
       "mdrm": "RCFDC973",
       "caption": "Credit Derivatives: Notional Amounts-Credit Options-Beneficiary",
-      "item": "6.a.3.b",
+      "item": "6.a.(3).b",
       "depth": 4
     },
     {
-      "key": "Q",
-      "mdrm": "RCFDF241",
-      "caption": "Nontrading securities at fair value: Level 2 fair value",
-      "item": "5.b.(1).d"
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDF242",
-      "caption": "Nontrading securities at fair value: Level 3 fair value",
-      "item": "5.b.(1).e"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDF252",
-      "caption": "Total Fair Value Of Deposits",
-      "item": "8",
-      "depth": 1,
-      "_note": "E depth assignment: RCFDF252 -> Q -- Liabilities item=8 depth=1"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDF253",
-      "caption": "Level 2 Fair Value Measurements Of Deposits",
-      "item": "8.d",
-      "depth": 2,
-      "_note": "E depth assignment: RCFDF253 -> Q -- Liabilities item=8.d depth=2"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDF254",
-      "caption": "Level 3 Fair Value Measurements Of Deposits",
-      "item": "8.e",
-      "depth": 2,
-      "_note": "E depth assignment: RCFDF254 -> Q -- Liabilities item=8.e depth=2"
-    },
-    {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDF261",
-      "caption": "Total Fair Value Of Loan Commitments (Not Accounted For As Derivatives)",
-      "item": "M.10.a",
-      "depth": 2
+      "caption": "Total fair value reported on Schedule RAL",
+      "item": "M.2.a.(A)",
+      "depth": 2,
+      "col": true
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDF262",
-      "caption": "Level 2 Fair Value Measurements Of Loan Commitments (Not Accounted For As Derivatives)",
-      "item": "M.10.c",
-      "depth": 2
+      "caption": "Level 2 fair value measurements",
+      "item": "M.2.a.(D)",
+      "depth": 2,
+      "col": true
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDF263",
-      "caption": "Level 3 Fair Value Measurements Of Loan Commitments (Not Accounted For As Derivatives)",
-      "item": "M.10.d",
-      "depth": 2
+      "caption": "Level 3 fair value measurements",
+      "item": "M.2.a.(E)",
+      "depth": 2,
+      "col": true
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDF585",
-      "caption": "Commercial And Industrial Loans Measured At Fair Value (Domestic Only)",
-      "item": "M.8.a",
+      "caption": "Commercial and industrial loans",
+      "item": "M.3.b",
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDF597",
-      "caption": "Unpaid Principal Balance Of Commercial And Industrial Loans Measured At Fair Value",
-      "item": "M.8.b",
+      "caption": "Commercial and industrial loans",
+      "item": "M.4.b",
       "depth": 2
     },
     {
@@ -1332,31 +750,11 @@
     },
     {
       "key": "Q -- Memoranda",
-      "mdrm": "RCFDF689",
-      "caption": "Amounts Netted In The Determination Of Total Fair Value Reported On Schedule Rc For Loan Commitments (Not Accounted For As Derivatives",
-      "item": "M.1.a.b",
-      "depth": 3
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDF692",
-      "caption": "Nontrading securities at fair value: Level 1 fair value",
-      "item": "5.b.(1).c"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDF694",
-      "caption": "Level 1 Fair Value Measurements For  Deposits",
-      "item": "8.c",
-      "depth": 2,
-      "_note": "E depth assignment: RCFDF694 -> Q -- Liabilities item=8.c depth=2"
-    },
-    {
-      "key": "C",
       "mdrm": "RCFDF697",
-      "caption": "Level 1 Fair Value Measurements For  Loan Commitments (Not Accounted For As Derivatives",
-      "item": "M.10.b",
-      "depth": 2
+      "caption": "Level 1 fair value measurements",
+      "item": "M.2.a.(C)",
+      "depth": 2,
+      "col": true
     },
     {
       "key": "RAL",
@@ -1366,101 +764,10 @@
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFDG013",
-      "caption": "Unpaid Principal Balance Of Loans Measured At Fair Valuel Other Loans",
-      "item": "M.9.d",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG474",
-      "caption": "Available-For-Sale Securities - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "1.b",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG475",
-      "caption": "Available-For-Sale Securities - Level 1 Fair Value Measurements",
-      "item": "1.c",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG476",
-      "caption": "Available-For-Sale Securities - Level 2 Fair Value Measurements",
-      "item": "1.d",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG477",
-      "caption": "Available-For-Sale Securities - Level 3 Fair Value Measurements",
-      "item": "1.e",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG479",
-      "caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell -Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "2.b",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG480",
-      "caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell -Level 1 Fair Value Measurements",
-      "item": "2.c",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG481",
-      "caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell - Level 2 Fair Value Measurements",
-      "item": "2.d",
-      "depth": 2
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG482",
-      "caption": "Federal Funds Sold And Securities Purchased Under Agreements To Resell - Level 3 Fair Value Measurements",
-      "item": "2.e",
-      "depth": 2
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG507",
-      "caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Total Fair Value Reported On Schedule Rc",
-      "item": "9",
-      "depth": 1
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG508",
-      "caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "9.b",
-      "depth": 2
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG509",
-      "caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Level 1 Fair Value Measurements",
-      "item": "9.c",
-      "depth": 2
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG510",
-      "caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Level 2 Fair Value Measurements",
-      "item": "9.d",
-      "depth": 2
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG511",
-      "caption": "Federal Funds Purchased And Securities Sold Under Agreements To Repurchase - Level 3 Fair Value Measurements",
-      "item": "9.e",
+      "caption": "Other loans",
+      "item": "M.4.c",
       "depth": 2
     },
     {
@@ -1530,7 +837,7 @@
       "key": "C",
       "mdrm": "RCFN1797",
       "caption": "Revolving; Open-End Loans Secured By 1-4 Family Residential Properties And Extended Under Lines Of Credit",
-      "item": "1.c.1.b",
+      "item": "1.c.(1).b",
       "depth": 4
     },
     {
@@ -1548,17 +855,17 @@
       "depth": 2
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNF585",
-      "caption": "Commercial And Industrial Loans Measured At Fair Value (Domestic Only)",
-      "item": "M.8.a.b",
+      "caption": "Commercial and industrial loans (IBF)",
+      "item": "M.3.b.b",
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNF597",
-      "caption": "Unpaid Principal Balance Of Commercial And Industrial Loans Measured At Fair Value",
-      "item": "M.8.b.b",
+      "caption": "Commercial and industrial loans (IBF)",
+      "item": "M.4.b.b",
       "depth": 3
     },
     {
@@ -1576,10 +883,10 @@
       "depth": 3
     },
     {
-      "key": "C",
+      "key": "Q -- Memoranda",
       "mdrm": "RCFNG013",
-      "caption": "Unpaid Principal Balance Of Loans Measured At Fair Valuel Other Loans",
-      "item": "M.9.d.b",
+      "caption": "Other loans (IBF)",
+      "item": "M.4.c.b",
       "depth": 3
     },
     {
@@ -1597,855 +904,10 @@
       "depth": 4
     },
     {
-      "key": "E",
-      "mdrm": "RCON2259",
-      "caption": "Nontransaction Accounts - Other",
-      "item": "5.c",
-      "depth": 2,
-      "_note": "E depth assignment: RCON2259 -> E item=5.c depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2347",
-      "caption": "Total Nontransaction Accounts - U.S. Branches And Agencies Of Foreign Banks",
-      "item": "2.a.c",
-      "depth": 3,
-      "_note": "E depth assignment: RCON2347 -> E item=2.a.c depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2348",
-      "caption": "Total Nontransaction Accounts - Other Commercial Banks In The U.S.",
-      "item": "2.b.c",
-      "depth": 3,
-      "_note": "E depth assignment: RCON2348 -> E item=2.b.c depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2367",
-      "caption": "Total Nontransaction Accounts - Foreign Branches Of Other U.S. Banks",
-      "item": "3.a.c",
-      "depth": 3,
-      "_note": "E depth assignment: RCON2367 -> E item=3.a.c depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2373",
-      "caption": "Total Nontransaction Accounts - Other Banks In Foreign Countries",
-      "item": "3.b.c",
-      "depth": 3,
-      "_note": "E depth assignment: RCON2373 -> E item=3.b.c depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2377",
-      "caption": "Total Nontransaction Accounts - Deposits Of Foreign Governments And Official Institutions",
-      "item": "4.c",
-      "depth": 2,
-      "_note": "E depth assignment: RCON2377 -> E item=4.c depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON2385",
-      "caption": "Total Nontransaction Accounts (Including Mmda'S)",
-      "item": "7.c",
-      "depth": 2,
-      "_note": "E depth assignment: RCON2385 -> E item=7.c depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCON5597",
-      "caption": "Estimated Amount Of Uninsured Assessable Deposits In Domestic Offices Of The Bank And In Insured Branches In Puerto Rico And U.S. Territories And Possessions; Including Related Interest Accrued And Unpaid",
-      "item": "M.5",
-      "depth": 1,
-      "_note": "E depth assignment: RCON5597 -> E item=M.5 depth=1"
-    },
-    {
       "key": "RAL",
       "mdrm": "RCON9395",
       "caption": "Consolidation Code",
       "item": "9395"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONC041",
-      "caption": "Total Nontransaction Accounts - Individuals; Partnerships; And Corporations (Include All Certified And Official Checks: U.S. Addressees (Domicile)",
-      "item": "1.a.c",
-      "depth": 3,
-      "_note": "E depth assignment: RCONC041 -> E item=1.a.c depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONC044",
-      "caption": "Total Nontransaction Accounts - Individuals; Partnerships; And Corporations (Include All Certified And Official Checks): Non-U.S. Addressees (Domicile)",
-      "item": "1.b.c",
-      "depth": 3,
-      "_note": "E depth assignment: RCONC044 -> E item=1.b.c depth=3"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF045",
-      "caption": "Amount Of Retirement Deposits Accounts Of $250;000 Or Less",
-      "item": "M.3.a",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF045 -> E item=M.3.a depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF046",
-      "caption": "Number Of Retirement Deposit Accounts Of $250;000 Or Less",
-      "item": "M.3.b",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF046 -> E item=M.3.b depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF047",
-      "caption": "Amount Of Retirement Deposit Accounts Of More Than $250;000",
-      "item": "M.3.c",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF047 -> E item=M.3.c depth=2"
-    },
-    {
-      "key": "E",
-      "mdrm": "RCONF048",
-      "caption": "Number Of Retirement Deposit Accounts Of More Than $250;000",
-      "item": "M.3.d",
-      "depth": 2,
-      "_note": "E depth assignment: RCONF048 -> E item=M.3.d depth=2"
-    },
-    {
-      "key": "C",
-      "mdrm": "RCONLG27",
-      "caption": "Outstanding balance of PPP loans",
-      "item": "M.7",
-      "depth": 1
-    },
-    {
-      "_note": "Q -- Liabilities section header (pages 24-25 of 002 PDF, correctly Schedule Q not RAL)",
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "caption": "Deposits",
-      "item": "8",
-      "depth": 1,
-      "order": 10
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "caption": "Federal funds purchased and securities sold under agreements to repurchase",
-      "item": "9",
-      "depth": 1,
-      "order": 20
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "caption": "Trading liabilities: derivative liabilities",
-      "item": "10.a",
-      "depth": 2,
-      "order": 30
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "caption": "Trading liabilities: other trading liabilities",
-      "item": "10.b",
-      "depth": 2,
-      "order": 40
-    },
-    {
-      "_note": "Q -- Memoranda parent header for M.1 (all other assets) group",
-      "key": "Q -- Memoranda",
-      "mdrm": "",
-      "caption": "All other assets (itemize amounts in Schedule Q, item 6 > $100,000 and > 25% of item 6)",
-      "item": "M.1",
-      "depth": 1,
-      "order": -1
-    },
-    {
-      "_note": "Q -- Memoranda parent header for M.2 (all other liabilities) group",
-      "key": "Q -- Memoranda",
-      "mdrm": "",
-      "caption": "All other liabilities (itemize amounts in Schedule Q, item 13 > $100,000 and > 25% of item 13)",
-      "item": "M.2",
-      "depth": 1,
-      "order": 998
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q",
-      "mdrm": "RCFDG502",
-      "caption": "Total Assets Measured At Fair Value On A Recurring Basis - Total Fair Value Reported On Schedule Rc",
-      "item": "7",
-      "depth": 1,
-      "order": 0
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q",
-      "mdrm": "RCFDG503",
-      "caption": "Total Assets Measured At Fair Value On A Recurring Basis - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "7.b",
-      "depth": 2,
-      "order": 1
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q",
-      "mdrm": "RCFDG504",
-      "caption": "Total Assets Measured At Fair Value On A Recurring Basis - Level 1 Fair Value Measurements",
-      "item": "7.c",
-      "depth": 2,
-      "order": 2
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q",
-      "mdrm": "RCFDG505",
-      "caption": "Total Assets Measured At Fair Value On A Recurring Basis - Level 2 Fair Value Measurements",
-      "item": "7.d",
-      "depth": 2,
-      "order": 3
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q",
-      "mdrm": "RCFDG506",
-      "caption": "Total Assets Measured At Fair Value On A Recurring Basis - Level 3 Fair Value Measurements",
-      "item": "7.e",
-      "depth": 2,
-      "order": 4
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG521",
-      "caption": "Other Borrowed Money - Total Fair Value Reported On Schedule Rc",
-      "item": "11",
-      "depth": 1,
-      "order": 5
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG522",
-      "caption": "Other Borrowed Money - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "11.b",
-      "depth": 2,
-      "order": 6
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG523",
-      "caption": "Other Borrowed Money - Level 1 Fair Value Measurements",
-      "item": "11.c",
-      "depth": 2,
-      "order": 7
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG524",
-      "caption": "Other Borrowed Money - Level 2 Fair Value Measurements",
-      "item": "11.d",
-      "depth": 2,
-      "order": 8
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG525",
-      "caption": "Other Borrowed Money - Level 3 Fair Value Measurements",
-      "item": "11.e",
-      "depth": 2,
-      "order": 9
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG526",
-      "caption": "Subordinated Notes And Debentures - Total Fair Value Reported On Schedule Rc",
-      "item": "12",
-      "depth": 1,
-      "order": 10
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG527",
-      "caption": "Subordinated Notes And Debentures - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "12.b",
-      "depth": 2,
-      "order": 11
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG528",
-      "caption": "Subordinated Notes And Debentures- Level 1 Fair Value Measurements",
-      "item": "12.c",
-      "depth": 2,
-      "order": 12
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG529",
-      "caption": "Subordinated Notes And Debentures- Level 2 Fair Value Measurements",
-      "item": "12.d",
-      "depth": 2,
-      "order": 13
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG530",
-      "caption": "Subordinated Notes And Debentures- Level 3 Fair Value Measurements",
-      "item": "12.e",
-      "depth": 2,
-      "order": 14
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG531",
-      "caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Total Fair Value Reported On Schedule Rc",
-      "item": "14",
-      "depth": 1,
-      "order": 15
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG532",
-      "caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "14.b",
-      "depth": 2,
-      "order": 16
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG533",
-      "caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Level 1 Fair Value Measurements",
-      "item": "14.c",
-      "depth": 2,
-      "order": 17
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG534",
-      "caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Level 2 Fair Value Measurements",
-      "item": "14.d",
-      "depth": 2,
-      "order": 18
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG535",
-      "caption": "Total Liabilities Measured At Fair Value On A Recurring Basis - Level 3 Fair Value Measurements",
-      "item": "14.e",
-      "depth": 2,
-      "order": 19
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG536",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Total Fair Value Reported On Schedule Rc",
-      "item": "M.1.a",
-      "depth": 2,
-      "order": 20
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG537",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.1.a.b",
-      "depth": 3,
-      "order": 21
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG538",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Level 1 Fair Value Measurements",
-      "item": "M.1.a.c",
-      "depth": 3,
-      "order": 22
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG539",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Level 2 Fair Value Measurements",
-      "item": "M.1.a.d",
-      "depth": 3,
-      "order": 23
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG540",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Mortgage Servicing Rights - Level 3 Fair Value Measurements",
-      "item": "M.1.a.e",
-      "depth": 3,
-      "order": 24
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG541",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Total Fair Value Reported On Schedule Rc",
-      "item": "M.1.b",
-      "depth": 2,
-      "order": 25
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG542",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.1.b.b",
-      "depth": 3,
-      "order": 26
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG543",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Level 1 Fair Value Measurements",
-      "item": "M.1.b.c",
-      "depth": 3,
-      "order": 27
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG544",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Level 2 Fair Value Measurements",
-      "item": "M.1.b.d",
-      "depth": 3,
-      "order": 28
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG545",
-      "caption": "All Other Assets (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 6; That Are Greater Than $100;000 And Exceed 25% Of Item 6): Nontrading Derivative Assets - Level 3 Fair Value Measurements",
-      "item": "M.1.b.e",
-      "depth": 3,
-      "order": 29
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG546",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
-      "item": "M.1.c",
-      "depth": 2,
-      "order": 30
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG547",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.1.c.b",
-      "depth": 3,
-      "order": 31
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG548",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
-      "item": "M.1.c.c",
-      "depth": 3,
-      "order": 32
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG549",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
-      "item": "M.1.c.d",
-      "depth": 3,
-      "order": 33
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG550",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
-      "item": "M.1.c.e",
-      "depth": 3,
-      "order": 34
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG551",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
-      "item": "M.1.d",
-      "depth": 2,
-      "order": 35
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG552",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.1.d.b",
-      "depth": 3,
-      "order": 36
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG553",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
-      "item": "M.1.d.c",
-      "depth": 3,
-      "order": 37
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG554",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
-      "item": "M.1.d.d",
-      "depth": 3,
-      "order": 38
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG555",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
-      "item": "M.1.d.e",
-      "depth": 3,
-      "order": 39
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG556",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
-      "item": "M.1.e",
-      "depth": 2,
-      "order": 40
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG557",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.1.e.b",
-      "depth": 3,
-      "order": 41
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG558",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
-      "item": "M.1.e.c",
-      "depth": 3,
-      "order": 42
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG559",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
-      "item": "M.1.e.d",
-      "depth": 3,
-      "order": 43
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG560",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
-      "item": "M.1.e.e",
-      "depth": 3,
-      "order": 44
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG561",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Total Fair Value Reported On Schedule Rc",
-      "item": "M.1.f",
-      "depth": 2,
-      "order": 45
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG562",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.1.f.b",
-      "depth": 3,
-      "order": 46
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG563",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 1 Fair Value Measurements",
-      "item": "M.1.f.c",
-      "depth": 3,
-      "order": 47
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG564",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 2 Fair Value Measurements",
-      "item": "M.1.f.d",
-      "depth": 3,
-      "order": 48
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG565",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Assets Measured At Fair Value On A Recurring Basis (Rc-Q 6.) - Level 3 Fair Value Measurements",
-      "item": "M.1.f.e",
-      "depth": 3,
-      "order": 49
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG566",
-      "caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Total Fair Value Reported On Schedule Rc",
-      "item": "M.2.b",
-      "depth": 2,
-      "order": 50
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG567",
-      "caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities- Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.2.b.b",
-      "depth": 3,
-      "order": 51
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG568",
-      "caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Level 1 Fair Value Measurements",
-      "item": "M.2.b.c",
-      "depth": 3,
-      "order": 52
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG569",
-      "caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Level 2 Fair Value Measurements",
-      "item": "M.2.b.d",
-      "depth": 3,
-      "order": 53
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG570",
-      "caption": "All Other Liabilities (Itemize And Describe Amounts Included In Schedule Rc-Q; Item 13; That Are Greater Than $100;000 And Exceed 25% Of Item 13): Nontrading Derivative Liabilities - Level 3 Fair Value Measurement",
-      "item": "M.2.b.e",
-      "depth": 3,
-      "order": 54
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG571",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
-      "item": "M.2.c",
-      "depth": 2,
-      "order": 55
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG572",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.2.c.b",
-      "depth": 3,
-      "order": 56
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG573",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
-      "item": "M.2.c.c",
-      "depth": 3,
-      "order": 57
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG574",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
-      "item": "M.2.c.d",
-      "depth": 3,
-      "order": 58
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG575",
-      "caption": "First Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
-      "item": "M.2.c.e",
-      "depth": 3,
-      "order": 59
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG576",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
-      "item": "M.2.d",
-      "depth": 2,
-      "order": 60
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG577",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.2.d.b",
-      "depth": 3,
-      "order": 61
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG578",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
-      "item": "M.2.d.c",
-      "depth": 3,
-      "order": 62
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG579",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
-      "item": "M.2.d.d",
-      "depth": 3,
-      "order": 63
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG580",
-      "caption": "Second Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
-      "item": "M.2.d.e",
-      "depth": 3,
-      "order": 64
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG581",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
-      "item": "M.2.e",
-      "depth": 2,
-      "order": 65
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG582",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.2.e.b",
-      "depth": 3,
-      "order": 66
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG583",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
-      "item": "M.2.e.c",
-      "depth": 3,
-      "order": 67
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG584",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
-      "item": "M.2.e.d",
-      "depth": 3,
-      "order": 68
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG585",
-      "caption": "Third Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
-      "item": "M.2.e.e",
-      "depth": 3,
-      "order": 69
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG586",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Total Fair Value Reported On Balance Sheet",
-      "item": "M.2.f",
-      "depth": 2,
-      "order": 70
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG587",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Less Amounts Netted In The Determination Of Total Fair Value",
-      "item": "M.2.f.b",
-      "depth": 3,
-      "order": 71
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG588",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 1 Fair Value Measurements",
-      "item": "M.2.f.c",
-      "depth": 3,
-      "order": 72
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG589",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 2 Fair Value Measurements",
-      "item": "M.2.f.d",
-      "depth": 3,
-      "order": 73
-    },
-    {
-      "_note": "Moved from RAL (Q attribution bug: 002 PDF pages 24-25 are Schedule Q -- Continued)",
-      "key": "Q -- Memoranda",
-      "mdrm": "RCFDG590",
-      "caption": "Fourth Itemized Amount That Exceeds $100;000 And Exceed 25% Of All Other Liabilities Measured At Fair Value On A Recurring Basis (Rc-Q 13.) - Level 3 Fair Value Measurements",
-      "item": "M.2.f.e",
-      "depth": 3,
-      "order": 74
     },
     {
       "_note": "RAL -- Schedule P: 002 PDF page 22 is Schedule P (Other Borrowed Money), misattributed to RAL by parser",
@@ -2463,14 +925,6 @@
       "depth": 1,
       "order": 30,
       "caption": "Owed to nonrelated banks in foreign countries"
-    },
-    {
-      "key": "RAL -- Schedule P",
-      "mdrm": "",
-      "item": "M.8",
-      "depth": 1,
-      "order": 70,
-      "caption": "Memorandum item 8 — Sweep deposits"
     },
     {
       "key": "RAL -- Schedule P",
@@ -2569,7 +1023,7 @@
       "caption": "Immediately available funds with a maturity greater than one day included in other borrowed money"
     },
     {
-      "key": "RAL -- Schedule P",
+      "key": "O",
       "mdrm": "RCONMT87",
       "item": "M.8.a",
       "depth": 2,
@@ -2577,7 +1031,7 @@
       "caption": "Sweep deposits: fully insured, affiliate sweep deposits"
     },
     {
-      "key": "RAL -- Schedule P",
+      "key": "O",
       "mdrm": "RCONMT89",
       "item": "M.8.b",
       "depth": 2,
@@ -2585,7 +1039,7 @@
       "caption": "Sweep deposits: not fully insured, affiliate sweep deposits"
     },
     {
-      "key": "RAL -- Schedule P",
+      "key": "O",
       "mdrm": "RCONMT91",
       "item": "M.8.c",
       "depth": 2,
@@ -2593,7 +1047,7 @@
       "caption": "Sweep deposits: fully insured, non-affiliate sweep deposits"
     },
     {
-      "key": "RAL -- Schedule P",
+      "key": "O",
       "mdrm": "RCONMT93",
       "item": "M.8.d",
       "depth": 2,
@@ -2601,20 +1055,12 @@
       "caption": "Sweep deposits: not fully insured, non-affiliate sweep deposits"
     },
     {
-      "key": "RAL -- Schedule P",
+      "key": "O",
       "mdrm": "RCONMT95",
       "item": "M.9",
       "depth": 1,
       "order": 80,
       "caption": "Total sweep deposits that are not brokered deposits"
-    },
-    {
-      "key": "E",
-      "mdrm": "",
-      "item": "M.3",
-      "depth": 1,
-      "order": 920,
-      "caption": "Memoranda 3: Amount and number of retirement deposit accounts > $250,000"
     },
     {
       "_note": "C Part I parent: item 1.c sub-group for 1-4 family residential properties",
@@ -2655,43 +1101,6 @@
       "caption": "Memoranda 4: C&I loans with remaining maturity >1 year (excl. nonaccrual)"
     },
     {
-      "key": "C",
-      "mdrm": "",
-      "item": "M.6",
-      "depth": 1,
-      "caption": "Memoranda 6: Unpaid principal balance and fair value of loans measured at FV"
-    },
-    {
-      "key": "C",
-      "mdrm": "",
-      "item": "M.9",
-      "depth": 1,
-      "caption": "Memoranda 9: Other loans measured at fair value"
-    },
-    {
-      "key": "C",
-      "mdrm": "",
-      "item": "M.10",
-      "depth": 1,
-      "caption": "Memoranda 10: Fair value of loan commitments (off-balance-sheet)"
-    },
-    {
-      "_note": "Q Assets item 3: Loans held for sale measured at FV (from C gap-fill, now correctly in Q)",
-      "key": "Q",
-      "mdrm": "",
-      "item": "3",
-      "depth": 1,
-      "caption": "Loans and leases held for sale measured at fair value on a recurring basis"
-    },
-    {
-      "_note": "Q Assets item 4: Loans held for investment measured at FV",
-      "key": "Q",
-      "mdrm": "",
-      "item": "4",
-      "depth": 1,
-      "caption": "Loans and leases held for investment measured at fair value on a recurring basis"
-    },
-    {
       "_note": "L item 6 sub-parent: credit derivative notional amounts",
       "key": "L",
       "mdrm": "",
@@ -2712,52 +1121,6 @@
       "item": "9.d",
       "depth": 2,
       "caption": "Item 9.d: Over-the-counter option contracts"
-    },
-    {
-      "_note": "N Memoranda: book value of loans sold/serviced",
-      "key": "N",
-      "mdrm": "",
-      "item": "M.1",
-      "depth": 1,
-      "caption": "Memoranda 1: Book value of loans sold or transferred and still serviced"
-    },
-    {
-      "key": "N",
-      "mdrm": "",
-      "item": "M.2",
-      "depth": 1,
-      "caption": "Memoranda 2: Interest rate, FX, and commodity contracts — fair value"
-    },
-    {
-      "_note": "Q Assets item 1: AFS securities FV header (col A=JA36 not in panel; sub-cols B-E added)",
-      "key": "Q",
-      "mdrm": "",
-      "item": "1",
-      "depth": 1,
-      "caption": "Available-for-sale debt securities and equity securities — fair value"
-    },
-    {
-      "_note": "Q Assets item 2: Fed funds sold FV header (col A=G478 not in panel)",
-      "key": "Q",
-      "mdrm": "",
-      "item": "2",
-      "depth": 1,
-      "caption": "Federal funds sold and securities purchased under agreements to resell — fair value"
-    },
-    {
-      "_note": "Q Assets item 5.a: Trading derivative assets (col A=RCFD3543)",
-      "key": "Q",
-      "mdrm": "",
-      "item": "5.a",
-      "depth": 2,
-      "caption": "Trading assets: derivative assets"
-    },
-    {
-      "key": "Q",
-      "mdrm": "",
-      "item": "6",
-      "depth": 1,
-      "caption": "All other assets measured at fair value"
     },
     {
       "_note": "RAL M.10: same value as Q Assets item 5.a (trading derivative positive FV)",
@@ -2867,375 +1230,222 @@
       "caption": "Memoranda 15: Other liabilities exceeding 5% of total (itemize >25% of item 4.f)"
     },
     {
-      "key": "B",
-      "mdrm": "RCFD0260",
-      "item": "1.b.1",
-      "depth": 3,
-      "caption": "U.S. Treasury securities (from Schedule RAL item 1.b.(1))"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDB915",
-      "item": "1.b.3",
-      "depth": 3,
-      "caption": "U.S. Treasury and U.S. Government agency obligations (aggregate)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDA003",
-      "item": "1.c.1",
-      "depth": 3,
-      "caption": "Securities of foreign governments and official institutions"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNA003",
-      "item": "1.c.1.b",
-      "depth": 4,
-      "caption": "Securities of foreign governments (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDC416",
-      "item": "1.c.(2).(a)",
-      "depth": 4,
-      "caption": "MBS issued or guaranteed by U.S. Government agencies"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNC416",
-      "item": "1.c.(2).(a).b",
-      "depth": 5,
-      "caption": "MBS agency (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDC417",
-      "item": "1.c.(2).(b)",
-      "depth": 4,
-      "caption": "MBS other"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNC417",
-      "item": "1.c.(2).(b).b",
-      "depth": 5,
-      "caption": "MBS other (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDC414",
-      "item": "1.d.(2).(a)",
-      "depth": 3,
-      "caption": "Securities purchased under agreements to resell: with commercial banks in the U.S."
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNC414",
-      "item": "1.d.(2).(a).b",
-      "depth": 4,
-      "caption": "Repos purchased: commercial banks in U.S. (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDC415",
-      "item": "1.d.(2).(b)",
-      "depth": 3,
-      "caption": "Securities purchased under agreements to resell: with others"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNC415",
-      "item": "1.d.(2).(b).b",
-      "depth": 4,
-      "caption": "Repos purchased: others (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDF857",
-      "item": "1.d.(2).(c)",
-      "depth": 3,
-      "caption": "Securities purchased under agreements to resell: with non-depository institutions"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNF857",
-      "item": "1.d.(2).(c).b",
-      "depth": 4,
-      "caption": "Repos purchased: non-depository (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDC422",
-      "item": "4.b.(2).(a)",
-      "depth": 3,
-      "caption": "Securities sold under agreements to repurchase: with commercial banks in the U.S."
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNC422",
-      "item": "4.b.(2).(a).b",
-      "depth": 4,
-      "caption": "Repos sold: commercial banks in U.S. (IBF only)"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFDC423",
-      "item": "4.b.(2).(b)",
-      "depth": 3,
-      "caption": "Securities sold under agreements to repurchase: with others"
-    },
-    {
-      "key": "B",
-      "mdrm": "RCFNC423",
-      "item": "4.b.(2).(b).b",
-      "depth": 4,
-      "caption": "Repos sold: others (IBF only)"
-    },
-    {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.18",
-      "depth": 1,
-      "caption": "Total gross notional amounts of derivative contracts held for trading — by type"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDA127",
-      "item": "M.18.b",
+      "item": "10.(B)",
       "depth": 2,
-      "caption": "Total gross notional: Foreign exchange derivative contracts (trading)"
+      "caption": "Foreign exchange contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8723",
-      "item": "M.18.c",
+      "item": "10.(C)",
       "depth": 2,
-      "caption": "Total gross notional: Equity derivative contracts (trading)"
+      "caption": "Equity derivative contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8724",
-      "item": "M.18.d",
+      "item": "10.(D)",
       "depth": 2,
-      "caption": "Total gross notional: Commodity and other derivative contracts (trading)"
+      "caption": "Commodity and other contracts",
+      "col": true
     },
     {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.19",
-      "depth": 1,
-      "caption": "Total gross notional amounts of derivative contracts held for purposes other than trading"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8726",
-      "item": "M.19.b",
+      "item": "11.(B)",
       "depth": 2,
-      "caption": "Total gross notional: Foreign exchange derivative contracts (non-trading)"
+      "caption": "Foreign exchange contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8727",
-      "item": "M.19.c",
+      "item": "11.(C)",
       "depth": 2,
-      "caption": "Total gross notional: Equity derivative contracts (non-trading)"
+      "caption": "Equity derivative contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8728",
-      "item": "M.19.d",
+      "item": "11.(D)",
       "depth": 2,
-      "caption": "Total gross notional: Commodity and other derivative contracts (non-trading)"
+      "caption": "Commodity and other contracts",
+      "col": true
     },
     {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.20",
-      "depth": 1,
-      "caption": "Gross positive fair value of derivative contracts held for trading — by type"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8733",
-      "item": "M.20.a",
+      "item": "12.a.(1).(A)",
       "depth": 2,
-      "caption": "Gross positive FV: Interest rate contracts (trading)"
+      "caption": "Interest rate contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8734",
-      "item": "M.20.b",
+      "item": "12.a.(1).(B)",
       "depth": 2,
-      "caption": "Gross positive FV: Foreign exchange contracts (trading)"
+      "caption": "Foreign exchange contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8735",
-      "item": "M.20.c",
+      "item": "12.a.(1).(C)",
       "depth": 2,
-      "caption": "Gross positive FV: Equity derivative contracts (trading)"
+      "caption": "Equity derivative contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8736",
-      "item": "M.20.d",
+      "item": "12.a.(1).(D)",
       "depth": 2,
-      "caption": "Gross positive FV: Commodity and other contracts (trading)"
+      "caption": "Commodity and other contracts",
+      "col": true
     },
     {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.21",
-      "depth": 1,
-      "caption": "Gross negative fair value of derivative contracts held for trading — by type"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8737",
-      "item": "M.21.a",
+      "item": "12.a.(2).(A)",
       "depth": 2,
-      "caption": "Gross negative FV: Interest rate contracts (trading)"
+      "caption": "Interest rate contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8738",
-      "item": "M.21.b",
+      "item": "12.a.(2).(B)",
       "depth": 2,
-      "caption": "Gross negative FV: Foreign exchange contracts (trading)"
+      "caption": "Foreign exchange contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8739",
-      "item": "M.21.c",
+      "item": "12.a.(2).(C)",
       "depth": 2,
-      "caption": "Gross negative FV: Equity derivative contracts (trading)"
+      "caption": "Equity derivative contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8740",
-      "item": "M.21.d",
+      "item": "12.a.(2).(D)",
       "depth": 2,
-      "caption": "Gross negative FV: Commodity and other contracts (trading)"
+      "caption": "Commodity and other contracts",
+      "col": true
     },
     {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.22",
-      "depth": 1,
-      "caption": "Gross positive fair value of derivative contracts held for purposes other than trading"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8741",
-      "item": "M.22.a",
+      "item": "12.b.(1).(A)",
       "depth": 2,
-      "caption": "Gross positive FV: Interest rate contracts (non-trading)"
+      "caption": "Interest rate contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8742",
-      "item": "M.22.b",
+      "item": "12.b.(1).(B)",
       "depth": 2,
-      "caption": "Gross positive FV: Foreign exchange contracts (non-trading)"
+      "caption": "Foreign exchange contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8743",
-      "item": "M.22.c",
+      "item": "12.b.(1).(C)",
       "depth": 2,
-      "caption": "Gross positive FV: Equity derivative contracts (non-trading)"
+      "caption": "Equity derivative contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8744",
-      "item": "M.22.d",
+      "item": "12.b.(1).(D)",
       "depth": 2,
-      "caption": "Gross positive FV: Commodity and other contracts (non-trading)"
+      "caption": "Commodity and other contracts",
+      "col": true
     },
     {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.23",
-      "depth": 1,
-      "caption": "Gross negative fair value of derivative contracts held for purposes other than trading"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8745",
-      "item": "M.23.a",
+      "item": "12.b.(2).(A)",
       "depth": 2,
-      "caption": "Gross negative FV: Interest rate contracts (non-trading)"
+      "caption": "Interest rate contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8746",
-      "item": "M.23.b",
+      "item": "12.b.(2).(B)",
       "depth": 2,
-      "caption": "Gross negative FV: Foreign exchange contracts (non-trading)"
+      "caption": "Foreign exchange contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8747",
-      "item": "M.23.c",
+      "item": "12.b.(2).(C)",
       "depth": 2,
-      "caption": "Gross negative FV: Equity derivative contracts (non-trading)"
+      "caption": "Equity derivative contracts",
+      "col": true
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFD8748",
-      "item": "M.23.d",
+      "item": "12.b.(2).(D)",
       "depth": 2,
-      "caption": "Gross negative FV: Commodity and other contracts (non-trading)"
+      "caption": "Commodity and other contracts",
+      "col": true
     },
     {
-      "key": "RAL",
-      "mdrm": "",
-      "item": "M.24",
-      "depth": 1,
-      "caption": "Credit derivatives: notional amounts — by role of reporting institution"
-    },
-    {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDC219",
-      "item": "M.24.a",
+      "item": "6.b.(1)",
       "depth": 2,
-      "caption": "Credit default swaps — guarantor (protection seller)"
+      "caption": "Gross positive fair value (guarantor)"
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDC220",
-      "item": "M.24.b",
+      "item": "6.b.(2)",
       "depth": 2,
-      "caption": "Credit default swaps — beneficiary (protection buyer)"
+      "caption": "Gross negative fair value (guarantor)"
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDC221",
-      "item": "M.24.c",
+      "item": "6.b.(1).b",
       "depth": 2,
-      "caption": "Total return swaps — guarantor"
+      "caption": "Gross positive fair value (beneficiary)"
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDC222",
-      "item": "M.24.d",
+      "item": "6.b.(2).b",
       "depth": 2,
-      "caption": "Total return swaps — beneficiary"
+      "caption": "Gross negative fair value (beneficiary)"
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDC974",
-      "item": "M.24.e",
+      "item": "6.a.(4)",
       "depth": 2,
-      "caption": "Other credit derivatives — guarantor"
+      "caption": "Other credit derivatives (guarantor)"
     },
     {
-      "key": "RAL",
+      "key": "L",
       "mdrm": "RCFDC975",
-      "item": "M.24.f",
+      "item": "6.a.(4).b",
       "depth": 2,
-      "caption": "Other credit derivatives — beneficiary"
+      "caption": "Other credit derivatives (beneficiary)"
     },
     {
       "key": "RAL",
@@ -4344,83 +2554,6 @@
       "caption": "Total Collective Investment Funds - Market Value Of Fund Assets"
     },
     {
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "item": "14",
-      "depth": 1,
-      "caption": "All other liabilities measured at fair value on a recurring basis"
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG391",
-      "item": "6.a",
-      "depth": 2,
-      "caption": "All Other Assets - Total Fair Value Reported On Schedule Rc"
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG392",
-      "item": "6.b",
-      "depth": 2,
-      "caption": "All Other Assets - Less Amounts Netted In The Determination Of Total Fair Value"
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG395",
-      "item": "6.c",
-      "depth": 2,
-      "caption": "All Other Assets - Level 1 Fair Value Measurements"
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG396",
-      "item": "6.d",
-      "depth": 2,
-      "caption": "All Other Assets - Level 2 Fair Value Measurements"
-    },
-    {
-      "key": "Q",
-      "mdrm": "RCFDG804",
-      "item": "6.e",
-      "depth": 2,
-      "caption": "All Other Assets - Level 3 Fair Value Measurements"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG805",
-      "item": "14.a",
-      "depth": 2,
-      "caption": "All Other Liabilities - Total Fair Value Reported On Balance Sheet"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG806",
-      "item": "14.b",
-      "depth": 2,
-      "caption": "All Other Liabilities - Less Amounts Netted In The Determination Of Total Fair Value"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG807",
-      "item": "14.c",
-      "depth": 2,
-      "caption": "All Other Liabilities - Level 1 Fair Value Measurements"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG808",
-      "item": "14.d",
-      "depth": 2,
-      "caption": "All Other Liabilities - Level 2 Fair Value Measurements"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDG809",
-      "item": "14.e",
-      "depth": 2,
-      "caption": "All Other Liabilities - Level 3 Fair Value Measurements"
-    },
-    {
       "key": "RAL",
       "mdrm": "RCFD2151",
       "item": "1.h",
@@ -4509,14 +2642,14 @@
       "mdrm": "RCFDK479",
       "item": "1.f.(1)",
       "depth": 3,
-      "caption": "U.S. Treasury And Agency Securities"
+      "caption": "U.S. Treasury and U.S. Government agency securities"
     },
     {
       "key": "RAL",
       "mdrm": "RCFNK479",
       "item": "1.f.(1).b",
       "depth": 4,
-      "caption": "U.S. Treasury And Agency Securities"
+      "caption": "U.S. Treasury and U.S. Government agency securities (IBF only)"
     },
     {
       "key": "RAL",
@@ -4549,44 +2682,44 @@
     {
       "key": "RAL",
       "mdrm": "RCFD3536",
-      "item": "1.f.(3)",
+      "item": "1.f.(2).(b)",
       "depth": 3,
-      "caption": "TRADING ASSETS - ALL OTHER MORTGAGE-BACKED SECURITIES"
+      "caption": "Other mortgage-backed securities"
     },
     {
       "key": "A",
       "mdrm": "RCFD0070",
       "item": "4",
       "depth": 1,
-      "caption": "Balances Due From Banks In Foreign Countries And Foreign Central Banks"
+      "caption": "Balances due from banks in foreign countries and foreign central banks"
     },
     {
       "key": "A",
       "mdrm": "RCFN0070",
       "item": "4.b",
       "depth": 2,
-      "caption": "Balances Due From Banks In Foreign Countries And Foreign Central Banks"
+      "caption": "Balances due from banks in foreign countries and foreign central banks (IBF only)"
     },
     {
       "key": "A",
       "mdrm": "RCFN0020",
       "item": "1.b",
       "depth": 2,
-      "caption": "Cash Items In Process Of Collection And Unposted Debits"
+      "caption": "Cash items in process of collection and unposted debits (IBF only)"
     },
     {
       "key": "A",
       "mdrm": "RCFN0082",
-      "item": "5.b",
+      "item": "3.b",
       "depth": 2,
-      "caption": "Balances Due From Depository Institutions In The U.S."
+      "caption": "Balances due from depository institutions in the U.S. (IBF only)"
     },
     {
       "key": "A",
       "mdrm": "RCFN0010",
       "item": "6.b",
       "depth": 2,
-      "caption": "Cash And Balances Due From Depository Institutions"
+      "caption": "Total (sum of items 1 through 5) (IBF only)"
     },
     {
       "key": "RAL",
@@ -4617,25 +2750,11 @@
       "caption": "Federal Funds Purchased - With Depository Institutions In The U.S."
     },
     {
-      "key": "L",
-      "mdrm": "RCFD3529",
-      "item": "M.9",
-      "depth": 1,
-      "caption": "INTEREST RATE; FOREIGN EXCHANGE RATE; AND OTHER COMMODITY AND EQUITY CONTRACTS: FAIR VALUE OF AMOUNTS CARRIED AS ASSETS - PAST DUE 30 THROUGH 89 DAYS"
-    },
-    {
       "key": "C",
       "mdrm": "RCFN2123",
-      "item": "M.8",
+      "item": "10.b",
       "depth": 1,
-      "caption": "Unearned Income On Loans"
-    },
-    {
-      "key": "C",
-      "mdrm": "",
-      "item": "M.2",
-      "depth": 1,
-      "caption": "C&I loans currently outstanding — by original amount"
+      "caption": "Unearned income on loans (IBF only)"
     },
     {
       "key": "E",
@@ -4680,19 +2799,6 @@
       "caption": "Other Bonds; Notes; Debentures; And Corporate Stock (Including State And Local Securities): All Other"
     },
     {
-      "key": "Q",
-      "mdrm": "RCFDF684",
-      "item": "5.b.(1).b",
-      "caption": "Nontrading securities at fair value: LESS amounts netted"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "RCFDF686",
-      "item": "M.5",
-      "depth": 1,
-      "caption": "Amounts Netted In The Determination Of Total Fair Value Reported On Schedule Rc For Deposits"
-    },
-    {
       "key": "RAL",
       "mdrm": "RCFDF856",
       "item": "1.d.(1).(b)",
@@ -4735,20 +2841,6 @@
       "caption": "Memoranda"
     },
     {
-      "key": "N",
-      "mdrm": "",
-      "item": "M",
-      "depth": 1,
-      "caption": "Memoranda"
-    },
-    {
-      "key": "Q",
-      "mdrm": "",
-      "item": "M",
-      "depth": 1,
-      "caption": "Memoranda"
-    },
-    {
       "key": "S",
       "mdrm": "",
       "item": "M",
@@ -4763,20 +2855,6 @@
       "caption": "Memoranda"
     },
     {
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "item": "M",
-      "depth": 1,
-      "caption": "Memoranda"
-    },
-    {
-      "key": "Q -- Memoranda",
-      "mdrm": "",
-      "item": "M",
-      "depth": 1,
-      "caption": "Memoranda"
-    },
-    {
       "key": "RAL -- Schedule P",
       "mdrm": "",
       "item": "M",
@@ -4784,60 +2862,11 @@
       "caption": "Memoranda"
     },
     {
-      "key": "A",
-      "mdrm": "",
-      "item": "6",
-      "depth": 1,
-      "caption": "Items held in foreign offices"
-    },
-    {
-      "key": "D",
-      "mdrm": "",
-      "item": "4",
-      "depth": 1,
-      "caption": "Pledged assets"
-    },
-    {
-      "key": "C",
-      "mdrm": "",
-      "item": "5",
-      "depth": 1,
-      "caption": "Loans to foreign governments and official institutions"
-    },
-    {
-      "key": "B",
-      "mdrm": "",
-      "item": "1",
-      "depth": 1,
-      "caption": "Debt securities"
-    },
-    {
-      "key": "B",
-      "mdrm": "",
-      "item": "4",
-      "depth": 1,
-      "caption": "Trading securities"
-    },
-    {
-      "key": "C",
-      "mdrm": "",
-      "item": "5.c",
-      "depth": 2,
-      "caption": "Loans to foreign governments — other commercial banks in foreign countries"
-    },
-    {
       "key": "L",
       "mdrm": "",
       "item": "6",
       "depth": 1,
       "caption": "Derivatives: credit derivatives"
-    },
-    {
-      "key": "Q -- Liabilities",
-      "mdrm": "",
-      "item": "10",
-      "depth": 1,
-      "caption": "Trading liabilities"
     },
     {
       "key": "RAL",
@@ -4903,46 +2932,6 @@
       "caption": "Other memoranda"
     },
     {
-      "key": "B",
-      "mdrm": "",
-      "item": "1.b",
-      "depth": 2,
-      "caption": "U.S. Treasury and government agency securities",
-      "header": true
-    },
-    {
-      "key": "B",
-      "mdrm": "",
-      "item": "1.c",
-      "depth": 2,
-      "caption": "Securities of foreign governments and official institutions and other",
-      "header": true
-    },
-    {
-      "key": "B",
-      "mdrm": "",
-      "item": "1.d",
-      "depth": 2,
-      "caption": "Securities purchased under agreements to resell",
-      "header": true
-    },
-    {
-      "key": "B",
-      "mdrm": "",
-      "item": "4.b",
-      "depth": 2,
-      "caption": "Securities sold under agreements to repurchase",
-      "header": true
-    },
-    {
-      "key": "Q",
-      "mdrm": "",
-      "item": "5",
-      "depth": 1,
-      "caption": "Trading assets",
-      "header": true
-    },
-    {
       "key": "RAL",
       "mdrm": "",
       "item": "4.b",
@@ -4964,7 +2953,7 @@
       "mdrm": "RCFD8693",
       "item": "9.a.a",
       "depth": 3,
-      "caption": "INTEREST RATE FUTURES CONTRACTS"
+      "caption": "Interest rate futures contracts — notional value"
     },
     {
       "key": "L",
@@ -4979,7 +2968,7 @@
       "mdrm": "RCFD8697",
       "item": "9.b.a",
       "depth": 3,
-      "caption": "INTEREST RATE FORWARD CONTRACTS"
+      "caption": "Interest rate forward contracts — notional value"
     },
     {
       "key": "L",
@@ -4994,7 +2983,7 @@
       "mdrm": "RCFD8701",
       "item": "9.c.1.a",
       "depth": 4,
-      "caption": "WRITTEN EXCHANGE-TRADED INTEREST RATE OPTION CONTRACTS"
+      "caption": "Written exchange-traded interest rate option contracts — notional value"
     },
     {
       "key": "L",
@@ -5009,7 +2998,7 @@
       "mdrm": "RCFD8705",
       "item": "9.c.2.a",
       "depth": 4,
-      "caption": "PURCHASED EXCHANGE-TRADED INTEREST RATE OPTION CONTRACTS"
+      "caption": "Purchased exchange-traded interest rate option contracts — notional value"
     },
     {
       "key": "L",
@@ -5024,14 +3013,14 @@
       "mdrm": "RCFD8709",
       "item": "9.d.1.a",
       "depth": 4,
-      "caption": "WRITTEN OTC INTEREST RATE OPTION CONTRACTS"
+      "caption": "Written OTC interest rate option contracts — notional value"
     },
     {
       "key": "L",
       "mdrm": "RCFD8710",
       "item": "9.d.1.b",
       "depth": 4,
-      "caption": "WRITTEN OTC FOREIGN EXCHANGE OPTION CONTRACTS"
+      "caption": "Written OTC foreign exchange option contracts — notional value"
     },
     {
       "key": "L",
@@ -5046,14 +3035,14 @@
       "mdrm": "RCFD8713",
       "item": "9.d.2.a",
       "depth": 4,
-      "caption": "PURCHASED OTC INTEREST RATE OPTION CONTRACTS"
+      "caption": "Purchased OTC interest rate option contracts — notional value"
     },
     {
       "key": "L",
       "mdrm": "RCFD8714",
       "item": "9.d.2.b",
       "depth": 4,
-      "caption": "PURCHASED OTC FOREIGN EXCHANGE OPTION CONTRACTS"
+      "caption": "Purchased OTC foreign exchange option contracts — notional value"
     },
     {
       "key": "L",
@@ -5068,7 +3057,7 @@
       "mdrm": "RCFD3450",
       "item": "9.e.a",
       "depth": 3,
-      "caption": "INTEREST RATE CONTRACTS - NOTIONAL VALUE OF ALL OUTSTANDING INTEREST RATE CONTRACTS"
+      "caption": "Interest rate contracts — notional value of all outstanding contracts"
     },
     {
       "key": "RAL",
@@ -5193,49 +3182,49 @@
     {
       "key": "RAL",
       "mdrm": "",
-      "caption": "Mortgage-backed securities (trading)",
+      "caption": "Mortgage-backed securities",
       "item": "1.f.(2)"
     },
     {
       "key": "RAL",
       "mdrm": "RCFDK298",
-      "caption": "Trading assets: mortgage-backed securities issued or guaranteed by U.S. Government agencies",
+      "caption": "Issued or guaranteed by U.S. Government agencies",
       "item": "1.f.(2).(a)"
     },
     {
       "key": "RAL",
       "mdrm": "RCFNK298",
-      "caption": "Trading assets: mortgage-backed securities issued or guaranteed by U.S. Government agencies (IBF only)",
+      "caption": "Issued or guaranteed by U.S. Government agencies (IBF only)",
       "item": "1.f.(2).(a).b"
     },
     {
       "key": "RAL",
       "mdrm": "RCFDK299",
-      "caption": "Trading assets: other mortgage-backed securities",
-      "item": "1.f.(2).(b)"
+      "caption": "Other asset-backed securities",
+      "item": "1.f.(3)"
     },
     {
       "key": "RAL",
       "mdrm": "RCFNK299",
-      "caption": "Trading assets: other mortgage-backed securities (IBF only)",
-      "item": "1.f.(2).(b).b"
-    },
-    {
-      "key": "RAL",
-      "mdrm": "RCFN3536",
-      "caption": "Trading assets: all other mortgage-backed securities (IBF only)",
+      "caption": "Other asset-backed securities (IBF only)",
       "item": "1.f.(3).b"
     },
     {
       "key": "RAL",
+      "mdrm": "RCFN3536",
+      "caption": "Other mortgage-backed securities (IBF only)",
+      "item": "1.f.(2).(b).b"
+    },
+    {
+      "key": "RAL",
       "mdrm": "RCFDL193",
-      "caption": "Trading assets: other securities",
+      "caption": "Other securities",
       "item": "1.f.(4)"
     },
     {
       "key": "RAL",
       "mdrm": "RCFNL193",
-      "caption": "Trading assets: other securities (IBF only)",
+      "caption": "Other securities (IBF only)",
       "item": "1.f.(4).b"
     },
     {
@@ -5449,22 +3438,1943 @@
       "caption": "With original amounts of more than $250,000 through $500,000: Amount currently outstanding"
     },
     {
-      "key": "B",
-      "mdrm": "",
-      "item": "1.c.(2)",
-      "caption": "Mortgage-backed securities"
+      "_note": "N: Commercial and industrial loans — 4 columns",
+      "key": "N",
+      "mdrm": "RCFD1606",
+      "item": "1.a.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
     },
     {
-      "key": "B",
-      "mdrm": "",
-      "item": "1.d.(2)",
-      "caption": "Securities purchased under agreements to resell"
+      "key": "N",
+      "mdrm": "RCFD1607",
+      "item": "1.a.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
     },
     {
-      "key": "B",
+      "key": "N",
+      "mdrm": "RCFD1608",
+      "item": "1.a.(C)",
+      "caption": "Nonaccrual",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1609",
+      "item": "1.a.(D)",
+      "caption": "Modified and in compliance with modified terms",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1421",
+      "item": "1.b.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1422",
+      "item": "1.b.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1423",
+      "item": "1.b.(C)",
+      "caption": "Nonaccrual",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1424",
+      "item": "1.b.(D)",
+      "caption": "Modified and in compliance with modified terms",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD3183",
+      "item": "1.c.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD3184",
+      "item": "1.c.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD3185",
+      "item": "1.c.(C)",
+      "caption": "Nonaccrual",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD3186",
+      "item": "1.c.(D)",
+      "caption": "Modified and in compliance with modified terms",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1623",
+      "item": "2.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1624",
+      "item": "2.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1625",
+      "item": "2.(C)",
+      "caption": "Nonaccrual",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1627",
+      "item": "2.(D)",
+      "caption": "Modified and in compliance with modified terms",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1406",
+      "item": "3.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1407",
+      "item": "3.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1403",
+      "item": "3.(C)",
+      "caption": "Nonaccrual",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1404",
+      "item": "3.(D)",
+      "caption": "Modified and in compliance with modified terms",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1628",
+      "item": "M.1.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1629",
+      "item": "M.1.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1582",
+      "item": "M.1.(C)",
+      "caption": "Nonaccrual",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD1637",
+      "item": "M.1.(D)",
+      "caption": "Modified and in compliance with modified terms",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD3529",
+      "item": "M.2.(A)",
+      "caption": "Past due 30 through 89 days and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
+      "mdrm": "RCFD3530",
+      "item": "M.2.(B)",
+      "caption": "Past due 90 days or more and still accruing",
+      "col": true
+    },
+    {
+      "key": "N",
       "mdrm": "",
-      "item": "4.b.(2)",
-      "caption": "Securities sold under agreements to repurchase"
+      "item": "1",
+      "caption": "Total loans to U.S. addressees (domicile)"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "1.a",
+      "caption": "Commercial and industrial loans"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "1.b",
+      "caption": "Loans secured by real estate"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "1.c",
+      "caption": "All other loans (including all lease financing receivables)"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "2",
+      "caption": "Total loans to non-U.S. addressees (domicile)"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "3",
+      "caption": "Total (sum of items 1.a through 1.c and 2)"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "M",
+      "caption": "Memoranda"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "M.1",
+      "caption": "Book value of loans sold or otherwise transferred to head office or related institutions and still serviced by the reporting branch or agency"
+    },
+    {
+      "key": "N",
+      "mdrm": "",
+      "item": "M.2",
+      "caption": "Interest rate, FX, and other commodity and equity contracts: Fair value of amounts carried as assets"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "1.a",
+      "caption": "U.S. addressees (domicile)"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "1.b",
+      "caption": "Non-U.S. addressees (domicile)"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "2.a",
+      "caption": "U.S. branches and agencies of other foreign banks"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "2.b",
+      "caption": "Other commercial banks in the U.S."
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "3.a",
+      "caption": "Foreign branches of U.S. banks"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "3.b",
+      "caption": "Other banks in foreign countries"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "4",
+      "caption": "Foreign governments and official institutions (including foreign central banks)"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "5",
+      "caption": "All other deposits and credit balances"
+    },
+    {
+      "key": "E",
+      "mdrm": "",
+      "item": "7",
+      "caption": "Total deposits and credit balances"
+    },
+    {
+      "key": "E",
+      "mdrm": "RCONC040",
+      "item": "1.a.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCONC041",
+      "item": "1.a.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFNC042",
+      "item": "1.a.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCONC043",
+      "item": "1.b.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCONC044",
+      "item": "1.b.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFNC045",
+      "item": "1.b.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1643",
+      "item": "2.a.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2347",
+      "item": "2.a.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN1668",
+      "item": "2.a.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1645",
+      "item": "2.b.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2348",
+      "item": "2.b.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN1669",
+      "item": "2.b.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1646",
+      "item": "3.a.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2367",
+      "item": "3.a.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN1671",
+      "item": "3.a.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1647",
+      "item": "3.b.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2373",
+      "item": "3.b.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN1672",
+      "item": "3.b.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1649",
+      "item": "4.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2377",
+      "item": "4.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN2650",
+      "item": "4.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1650",
+      "item": "5.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2259",
+      "item": "5.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN2261",
+      "item": "5.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON1653",
+      "item": "7.(A)",
+      "caption": "Total transaction accounts and credit balances (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2210",
+      "item": "7.(B)",
+      "caption": "Memo: Total demand deposits (included in Column A)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCON2385",
+      "item": "7.(C)",
+      "caption": "Total nontransaction accounts (including MMDAs) (excluding IBF)",
+      "col": true
+    },
+    {
+      "key": "E",
+      "mdrm": "RCFN2205",
+      "item": "7.(D)",
+      "caption": "IBF deposit liabilities",
+      "col": true
+    },
+    {
+      "key": "O",
+      "mdrm": "RCFNF234",
+      "item": "3",
+      "caption": "Total foreign deposits, including interest accrued and unpaid thereon (included in item 2 above)"
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M",
+      "caption": "Memoranda"
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M.1",
+      "caption": "Total deposit liabilities of the branch (including related interest accrued and unpaid) less allowable exclusions"
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M.1.a",
+      "caption": "Deposit accounts (excluding retirement accounts) of $250,000 or less"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF049",
+      "item": "M.1.a.(1)",
+      "caption": "Amount of deposit accounts (excluding retirement accounts) of $250,000 or less"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF050",
+      "item": "M.1.a.(2)",
+      "caption": "Number of deposit accounts (excluding retirement accounts) of $250,000 or less"
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M.1.b",
+      "caption": "Deposit accounts (excluding retirement accounts) of more than $250,000"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF051",
+      "item": "M.1.b.(1)",
+      "caption": "Amount of deposit accounts (excluding retirement accounts) of more than $250,000"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF052",
+      "item": "M.1.b.(2)",
+      "caption": "Number of deposit accounts (excluding retirement accounts) of more than $250,000"
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M.1.c",
+      "caption": "Retirement deposit accounts of $250,000 or less"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF045",
+      "item": "M.1.c.(1)",
+      "caption": "Amount of retirement deposit accounts of $250,000 or less"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF046",
+      "item": "M.1.c.(2)",
+      "caption": "Number of retirement deposit accounts of $250,000 or less"
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M.1.d",
+      "caption": "Retirement deposit accounts of more than $250,000"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF047",
+      "item": "M.1.d.(1)",
+      "caption": "Amount of retirement deposit accounts of more than $250,000"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONF048",
+      "item": "M.1.d.(2)",
+      "caption": "Number of retirement deposit accounts of more than $250,000"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCON5597",
+      "item": "M.2",
+      "caption": "Estimated amount of uninsured assessable deposits"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCON5590",
+      "item": "M.3",
+      "caption": "Preferred deposits"
+    },
+    {
+      "key": "O",
+      "mdrm": "RCONLG27",
+      "item": "M.6",
+      "caption": "Outstanding balance of Paycheck Protection Program (PPP) loans"
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "5",
+      "caption": "Trading assets"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "10",
+      "caption": "Trading liabilities"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M",
+      "caption": "Memoranda"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1",
+      "caption": "All other assets (itemize and describe amounts included in Schedule Q, item 6, that are greater than $100,000 and exceed 25% of item 6)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2",
+      "caption": "All other liabilities (itemize and describe amounts included in Schedule Q, item 13, that are greater than $100,000 and exceed 25% of item 13)"
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "1",
+      "caption": "Available-for-sale debt securities and equity securities not held for trading"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDJA36",
+      "item": "1.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG474",
+      "item": "1.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG475",
+      "item": "1.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG476",
+      "item": "1.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG477",
+      "item": "1.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "2",
+      "caption": "Federal funds sold and securities purchased under agreements to resell"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG478",
+      "item": "2.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG479",
+      "item": "2.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG480",
+      "item": "2.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG481",
+      "item": "2.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG482",
+      "item": "2.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "3",
+      "caption": "Loans and leases held for sale"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG483",
+      "item": "3.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG484",
+      "item": "3.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG485",
+      "item": "3.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG486",
+      "item": "3.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG487",
+      "item": "3.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "4",
+      "caption": "Loans and leases held for investment"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG488",
+      "item": "4.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG489",
+      "item": "4.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG490",
+      "item": "4.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG491",
+      "item": "4.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG492",
+      "item": "4.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "5.a",
+      "caption": "Derivative assets"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFD3543",
+      "item": "5.a.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG493",
+      "item": "5.a.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG494",
+      "item": "5.a.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG495",
+      "item": "5.a.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG496",
+      "item": "5.a.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "5.b",
+      "caption": "Other trading assets"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG497",
+      "item": "5.b.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG498",
+      "item": "5.b.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG499",
+      "item": "5.b.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG500",
+      "item": "5.b.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG501",
+      "item": "5.b.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "5.b.(1)",
+      "caption": "Nontrading securities at fair value"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDF240",
+      "item": "5.b.(1).(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDF684",
+      "item": "5.b.(1).(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDF692",
+      "item": "5.b.(1).(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDF241",
+      "item": "5.b.(1).(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDF242",
+      "item": "5.b.(1).(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "6",
+      "caption": "All other assets"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG391",
+      "item": "6.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG392",
+      "item": "6.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG395",
+      "item": "6.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG396",
+      "item": "6.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG804",
+      "item": "6.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "",
+      "item": "7",
+      "caption": "Total assets measured at fair value on a recurring basis (sum of items 1 through 5.b and 6)"
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG502",
+      "item": "7.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG503",
+      "item": "7.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG504",
+      "item": "7.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG505",
+      "item": "7.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q",
+      "mdrm": "RCFDG506",
+      "item": "7.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "8",
+      "caption": "Deposits"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDF252",
+      "item": "8.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDF694",
+      "item": "8.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDF253",
+      "item": "8.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDF254",
+      "item": "8.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "9",
+      "caption": "Federal funds purchased and securities sold under agreements to repurchase"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG507",
+      "item": "9.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG508",
+      "item": "9.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG509",
+      "item": "9.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG510",
+      "item": "9.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG511",
+      "item": "9.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "10.a",
+      "caption": "Derivative liabilities"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG512",
+      "item": "10.a.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG513",
+      "item": "10.a.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG514",
+      "item": "10.a.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG515",
+      "item": "10.a.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "10.b",
+      "caption": "Other trading liabilities"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG516",
+      "item": "10.b.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG517",
+      "item": "10.b.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG518",
+      "item": "10.b.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG519",
+      "item": "10.b.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG520",
+      "item": "10.b.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "11",
+      "caption": "Other borrowed money"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG521",
+      "item": "11.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG522",
+      "item": "11.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG523",
+      "item": "11.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG524",
+      "item": "11.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG525",
+      "item": "11.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "12",
+      "caption": "Subordinated notes and debentures"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG526",
+      "item": "12.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG527",
+      "item": "12.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG528",
+      "item": "12.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG529",
+      "item": "12.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG530",
+      "item": "12.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "13",
+      "caption": "All other liabilities"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG805",
+      "item": "13.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG806",
+      "item": "13.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG807",
+      "item": "13.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG808",
+      "item": "13.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG809",
+      "item": "13.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "",
+      "item": "14",
+      "caption": "Total liabilities measured at fair value on a recurring basis (sum of items 8 through 13)"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG531",
+      "item": "14.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG532",
+      "item": "14.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG533",
+      "item": "14.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG534",
+      "item": "14.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDG535",
+      "item": "14.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1.a",
+      "caption": "Mortgage servicing assets"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG536",
+      "item": "M.1.a.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG537",
+      "item": "M.1.a.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG538",
+      "item": "M.1.a.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG539",
+      "item": "M.1.a.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG540",
+      "item": "M.1.a.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1.b",
+      "caption": "Nontrading derivative assets"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG541",
+      "item": "M.1.b.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG542",
+      "item": "M.1.b.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG543",
+      "item": "M.1.b.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG544",
+      "item": "M.1.b.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG545",
+      "item": "M.1.b.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1.c",
+      "caption": "First itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG546",
+      "item": "M.1.c.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG547",
+      "item": "M.1.c.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG548",
+      "item": "M.1.c.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG549",
+      "item": "M.1.c.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG550",
+      "item": "M.1.c.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1.d",
+      "caption": "Second itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG551",
+      "item": "M.1.d.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG552",
+      "item": "M.1.d.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG553",
+      "item": "M.1.d.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG554",
+      "item": "M.1.d.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG555",
+      "item": "M.1.d.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1.e",
+      "caption": "Third itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG556",
+      "item": "M.1.e.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG557",
+      "item": "M.1.e.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG558",
+      "item": "M.1.e.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG559",
+      "item": "M.1.e.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG560",
+      "item": "M.1.e.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.1.f",
+      "caption": "Fourth itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG561",
+      "item": "M.1.f.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG562",
+      "item": "M.1.f.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG563",
+      "item": "M.1.f.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG564",
+      "item": "M.1.f.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG565",
+      "item": "M.1.f.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2.b",
+      "caption": "Nontrading derivative liabilities"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG566",
+      "item": "M.2.b.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG567",
+      "item": "M.2.b.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG568",
+      "item": "M.2.b.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG569",
+      "item": "M.2.b.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG570",
+      "item": "M.2.b.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2.c",
+      "caption": "First itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG571",
+      "item": "M.2.c.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG572",
+      "item": "M.2.c.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG573",
+      "item": "M.2.c.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG574",
+      "item": "M.2.c.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG575",
+      "item": "M.2.c.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2.d",
+      "caption": "Second itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG576",
+      "item": "M.2.d.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG577",
+      "item": "M.2.d.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG578",
+      "item": "M.2.d.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG579",
+      "item": "M.2.d.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG580",
+      "item": "M.2.d.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2.e",
+      "caption": "Third itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG581",
+      "item": "M.2.e.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG582",
+      "item": "M.2.e.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG583",
+      "item": "M.2.e.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG584",
+      "item": "M.2.e.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG585",
+      "item": "M.2.e.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2.f",
+      "caption": "Fourth itemized amount (itemize and describe)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG586",
+      "item": "M.2.f.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG587",
+      "item": "M.2.f.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG588",
+      "item": "M.2.f.(C)",
+      "caption": "Level 1 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG589",
+      "item": "M.2.f.(D)",
+      "caption": "Level 2 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDG590",
+      "item": "M.2.f.(E)",
+      "caption": "Level 3 fair value measurements",
+      "col": true
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFDF686",
+      "item": "8.(B)",
+      "depth": 1,
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "C",
+      "mdrm": "",
+      "item": "M.5",
+      "caption": "Number and outstanding balance of Section 4013 loans"
+    },
+    {
+      "key": "C",
+      "mdrm": "RCONLG24",
+      "item": "M.5.a",
+      "caption": "Number of outstanding Section 4013 loans"
+    },
+    {
+      "key": "C",
+      "mdrm": "RCONLG25",
+      "item": "M.5.b",
+      "caption": "Outstanding balance of Section 4013 loans"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.3",
+      "caption": "Loans measured at fair value (included in Schedule C, part I, items 1 through 8)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.3.a",
+      "caption": "Loans secured by real estate"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.4",
+      "caption": "Unpaid principal balance of loans measured at fair value (reported in Schedule Q, Memorandum item 3)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.4.a",
+      "caption": "Loans secured by real estate"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "",
+      "item": "M.2.a",
+      "caption": "Loan commitments (not accounted for as derivatives)"
+    },
+    {
+      "key": "Q -- Memoranda",
+      "mdrm": "RCFDF689",
+      "item": "M.2.a.(B)",
+      "caption": "LESS: Amounts netted in the determination of total fair value",
+      "col": true
+    },
+    {
+      "key": "C",
+      "mdrm": "RCFD2122",
+      "item": "11",
+      "caption": "Total loans and leases, net of unearned income"
+    },
+    {
+      "key": "A",
+      "mdrm": "RCFD0010",
+      "item": "6",
+      "caption": "Total (sum of items 1 through 5)"
+    },
+    {
+      "key": "T",
+      "mdrm": "RCFDB915",
+      "item": "M.1.c",
+      "caption": "U.S. Treasury and U.S. Government agency obligations"
+    },
+    {
+      "key": "T",
+      "mdrm": "RCXXB868",
+      "item": "M.1.l",
+      "caption": "Total managed assets held in personal trust and agency accounts (sum of Memorandum items 1.a through 1.k)"
+    },
+    {
+      "key": "RAL",
+      "mdrm": "RCFN3548",
+      "item": "4.e.b",
+      "caption": "Trading liabilities, total (IBF only)"
+    },
+    {
+      "key": "L",
+      "mdrm": "RCFDA126",
+      "item": "10.(A)",
+      "caption": "Interest rate contracts",
+      "col": true
+    },
+    {
+      "key": "L",
+      "mdrm": "RCFD8725",
+      "item": "11.(A)",
+      "caption": "Interest rate contracts",
+      "col": true
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "10",
+      "caption": "Total gross notional amount of derivative contracts held for trading"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "11",
+      "caption": "Total gross notional amount of derivative contracts held for purposes other than trading"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12",
+      "caption": "Gross fair values of derivative contracts"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12.a",
+      "caption": "Contracts held for trading"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12.a.(1)",
+      "caption": "Gross positive fair value"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12.a.(2)",
+      "caption": "Gross negative fair value"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12.b",
+      "caption": "Contracts held for purposes other than trading"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12.b.(1)",
+      "caption": "Gross positive fair value"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "12.b.(2)",
+      "caption": "Gross negative fair value"
+    },
+    {
+      "key": "L",
+      "mdrm": "",
+      "item": "6.b",
+      "caption": "Gross fair values"
+    },
+    {
+      "key": "Q -- Liabilities",
+      "mdrm": "RCFD3547",
+      "item": "10.a.(A)",
+      "caption": "Total fair value reported on Schedule RAL",
+      "col": true
+    },
+    {
+      "key": "O",
+      "mdrm": "",
+      "item": "M.8",
+      "caption": "Sweep deposits"
     }
   ],
   "drop_codes": [
@@ -5752,31 +5662,117 @@
     "RCON5585",
     "RCON5586",
     "RCON5587",
-    "RCON5589"
+    "RCON5589",
+    "RCFD2122"
   ],
   "captions": {
-    "RCFNC416": "MORTGAGE-BACKED SECURITIES - ISSUED OR GUARANTEED BY U.S. GOVERNMENT AGENCIES",
-    "RCFNC417": "MORTGAGE-BACKED SECURITIES - OTHER",
-    "RCFNF857": "SECURITIES PURCHASED UNDER AGREEMENTS TO RESELL: WITH NONBANK BROKERS AND DEALERS IN SECURITIES",
-    "RCFNC422": "SECURITIES SOLD UNDER AGREEMENTS TO REPURCHASE - WITH DEPOSITORY INSTITUTIONS IN THE U.S.",
-    "RCFNC423": "SECURITIES SOLD UNDER AGREEMENTS TO REPURCHASE - WITH OTHERS",
-    "RCFDC417": "MORTGAGE-BACKED SECURITIES - OTHER",
-    "RCFNC414": "SECURITIES PURCHASED UNDER AGREEMENTS TO RESELL - WITH DEPOSITORY INSTITUTIONS IN THE U.S.",
-    "RCFNC415": "SECURITIES PURCHASED UNDER AGREEMENTS TO RESELL - WITH OTHERS",
-    "RCFD3543": "REVALUATION GAINS ON INTEREST RATE; FOREIGN EXCHANGE RATE; AND OTHER COMMODITY AND EQUITY CONTRACTS",
-    "RCFD6724": "AUDIT INDICATOR",
-    "RCFDC219": "NOTIONAL AMOUNT OF CREDIT DERIVATIVES ON WHICH THE REPORTING BANK IS THE GUARANTOR:GROSS POSITIVE FAIR VALUE",
-    "RCFDC220": "NOTIONAL AMOUNT OF CREDIT DERIVATIVES ON WHICH THE REPORTING BANK IS THE GUARANTOR:GROSS NEGATIVE FAIR VALUE",
-    "RCFDC221": "NOTIONAL AMOUNT OF CREDIT DERIVATIVES ON WHICH THE REPORTING BANK IS THE BENEFICIARY:GROSS POSITIVE FAIR VALUE",
-    "RCFDC222": "NOTIONAL AMOUNT OF CREDIT DERIVATIVES ON WHICH THE REPORTING BANK IS THE BENEFICIARY:GROSS NEGATIVE FAIR VALUE",
-    "RCFD2171": "CLAIMS ON NON-AFFILIATES",
-    "RCFD8741": "GROSS POSITIVE FAIR VALUE OF INTEREST RATE DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8742": "GROSS POSITIVE FAIR VALUE OF FOREIGN EXCHANGE DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8743": "GROSS POSITIVE FAIR VALUE OF EQUITY DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8744": "GROSS POSITIVE FAIR VALUE OF COMMODITY AND OTHER DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8745": "GROSS NEGATIVE FAIR VALUE OF INTEREST RATE DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8746": "GROSS NEGATIVE FAIR VALUE OF FOREIGN EXCHANGE DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8747": "GROSS NEGATIVE FAIR VALUE OF EQUITY DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET",
-    "RCFD8748": "GROSS NEGATIVE FAIR VALUE OF COMMODITY AND OTHER DERIVATIVE CONTRACTS HELD FOR PURPOSES OTHER THAN TRADING THAT ARE MARKED TO MARKET"
+    "RCFNC416": "Mortgage-backed securities — issued or guaranteed by U.S. government agencies",
+    "RCFNC417": "Mortgage-backed securities — other",
+    "RCFNF857": "Securities purchased under agreements to resell: with nonbank brokers and dealers in securities",
+    "RCFNC422": "Securities sold under agreements to repurchase — with depository institutions in the U.S.",
+    "RCFNC423": "Securities sold under agreements to repurchase — with others",
+    "RCFDC417": "Mortgage-backed securities — other",
+    "RCFNC414": "Securities purchased under agreements to resell — with depository institutions in the U.S.",
+    "RCFNC415": "Securities purchased under agreements to resell — with others",
+    "RCFD3543": "Revaluation gains on interest rate, foreign exchange rate, and other commodity and equity contracts",
+    "RCFD6724": "Audit indicator",
+    "RCFDC219": "Credit derivatives on which the reporting bank is the guarantor — gross positive fair value",
+    "RCFDC220": "Credit derivatives on which the reporting bank is the guarantor — gross negative fair value",
+    "RCFDC221": "Credit derivatives on which the reporting bank is the beneficiary — gross positive fair value",
+    "RCFDC222": "Credit derivatives on which the reporting bank is the beneficiary — gross negative fair value",
+    "RCFD2171": "Claims on non-affiliates",
+    "RCFD8741": "Gross positive fair value of interest rate derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8742": "Gross positive fair value of foreign exchange derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8743": "Gross positive fair value of equity derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8744": "Gross positive fair value of commodity and other derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8745": "Gross negative fair value of interest rate derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8746": "Gross negative fair value of foreign exchange derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8747": "Gross negative fair value of equity derivative contracts held for purposes other than trading, marked to market",
+    "RCFD8748": "Gross negative fair value of commodity and other derivative contracts held for purposes other than trading, marked to market",
+    "RCFD0020": "Cash items in process of collection and unposted debits",
+    "RCFD0010": "Cash and balances due from depository institutions",
+    "RCFD2122": "Total loans and leases, net of unearned income",
+    "RCFD0080": "Currency and coin",
+    "RCFD0082": "Balances due from depository institutions in the U.S.",
+    "RCFD0090": "Balances due from Federal Reserve Banks",
+    "RCFD1415": "Construction and land development loans",
+    "RCFD1420": "Real estate loans secured by farmland",
+    "RCFD1460": "Real estate loans secured by multi-family (5 or more) residential properties",
+    "RCFD1480": "Real estate loans secured by nonfarm nonresidential properties",
+    "RCFDB534": "Loans to other depository institutions in the U.S.",
+    "RCFD1520": "Loans to other financial institutions",
+    "RCFD1763": "Commercial and industrial loans to U.S. addressees",
+    "RCFD1764": "Commercial and industrial loans to non-U.S. addressees",
+    "RCFD2081": "Loans to foreign governments and official institutions",
+    "RCFD1885": "All other loans",
+    "RCFD2182": "Lease financing receivables (net of unearned income) of U.S. addressees (domicile)",
+    "RCFD2183": "Lease financing receivables (net of unearned income) of non-U.S. addressees (domicile)",
+    "RCFD2123": "Unearned income on loans",
+    "RCONC040": "Total transaction accounts — individuals, partnerships, and corporations (include all certified and official checks): U.S. addressees (domicile)",
+    "RCONC043": "Total transaction accounts — individuals, partnerships, and corporations (include all certified and official checks): non-U.S. addressees (domicile)",
+    "RCON1643": "Total transaction accounts and credit balances (excluding IBF) — deposits of U.S. branches and agencies of other foreign banks",
+    "RCON1645": "Total transaction accounts and credit balances (excluding IBF) — deposits of other commercial banks in the U.S.",
+    "RCON1646": "Total transaction accounts and credit balances (excluding IBF) — deposits of foreign branches of U.S. banks",
+    "RCON1647": "Total transaction accounts and credit balances (excluding IBF) — deposits of other banks in foreign countries",
+    "RCON1649": "Total transaction accounts and credit balances (excluding IBF) — deposits of foreign governments and official institutions",
+    "RCON1650": "Total transaction accounts and credit balances (excluding IBF) — all other deposits and credit balances",
+    "RCON1653": "Total deposits and credit balances",
+    "RCFD3381": "Quarterly average of interest-bearing balances due from depository institutions",
+    "RCFD3365": "Quarterly average of federal funds sold and securities purchased under agreements to resell",
+    "RCFD3360": "Quarterly average of total loans",
+    "RCFD3105": "Average of loans to banks in foreign countries",
+    "RCFD3106": "Quarterly average of total claims on nonrelated parties",
+    "RCFD3345": "Quarterly average of time certificates of deposit in denominations of $100,000 or more in domestic offices",
+    "RCFD3107": "Average of interest-bearing deposits and credit balances",
+    "RCFD3353": "Quarterly average of federal funds purchased and securities sold under agreements to repurchase",
+    "RCFD3355": "Quarterly average of other borrowed money",
+    "RCFD3423": "Unused commitments — total",
+    "RCFD8765": "Spot foreign exchange contracts",
+    "RCFD3375": "Standby letters of credit and foreign office guarantees — amount outstanding",
+    "RCFD3378": "Standby letters of credit conveyed to others through participations",
+    "RCFD3411": "Commercial and similar letters of credit",
+    "RCFD5602": "All other off-balance sheet contingent liabilities ≥ ½ of 1% of total claims on nonrelated parties — total",
+    "RCFD5598": "First component: all other off-balance sheet liabilities ≥ 1% of total claims on nonrelated parties",
+    "RCFD5600": "Second component: all other off-balance sheet liabilities ≥ 1% of total claims on nonrelated parties",
+    "RCFD5601": "Third component: all other off-balance sheet liabilities ≥ 1% of total claims on nonrelated parties",
+    "RCFD5603": "All other off-balance sheet contingent claims (assets) ≥ ½ of 1% of total claims on nonrelated parties — total",
+    "RCFD5604": "First component: all other off-balance sheet assets ≥ 1% of total claims on nonrelated parties",
+    "RCFD5605": "Second component: all other off-balance sheet assets ≥ 1% of total claims on nonrelated parties",
+    "RCFD5606": "Third component: all other off-balance sheet assets ≥ 1% of total claims on nonrelated parties",
+    "RCFD8693": "Interest rate futures contracts — notional value",
+    "RCFD8697": "Interest rate forward contracts — notional value",
+    "RCFD8701": "Written exchange-traded interest rate option contracts — notional value",
+    "RCFD8705": "Purchased exchange-traded interest rate option contracts — notional value",
+    "RCFD8709": "Written OTC interest rate option contracts — notional value",
+    "RCFD8710": "Written OTC foreign exchange option contracts — notional value",
+    "RCFD8713": "Purchased OTC interest rate option contracts — notional value",
+    "RCFD8714": "Purchased OTC foreign exchange option contracts — notional value",
+    "RCFD3450": "Interest rate contracts — notional value of all outstanding contracts",
+    "RCFDA126": "Total gross notional amount of interest rate derivative contracts held for trading",
+    "RCFD8725": "Total gross notional amount of interest rate derivative contracts held for purposes other than trading — contracts marked to market",
+    "RCFD3529": "Interest rate, foreign exchange rate, and other commodity and equity contracts: fair value of amounts carried as assets",
+    "RCFDF236": "Total deposit liabilities before exclusions (as defined in Section 3(l) of the Federal Deposit Insurance Act)",
+    "RCFDF237": "Total allowable exclusions, including interest accrued and unpaid on allowable exclusions (including foreign deposits)",
+    "RCFDK652": "Average consolidated total assets for the calendar quarter",
+    "RCFDK653": "Averaging method used",
+    "RCFDK654": "Average tangible equity for the calendar quarter",
+    "RCFDK655": "Holdings of long-term unsecured debt issued by other FDIC-insured institutions",
+    "RCFDG478": "Federal funds sold and securities purchased under agreements to resell — total fair value reported on Schedule RC",
+    "RCFDG497": "Other trading assets — total fair value reported on Schedule RAL",
+    "RCFD3536": "Trading assets — all other mortgage-backed securities",
+    "RCFD2170": "Total assets",
+    "RCFD2205": "Total deposits and credit balances",
+    "RCFD3190": "Other borrowed money",
+    "RCFD3548": "Trading liabilities, total",
+    "RCFD2916": "Other liabilities (to nonrelated parties)",
+    "RCFD2927": "Total liabilities to nonrelated parties",
+    "RCFD2944": "Net due to head office and other related institutions in the U.S. and in foreign countries",
+    "RCFD2950": "Total liabilities",
+    "RCFDA345": "Fiduciary powers granted but not exercised",
+    "RCFDA346": "Fiduciary powers granted and exercised, but no dollar values to report",
+    "RCFDB867": "Does the bank have any fiduciary or related activity (in the form of assets or accounts) to report in this schedule?",
+    "RCFD0070": "Balances due from banks in foreign countries and foreign central banks",
+    "RCFN0070": "Balances due from banks in foreign countries and foreign central banks (IBF only)",
+    "RCFN0020": "Cash items in process of collection and unposted debits (IBF only)"
   }
 }

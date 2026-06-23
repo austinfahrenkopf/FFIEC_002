@@ -90,9 +90,16 @@
     },
     "C -- Part II": [
       "1"
+    ],
+    "C": [
+      "5"
     ]
   },
-  "spurious_allowed": {},
+  "spurious_allowed": {
+    "RCONLG24": "Schedule C Part I M.5.a (number of Section 4013 loans) — real 2026-form item but absent from the FFIEC 002 panel (CARES Act Section 4013 relief expired 2022-01-01; no foreign branch/agency reported it). Kept for PDF structural completeness per audit.",
+    "RCONLG25": "Schedule C Part I M.5.b (outstanding balance of Section 4013 loans) — same as LG24; real form item, no panel data.",
+    "RCXXB868": "Schedule T M.1.l (total managed assets) — derived RCXX total (sum of M.1.a-k); not separately reported in the panel (real value available at item 4.a = RCFDB868). Kept for PDF structural completeness."
+  },
   "_spurious_description": "spurious_allowed: hierarchy LEAF codes legitimately absent from the panel (text/admin fields or valid-but-unfiled form lines greyed-out per C4). The bidirectional gate FAILS on any hierarchy leaf code never reported in the panel that is NOT listed here — so genuine parse artifacts must be dropped via *_hierarchy_overrides.json drop_codes, not parked here.",
   "structure_exclusions": {
     "C": [
@@ -102,11 +109,7 @@
       "4.a",
       "4.a.b",
       "4.b",
-      "4.b.b",
-      "M.1",
-      "M.2.a",
-      "M.2.b",
-      "M.2.c"
+      "4.b.b"
     ],
     "Q": [
       "5.b.1",

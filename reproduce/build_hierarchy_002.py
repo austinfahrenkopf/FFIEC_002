@@ -103,9 +103,14 @@ def apply_overrides(hier):
             item_=row.get("item","")
             if item_ and any(x.get("item")==item_ and not x.get("mdrm") for x in seq): continue
         item=row.get("item", mdrm[4:] if mdrm else "")
-        seq.append({"mdrm":mdrm,"caption":row.get("caption",mdrm),"item":item,
+        node={"mdrm":mdrm,"caption":row.get("caption",mdrm),"item":item,
                     "depth":depth(item) if item else 1,
-                    "order":row.get("order", len(seq))})
+                    "order":row.get("order", len(seq))}
+        # col: matrix-column leaf flag (mirrors Y-9C build). When set, the engine renders the
+        # node as a column-suffix leaf (suppresses the item-number badge) — e.g. Schedule N's
+        # .(A)/.(B)/.(C)/.(D) past-due/nonaccrual/modified columns under each loan-type row.
+        if row.get("col"): node["col"]=True
+        seq.append(node)
         added+=1
     # Re-sort by item number (hierarchical) so force_rows land after their parents,
     # then rewrite 'order' to match new positions (linter and site both use 'order').

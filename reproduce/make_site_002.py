@@ -318,8 +318,8 @@ let _toastTmr;function showToast(msg,type='warn'){const t=document.getElementByI
 const ROSTER=new Map(),TYPES={};
 for(const [rssd,nm,ty] of BANKS){ROSTER.set(rssd,{nm,ty});if(ty){(TYPES[ty]=TYPES[ty]||[]).push(rssd);}}
 const TYPE_DESC={USB:'uninsured state branches',UFB:'uninsured federal branches',UFA:'uninsured federal agencies',USA:'uninsured state agencies',IFB:'insured federal branches',ISB:'insured state branches'};
-const SCHED_NAMES={'RAL':'RAL — Assets & Liabilities','A':'A — Cash & Balances Due','C':'C — Loans & Leases','C -- Part II':'C — Part II (Small Business & Small Farm Loans)','E':'E — Deposits & Credit Balances','K':'K — Quarterly Averages','L':'L — Off-Balance-Sheet Items','M':'M — Memoranda','N':'N — Past Due & Nonaccrual','O':'O — Other Data','Q':'Q — Fair Value','S':'S — Servicing/Securitization','T':'T — Other'};
-const FORM_ORDER=['RAL','A','C','C -- Part II','E','K','L','M','N','O','Q','S','T'];
+const SCHED_NAMES={'RAL':'RAL — Assets & Liabilities','A':'A — Cash & Balances Due','C':'C — Loans & Leases','C -- Part II':'C — Part II (Small Business & Small Farm Loans)','E':'E — Deposits & Credit Balances','K':'K — Quarterly Averages','L':'L — Off-Balance-Sheet Items','M':'M — Memoranda','N':'N — Past Due & Nonaccrual','O':'O — Other Data','RAL -- Schedule P':'P — Other Borrowed Money','Q':'Q — Fair Value (Assets)','Q -- Liabilities':'Q — Fair Value (Liabilities)','Q -- Memoranda':'Q — Fair Value (Memoranda)','S':'S — Servicing/Securitization','T':'T — Other'};
+const FORM_ORDER=['RAL','A','C','C -- Part II','E','K','L','M','N','O','RAL -- Schedule P','Q','Q -- Liabilities','Q -- Memoranda','S','T'];
 const DERIV={
  'D_LOANSDEP':{type:'ratio',lbl:'Liquidity ▸ Loans / Deposits (%)',plus:['2122'],den:['2205']},
  'D_DEPASSETS':{type:'ratio',lbl:'Funding ▸ Deposits / Assets (%)',plus:['2205'],den:['2170']},
@@ -578,7 +578,7 @@ function rowEl(nd,has,dispCap){
  d.dataset.code=nd.code;d.dataset.txt=(nd.code+' '+nd.caption).toLowerCase();d.dataset.depth=nd.depth;d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
  const car=`<span class="caret"${has?'':' style="visibility:hidden"'}>▸</span>`;
  const cap=`<span class="cap" title="${String(nd.caption||'').replace(/"/g,'&quot;')}">${dispCap||nd.caption||''}</span>`;
- d.innerHTML=nd.derived?`${car}${cap}`:`${car}${nd.num?`<span class=num>${nd.num}</span>`:''}${cap}<span class=code>${nd.code}</span>`;
+ d.innerHTML=nd.derived?`${car}${cap}`:`${car}${(nd.num&&!nd.col)?`<span class=num>${nd.num}</span>`:''}${cap}<span class=code>${nd.code}</span>`;
  const lab=nd.derived?short(nd.caption):(nd.caption||nd.code);
  d.querySelector('.caret').onclick=ev=>{ev.stopPropagation();if(has)toggleNode(d);};
  d.onclick=()=>toggleMeasure(nd.code,lab,nd.pct);
@@ -612,9 +612,9 @@ function emitSchedule(sch,showRaw){const allRows=HIER[sch];
      else out.push({code:'EMPTY:'+r.item,caption:'(empty)',num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,placeholder:true});
      continue;}
    const p=r.mdrm.slice(0,4),base=r.mdrm.slice(4),cap=r.caption||r.mdrm;const depth=r.depth||1;
-   if(p==='RCFD'||p==='RCON'){if(!done.has('C'+base)){done.add('C'+base);out.push({code:'COMB'+base,caption:cap,num:r.item||'',depth,comb:true,derived:false,pct:false});}
+   if(p==='RCFD'||p==='RCON'){if(!done.has('C'+base)){done.add('C'+base);out.push({code:'COMB'+base,caption:cap,num:r.item||'',depth,comb:true,derived:false,pct:false,col:!!r.col});}
      if(showRaw&&!done.has(r.mdrm)){done.add(r.mdrm);out.push({code:r.mdrm,caption:cap+' ['+p.slice(2)+']',num:'',depth:depth+1,comb:false,derived:false,pct:false});}}
-   else{if(combBases.has(base))continue;if(!done.has(r.mdrm)){done.add(r.mdrm);out.push({code:r.mdrm,caption:cap,num:r.item||'',depth,comb:false,derived:false,pct:false});}}}
+   else{if(combBases.has(base))continue;if(!done.has(r.mdrm)){done.add(r.mdrm);out.push({code:r.mdrm,caption:cap,num:r.item||'',depth,comb:false,derived:false,pct:false,col:!!r.col});}}}
  return out;}
 function secPrefix(nodes){
  const caps=[];function walk(ns){for(const n of ns){if(!n.header&&!n.derived&&!n.placeholder){if(!n.children.length)caps.push(n.caption||'');else walk(n.children);}}}
