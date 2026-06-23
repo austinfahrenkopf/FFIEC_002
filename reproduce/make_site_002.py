@@ -335,6 +335,7 @@ const DERIV={
  'D_NPL_RE':{type:'ratio',lbl:'Loan quality ▸ RE loans NPL % (Past Due + Non Accrual / RE loans)',plus:['1421','1422','1423'],den:['1415','1420','1460','1480','1797']},
  'D_NPL_OTHR':{type:'ratio',lbl:'Loan quality ▸ Other loans NPL % (Past Due + Non Accrual / other loans)',plus:['3183','3184','3185'],den:['1885']},
 };
+const DYN={};   // dynamic subtotal measures created by clicking a grouping row in the tree
 const DKIND=m=>DERIV[m]?DERIV[m].type:null;const isPct=m=>DKIND(m)==='ratio';
 const short=lbl=>{const i=lbl.indexOf('▸');return (i>=0?lbl.slice(i+1):lbl).replace(/\s*\(.*\)\s*$/,'').trim();};
 const sqlList=a=>a.map(x=>`'${String(x).replace(/'/g,"''")}'`).join(',');
@@ -344,8 +345,19 @@ function yoyQtr(q){return q?`${+q.slice(0,4)-1}${q.slice(4)}`:null;}
 const fmtUnit=(v,pct)=>v==null?'—':pct?(+v).toFixed(2)+'%':(Math.abs(v)>=1e9?(v/1e6).toLocaleString(undefined,{maximumFractionDigits:0})+' B':Math.abs(v)>=1e6?(v/1e3).toLocaleString(undefined,{maximumFractionDigits:0})+' M':Number(v).toLocaleString()+' k');
 
 let conn,HIER=null,treeBuilt=false,sqlC=[],sqlR=[],ALLQ=[];
+const SUB_AGG_DESCS={
+  // Column-sum matrix schedules — row-subtotal sums across columns
+  'N':'Total Past Due & Nonaccrual',        // cols A/B/C/D = 30-89d / 90+d / nonaccrual / modified
+  'Q':'Total Fair Value',                   // cols = Total FV + LESS netted + Level 1/2/3
+  'Q -- Liabilities':'Total Fair Value',
+  'Q -- Memoranda':'Total Fair Value',
+  'E':'Total Deposits',                     // cols A/C/D = transaction / nontransaction / IBF (item 7.B memo is included)
+  'L':'Total Off-Balance-Sheet',            // cols = OTC derivative contract types (IR, FX, equity, commodity)
+  // Roll-up only (no descriptor — form captions are self-describing):
+  // RAL, A, C, C -- Part II, K, M, O, RAL -- Schedule P, S, T
+};
 const _fullCap=new Map();
-function _walkFC(nodes,parts){for(const nd of nodes){if(!nd.placeholder&&!nd.derived&&!nd.header&&nd.code&&!/^(H:|SEC:|SUB:|EMPTY:)/.test(nd.code)){const cap=nd.caption||'';const anc=parts.filter(Boolean);_fullCap.set(nd.code,anc.length?anc.join(' — ')+' — '+cap:cap);}if(nd.children&&nd.children.length)_walkFC(nd.children,nd.header?[...parts,nd.caption||'']:parts);}}
+function _walkFC(nodes,parts,sch){for(const nd of nodes){if(!nd.placeholder&&!nd.derived&&!nd.header&&nd.code&&!/^(H:|SEC:|SUB:|EMPTY:)/.test(nd.code)){const cap=nd.caption||'';const anc=parts.filter(Boolean);_fullCap.set(nd.code,anc.length?anc.join(' — ')+' — '+cap:cap);}if(nd.header&&nd.code){const _sn=sch&&SCHED_NAMES[sch]?SCHED_NAMES[sch]:(parts.length?parts[0]:'');const _si=_sn.indexOf(' — ');const _sk=_si>=0?_sn.slice(0,_si):_sn;const _agg=sch?SUB_AGG_DESCS[sch]||'':'';const _cnt=(function c(n){let k=0;for(const x of(n.children||[])){if(x.header)k+=c(x);else if(x.code&&!x.placeholder&&!/^(H:|SEC:|SUB:|EMPTY:)/.test(x.code))k++;}return k;})(nd);if(_cnt>0){const _rl=_agg?_sk+' '+_agg+': '+(nd.caption||''):_sk?_sk+' '+(nd.caption||''):(nd.caption||'');_fullCap.set('SUB:'+nd.code,_rl);if(!/^(H:|SEC:|EMPTY:)/.test(nd.code)&&!_fullCap.has(nd.code))_fullCap.set(nd.code,_rl);}}if(nd.children&&nd.children.length)_walkFC(nd.children,nd.header?[...parts,nd.caption||'']:parts,sch);}}
 function fullCap(code){return _fullCap.get(code)||'';}
 const _seriesCache=new Map(),_inflight=new Map();
 let active=[],measures=[],peerMembers=[],peers={},lastSeries=[],Qall=[],rangeSel={a:0,b:0};
@@ -387,7 +399,7 @@ async function seriesFor(id,m){const cond=scopeCond(id);if(cond==null)return [];
  const _sk=`${id}::${m}`;if(_seriesCache.has(_sk))return _seriesCache.get(_sk);
  if(_inflight.has(_sk))return _inflight.get(_sk);
  const _p=(async()=>{
- let d=DERIV[m];if(!d&&m&&m.startsWith('COMB'))d={type:'sum',plus:[m.slice(4)],minus:[],den:[]};
+ let d=DERIV[m]||DYN[m];if(!d&&m&&m.startsWith('COMB'))d={type:'sum',plus:[m.slice(4)],minus:[],den:[]};
  if(d){const bases=[...d.plus,...(d.minus||[]),...(d.den||[])];
    const codes=[];for(const b of bases)for(const p of['RCFD','RCON','RCFN'])codes.push(`${p}${b}`);
    const r=(await conn.query(`SELECT id_rssd,quarter_end,mdrm,value FROM t WHERE ${cond} AND mdrm IN (${sqlList(codes)})`)).toArray();
@@ -567,12 +579,16 @@ function rowEl(nd,has,dispCap){
    return p;}
  if(nd.header){
    const d=document.createElement('div');d.className='trow hdr';
-   d.dataset.depth=nd.depth;d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
+   d.dataset.code=nd.code;d.dataset.depth=nd.depth;d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
    const car=`<span class="caret"${has?'':' style="visibility:hidden"'}>▸</span>`;
    const cap=`<span class="cap" title="${String(nd.caption||'').replace(/"/g,'&quot;')}">${dispCap||nd.caption||''}</span>`;
    d.innerHTML=`${car}${nd.num?`<span class=num>${nd.num}</span>`:''}${cap}`;
    d.querySelector('.caret').onclick=ev=>{ev.stopPropagation();if(has)toggleNode(d);};
-   d.onclick=()=>{if(has)toggleNode(d);};
+   const codes=descCodes(nd);const pctSkip=hasPctDesc(nd);
+   if(codes.length){d.title='Click to chart sum of '+codes.length+' leaf $ code(s)'+(pctSkip?' · non-additive % cells excluded':'');
+     d.onclick=()=>{const code='SUB:'+nd.code;const rl=fullCap(code)||nd.caption;DYN[code]={type:'sum',lbl:rl,plus:codes};toggleMeasure(code,rl,false);};}
+   else if(pctSkip){d.title='Contains only non-additive % cells — cannot sum';d.onclick=()=>{if(has)toggleNode(d);};}
+   else d.onclick=()=>{if(has)toggleNode(d);};
    return d;}
  const d=document.createElement('div');d.className='trow'+(nd.comb?' comb':'');
  d.dataset.code=nd.code;d.dataset.txt=(nd.code+' '+nd.caption).toLowerCase();d.dataset.depth=nd.depth;d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
@@ -608,7 +624,7 @@ function emitSchedule(sch,showRaw){const allRows=HIER[sch];
  for(const r of allRows){
    if(!REPORT.test(r.mdrm)){ // header / placeholder row (no valid MDRM)
      if(!r.item)continue;
-     if(r.caption)out.push({code:'HDR:'+r.item,caption:r.caption,num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,header:true});
+     if(r.caption)out.push({code:'HDR:'+sch+':'+r.item,caption:r.caption,num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,header:true});
      else out.push({code:'EMPTY:'+r.item,caption:'(empty)',num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,placeholder:true});
      continue;}
    const p=r.mdrm.slice(0,4),base=r.mdrm.slice(4),cap=r.caption||r.mdrm;const depth=r.depth||1;
@@ -653,7 +669,7 @@ function toggleNode(row){if(!row._kids)return;const open=row._kids.style.display
 function buildTree(){const t=document.getElementById('tree');t.innerHTML='';const showRaw=document.getElementById('showraw').checked;
  addSchedule(t,'★ Ratios & Subtotals',Object.keys(DERIV).map(k=>({code:k,caption:DERIV[k].lbl,num:'',depth:1,comb:false,derived:true,pct:isPct(k),children:[]})));
  const keys=[...FORM_ORDER.filter(k=>HIER[k]),...Object.keys(HIER).filter(k=>SCHED_NAMES[k]&&!FORM_ORDER.includes(k))];
- for(const sch of keys){const flat=emitSchedule(sch,showRaw);if(!flat.length)continue;const nroots=nest(flat);addSchedule(t,SCHED_NAMES[sch]||sch,nroots);_walkFC(nroots,[SCHED_NAMES[sch]||sch]);}
+ for(const sch of keys){const flat=emitSchedule(sch,showRaw);if(!flat.length)continue;const nroots=nest(flat);addSchedule(t,SCHED_NAMES[sch]||sch,nroots);_walkFC(nroots,[SCHED_NAMES[sch]||sch],sch);}
  treeBuilt=true;markTree();renderFavShelf();}
 let lvl={'#tree':0,'#formbody':0};
 function applyLevel(L,root='#tree'){L=Math.max(0,L);lvl[root]=L;
@@ -697,7 +713,9 @@ function filterTree(q){q=q.trim().toLowerCase();
  document.querySelectorAll('#tree .schsec').forEach(sec=>{const rows=sec.querySelector('.schrows');let any=false;
    sec.querySelectorAll('.trow').forEach(r=>{const m=r.dataset.txt.includes(q);r.style.display=m?'':'none';if(m)any=true;});
    rows.style.display=any?'block':'none';sec.style.display=any?'':'none';});}
-function markTree(){const on=new Set(measures.map(m=>m.code));document.querySelectorAll('#tree .trow').forEach(r=>r.classList.toggle('on',on.has(r.dataset.code)));}
+function descCodes(nd){const out=[];(function rec(n){for(const c of (n.children||[])){if(c.header)rec(c);else if(c.code&&!c.placeholder&&!c.derived)out.push(c.code.slice(4));}})(nd);return out;}
+function hasPctDesc(nd){return false;}
+function markTree(){const on=new Set(measures.map(m=>m.code));document.querySelectorAll('#tree .trow').forEach(r=>r.classList.toggle('on',on.has(r.dataset.code)||on.has('SUB:'+r.dataset.code)));}
 function toggleMeasure(code,label,pct){const i=measures.findIndex(m=>m.code===code);
  if(i>=0)measures.splice(i,1);else{if(measures.length>=6){showToast('Up to 6 measures.');return;}measures.push({code,label,pct:!!pct});}
  entSortField='__none__';markTree();renderMeasures();scheduleRecompute();saveMeasures();}
