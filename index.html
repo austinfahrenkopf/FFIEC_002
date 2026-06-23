@@ -164,7 +164,7 @@ body:not(.dark) .lgon-row td{background:#e8f5e9!important}body.dark .lgon-row td
    <textarea id="sql">SELECT quarter_end, value FROM t WHERE id_rssd=450810 AND mdrm='RCFD2170' ORDER BY quarter_end;</textarea>
    <div style="margin-top:8px"><button id="runsql" class="sec">Run</button> <button id="sqlcsv" class="sec">Export result</button></div>
    <div id="sqlout"></div></details>
-  <div class="credit">Built by Austin Fahrenkopf &middot; data: public FFIEC filings &middot; Built 2026-06-23 08:12</div>
+  <div class="credit">Built by Austin Fahrenkopf &middot; data: public FFIEC filings &middot; Built 2026-06-23 09:03</div>
  </div>
 </div>
 <div id="formmodal" class="modal" style="display:none"><div class="modalbox">
@@ -257,15 +257,19 @@ const fmtUnit=(v,pct)=>v==null?'—':pct?(+v).toFixed(2)+'%':(Math.abs(v)>=1e9?(
 
 let conn,HIER=null,treeBuilt=false,sqlC=[],sqlR=[],ALLQ=[];
 const SUB_AGG_DESCS={
-  // Column-sum matrix schedules — row-subtotal sums across columns
-  'N':'Total Past Due & Nonaccrual',        // cols A/B/C/D = 30-89d / 90+d / nonaccrual / modified
-  'Q':'Total Fair Value',                   // cols = Total FV + LESS netted + Level 1/2/3
-  'Q -- Liabilities':'Total Fair Value',
-  'Q -- Memoranda':'Total Fair Value',
-  'E':'Total Deposits',                     // cols A/C/D = transaction / nontransaction / IBF (item 7.B memo is included)
-  'L':'Total Off-Balance-Sheet',            // cols = OTC derivative contract types (IR, FX, equity, commodity)
-  // Roll-up only (no descriptor — form captions are self-describing):
-  // RAL, A, C, C -- Part II, K, M, O, RAL -- Schedule P, S, T
+  // ONLY additive column-sum matrices: columns mutually-exclusive, same unit, NO redundant Total/Memo col,
+  // AND the schedule body is UNIFORMLY that matrix (every clickable header sums the same exclusive columns).
+  // Verified against panel + hierarchy (see ORCHESTRATION_STATE §68 v2).
+  'N':'Total Past Due & Nonaccrual',     // 100% col rows: 30-89d / 90+d / nonaccrual / modified — exclusive states
+  // NOT clean uniform column-sum matrices (header-sum would double-count, mix units, or the schedule is mixed):
+  //   Q / Q -- Liabilities / Q -- Memoranda : each row has a "Total fair value" column PLUS Level 1/2/3
+  //        → sum ≈ 2× total (codes RCFDJA36 / RCFDG478 populated)
+  //   E : col "Memo: Total demand deposits (included in Column A)" (RCON2210, ~23k filings) is a SUBSET of
+  //        column A → including it double-counts demand deposits
+  //   L : MIXED — only items 10/11/12 are the 4-col derivative matrix (24 of 79 data rows are col); items 1-9
+  //        (commitments, standby/commercial LCs, credit-derivative detail) are non-matrix OBS → descriptor mislabels them
+  //   C -- Part II : columns are Number + Amount PAIRS per size bucket → sum mixes loan counts with dollars
+  //   RAL, A, C, K, M, O, RAL -- Schedule P, S, T — roll-up
 };
 const _fullCap=new Map();
 function _walkFC(nodes,parts,sch){for(const nd of nodes){if(!nd.placeholder&&!nd.derived&&!nd.header&&nd.code&&!/^(H:|SEC:|SUB:|EMPTY:)/.test(nd.code)){const cap=nd.caption||'';const anc=parts.filter(Boolean);_fullCap.set(nd.code,anc.length?anc.join(' — ')+' — '+cap:cap);}if(nd.header&&nd.code){const _sn=sch&&SCHED_NAMES[sch]?SCHED_NAMES[sch]:(parts.length?parts[0]:'');const _si=_sn.indexOf(' — ');const _sk=_si>=0?_sn.slice(0,_si):_sn;const _agg=sch?SUB_AGG_DESCS[sch]||'':'';const _cnt=(function c(n){let k=0;for(const x of(n.children||[])){if(x.header)k+=c(x);else if(x.code&&!x.placeholder&&!/^(H:|SEC:|SUB:|EMPTY:)/.test(x.code))k++;}return k;})(nd);if(_cnt>0){const _rl=_agg?_sk+' '+_agg+': '+(nd.caption||''):_sk?_sk+' '+(nd.caption||''):(nd.caption||'');_fullCap.set('SUB:'+nd.code,_rl);if(!/^(H:|SEC:|EMPTY:)/.test(nd.code)&&!_fullCap.has(nd.code))_fullCap.set(nd.code,_rl);}}if(nd.children&&nd.children.length)_walkFC(nd.children,nd.header?[...parts,nd.caption||'']:parts,sch);}}
