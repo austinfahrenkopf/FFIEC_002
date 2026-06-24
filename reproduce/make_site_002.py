@@ -144,7 +144,7 @@ HTML = r"""<!doctype html><html lang="en"><head><meta charset="utf-8">
  .slider{display:flex;align-items:center;gap:10px;margin:8px 0}.slider input{min-width:120px;flex:1}
  .frow{display:flex;gap:10px;padding:2px 6px;font-size:14px;border-bottom:1px solid #f3f5f8}
  .frow .lab{flex:1;min-width:280px}.vcell{width:92px;flex:none;text-align:right;font-variant-numeric:tabular-nums;color:#14213d}
- :root{--border:#ccc;--head:#f7f8fc;--fg2:#64748b}
+ :root{--border:#ccc;--head:#f7f8fc;--fg2:#64748b;--bg:#fff;--bg2:#f7f9fb;--fg:#14213d;--muted:#64748b}
  .modal{position:fixed;inset:0;background:rgba(10,20,40,.4);z-index:60;display:flex;align-items:flex-start;justify-content:center}
  .modalbox{background:#fff;margin-top:32px;width:min(960px,95vw);height:88vh;min-width:480px;min-height:320px;max-width:98vw;display:flex;flex-direction:column;border-radius:10px;overflow:hidden;resize:both}
  .modalbody{flex:1;overflow:auto}
@@ -162,7 +162,7 @@ HTML = r"""<!doctype html><html lang="en"><head><meta charset="utf-8">
  body.dark #panelEnts.entfloat{background:#161e2b;border-color:#2a3547}
  #panelEnts.entfloat .railhead{cursor:move}
  #entdetach{float:right;padding:2px 8px;margin-left:6px}
- body.dark{background:#0e1420;color:#e6e9ef;--border:#2a3547;--head:#1a2638;--fg2:#9aa3b2}
+ body.dark{background:#0e1420;color:#e6e9ef;--border:#2a3547;--head:#1a2638;--fg2:#9aa3b2;--bg:#161e2b;--bg2:#1b2433;--fg:#e6e9ef;--muted:#9aa3b2}
  body.dark .rail,body.dark .card,body.dark .box,body.dark details,body.dark .modalbox{background:#161e2b;border-color:#2a3547}
  body.dark .railtabs{background:#121a26;border-color:#2a3547}body.dark .railhead,body.dark .modalhead{border-color:#2a3547}body.dark .rail{border-right-color:#2a3547}
  body.dark select,body.dark input,body.dark textarea,body.dark button.sec,body.dark .tab{background:#1b2433;color:#e6e9ef;border-color:#2a3547}
