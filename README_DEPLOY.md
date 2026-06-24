@@ -51,3 +51,4 @@ A SharePoint page cannot RUN this dashboard's JavaScript, and it cannot embed a 
 URL for other users. To embed a live version on a SharePoint page you would need it served
 from a real internal web URL (an internal/IIS host). With that off the table, use a
 SharePoint page as a *link/front-door* to this shared folder + launcher instead.
+
