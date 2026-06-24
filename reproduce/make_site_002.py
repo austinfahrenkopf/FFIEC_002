@@ -66,7 +66,7 @@ else:
     df.to_parquet(os.path.join(SITE,"ffiec002.parquet"),**_PQARGS); PARTS=["ffiec002.parquet"]
     if os.path.getsize(os.path.join(SITE,"ffiec002.parquet"))>MAXBYTES:
         os.remove(os.path.join(SITE,"ffiec002.parquet")); PARTS=[]; yr=df["quarter_end"].str[:4].astype(int)
-        for lo,hi in [(1999,2009),(2010,2019),(2020,2030)]:
+        for lo,hi in [(1976,2009),(2010,2019),(2020,2030)]:
             sub=df[(yr>=lo)&(yr<=hi)]
             if sub.empty: continue
             fn=f"ffiec002_{lo}_{hi}.parquet"; sub.to_parquet(os.path.join(SITE,fn),**_PQARGS); PARTS.append(fn)
@@ -93,56 +93,56 @@ HTML = r"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <style>
  *{box-sizing:border-box}
  body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:#14213d;background:#fafbfc}
- header{background:#14213d;color:#fff;padding:12px 20px}header h1{margin:0;font-size:17px}header p{margin:3px 0 0;font-size:12px;color:#aeb7c9}
+ header{background:#14213d;color:#fff;padding:12px 20px}header h1{margin:0;font-size:17px}header p{margin:3px 0 0;font-size:13px;color:#aeb7c9}
  .app{display:grid;grid-template-columns:var(--railw,460px) 7px 1fr;min-height:calc(100vh - 52px)}
  #railsplit{cursor:col-resize;background:#e3e8ef}#railsplit:hover{background:#b9c2cf}body.dark #railsplit{background:#2a3547}
  .app.popped #railsplit{display:none}
  .rail{border-right:1px solid #e3e8ef;background:#fff;display:flex;flex-direction:column;max-height:calc(100vh - 52px);position:sticky;top:0}
  .railtabs{display:flex;gap:4px;align-items:center;padding:8px 10px;border-bottom:1px solid #e3e8ef;background:#f7f9fb}
- .tab{background:#fff;color:#14213d;border:1px solid #cdd5e0;padding:4px 12px;border-radius:7px;font-size:12px;cursor:pointer}
+ .tab{background:#fff;color:#14213d;border:1px solid #cdd5e0;padding:4px 12px;border-radius:7px;font-size:13px;cursor:pointer}
  .tab.on{background:#14213d;color:#fff;border-color:#14213d}
  #panelItems,#panelEnts{flex:1;overflow:hidden;display:flex;flex-direction:column;min-height:0}
  .railhead{padding:8px 12px;border-bottom:1px solid #e3e8ef}
- .railhead input{width:100%;margin-top:6px;font-size:13px;padding:7px;border:1px solid #cdd5e0;border-radius:7px}
+ .railhead input{width:100%;margin-top:6px;font-size:14px;padding:7px;border:1px solid #cdd5e0;border-radius:7px}
  #tree{flex:1;overflow:auto;padding:6px 10px}#entlistpanel{flex:1;overflow:auto;padding:4px 8px}
  .main{padding:14px 18px;overflow:auto}
- label{font-size:12px;color:#5a6478;display:block;margin-bottom:3px}
- select,input{font-size:14px;padding:7px;border:1px solid #cdd5e0;border-radius:7px;background:#fff}
+ label{font-size:13px;color:#5a6478;display:block;margin-bottom:3px}
+ select,input{font-size:15px;padding:7px;border:1px solid #cdd5e0;border-radius:7px;background:#fff}
  input{min-width:300px}#ent{min-width:380px}#pname{min-width:160px}
- button{font-size:13px;padding:7px 12px;border:1px solid #1b7f3b;background:#1b7f3b;color:#fff;border-radius:7px;cursor:pointer}
+ button{font-size:14px;padding:7px 12px;border:1px solid #1b7f3b;background:#1b7f3b;color:#fff;border-radius:7px;cursor:pointer}
  button.sec{background:#fff;color:#14213d;border-color:#cdd5e0}
  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin-bottom:10px}
- #status{font-size:12px;color:#5a6478;margin:6px 0}.muted{color:#5a6478;font-size:12px}
+ #status{font-size:13px;color:#5a6478;margin:6px 0}.muted{color:#5a6478;font-size:13px}
  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:2px 0 10px}
- .chip{display:inline-flex;align-items:center;gap:7px;font-size:12px;background:#eef3f8;border:1px solid #d8e0ea;border-radius:14px;padding:4px 10px}
+ .chip{display:inline-flex;align-items:center;gap:7px;font-size:13px;background:#eef3f8;border:1px solid #d8e0ea;border-radius:14px;padding:4px 10px}
  .chip b{font-weight:600}.chip .x{cursor:pointer;color:#8a93a3;font-weight:700}
  .sw{width:10px;height:10px;border-radius:50%;display:inline-block}
  .cards{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 12px}
  .card{flex:1;min-width:140px;background:#fff;border:1px solid #e3e8ef;border-radius:10px;padding:10px 13px}
- .card .k{font-size:11px;color:#5a6478}.card .v{font-size:28px;font-weight:700;margin-top:3px}
- .up{color:#fff;background:#1b7f3b;border-radius:4px;padding:1px 5px;font-size:11px;font-weight:600}.dn{color:#fff;background:#c0392b;border-radius:4px;padding:1px 5px;font-size:11px;font-weight:600}
- table{border-collapse:collapse;width:100%;font-size:13px;margin-top:10px}th,td{border:1px solid #e3e8ef;padding:6px 9px;text-align:right}
+ .card .k{font-size:13px;color:#5a6478}.card .v{font-size:28px;font-weight:700;margin-top:3px}
+ .up{color:#fff;background:#1b7f3b;border-radius:4px;padding:1px 5px;font-size:13px;font-weight:600}.dn{color:#fff;background:#c0392b;border-radius:4px;padding:1px 5px;font-size:13px;font-weight:600}
+ table{border-collapse:collapse;width:100%;font-size:14px;margin-top:10px}th,td{border:1px solid #e3e8ef;padding:6px 9px;text-align:right}
  th{background:#f2f5f9;position:sticky;top:0;z-index:1}td:first-child,th:first-child{text-align:left}tr:nth-child(even) td{background:#f7f9fc}
  svg{background:#fff;border:1px solid #e3e8ef;border-radius:8px;display:block;overflow:visible}
  svg circle.pt{cursor:pointer;r:1.5px;fill-opacity:0;stroke-opacity:0;pointer-events:none;transition:r .1s,fill-opacity .1s,stroke-opacity .1s}
  svg .qband .reveal{opacity:0;transition:opacity .05s;pointer-events:none}svg .qband:hover .reveal{opacity:1}svg .qband-pinned .reveal{opacity:1!important;pointer-events:none}svg .qband .hit{fill:#000;fill-opacity:0;pointer-events:all;cursor:crosshair}
  details{margin-top:14px;background:#fff;border:1px solid #e3e8ef;border-radius:8px;padding:12px}
- textarea{width:100%;height:70px;font-family:Consolas,monospace;font-size:13px}
+ textarea{width:100%;height:70px;font-family:Consolas,monospace;font-size:14px}
  .box{background:#fff;border:1px solid #e3e8ef;border-radius:8px;padding:12px;margin-bottom:12px}
- .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin:6px 0 2px}
- .schhead{font-weight:700;color:#14213d;margin:8px 0 3px;cursor:pointer;font-size:12px}.schhead .cnt{color:#9aa3b2;font-weight:400}
- .trow{padding:3px 6px;border-radius:5px;cursor:pointer;font-size:12px;line-height:1.3;display:flex;align-items:baseline;gap:4px;white-space:nowrap}
- .trow:hover{background:#eef3f8}.trow .code{color:#9aa3b2;font-size:10px;flex:none}
+ .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;margin:6px 0 2px}
+ .schhead{font-weight:700;color:#14213d;margin:8px 0 3px;cursor:pointer;font-size:13px}.schhead .cnt{color:#9aa3b2;font-weight:400}
+ .trow{padding:3px 6px;border-radius:5px;cursor:pointer;font-size:13px;line-height:1.3;display:flex;align-items:baseline;gap:4px;white-space:nowrap}
+ .trow:hover{background:#eef3f8}.trow .code{color:#9aa3b2;font-size:12px;flex:none}
  .trow.comb{color:#1b7f3b}.trow .num{color:#5a6478;flex:none}.trow.on{background:#dcefe2}.trow.nodata{opacity:0.38;pointer-events:none;cursor:default}.trow.hdr{font-weight:600;border-left:2px solid var(--accent,#1b7f3b);margin-top:2px}.trow.hdr .cap{color:#14213d}body.dark .trow.hdr .cap{color:#e6e9ef}
  .trow .cap{overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
- .caret{cursor:pointer;color:#5a6478;display:inline-block;width:13px;text-align:center;font-size:10px}
- .railctl{margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:11px}.railctl button{padding:3px 8px}
- .erow{display:flex;justify-content:space-between;gap:8px;padding:4px 6px;border-radius:5px;cursor:pointer;font-size:12px;border-bottom:1px solid #f3f5f8}
+ .caret{cursor:pointer;color:#5a6478;display:inline-block;width:13px;text-align:center;font-size:12px}
+ .railctl{margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:13px}.railctl button{padding:3px 8px}
+ .erow{display:flex;justify-content:space-between;gap:8px;padding:4px 6px;border-radius:5px;cursor:pointer;font-size:13px;border-bottom:1px solid #f3f5f8}
  .erow:hover{background:#eef3f8}.erow .en{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
  .erow .ev{color:#5a6478;font-variant-numeric:tabular-nums}.erow .pp{color:#1b7f3b;font-weight:700;cursor:pointer}.erow.agg{font-weight:600}
- .erow .ewl{cursor:pointer;color:#c8992e;font-size:12px;flex:none;padding:0 2px;opacity:.2;transition:opacity .1s;user-select:none}.erow .ewl.on{opacity:1;color:#e8a800}.erow:hover .ewl{opacity:.6}.erow:hover .ewl.on{opacity:1}
+ .erow .ewl{cursor:pointer;color:#c8992e;font-size:13px;flex:none;padding:0 2px;opacity:.2;transition:opacity .1s;user-select:none}.erow .ewl.on{opacity:1;color:#e8a800}.erow:hover .ewl{opacity:.6}.erow:hover .ewl.on{opacity:1}
  .slider{display:flex;align-items:center;gap:10px;margin:8px 0}.slider input{min-width:120px;flex:1}
- .frow{display:flex;gap:10px;padding:2px 6px;font-size:13px;border-bottom:1px solid #f3f5f8}
+ .frow{display:flex;gap:10px;padding:2px 6px;font-size:14px;border-bottom:1px solid #f3f5f8}
  .frow .lab{flex:1;min-width:280px}.vcell{width:92px;flex:none;text-align:right;font-variant-numeric:tabular-nums;color:#14213d}
  :root{--border:#ccc;--head:#f7f8fc;--fg2:#64748b}
  .modal{position:fixed;inset:0;background:rgba(10,20,40,.4);z-index:60;display:flex;align-items:flex-start;justify-content:center}
@@ -175,20 +175,20 @@ body.dark .erow.on{background:#16361f}
  body.dark .chip{background:#1b2433;border-color:#2a3547}body.dark .trow:hover,body.dark .erow:hover{background:#1f2a3a}body.dark .trow.on{background:#16361f}
  body.dark .erow,body.dark .frow{border-color:#222c3b}body.dark svg{background:#0f1825;border-color:#2a3547}
  body.dark .up{color:#3fb950}body.dark .dn{color:#f85149}body.dark a{color:#6cb6ff}
- #theme{float:right;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);padding:4px 10px;font-size:12px}
- .credit{margin:20px 2px 10px;font-size:11px;color:#9aa3b2}.credit a{color:inherit;text-decoration:underline}
-.fav{cursor:pointer;color:#d69e2e;font-size:11px;flex:none;padding:0 3px;opacity:.4;transition:opacity .1s}.fav.on{opacity:1}.fav:hover{opacity:1}
-.pane-toggle{font-size:11px;padding:3px 8px;margin-bottom:4px}
+ #theme{float:right;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);padding:4px 10px;font-size:13px}
+ .credit{margin:20px 2px 10px;font-size:13px;color:#9aa3b2}.credit a{color:inherit;text-decoration:underline}
+.fav{cursor:pointer;color:#d69e2e;font-size:13px;flex:none;padding:0 3px;opacity:.4;transition:opacity .1s}.fav.on{opacity:1}.fav:hover{opacity:1}
+.pane-toggle{font-size:13px;padding:3px 8px;margin-bottom:4px}
 .trow.placeholder{opacity:.55;cursor:default;pointer-events:none}
-#charttip{position:fixed;pointer-events:none;z-index:50;background:var(--tip-bg,#1a2535);color:var(--tip-fg,#e6e9ef);border:1px solid #3a4a5e;border-radius:8px;padding:8px 12px;font-size:12px;line-height:1.55;white-space:normal;max-width:min(560px,90vw);min-width:160px;min-height:40px;display:none;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+#charttip{position:fixed;pointer-events:none;z-index:50;background:var(--tip-bg,#1a2535);color:var(--tip-fg,#e6e9ef);border:1px solid #3a4a5e;border-radius:8px;padding:8px 12px;font-size:13px;line-height:1.55;white-space:normal;max-width:min(560px,90vw);min-width:160px;min-height:40px;display:none;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 body:not(.dark) #charttip{--tip-bg:#fff;--tip-fg:#14213d;border-color:#cdd5e0;box-shadow:0 4px 16px rgba(0,0,0,.12)}
-#charttip .tip-q{font-weight:700;margin-bottom:4px;color:#9aa3b2;font-size:11px}
+#charttip .tip-q{font-weight:700;margin-bottom:4px;color:#9aa3b2;font-size:13px}
 #charttip .tip-row{display:flex;align-items:center;gap:6px}
 #charttip .tip-sw{width:8px;height:8px;border-radius:50%;flex:none}
-#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(8px);background:#1a2638;color:#e6e9ef;padding:9px 18px;border-radius:8px;font-size:13px;z-index:9999;pointer-events:none;opacity:0;transition:opacity .2s,transform .2s;max-width:min(360px,90vw);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(8px);background:#1a2638;color:#e6e9ef;padding:9px 18px;border-radius:8px;font-size:14px;z-index:9999;pointer-events:none;opacity:0;transition:opacity .2s,transform .2s;max-width:min(360px,90vw);text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.3)}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-#formulatip{position:fixed;pointer-events:none;z-index:55;background:var(--tip-bg,#1a2535);color:var(--tip-fg,#e6e9ef);border:1px solid #3a4a5e;border-radius:6px;padding:7px 11px;font-size:11px;line-height:1.5;display:none;box-shadow:0 3px 12px rgba(0,0,0,.35);max-width:320px;white-space:normal}
-#formulatip .ftip-lbl{font-weight:600;color:#9aa3b2;font-size:10px;letter-spacing:.3px;text-transform:uppercase;margin-bottom:3px}
+#formulatip{position:fixed;pointer-events:none;z-index:55;background:var(--tip-bg,#1a2535);color:var(--tip-fg,#e6e9ef);border:1px solid #3a4a5e;border-radius:6px;padding:7px 11px;font-size:13px;line-height:1.5;display:none;box-shadow:0 3px 12px rgba(0,0,0,.35);max-width:320px;white-space:normal}
+#formulatip .ftip-lbl{font-weight:600;color:#9aa3b2;font-size:12px;letter-spacing:.3px;text-transform:uppercase;margin-bottom:3px}
 body:not(.dark) #formulatip{--tip-bg:#fff;--tip-fg:#14213d;border-color:#cdd5e0;box-shadow:0 3px 12px rgba(0,0,0,.12)}
 body:not(.dark) .lgon-row td{background:#e8f5e9!important}body.dark .lgon-row td{background:#0f2f1c!important}.lgon-row .lglink{font-weight:600}
 #pbar{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent,#1b7f3b);transition:width .3s ease,opacity .4s ease;z-index:10000;pointer-events:none}
@@ -196,7 +196,7 @@ body:not(.dark) .lgon-row td{background:#e8f5e9!important}body.dark .lgon-row td
 </style></head><body class="dark">
 <div id="pbar"></div><div id="formulatip" style="display:none"></div>
 <header><button id="theme">☀ Light</button><h1>FFIEC 002 Dashboard</h1>
-<p>U.S. Branches &amp; Agencies of Foreign Banks · filers + ALL / type / peer groups · 1999&ndash;present · $ thousands<span id="datacur"></span></p></header>
+<p>U.S. Branches &amp; Agencies of Foreign Banks · filers + ALL / type / peer groups · 1976&ndash;present (semiannual 1976&ndash;79, quarterly from 1980) · $ thousands<span id="datacur"></span></p></header>
 <div class="app">
  <div class="rail">
   <div class="railtabs"><button id="tabItems" class="tab on">Line items</button><button id="tabEnts" class="tab">Entities</button>
@@ -228,37 +228,54 @@ body:not(.dark) .lgon-row td{background:#e8f5e9!important}body.dark .lgon-row td
    <div><button id="add" class="sec">+ Add to chart</button> <button id="addpeer" class="sec">+ Add to peer</button>
     <button id="formbtn" class="sec">📄 Call-report view</button> <button id="leaguebtn" class="sec">🏆 League table</button> <button id="reportbtn" class="sec" disabled title="Select a single filer to generate a tear-sheet report">📋 Report</button> <button id="exportbtn" class="sec">⬇ Export</button> <button id="copylink" class="sec" title="Copy link to current chart state">🔗 Link</button> <button id="kbdbtn" class="sec" title="Keyboard shortcuts (?)">⌨</button></div>
   </div>
-  <div><label>Entities (overlay to compare)</label> <button id="clrents" class="sec" style="padding:1px 6px;font-size:10px;opacity:0.6" title="Remove all entities from chart">✕ Clear</button><div id="chips" class="chips"><span class="muted">none</span></div><div id="crosslinks" style="font-size:10px;color:var(--muted,#9aa3b2);margin-bottom:4px"></div></div>
-  <div><label>Measures (click items in the left rail; ✕ to remove)</label> <button id="clrmeas" class="sec" style="padding:1px 6px;font-size:10px;opacity:0.6" title="Remove all measures">✕ Clear</button> <button id="calcbtn" class="sec" style="padding:1px 6px;font-size:10px" title="Define a custom calculated series combining existing line items">Σ Calc</button>
-   <span style="font-size:11px;white-space:nowrap">Quick add: <select id="deriv-grpadd" style="font-size:11px;padding:1px 3px"><option value="">— category —</option><option value="Credit">Credit quality</option><option value="Loan quality">Loan-level NPL</option><option value="Funding">Funding</option><option value="Liquidity">Liquidity</option><option value="Subtotal">Subtotals $</option></select><button id="deriv-grpadd-btn" class="sec" style="padding:1px 6px;font-size:11px">Add</button></span>
+  <div><label>Entities (overlay to compare)</label> <button id="clrents" class="sec" style="padding:1px 6px;font-size:12px;opacity:0.6" title="Remove all entities from chart">✕ Clear</button><div id="chips" class="chips"><span class="muted">none</span></div><div id="crosslinks" style="font-size:12px;color:var(--muted,#9aa3b2);margin-bottom:4px"></div></div>
+  <div><label>Measures (click items in the left rail; ✕ to remove)</label> <button id="clrmeas" class="sec" style="padding:1px 6px;font-size:12px;opacity:0.6" title="Remove all measures">✕ Clear</button> <button id="calcbtn" class="sec" style="padding:1px 6px;font-size:12px" title="Define a custom calculated series combining existing line items">Σ Calc</button>
+   <span style="font-size:13px;white-space:nowrap">Quick add: <select id="deriv-grpadd" style="font-size:13px;padding:1px 3px"><option value="">— category —</option><option value="Credit">Credit quality</option><option value="Loan quality">Loan-level NPL</option><option value="Funding">Funding</option><option value="Liquidity">Liquidity</option><option value="Subtotal">Subtotals $</option></select><button id="deriv-grpadd-btn" class="sec" style="padding:1px 6px;font-size:13px">Add</button></span>
    <div id="mchips" class="chips"><span class="muted">none</span></div>
-   <div id="calcdiv" style="display:none;margin:4px 0 8px;padding:8px 10px;border:1px solid var(--border,#ccc);border-radius:6px;font-size:12px;background:var(--bg2,#f7f9fb)">
-    <b style="display:block;margin-bottom:6px">Custom calculated series (session-only)</b>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
-     <label style="display:flex;align-items:center;gap:4px">Name<input id="calcname" placeholder="My calc" style="width:110px;font:inherit;font-size:11px;padding:2px 5px;border:1px solid var(--border,#ccc);border-radius:3px;background:inherit;color:inherit"></label>
-     <label style="display:flex;align-items:center;gap:4px">Formula<input id="calcformula" placeholder="RCFD2122+RCFD2123  or  RCFD2122/RCFD2170" style="width:260px;font:inherit;font-size:11px;padding:2px 5px;border:1px solid var(--border,#ccc);border-radius:3px;background:inherit;color:inherit"></label>
-     <button id="calcadd" class="sec" style="font-size:11px;padding:2px 8px">Add to chart</button>
+   <div id="calcdiv" style="display:none;margin:4px 0 8px;padding:8px 10px;border:1px solid var(--border,#ccc);border-radius:6px;font-size:13px;background:var(--bg2,#f7f9fb)">
+    <b style="display:block;margin-bottom:4px">Custom calculated series <span style="font-weight:400;color:var(--muted,#9aa3b2)">(session-only)</span></b>
+    <div style="font-size:13px;color:var(--muted,#9aa3b2);margin-bottom:6px">Reference active measures by letter. Operators: <code>+ − * / ( )</code>. Division → % axis, Σnum/Σden aggregation.</div>
+    <table style="border-collapse:collapse;font-size:13px;margin-bottom:8px;max-width:520px">
+     <thead><tr><th style="text-align:left;padding:1px 8px 2px 0;color:var(--muted,#9aa3b2);font-weight:600">Letter</th><th style="text-align:left;padding:1px 8px 2px 0;color:var(--muted,#9aa3b2);font-weight:600">MDRM</th><th style="text-align:left;padding:1px 0 2px 0;color:var(--muted,#9aa3b2);font-weight:600">Line item</th></tr></thead>
+     <tbody id="calc-picklist"></tbody>
+    </table>
+    <div style="border-top:1px solid var(--border,#ccc);margin:4px 0 6px;padding-top:6px">
+     <div style="font-size:13px;color:var(--muted,#9aa3b2);margin-bottom:4px">Or search any code to insert at cursor:</div>
+     <input id="calc-codesearch" autocomplete="off" placeholder="MDRM code or description…" style="width:260px;font:inherit;font-size:13px;padding:2px 5px;border:1px solid var(--border,#ccc);border-radius:3px;background:inherit;color:inherit">
+     <div id="calc-coderes" style="display:none;max-height:110px;overflow-y:auto;border:1px solid var(--border,#ccc);border-radius:3px;margin-top:3px;font-size:13px;max-width:520px"></div>
     </div>
-    <div style="font-size:10px;color:var(--muted,#9aa3b2);margin-top:4px">Use MDRM codes (e.g. RCFD2122). Separate with + or − for sum; use / for ratio (numerator/denominator). Example: <code>RCFD2122/RCFD2170</code> for loans÷assets.</div>
-    <span id="calcstatus" style="color:#c0392b;font-size:11px;margin-top:4px;display:block"></span>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+     <label style="display:flex;align-items:center;gap:4px">Name<input id="calcname" placeholder="My calc" style="width:110px;font:inherit;font-size:13px;padding:2px 5px;border:1px solid var(--border,#ccc);border-radius:3px;background:inherit;color:inherit"></label>
+     <label style="display:flex;align-items:center;gap:4px">Formula<input id="calcformula" placeholder="e.g.  A/B  or  (A+B)/C  or  A*4" style="width:240px;font:inherit;font-size:13px;padding:2px 5px;border:1px solid var(--border,#ccc);border-radius:3px;background:inherit;color:inherit"></label>
+     <button id="calcadd" class="sec" style="font-size:13px;padding:2px 8px">Add to chart</button>
+    </div>
+    <span id="calcstatus" style="color:#c0392b;font-size:13px;margin-top:4px;display:block"></span>
+    <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;align-items:center">
+     <button id="calcSave" class="sec" style="font-size:13px;padding:2px 8px" title="POST formulas to local server at /api/save-formulas">Save formulas</button>
+     <button id="calcLoad" class="sec" style="font-size:13px;padding:2px 8px" title="GET formulas from local server at /api/formulas">Load formulas</button>
+     <span style="color:var(--muted,#9aa3b2);font-size:12px;margin:0 2px">|</span>
+     <button id="calcExport" class="sec" style="font-size:13px;padding:2px 8px" title="Download formulas as JSON file">Export</button>
+     <button id="calcImport" class="sec" style="font-size:13px;padding:2px 8px" title="Upload formulas JSON file">Import</button>
+     <input type="file" id="calcImportFile" accept=".json,application/json" style="display:none">
+    </div>
    </div></div>
   <details class="box" id="peerbox"><summary><b>Peer-group builder</b> — custom bucket of filers; aggregates correctly for levels &amp; ratios</summary>
    <div class="row" style="margin-top:10px"><div><label>Peer group name</label><input id="pname" placeholder="e.g. Japanese branches"></div>
     <div><button id="savepeer">Save peer group</button> <button id="clearpeer" class="sec">Clear members</button></div></div>
    <div><label>Members (use “+ Add to peer”; filers only)</label><div id="pmembers" class="chips"><span class="muted">none</span></div></div>
    <div><label>Saved peer groups</label><div id="psaved" class="chips"></div></div></details>
-  <div id="kpiselrow" style="display:none;margin-bottom:4px"><span class="muted" style="font-size:11px">KPI series: </span><select id="kpisel" style="font-size:11px;padding:2px 4px;border:1px solid var(--border,#ccc);border-radius:4px"></select></div>
+  <div id="kpiselrow" style="display:none;margin-bottom:4px"><span class="muted" style="font-size:13px">KPI series: </span><select id="kpisel" style="font-size:13px;padding:2px 4px;border:1px solid var(--border,#ccc);border-radius:4px"></select></div>
   <div class="cards" id="cards"></div><div class="legend" id="legend"></div>
   <div id="snapshot"></div>
-  <div id="panes"><p class="muted">Pick an entity, then click a line item on the left.</p></div>
+  <div id="panes"><p class="muted">Pick an entity, then click a line item on the left.</p></div><button id="addchartbtn" class="sec" style="margin-top:8px;font-size:13px;display:none" onclick="addChart()">⊕ Add chart</button><div id="extracharts-area"></div>
   <div class="slider" id="sliderwrap" style="display:none"><span class="muted">From</span><input type="range" id="r0"><input type="range" id="r1">
-   <input type="text" id="rfrom" list="qlist" size="10" style="font:inherit;font-size:12px;border:1px solid var(--border,#ccc);border-radius:3px;padding:1px 4px;background:inherit;color:inherit"><span class="muted">to</span><input type="text" id="rto" list="qlist" size="10" style="font:inherit;font-size:12px;border:1px solid var(--border,#ccc);border-radius:3px;padding:1px 4px;background:inherit;color:inherit"><datalist id="qlist"></datalist> <button id="preset1y" class="sec" style="padding:3px 8px;font-size:11px">1Y</button><button id="preset5y" class="sec" style="padding:3px 8px;font-size:11px">5Y</button><button id="preset10y" class="sec" style="padding:3px 8px;font-size:11px">10Y</button><button id="rreset" class="sec" style="padding:3px 8px;font-size:11px">All</button>
+   <input type="text" id="rfrom" list="qlist" size="10" style="font:inherit;font-size:13px;border:1px solid var(--border,#ccc);border-radius:3px;padding:1px 4px;background:inherit;color:inherit"><span class="muted">to</span><input type="text" id="rto" list="qlist" size="10" style="font:inherit;font-size:13px;border:1px solid var(--border,#ccc);border-radius:3px;padding:1px 4px;background:inherit;color:inherit"><datalist id="qlist"></datalist> <button id="preset1y" class="sec" style="padding:3px 8px;font-size:13px">1Y</button><button id="preset5y" class="sec" style="padding:3px 8px;font-size:13px">5Y</button><button id="preset10y" class="sec" style="padding:3px 8px;font-size:13px">10Y</button><button id="rreset" class="sec" style="padding:3px 8px;font-size:13px">All</button>
    <label class="muted" title="rebase each $ series to 100 at the start of the range"><input type="checkbox" id="idx"> index to 100</label>
    <label class="muted" title="show quarter-over-quarter absolute change instead of level"><input type="checkbox" id="qoqdelta"> QoQ Δ</label>
    <label class="muted" title="divide each $ series by total assets (RCFD2170), producing a % ratio"><input type="checkbox" id="normbyassets"> ÷ assets</label>
    <label class="muted" title="render $ series as stacked areas (additive measures only — disabled for % / ratio series)"><input type="checkbox" id="stackedmode"> ◫ Stacked</label>
-   <span class="muted" style="font-size:11px;white-space:nowrap">⟵<input id="reflineval" type="text" placeholder="ref line e.g. 8 or 5e6" style="width:100px;font-size:11px;padding:1px 4px;border:1px solid var(--border,#ccc);background:inherit;color:inherit;border-radius:3px"><input id="reflinelbl" type="text" placeholder="label" style="width:60px;font-size:11px;padding:1px 4px;border:1px solid var(--border,#ccc);background:inherit;color:inherit;border-radius:3px"><button id="reflineset" class="sec" style="padding:1px 6px;font-size:11px">Set</button><button id="reflineclr" class="sec" style="padding:1px 6px;font-size:11px">✕</button></span>
-   <button id="csv" class="sec">Export</button><button id="svgexport" class="sec" style="padding:3px 8px;font-size:11px" title="Download chart as SVG file">📷 SVG</button><button id="cplink" class="sec" style="padding:3px 8px;font-size:11px" title="Copy shareable link to this view">🔗 Link</button></div>
+   <span class="muted" style="font-size:13px;white-space:nowrap">⟵<input id="reflineval" type="text" placeholder="ref line e.g. 8 or 5e6" style="width:100px;font-size:13px;padding:1px 4px;border:1px solid var(--border,#ccc);background:inherit;color:inherit;border-radius:3px"><input id="reflinelbl" type="text" placeholder="label" style="width:60px;font-size:13px;padding:1px 4px;border:1px solid var(--border,#ccc);background:inherit;color:inherit;border-radius:3px"><button id="reflineset" class="sec" style="padding:1px 6px;font-size:13px">Set</button><button id="reflineclr" class="sec" style="padding:1px 6px;font-size:13px">✕</button></span>
+   <button id="csv" class="sec">Export</button><button id="svgexport" class="sec" style="padding:3px 8px;font-size:13px" title="Download chart as SVG file">📷 SVG</button><button id="cplink" class="sec" style="padding:3px 8px;font-size:13px" title="Copy shareable link to this view">🔗 Link</button></div>
   <div id="tbl"></div>
   <details class="box"><summary><b>SQL</b> — table <code>t</code> (quarter_end,id_rssd,institution_name,entity_type,mdrm,description,value,source)</summary>
    <textarea id="sql">SELECT quarter_end, value FROM t WHERE id_rssd=450810 AND mdrm='RCFD2170' ORDER BY quarter_end;</textarea>
@@ -270,27 +287,27 @@ body:not(.dark) .lgon-row td{background:#e8f5e9!important}body.dark .lgon-row td
 <div id="formmodal" class="modal" style="display:none"><div class="modalbox">
  <div class="modalhead" style="flex-wrap:wrap;row-gap:4px"><b>Call-report view</b>
   <div id="fent-chips" style="display:inline-flex;flex-wrap:wrap;gap:3px;margin:0 4px"></div>
-  <input id="fent-inp" list="entlist" autocomplete="off" placeholder="name or RSSD…" style="font:inherit;font-size:11px;border:1px solid var(--border,#ccc);border-radius:3px;padding:2px 5px;background:inherit;color:inherit;width:140px">
-  <button id="fent-add" class="sec" style="font-size:11px;padding:2px 6px">Add</button>
-  <button id="fent-cur" class="sec" style="font-size:11px;padding:2px 6px" title="Add chart entities">+Chart</button>
-  <label style="font-size:12px">From <select id="ffrom"></select></label><label style="font-size:12px">To <select id="fto"></select></label>
-  <button id="ffull" class="sec" style="font-size:11px;padding:2px 6px" title="Full available range">Full</button>
-  <input id="frow-filter" autocomplete="off" placeholder="filter items…" style="font:inherit;font-size:11px;border:1px solid var(--border,#ccc);border-radius:3px;padding:2px 5px;background:inherit;color:inherit;width:110px">
+  <input id="fent-inp" list="entlist" autocomplete="off" placeholder="name or RSSD…" style="font:inherit;font-size:13px;border:1px solid var(--border,#ccc);border-radius:3px;padding:2px 5px;background:inherit;color:inherit;width:140px">
+  <button id="fent-add" class="sec" style="font-size:13px;padding:2px 6px">Add</button>
+  <button id="fent-cur" class="sec" style="font-size:13px;padding:2px 6px" title="Add chart entities">+Chart</button>
+  <label style="font-size:13px">From <select id="ffrom"></select></label><label style="font-size:13px">To <select id="fto"></select></label>
+  <button id="ffull" class="sec" style="font-size:13px;padding:2px 6px" title="Full available range">Full</button>
+  <span style="position:relative;display:inline-block"><input id="frow-filter" autocomplete="off" placeholder="filter items or search codes…" style="font:inherit;font-size:13px;border:1px solid var(--border,#ccc);border-radius:3px;padding:2px 5px;background:inherit;color:inherit;width:170px"><div id="frow-coderes" style="display:none;position:absolute;top:100%;left:0;z-index:99;max-height:160px;overflow-y:auto;min-width:300px;border:1px solid var(--border,#ccc);border-radius:0 0 4px 4px;background:var(--bg,#fff);box-shadow:0 4px 8px rgba(0,0,0,.15);font-size:13px"></div></span>
   <button id="fdn" class="sec" title="expand one level">▾</button><button id="fup" class="sec" title="collapse one level">▴</button>
   <button id="fexp" class="sec">⊕</button><button id="fcol" class="sec">⊖</button><button id="fpop" class="sec" title="float / dock">⧉</button>
   <button id="formexport" class="sec">Export</button> <button id="formclose" class="sec">Close</button></div>
  <div id="formbody" style="overflow:auto;padding:10px 14px"></div></div></div>
 <div id="leaguemodal" class="modal" style="display:none"><div class="modalbox">
  <div class="modalhead"><b>🏆 League table</b>
-  <label style="font-size:12px">Measure <select id="lgmeasure"></select></label>
-  <label style="font-size:12px">Quarter <select id="lgquarter"></select></label>
-  <label style="font-size:12px">Top <select id="lgtopn"><option>25</option><option>50</option><option>100</option><option value="0">All</option></select></label>
-  <label style="font-size:12px" title="Filter by total-asset bucket">Size <select id="lgbucket"><option value="">All</option><option value="1">≥$1T</option><option value="0.1">$100B–$1T</option><option value="0.01">$10B–$100B</option><option value="0.001">$1B–$10B</option><option value="0.0001">$100M–$1B</option><option value="-">&lt;$100M</option></select></label>
+  <label style="font-size:13px">Measure <select id="lgmeasure"></select></label>
+  <label style="font-size:13px">Quarter <select id="lgquarter"></select></label>
+  <label style="font-size:13px">Top <select id="lgtopn"><option>25</option><option>50</option><option>100</option><option value="0">All</option></select></label>
+  <label style="font-size:13px" title="Filter by total-asset bucket">Size <select id="lgbucket"><option value="">All</option><option value="1">≥$1T</option><option value="0.1">$100B–$1T</option><option value="0.01">$10B–$100B</option><option value="0.001">$1B–$10B</option><option value="0.0001">$100M–$1B</option><option value="-">&lt;$100M</option></select></label>
   <button id="lgexport" class="sec">Export</button> <button id="lgclose" class="sec">Close</button></div>
  <div id="leaguebody" style="flex:1;overflow:auto;padding:10px 14px"><p class="muted">Loading…</p></div></div></div>
 <div id="reportmodal" class="modal" style="display:none"><div class="modalbox" style="width:min(1040px,96vw);height:92vh">
- <div class="modalhead"><b>📋 Entity Report</b> &nbsp;<span id="rpt-title"></span><span id="rpt-asof" class="muted" style="font-size:11px"></span>
-  <button id="rpt-addchart" class="sec">📈 Add to chart</button> <button id="rpt-print" class="sec">🖨 Print / PDF</button> <button id="rpt-html" class="sec" title="Download report as HTML file">⬇ HTML</button> <button id="rpt-link" class="sec" style="padding:3px 8px;font-size:11px" title="Copy link to this entity view">📎 Link</button> <button id="rptclose" class="sec">Close</button></div>
+ <div class="modalhead"><b>📋 Entity Report</b> &nbsp;<span id="rpt-title"></span><span id="rpt-asof" class="muted" style="font-size:13px"></span>
+  <button id="rpt-addchart" class="sec">📈 Add to chart</button> <button id="rpt-print" class="sec">🖨 Print / PDF</button> <button id="rpt-html" class="sec" title="Download report as HTML file">⬇ HTML</button> <button id="rpt-link" class="sec" style="padding:3px 8px;font-size:13px" title="Copy link to this entity view">📎 Link</button> <button id="rptclose" class="sec">Close</button></div>
  <div id="rptbody" class="modalbody" style="flex:1;overflow:auto;padding:14px 18px"></div></div></div>
 <div id="exportmodal" class="modal" style="display:none"><div class="modalbox" style="width:min(840px,96vw);max-height:92vh">
  <div class="modalhead"><b>⬇ Export Builder</b>
@@ -299,11 +316,11 @@ body:not(.dark) .lgon-row td{background:#e8f5e9!important}body.dark .lgon-row td
   <button id="expbld-run" class="sec">⬇ Download CSV</button>
   <button id="expbld-close" class="sec">Close</button></div>
  <div id="expbldbody" class="modalbody" style="flex:1;overflow:auto;padding:14px 18px"><p class="muted">Loading…</p></div>
- <div id="eb-preview-area" style="overflow:auto;max-height:260px;padding:0 18px 10px;font-size:11px"></div></div></div>
+ <div id="eb-preview-area" style="overflow:auto;max-height:260px;padding:0 18px 10px;font-size:13px"></div></div></div>
 <div id="toast"></div>
 <div id="kbdmodal" class="modal" style="display:none"><div class="modalbox" style="width:min(420px,92vw)">
  <div class="modalhead"><b>⌨ Keyboard shortcuts</b> <button id="kbdclose" class="sec">Close</button></div>
- <div style="padding:16px;font-size:13px"><table style="width:100%;border-collapse:collapse">
+ <div style="padding:16px;font-size:14px"><table style="width:100%;border-collapse:collapse">
   <tr><td style="padding:3px 10px;font-family:monospace;width:120px">[  ,</td><td>Previous quarter</td></tr>
   <tr><td style="padding:3px 10px;font-family:monospace">]  .</td><td>Next quarter</td></tr>
   <tr><td style="padding:3px 10px;font-family:monospace">/</td><td>Focus tree search</td></tr>
@@ -350,7 +367,7 @@ const DERIV={
 };
 const DYN={};   // dynamic subtotal measures created by clicking a grouping row in the tree
 const USERCALC={};  // user-defined custom calculated series (session-only)
-const DKIND=m=>(DERIV[m]||DYN[m]||USERCALC[m])?.type||null;const isPct=m=>DKIND(m)==='ratio';
+const DKIND=m=>(DERIV[m]||DYN[m]||USERCALC[m])?.type||null;const isPct=m=>DKIND(m)==='ratio'||(USERCALC[m]?.type==='expr'&&!!USERCALC[m]?.pct);
 const short=lbl=>{const i=lbl.indexOf('▸');return (i>=0?lbl.slice(i+1):lbl).replace(/\s*\(.*\)\s*$/,'').trim();};
 const sqlList=a=>a.map(x=>`'${String(x).replace(/'/g,"''")}'`).join(',');
 // MEDIUM-2: date-based quarter helpers — quarter strings are "YYYY-MM-DD" (end-of-quarter).
@@ -400,6 +417,7 @@ function hashToState(){
     return !!(eStr||mStr);}catch{return false;}}
 function elabel(id){if(id==='ALL')return 'ALL';if(id.startsWith('ET:'))return 'ALL '+id.slice(3);
  if(id.startsWith('PEER:'))return '★ '+id.slice(5);if(id.startsWith('BANK:')){const r=ROSTER.get(+id.slice(5));return r?`${r.nm} (${id.slice(5)})`:id;}return id;}
+function bankEnt(rssd){return {id:'BANK:'+rssd,label:elabel('BANK:'+rssd)};}
 function resolveEnt(){const v=document.getElementById('ent').value.trim();
  if(v.replace(/^★\s*/,'') in peers){const n=v.replace(/^★\s*/,'');return {id:'PEER:'+n,label:'★ '+n};}
  const et=v.match(/\b(UFB|USB|UFA|USA|IFB|ISB)\b/i);if(et)return {id:'ET:'+et[1].toUpperCase(),label:'ALL '+et[1].toUpperCase()};
@@ -412,24 +430,97 @@ function scopeCond(id){if(id==='ALL')return '1=1';
 function members(id){if(id.startsWith('BANK:'))return [+id.slice(5)];if(id.startsWith('ET:'))return TYPES[id.slice(3)]||[];
  if(id.startsWith('PEER:'))return peers[id.slice(5)]||[];if(id==='ALL')return [...ROSTER.keys()];return [];}
 function coalesce(map,base){return map['RCFD'+base]??map['RCON'+base]??map['RCFN'+base];}
-function parseCalcFormula(str){
-  const s=str.trim();
-  const si=s.indexOf('/');
-  if(si>0){
-    const pT=t=>{return t.split(/\s*\+\s*/).map(x=>x.trim().toUpperCase()).filter(x=>/^[A-Z0-9]{4,8}$/.test(x));};
-    const plus=pT(s.slice(0,si)),den=pT(s.slice(si+1));
-    if(plus.length&&den.length)return {type:'ratio',plus,minus:[],den};}
-  const tokens=s.split(/(\s*[-+]\s*)/),plus=[],minus=[];let sign='+';
-  for(const tok of tokens){const t=tok.trim();if(t==='+'||t==='-'){sign=t;continue;}
-    const c=t.toUpperCase();if(/^[A-Z0-9]{4,8}$/.test(c)){(sign==='-'?minus:plus).push(c);sign='+';}}
-  if(plus.length)return {type:'sum',plus,minus};
+function parseCalcExpr(str,aliases){
+  const s=str.trim();if(!s)throw'Formula is empty.';
+  const toks=[];let i=0;
+  while(i<s.length){
+    if(/\s/.test(s[i])){i++;continue;}
+    const c=s[i];
+    if(c==='('){toks.push({t:'lp'});i++;}
+    else if(c===')'){toks.push({t:'rp'});i++;}
+    else if(c==='+'){toks.push({t:'op',v:'+',p:1});i++;}
+    else if(c==='-'){
+      const prev=toks.length?toks[toks.length-1]:null;
+      if(!prev||prev.t==='lp'||prev.t==='op')toks.push({t:'num',v:0});
+      toks.push({t:'op',v:'-',p:1});i++;}
+    else if(c==='*'||c==='×'){toks.push({t:'op',v:'*',p:2});i++;}
+    else if(c==='/'||c==='÷'){toks.push({t:'op',v:'/',p:2});i++;}
+    else if(/\d/.test(c)){let n='';while(i<s.length&&/[\d.]/.test(s[i]))n+=s[i++];toks.push({t:'num',v:parseFloat(n)});}
+    else if(/[A-Za-z]/.test(c)){
+      let n='';while(i<s.length&&/[A-Za-z0-9]/.test(s[i]))n+=s[i++];
+      const up=n.toUpperCase();
+      if(/^[A-Z]{4}\d{4,}$/.test(up))toks.push({t:'var',v:up});
+      else if(/^[A-Z]$/.test(up)){
+        if(!aliases[up])throw`Letter "${up}" not in pick-list — add that measure first.`;
+        toks.push({t:'var',v:up});}
+      else throw`Unknown token "${n}". Use A–Z from the pick-list or a MDRM code.`;}
+    else throw`Unexpected character "${c}".`;}
+  const out=[],ops=[];
+  for(const tok of toks){
+    if(tok.t==='num'||tok.t==='var')out.push(tok);
+    else if(tok.t==='op'){
+      while(ops.length&&ops[ops.length-1].t==='op'&&ops[ops.length-1].p>=tok.p)out.push(ops.pop());
+      ops.push(tok);}
+    else if(tok.t==='lp')ops.push(tok);
+    else if(tok.t==='rp'){
+      while(ops.length&&ops[ops.length-1].t!=='lp')out.push(ops.pop());
+      if(!ops.length)throw'Mismatched parentheses.';
+      ops.pop();}}
+  while(ops.length){if(ops[ops.length-1].t==='lp')throw'Mismatched parentheses.';out.push(ops.pop());}
+  const stk=[];
+  for(const tok of out){
+    if(tok.t==='num'||tok.t==='var')stk.push(tok);
+    else{if(stk.length<2)throw'Invalid expression — each operator needs two operands.';
+      const R=stk.pop(),L=stk.pop();stk.push({t:'op',v:tok.v,L,R});}}
+  if(stk.length!==1)throw'Invalid expression.';
+  const ast=stk[0];
+  (function _z(n){if(n.t==='op'){if(n.v==='/'&&n.R.t==='num'&&n.R.v===0)throw'Division by zero.';_z(n.L);_z(n.R);}})(ast);
+  function _hd(n){return n.t==='op'&&(n.v==='/'||_hd(n.L)||_hd(n.R));}
+  const vars={};
+  function _wk(n){
+    if(n.t==='var'){const code=/^[A-Z]{4}\d/.test(n.v)?n.v:(aliases[n.v]||null);
+      if(!code)throw`Variable "${n.v}" has no mapped code.`;vars[n.v]=code;}
+    else if(n.t==='op'){_wk(n.L);_wk(n.R);}}
+  _wk(ast);
+  return {ast,pct:_hd(ast),vars};}
+function evalCalcAST(node,env){
+  if(node.t==='num')return node.v;
+  if(node.t==='var'){const v=env[node.v];return v==null?null:Number(v);}
+  if(node.t==='op'){
+    const L=evalCalcAST(node.L,env),R=evalCalcAST(node.R,env);
+    if(L==null||R==null)return null;
+    if(node.v==='+')return L+R;if(node.v==='-')return L-R;
+    if(node.v==='*')return L*R;if(node.v==='/')return R===0?null:L/R;}
   return null;}
+function refreshCalcPicklist(){
+  const tbody=document.getElementById('calc-picklist');if(!tbody)return;
+  const AL='ABCDEFGHIJKLMNOPQRSTUVWXYZ';let h='';
+  for(let i=0;i<Math.min(measures.length,26);i++){
+    const m=measures[i];const lbl=m.label||fullCap(m.code)||m.code;
+    h+=`<tr><td style="font-weight:700;padding:1px 8px 1px 0;color:var(--accent,#2b6cb0)">${AL[i]}</td><td style="color:var(--muted,#9aa3b2);padding:1px 8px 1px 0;font-family:monospace;font-size:12px">${m.code}</td><td style="color:var(--fg,#14213d)">${lbl}</td></tr>`;}
+  tbody.innerHTML=h||'<tr><td colspan="3" style="color:var(--muted,#9aa3b2);font-style:italic">Add measures to the chart first, then open Σ Calc.</td></tr>';}
+function searchHier(q){const q2=q.toLowerCase();const seen=new Set();const res=[];
+ if(HIER)for(const sch of Object.keys(HIER))for(const r of (HIER[sch]||[])){
+  if(!r.mdrm||seen.has(r.mdrm))continue;seen.add(r.mdrm);
+  if((r.mdrm||'').toLowerCase().includes(q2)||(r.caption||'').toLowerCase().includes(q2))res.push({m:r.mdrm,c:r.caption||''});}
+ for(const k of Object.keys(DERIV)){if(seen.has(k))continue;seen.add(k);
+  const d=DERIV[k];if((k||'').toLowerCase().includes(q2)||(d.lbl||'').toLowerCase().includes(q2))res.push({m:k,c:d.lbl||''});}
+ return res.slice(0,40);}
 
 async function seriesFor(id,m){const cond=scopeCond(id);if(cond==null)return [];
  const _sk=`${id}::${m}`;if(_seriesCache.has(_sk))return _seriesCache.get(_sk);
  if(_inflight.has(_sk))return _inflight.get(_sk);
  const _p=(async()=>{
  let d=DERIV[m]||DYN[m]||USERCALC[m];if(!d&&m&&m.startsWith('COMB'))d={type:'sum',plus:[m.slice(4)],minus:[],den:[]};
+ if(d?.type==='expr'){
+   const vSer={};
+   for(const[vn,vc]of Object.entries(d.vars))vSer[vn]=Object.fromEntries(await seriesFor(id,vc));
+   const qSet=new Set();for(const rows of Object.values(vSer))Object.keys(rows).forEach(q=>qSet.add(q));
+   const out=[];
+   for(const q of[...qSet].sort()){
+     const env={};for(const[vn,qmap]of Object.entries(vSer))env[vn]=qmap[q]??null;
+     try{let v=evalCalcAST(d.ast,env);if(v!=null){if(d.pct)v=v*100;out.push([q,v]);}}catch(e){}}
+   _seriesCache.set(_sk,out);return out;}
  if(d){const bases=[...d.plus,...(d.minus||[]),...(d.den||[])];
    const codes=[];for(const b of bases)for(const p of['RCFD','RCON','RCFN'])codes.push(`${p}${b}`);
    const r=(await conn.query(`SELECT id_rssd,quarter_end,mdrm,value FROM t WHERE ${cond} AND mdrm IN (${sqlList(codes)})`)).toArray();
@@ -501,31 +592,45 @@ async function init(){try{
  document.getElementById('kbdbtn').onclick=()=>document.getElementById('kbdmodal').style.display='flex';
  document.getElementById('clrents').onclick=()=>{active=[];renderChips();scheduleRecompute();};
  document.getElementById('clrmeas').onclick=()=>{measures=[];entSortField='__none__';markTree();renderMeasures();scheduleRecompute();saveMeasures();};
- document.getElementById('calcbtn').onclick=()=>{const d=document.getElementById('calcdiv');d.style.display=d.style.display==='none'?'block':'none';};
+ document.getElementById('calcbtn').onclick=()=>{const d=document.getElementById('calcdiv');const show=d.style.display==='none';d.style.display=show?'block':'none';if(show)refreshCalcPicklist();};
+ document.getElementById('calc-codesearch').oninput=function(){const q=this.value.trim();const el=document.getElementById('calc-coderes');if(!q){el.style.display='none';el.innerHTML='';return;}const res=searchHier(q);if(!res.length){el.innerHTML='<div style="padding:4px 6px;color:var(--muted,#9aa3b2)">No matches</div>';el.style.display='block';return;}el.innerHTML=res.map(r=>`<div class="calc-cr" data-m="${r.m}" style="padding:2px 6px;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${r.c}"><b>${r.m}</b> — ${r.c}</div>`).join('');el.style.display='block';el.querySelectorAll('.calc-cr').forEach(d=>d.onclick=()=>{const inp=document.getElementById('calcformula');const p=inp.selectionStart,txt=inp.value;inp.value=txt.slice(0,p)+d.dataset.m+txt.slice(inp.selectionEnd);inp.focus();inp.setSelectionRange(p+d.dataset.m.length,p+d.dataset.m.length);el.style.display='none';this.value='';});};
  document.getElementById('calcadd').onclick=()=>{
    const name=(document.getElementById('calcname').value.trim()||'Custom calc');
    const fstr=document.getElementById('calcformula').value.trim();
-   const st=document.getElementById('calcstatus');
-   const parsed=parseCalcFormula(fstr);
-   if(!parsed){st.textContent='Invalid formula — use MDRM codes with +/− or a/b for ratio.';return;}
+   const st=document.getElementById('calcstatus');st.textContent='';
+   if(!fstr){st.textContent='Enter a formula.';return;}
+   const AL='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   const aliases={};for(let i=0;i<Math.min(measures.length,26);i++)aliases[AL[i]]=measures[i].code;
+   let parsed;try{parsed=parseCalcExpr(fstr,aliases);}catch(e){st.textContent=String(e);return;}
    const code='CALC_'+(Date.now()%1e9);
-   USERCALC[code]={...parsed,lbl:name};
+   USERCALC[code]={type:'expr',ast:parsed.ast,pct:parsed.pct,vars:parsed.vars,lbl:name};
    _seriesCache.clear();
-   toggleMeasure(code,name,parsed.type==='ratio');
-   st.textContent='';document.getElementById('calcformula').value='';document.getElementById('calcname').value='';
+   toggleMeasure(code,name,parsed.pct);
+   document.getElementById('calcformula').value='';document.getElementById('calcname').value='';
    document.getElementById('calcdiv').style.display='none';};
+function getFormulasJson(){const out={};for(const[k,v]of Object.entries(USERCALC))out[k]=v;return JSON.stringify(out);}
+function applyFormulas(obj){let n=0;for(const[code,entry]of Object.entries(obj)){if(!code.startsWith('CALC_'))continue;if(!entry?.type||!entry?.lbl)continue;if(!USERCALC[code]){USERCALC[code]=entry;toggleMeasure(code,entry.lbl,!!entry.pct);n++;}}return n;}
+async function saveFormulas(){try{const r=await fetch('/api/save-formulas',{method:'POST',headers:{'Content-Type':'application/json'},body:getFormulasJson()});if(!r.ok)throw new Error('HTTP '+r.status);showToast('Formulas saved.','ok');}catch(e){const el=document.getElementById('calcstatus');if(el)el.textContent='Save failed: '+e.message;}}
+async function loadFormulas(){try{const r=await fetch('/api/formulas');if(!r.ok)throw new Error('HTTP '+r.status);const obj=await r.json();const n=applyFormulas(obj);showToast('Loaded '+n+' formula'+(n===1?'':'s')+'.','ok');}catch(e){const el=document.getElementById('calcstatus');if(el)el.textContent='Load failed: '+e.message;}}
+async function autoLoadFormulas(){try{const r=await fetch('/api/formulas');if(!r.ok)return;const obj=await r.json();applyFormulas(obj);}catch(e){}}
+function exportFormulas(){const s=getFormulasJson();const b=new Blob([s],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='formulas.json';a.click();URL.revokeObjectURL(u);}
+ document.getElementById('calcSave').onclick=saveFormulas;
+ document.getElementById('calcLoad').onclick=loadFormulas;
+ document.getElementById('calcExport').onclick=exportFormulas;
+ document.getElementById('calcImport').onclick=()=>document.getElementById('calcImportFile').click();
+ document.getElementById('calcImportFile').onchange=e=>{const f=e.target.files?.[0];if(!f)return;const rd=new FileReader();rd.onload=ev=>{try{const obj=JSON.parse(ev.target.result);const n=applyFormulas(obj);showToast('Imported '+n+' formula'+(n===1?'':'s')+'.','ok');}catch(ex){const el=document.getElementById('calcstatus');if(el)el.textContent='Import failed: invalid JSON.';}};rd.readAsText(f);e.target.value='';};
  {const stackEl=document.getElementById('stackedmode');if(stackEl)stackEl.onchange=()=>draw();}
  document.getElementById('deriv-grpadd-btn').onclick=()=>{const cat=document.getElementById('deriv-grpadd').value;if(!cat)return;let added=0;for(const [code,d] of Object.entries(DERIV)){const lbl=d.lbl||'';const parts=lbl.split(' ▸ ');if(parts[0]!==cat)continue;if(measures.length>=20){showToast('Measure limit is 20 — remove some first.','warn');break;}if(!measures.find(m=>m.code===code)){const shortLbl=parts.slice(1).join(' ▸ ')||lbl;measures.push({code,label:shortLbl,pct:true});added++;}}if(!added){showToast('No new measures found for that category.','warn');return;}entSortField='__none__';markTree();renderMeasures();scheduleRecompute();saveMeasures();};
  document.getElementById('kbdclose').onclick=()=>document.getElementById('kbdmodal').style.display='none';
  (function(){const ft=document.getElementById('formulatip');document.querySelector('.rail').addEventListener('mouseover',e=>{const row=e.target.closest('.trow[data-formula]');if(!row||!ft)return;ft.innerHTML=`<div class="ftip-lbl">Formula</div>${row.dataset.formula}`;ft.style.display='block';});document.querySelector('.rail').addEventListener('mouseout',e=>{if(e.target.closest('.trow[data-formula]')&&!e.relatedTarget?.closest('.trow[data-formula]'))ft.style.display='none';});document.addEventListener('mousemove',e=>{if(ft&&ft.style.display!=='none'){const x=e.clientX+14,y=e.clientY+14,w=ft.offsetWidth,h=ft.offsetHeight;ft.style.left=Math.min(x,window.innerWidth-w-10)+'px';ft.style.top=Math.min(y,window.innerHeight-h-10)+'px';}});})();
  document.getElementById('expbld-close').onclick=()=>document.getElementById('exportmodal').style.display='none';
  document.getElementById('expbld-run').onclick=async()=>{const btn=document.getElementById('expbld-run');btn.textContent='⏳…';btn.disabled=true;try{const res=await runExport(false);if(!res||!res.body?.length){showToast('No data for the selected scope.');return;}dl2(res.headers,res.body,'ffiec002_export');}catch(e){showToast('Export error: '+e,'err');}finally{btn.textContent='⬇ Download CSV';btn.disabled=false;}};
- document.getElementById('expbld-preview').onclick=async()=>{const btn=document.getElementById('expbld-preview');btn.textContent='⏳…';btn.disabled=true;try{const res=await runExport(true);if(!res)return;const sqlBlock=res.sql?`<details style="margin-bottom:8px"><summary style="cursor:pointer;font-size:11px;color:var(--muted,#9aa3b2)">Generated SQL (click to expand)</summary><pre style="font-size:10px;white-space:pre-wrap;word-break:break-all;background:var(--head,#eef2f7);padding:6px 8px;border-radius:4px;margin:4px 0">${res.sql.replace(/</g,'&lt;')}</pre></details>`:'';let h=`<table><tr>${res.headers.map(c=>`<th>${c}</th>`).join('')}</tr>`;for(const r of res.body)h+=`<tr>${r.map(v=>`<td>${v??''}</td>`).join('')}</tr>`;document.getElementById('eb-preview-area').innerHTML=sqlBlock+h+`</table><p class="muted">${res.body.length} rows shown (first 50).</p>`;}catch(e){showToast('Preview error: '+e,'err');}finally{btn.textContent='👁 Preview';btn.disabled=false;}};
+ document.getElementById('expbld-preview').onclick=async()=>{const btn=document.getElementById('expbld-preview');btn.textContent='⏳…';btn.disabled=true;try{const res=await runExport(true);if(!res)return;const sqlBlock=res.sql?`<details style="margin-bottom:8px"><summary style="cursor:pointer;font-size:13px;color:var(--muted,#9aa3b2)">Generated SQL (click to expand)</summary><pre style="font-size:12px;white-space:pre-wrap;word-break:break-all;background:var(--head,#eef2f7);padding:6px 8px;border-radius:4px;margin:4px 0">${res.sql.replace(/</g,'&lt;')}</pre></details>`:'';let h=`<table><tr>${res.headers.map(c=>`<th>${c}</th>`).join('')}</tr>`;for(const r of res.body)h+=`<tr>${r.map(v=>`<td>${v??''}</td>`).join('')}</tr>`;document.getElementById('eb-preview-area').innerHTML=sqlBlock+h+`</table><p class="muted">${res.body.length} rows shown (first 50).</p>`;}catch(e){showToast('Preview error: '+e,'err');}finally{btn.textContent='👁 Preview';btn.disabled=false;}};
  document.getElementById('expbld-setcur').onclick=()=>{for(const e of active){if(!_eb.entities.find(x=>x.id===e.id))_eb.entities.push({id:e.id,label:e.label});}if(Qall.length){_eb.fromQ=Qall[rangeSel.a];_eb.toQ=Qall[rangeSel.b];}renderExportUI();};
  document.getElementById('ffrom').onchange=renderForm;document.getElementById('fto').onchange=renderForm;
  document.getElementById('fexp').onclick=()=>expandAll(true,'#formbody');document.getElementById('fcol').onclick=()=>expandAll(false,'#formbody');
  document.getElementById('fdn').onclick=()=>drillSmart(1,'#formbody');document.getElementById('fup').onclick=()=>drillSmart(-1,'#formbody');
- document.getElementById('frow-filter').oninput=function(){const q=this.value.toLowerCase();document.querySelectorAll('#formbody .frow').forEach(r=>{const lab=r.querySelector('.lab');if(!lab)return;const txt=lab.textContent.toLowerCase();const show=!q||txt.includes(q);r.style.display=show?'':'none';});};
+ document.getElementById('frow-filter').oninput=function(){const q=this.value;const el=document.getElementById('frow-coderes');if(q.length>=2){const res=searchHier(q);if(res.length){el.innerHTML=res.map(r=>`<div class="frow-cr" data-m="${r.m}" style="padding:3px 8px;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:inherit" title="${r.c}"><b>${r.m}</b> — ${r.c}</div>`).join('');el.style.display='block';el.querySelectorAll('.frow-cr').forEach(d=>d.onclick=()=>{document.getElementById('frow-filter').value=d.dataset.m;el.style.display='none';const qm=d.dataset.m.toLowerCase();document.querySelectorAll('#formbody .frow').forEach(r=>{const lab=r.querySelector('.lab');if(!lab)return;r.style.display=lab.textContent.toLowerCase().includes(qm)?'':'none';});});}else el.style.display='none';}else el.style.display='none';const qlo=q.toLowerCase();document.querySelectorAll('#formbody .frow').forEach(r=>{const lab=r.querySelector('.lab');if(!lab)return;const txt=lab.textContent.toLowerCase();const show=!qlo||txt.includes(qlo);r.style.display=show?'':'none';});};
  document.getElementById('ffull').onclick=()=>{const qs=window._fq||[];if(qs.length){document.getElementById('ffrom').value=qs[0];document.getElementById('fto').value=qs[qs.length-1];}renderForm();};
  document.getElementById('fent-add').onclick=()=>{const v=document.getElementById('fent-inp').value.trim();if(!v)return;let ent=null;const cv=v.replace(/^★\s*/,'');if(cv in peers)ent={id:'PEER:'+cv,label:'★ '+cv};else if(/^all$/i.test(v))ent={id:'ALL',label:'ALL'};else{const m=v.match(/(\d{3,})/);if(m)ent={id:'BANK:'+m[1],label:elabel('BANK:'+m[1])};}if(ent){window._feEnts=window._feEnts||[];if(!window._feEnts.find(e=>e.id===ent.id)){window._feEnts.push(ent);renderFentChips();renderForm();}}document.getElementById('fent-inp').value='';};
  document.getElementById('fent-cur').onclick=()=>{window._feEnts=window._feEnts||[];for(const e of active){if(e.id.startsWith('BANK:')&&!window._feEnts.find(x=>x.id===e.id))window._feEnts.push({id:e.id,label:e.label});}renderFentChips();renderForm();};
@@ -552,7 +657,7 @@ async function init(){try{
  if(!restored){active=[{id:'ALL',label:'ALL'}];}
  if(!measures.length){try{const s=localStorage.getItem('ffiec002_measures');if(s){const ms=JSON.parse(s);if(Array.isArray(ms)&&ms.length)measures=ms.slice(0,20);}}catch{}if(!measures.length)measures=[{code:'COMB2170',label:'Total assets',pct:false}];}
  renderChips();renderMeasures();renderPeerSaved();
- st(`Ready — ${ROSTER.size} filers. Click items on the left; add entities to compare.`);pbar(100);recompute();
+ st(`Ready — ${ROSTER.size} filers. Click items on the left; add entities to compare.`);pbar(100);recompute();autoLoadFormulas();
  {const _rp=new URLSearchParams(location.hash.slice(1));if(_rp.get('report')==='1'&&active.length===1&&active[0].id.startsWith('BANK:'))openReport(active[0].id);}
 }catch(e){st('Load failed: '+e);console.error(e);}}
 
@@ -668,13 +773,13 @@ function emitSchedule(sch,showRaw){const allRows=HIER[sch];
  for(const r of allRows){
    if(!REPORT.test(r.mdrm)){ // header / placeholder row (no valid MDRM)
      if(!r.item)continue;
-     if(r.caption)out.push({code:'HDR:'+sch+':'+r.item,caption:r.caption,num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,header:true});
+     if(r.caption)out.push({code:'HDR:'+sch+':'+r.item,caption:r.caption,num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,header:true,sch:sch});
      else out.push({code:'EMPTY:'+r.item,caption:'(empty)',num:r.item||'',depth:r.depth||1,comb:false,derived:false,pct:false,placeholder:true});
      continue;}
    const p=r.mdrm.slice(0,4),base=r.mdrm.slice(4),cap=r.caption||r.mdrm;const depth=r.depth||1;
-   if(p==='RCFD'||p==='RCON'){if(!done.has('C'+base)){done.add('C'+base);out.push({code:'COMB'+base,caption:cap,num:r.item||'',depth,comb:true,derived:false,pct:false,col:!!r.col});}
+   if(p==='RCFD'||p==='RCON'){if(!done.has('C'+base)){done.add('C'+base);out.push({code:'COMB'+base,caption:cap,num:r.item||'',depth,comb:true,derived:false,pct:false,col:!!r.col,sch:sch});}
      if(showRaw&&!done.has(r.mdrm)){done.add(r.mdrm);out.push({code:r.mdrm,caption:cap+' ['+p.slice(2)+']',num:'',depth:depth+1,comb:false,derived:false,pct:false});}}
-   else{if(combBases.has(base))continue;if(!done.has(r.mdrm)){done.add(r.mdrm);out.push({code:r.mdrm,caption:cap,num:r.item||'',depth,comb:false,derived:false,pct:false,col:!!r.col});}}}
+   else{if(combBases.has(base))continue;if(!done.has(r.mdrm)){done.add(r.mdrm);out.push({code:r.mdrm,caption:cap,num:r.item||'',depth,comb:false,derived:false,pct:false,col:!!r.col,sch:sch});}}}
  return out;}
 function secPrefix(nodes){
  const caps=[];function walk(ns){for(const n of ns){if(!n.header&&!n.derived&&!n.placeholder){if(!n.children.length)caps.push(n.caption||'');else walk(n.children);}}}
@@ -757,10 +862,36 @@ function filterTree(q){q=q.trim().toLowerCase();
  document.querySelectorAll('#tree .schsec').forEach(sec=>{const rows=sec.querySelector('.schrows');let any=false;
    sec.querySelectorAll('.trow').forEach(r=>{const m=r.dataset.txt.includes(q);r.style.display=m?'':'none';if(m)any=true;});
    rows.style.display=any?'block':'none';sec.style.display=any?'':'none';});}
-function descCodes(nd){const out=[];(function rec(n){for(const c of (n.children||[])){if(c.header)rec(c);else if(c.code&&!c.placeholder&&!c.derived)out.push(c.code.slice(4));}})(nd);return out;}
+// PART-B roll-up double-count fix (adapted from fry9c PART B for 002's schedules). 002 collapses
+// RCFD/RCON/RCFN col-pairs via COMB folding, so the residual header-Σ double-counts are:
+//  • Fair-value matrices (Q / Q -- Liabilities / Q -- Memoranda): every row's columns are
+//    (A) Total fair value reported on Sched RAL, (B) LESS amounts netted, (C/D/E) Level 1/2/3 —
+//    cols B–E re-slice col A, so a naive sum ≈ 2× → use ONLY col A (the Total-fair-value column).
+//  • DC-1 explicit total/subset leaf inside a header (verified vs panel, stable across quarters):
+//    RAL 4 carries 4.g RCFD2927 "Total liabilities to nonrelated parties" (= Σ 4.a..4.f) → drop it;
+//    E 7 carries 7.(B) RCON2210 "Memo: Total demand deposits (included in Column A)" (subset) → drop.
+const FV_SCHED=new Set(['Q','Q -- Liabilities','Q -- Memoranda']);
+const ROLLUP_DROP={'RAL':{'4':['2927']},'E':{'7':['2210']}};
+function descCodes(nd){
+ const sch=nd.sch||'',fv=FV_SCHED.has(sch),drops=ROLLUP_DROP[sch]||{};
+ const out=[];
+ (function rec(n){
+   const dl=drops[n.num];
+   if(fv){
+     const cols=(n.children||[]).filter(c=>c.col&&!c.header&&c.code&&!c.placeholder&&!c.derived);
+     if(cols.length)out.push(cols[0].code.slice(4));   // col A = Total fair value only
+     for(const c of (n.children||[])){if(c.header)rec(c);else if(!c.col&&c.code&&!c.placeholder&&!c.derived)out.push(c.code.slice(4));}
+     return;}
+   for(const c of (n.children||[])){
+     if(c.header)rec(c);
+     else if(c.code&&!c.placeholder&&!c.derived){const b=c.code.slice(4);if(dl&&dl.indexOf(b)>=0)continue;out.push(b);}}
+ })(nd);
+ return out;}
 function hasPctDesc(nd){return false;}
 function markTree(){const on=new Set(measures.map(m=>m.code));document.querySelectorAll('#tree .trow').forEach(r=>r.classList.toggle('on',on.has(r.dataset.code)||on.has('SUB:'+r.dataset.code)));}
-function toggleMeasure(code,label,pct){const i=measures.findIndex(m=>m.code===code);
+function toggleMeasure(code,label,pct){
+ if(window._addToChartId!=null){const ch=_extraCharts.find(c=>c.id===window._addToChartId);if(ch){const i=ch.measures.findIndex(m=>m.code===code);if(i>=0)ch.measures.splice(i,1);else{if(ch.measures.length>=20){showToast('Up to 20 measures.');return;}ch.measures.push({code,label,pct:!!pct});}renderExtraChartChips(ch);recomputeExtraCharts().then(()=>drawExtraCharts());return;}}
+ const i=measures.findIndex(m=>m.code===code);
  if(i>=0)measures.splice(i,1);else{if(measures.length>=20){showToast('Up to 20 measures.');return;}measures.push({code,label,pct:!!pct});}
  entSortField='__none__';markTree();renderMeasures();scheduleRecompute();saveMeasures();}
 
@@ -842,7 +973,7 @@ async function recompute(){if(!measures.length||!active.length){lastSeries=[];Qa
  for(const m of measures)for(const e of active){if(mySeq!==_rcSeq)return;const rows=await seriesFor(e.id,m.code);if(mySeq!==_rcSeq)return;out.push({label:`${e.label} · ${fullCap(m.code)||m.label}`,pct:m.pct,rows,color:COLORS[ci++%COLORS.length],eid:e.id});}
  lastSeries=out;const qs=new Set();for(const s of out)for(const r of s.rows)qs.add(r[0]);
  _assetRows.clear();for(const e of active){if(mySeq!==_rcSeq)return;const ar=await seriesFor(e.id,'RCFD2170');_assetRows.set(e.id,Object.fromEntries(ar.map(r=>[r[0],r[1]])));}
- Qall=[...qs].sort();rangeSel={a:0,b:Math.max(0,Qall.length-1)};syncSlider();draw();stateToHash();}
+ Qall=[...qs].sort();rangeSel={a:0,b:Math.max(0,Qall.length-1)};syncSlider();await recomputeExtraCharts();draw();stateToHash();}
 function syncSlider(){const n=Qall.length,w=document.getElementById('sliderwrap');if(n<2){w.style.display='none';return;}w.style.display='flex';
  for(const id of['r0','r1']){const el=document.getElementById(id);el.min=0;el.max=n-1;}
  document.getElementById('r0').value=rangeSel.a;document.getElementById('r1').value=rangeSel.b;
@@ -861,20 +992,18 @@ function draw(){const host=document.getElementById('panes');
  const hasDol=workSeries.some(s=>!s.pct),hasPct=workSeries.some(s=>s.pct);
  const stackedOn=!!(document.getElementById('stackedmode')?.checked);
  if(hasDol&&hasPct){
-   const axisUI=dualAxis?workSeries.map((s,i)=>`<label style="font-size:10px;white-space:nowrap;margin-right:6px"><input type="checkbox" class="ax-right" data-i="${i}" ${window._axisRight.has(s.label)?'checked':''}> <span style="color:${s.color}">${(s.label||'').slice(0,30)}</span> → right</label>`).join(''):'';
-   html+=`<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><button class="sec pane-toggle" id="axistoggle">${dualAxis?'⊞ Split panes':'⊟ Dual axis'}</button>${axisUI}</div>`;
-   if(dualAxis){const leftS=workSeries.filter(s=>!window._axisRight.has(s.label));const rightS=workSeries.filter(s=>window._axisRight.has(s.label));const lFilt=leftS.length?leftS:workSeries.filter(s=>!s.pct);const rFilt=rightS.length?rightS:workSeries.filter(s=>s.pct);html+=paneDual(lFilt.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),rFilt.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),win);}
+   html+=`<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px"><label style="font-size:13px;cursor:pointer;user-select:none"><input type="checkbox" id="combinepct"${dualAxis?' checked':''}> Combine % onto right axis</label></div>`;
+   if(dualAxis){const lFilt=workSeries.filter(s=>!s.pct);const rFilt=workSeries.filter(s=>s.pct);html+=paneDual(lFilt.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),rFilt.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),win);}
    else{for(const [unit,arr] of groups){if(!arr.length)continue;const w=arr.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))}));html+=pane(w,unit==='percent',unit,win,stackedOn&&unit==='$ thousands');}}}
  else{for(const [unit,arr] of groups){if(!arr.length)continue;const w=arr.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))}));html+=pane(w,unit==='percent',unit,win,stackedOn&&unit==='$ thousands');}}
  if(document.getElementById('idx')&&document.getElementById('idx').checked){const dol=lastSeries.filter(s=>!s.pct);
-   if(dol.length){const w=dol.map(s=>{const rw=s.rows.filter(r=>ws.has(r[0]));let bb;if(_idxBase){bb=rw.find(r=>r[0]===_idxBase&&r[1]!=null&&r[1]!==0)||rw.find(r=>r[1]!=null&&r[1]!==0);}else{bb=rw.find(r=>r[1]!=null&&r[1]!==0);}const b=bb&&bb[1];return {...s,rows:b?rw.map(([q,v])=>[q,v==null?null:100*v/b]):[]};});const baseLbl=_idxBase?` (base: ${_idxBase})`:'';html+=`<div class="idx-pane"><div style="font-size:10px;color:var(--muted,#9aa3b2);padding:2px 14px">Index to 100${baseLbl} — click chart to rebase${_idxBase?` · <a href="#" id="idxbasereset" style="color:var(--muted,#9aa3b2)">reset</a>`:''}`;html+=pane(w,false,'index',win);html+=`</div>`;}}
+   if(dol.length){const w=dol.map(s=>{const rw=s.rows.filter(r=>ws.has(r[0]));let bb;if(_idxBase){bb=rw.find(r=>r[0]===_idxBase&&r[1]!=null&&r[1]!==0)||rw.find(r=>r[1]!=null&&r[1]!==0);}else{bb=rw.find(r=>r[1]!=null&&r[1]!==0);}const b=bb&&bb[1];return {...s,rows:b?rw.map(([q,v])=>[q,v==null?null:100*v/b]):[]};});const baseLbl=_idxBase?` (base: ${_idxBase})`:'';html+=`<div class="idx-pane"><div style="font-size:12px;color:var(--muted,#9aa3b2);padding:2px 14px">Index to 100${baseLbl} — click chart to rebase${_idxBase?` · <a href="#" id="idxbasereset" style="color:var(--muted,#9aa3b2)">reset</a>`:''}`;html+=pane(w,false,'index',win);html+=`</div>`;}}
  if(document.getElementById('qoqdelta')&&document.getElementById('qoqdelta').checked){const dol=lastSeries.filter(s=>!s.pct);
    if(dol.length){const w=dol.map(s=>{const rw=s.rows.filter(r=>ws.has(r[0]));const qm=Object.fromEntries(s.rows.map(r=>[r[0],r[1]]));const dd=rw.map((r,i)=>{const pQ=prevQtr(r[0]);const pv=pQ in qm?qm[pQ]:null;return [r[0],r[1]!=null&&pv!=null?r[1]-pv:null];}).filter(r=>r[1]!=null);return {...s,rows:dd,pct:false};});html+=pane(w,false,'$ thousands',win);}}
  host.innerHTML=html;
  if(window._pinnedQ){document.querySelectorAll(`#panes .qband[data-q="${window._pinnedQ}"]`).forEach(g=>g.classList.add('qband-pinned'));}
- if(lastSeries.length>0&&!lastSeries.some(s=>s.rows.some(r=>ws.has(r[0])))){host.innerHTML+=`<div style="text-align:center;padding:16px 8px 4px;font-size:13px;color:var(--muted,#9aa3b2)">No data available in the selected date range — try expanding the range or selecting <b>All</b>.</div>`;}
- const atb=document.getElementById('axistoggle');if(atb)atb.onclick=()=>{window._dualAxis=!window._dualAxis;draw();};
- document.querySelectorAll('.ax-right').forEach(cb=>cb.onchange=()=>{const s=workSeries[+cb.dataset.i];if(!s)return;if(cb.checked)window._axisRight.add(s.label);else window._axisRight.delete(s.label);draw();});
+ if(lastSeries.length>0&&!lastSeries.some(s=>s.rows.some(r=>ws.has(r[0])))){host.innerHTML+=`<div style="text-align:center;padding:16px 8px 4px;font-size:14px;color:var(--muted,#9aa3b2)">No data available in the selected date range — try expanding the range or selecting <b>All</b>.</div>`;}
+ const cpEl=document.getElementById('combinepct');if(cpEl)cpEl.onchange=()=>{window._dualAxis=cpEl.checked;draw();};
  const kpiSelEl=document.getElementById('kpisel'),kpiSelRow=document.getElementById('kpiselrow');
  if(lastSeries.length>1){kpiSelRow.style.display='';const pv=kpiSelEl.value;kpiSelEl.innerHTML=lastSeries.map((s,i)=>`<option value="${i}">${s.label||s.id||('Series '+(i+1))}</option>`).join('');if(pv&&+pv<lastSeries.length)kpiSelEl.value=pv;}else{kpiSelRow.style.display='none';kpiSelEl.innerHTML='';}
  const kpiIdx=lastSeries.length>1?(+kpiSelEl.value||0):0;
@@ -893,13 +1022,13 @@ function draw(){const host=document.getElementById('panes');
  const qoqRaw=last!=null&&prev!=null?last-prev:null,yoyRaw=last!=null&&yr!=null?last-yr:null,totRaw=last!=null&&f0!=null?last-f0:null;
  const absChg=(d)=>{if(d==null)return '';const s=d>=0?'+':'−';const a=Math.abs(d);if(prim.pct)return `${s}${a.toFixed(2)} pp`;if(a>=1e9)return `${s}${(a/1e9).toLocaleString(undefined,{maximumFractionDigits:2})} T`;if(a>=1e6)return `${s}${(a/1e6).toLocaleString(undefined,{maximumFractionDigits:2})} B`;if(a>=1e3)return `${s}${(a/1e3).toLocaleString(undefined,{maximumFractionDigits:1})} M`;return `${s}${a.toLocaleString()} k`;};
  const hasAgg=active.some(a=>a.id==='ALL'||a.id.startsWith('PEER:')||a.id.startsWith('ET:'));
- const aggNote=hasAgg?`<div style="font-size:11px;color:#d97706;padding:4px 0 2px" title="Dollar figures for ALL/peer/type-group entities are Σ of individual filer values — ratios (%) are Σnumerator/Σdenominator, not averages">⚠ Aggregate view — $ values are sums across filers; ratios are population-weighted</div>`:'';
+ const aggNote=hasAgg?`<div style="font-size:13px;color:#d97706;padding:4px 0 2px" title="Dollar figures for ALL/peer/type-group entities are Σ of individual filer values — ratios (%) are Σnumerator/Σdenominator, not averages">⚠ Aggregate view — $ values are sums across filers; ratios are population-weighted</div>`:'';
  document.getElementById('cards').innerHTML=
   aggNote+
   `<div class=card><div class=k>${prim.label} — latest${lastQ?` (${lastQ})`:''}</div><div class=v>${fmtUnit(last,prim.pct)}</div></div>`+
-  `<div class=card><div class=k>QoQ${pQ&&prev!=null?' vs '+pQ:''}</div><div class="v ${cls(qoq)}">${ar(qoq)}</div>${qoq!=null?`<div class="muted" style="font-size:11px;margin-top:2px">${absChg(qoqRaw)}</div>`:''}</div>`+
-  `<div class=card><div class=k>YoY${yQ&&yr!=null?' vs '+yQ:''}</div><div class="v ${cls(yoy)}">${ar(yoy)}</div>${yoy!=null?`<div class="muted" style="font-size:11px;margin-top:2px">${absChg(yoyRaw)}</div>`:''}</div>`+
-  `<div class=card><div class=k>Total Δ (range${f0q?' from '+f0q:''})</div><div class="v ${cls(tot)}">${ar(tot)}</div>${tot!=null?`<div class="muted" style="font-size:11px;margin-top:2px">${absChg(totRaw)}</div>`:''}</div>`+
+  `<div class=card><div class=k>QoQ${pQ&&prev!=null?' vs '+pQ:''}</div><div class="v ${cls(qoq)}">${ar(qoq)}</div>${qoq!=null?`<div class="muted" style="font-size:13px;margin-top:2px">${absChg(qoqRaw)}</div>`:''}</div>`+
+  `<div class=card><div class=k>YoY${yQ&&yr!=null?' vs '+yQ:''}</div><div class="v ${cls(yoy)}">${ar(yoy)}</div>${yoy!=null?`<div class="muted" style="font-size:13px;margin-top:2px">${absChg(yoyRaw)}</div>`:''}</div>`+
+  `<div class=card><div class=k>Total Δ (range${f0q?' from '+f0q:''})</div><div class="v ${cls(tot)}">${ar(tot)}</div>${tot!=null?`<div class="muted" style="font-size:13px;margin-top:2px">${absChg(totRaw)}</div>`:''}</div>`+
   `<div class=card><div class=k>Series</div><div class=v>${lastSeries.length}</div></div>`;
  const maps=lastSeries.map(s=>Object.fromEntries(s.rows));
  const head=['quarter_end',...lastSeries.map(s=>s.label+(s.pct?' (%)':' ($k)'))];
@@ -912,10 +1041,21 @@ function draw(){const host=document.getElementById('panes');
  if(lastSeries.length>1&&snapEl){
   const fmtDelta=(d,isPct)=>{if(d==null)return '';const sg=d>=0?'+':'−';const a=Math.abs(d);if(isPct)return `${sg}${a.toFixed(2)} pp`;if(a>=1e9)return `${sg}${(a/1e9).toLocaleString(undefined,{maximumFractionDigits:2})} T`;if(a>=1e6)return `${sg}${(a/1e6).toLocaleString(undefined,{maximumFractionDigits:2})} B`;if(a>=1e3)return `${sg}${(a/1e3).toLocaleString(undefined,{maximumFractionDigits:1})} M`;return `${sg}${a.toLocaleString()} k`;};
   const snapRows=lastSeries.map(s=>{const sR=s.rows.filter(r=>ws.has(r[0]));const sLast=sR.length?sR[sR.length-1][1]:null,sLastQ=sR.length?sR[sR.length-1][0]:null;const sMap=Object.fromEntries(sR.map(r=>[r[0],r[1]]));const sPQ=sLastQ?prevQtr(sLastQ):null,sYQ=sLastQ?yoyQtr(sLastQ):null;const sPrev=(sPQ&&sPQ in sMap)?sMap[sPQ]:null,sYr=(sYQ&&sYQ in sMap)?sMap[sYQ]:null;const sF0=sR.length?sR[0][1]:null;const sQoq=pctChg(sLast,sPrev),sYoy=pctChg(sLast,sYr),sTot=pctChg(sLast,sF0);const sQR=sLast!=null&&sPrev!=null?sLast-sPrev:null,sYR=sLast!=null&&sYr!=null?sLast-sYr:null,sTR=sLast!=null&&sF0!=null?sLast-sF0:null;return {s,sLast,sQoq,sYoy,sTot,sQR,sYR,sTR};});
-  let sh=`<table style="width:100%;margin-top:8px;border-collapse:collapse;font-size:12px"><thead><tr><th style="text-align:left;padding:3px 6px">Entity</th><th style="padding:3px 6px">Latest</th><th style="padding:3px 6px">QoQ</th><th style="padding:3px 6px">YoY</th><th style="padding:3px 6px">Total Δ</th></tr></thead><tbody>`;
-  for(const {s,sLast,sQoq,sYoy,sTot,sQR,sYR,sTR} of snapRows){const dot=`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${s.color};margin-right:5px"></span>`;sh+=`<tr><td style="text-align:left;padding:3px 6px">${dot}${s.label}</td><td style="padding:3px 6px;text-align:right">${fmtUnit(sLast,s.pct)}</td><td class="${cls(sQoq)}" style="padding:3px 6px;text-align:right">${ar(sQoq)}${sQR!=null?` <span class="muted" style="font-size:10px">${fmtDelta(sQR,s.pct)}</span>`:''}</td><td class="${cls(sYoy)}" style="padding:3px 6px;text-align:right">${ar(sYoy)}${sYR!=null?` <span class="muted" style="font-size:10px">${fmtDelta(sYR,s.pct)}</span>`:''}</td><td class="${cls(sTot)}" style="padding:3px 6px;text-align:right">${ar(sTot)}${sTR!=null?` <span class="muted" style="font-size:10px">${fmtDelta(sTR,s.pct)}</span>`:''}</td></tr>`;}
+  let sh=`<table style="width:100%;margin-top:8px;border-collapse:collapse;font-size:13px"><thead><tr><th style="text-align:left;padding:3px 6px">Entity</th><th style="padding:3px 6px">Latest</th><th style="padding:3px 6px">QoQ</th><th style="padding:3px 6px">YoY</th><th style="padding:3px 6px">Total Δ</th></tr></thead><tbody>`;
+  for(const {s,sLast,sQoq,sYoy,sTot,sQR,sYR,sTR} of snapRows){const dot=`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${s.color};margin-right:5px"></span>`;sh+=`<tr><td style="text-align:left;padding:3px 6px">${dot}${s.label}</td><td style="padding:3px 6px;text-align:right">${fmtUnit(sLast,s.pct)}</td><td class="${cls(sQoq)}" style="padding:3px 6px;text-align:right">${ar(sQoq)}${sQR!=null?` <span class="muted" style="font-size:12px">${fmtDelta(sQR,s.pct)}</span>`:''}</td><td class="${cls(sYoy)}" style="padding:3px 6px;text-align:right">${ar(sYoy)}${sYR!=null?` <span class="muted" style="font-size:12px">${fmtDelta(sYR,s.pct)}</span>`:''}</td><td class="${cls(sTot)}" style="padding:3px 6px;text-align:right">${ar(sTot)}${sTR!=null?` <span class="muted" style="font-size:12px">${fmtDelta(sTR,s.pct)}</span>`:''}</td></tr>`;}
   snapEl.innerHTML=sh+'</tbody></table>';
- }else if(snapEl){snapEl.innerHTML='';} }
+ }else if(snapEl){snapEl.innerHTML='';} const _aBtn=document.getElementById('addchartbtn');if(_aBtn)_aBtn.style.display='';drawExtraCharts();}
+// ---- extra charts ----
+let _extraCharts=[],_nextChartId=1;window._addToChartId=null;
+function addChart(){const id=_nextChartId++;_extraCharts.push({id,measures:[],lastSeries:[]});renderExtraChartsArea();}
+function removeChart(id){_extraCharts=_extraCharts.filter(c=>c.id!==id);if(window._addToChartId===id)window._addToChartId=null;renderExtraChartsArea();}
+function setChartTarget(id){window._addToChartId=(window._addToChartId===id)?null:id;document.querySelectorAll('.ec-target-btn').forEach(b=>{b.style.background='';b.style.color='';});if(window._addToChartId!=null){const b=document.getElementById('ec-tgt-'+window._addToChartId);if(b){b.style.background='var(--acc,#1d4ed8)';b.style.color='#fff';}}if(window._addToChartId!=null)showToast('Click tree items to add to Chart '+(window._addToChartId+1),'warn');}
+window.addChart=addChart;window.removeChart=removeChart;window.setChartTarget=setChartTarget;
+function renderExtraChartsArea(){const area=document.getElementById('extracharts-area');if(!area)return;area.innerHTML=_extraCharts.map(chart=>`<div class="extra-chart" id="ec-${chart.id}" style="margin-top:14px;border-top:1px solid var(--head,#eef2f7);padding-top:8px"><div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:4px"><b style="font-size:13px;color:var(--muted,#9aa3b2)">Chart ${chart.id+1}</b><button class="sec" style="font-size:12px;padding:1px 6px" onclick="removeChart(${chart.id})">✕</button><button class="sec ec-target-btn" id="ec-tgt-${chart.id}" style="font-size:12px;padding:1px 6px" onclick="setChartTarget(${chart.id})">▶ Add items</button><span id="ec-mchips-${chart.id}"></span></div><div id="ec-panes-${chart.id}"><p class="muted" style="font-size:13px">Click ▶ Add items, then a line item on the left.</p></div></div>`).join('');_extraCharts.forEach(c=>renderExtraChartChips(c));drawExtraCharts();}
+function renderExtraChartChips(chart){const c=document.getElementById('ec-mchips-'+chart.id);if(!c)return;c.innerHTML=chart.measures.map((m,i)=>`<span class="chip" style="font-size:12px"><b>${m.label}</b> <span class="muted">${m.pct?'%':'$'}</span><span class="x" data-ci="${chart.id}" data-i="${i}">✕</span></span>`).join('');c.querySelectorAll('.x').forEach(x=>x.onclick=()=>{const ch=_extraCharts.find(c=>c.id===+x.dataset.ci);if(ch){ch.measures.splice(+x.dataset.i,1);renderExtraChartChips(ch);recomputeExtraCharts().then(()=>drawExtraCharts());}});}
+async function recomputeExtraCharts(){for(const chart of _extraCharts){if(!chart.measures.length||!active.length){chart.lastSeries=[];continue;}const out=[];let ci=0;for(const m of chart.measures)for(const e of active){const rows=await seriesFor(e.id,m.code);const mlbl=fullCap(m.code)||m.label;const label=`${e.label} · ${mlbl}`;out.push({label,pct:m.pct,rows,color:COLORS[ci++%COLORS.length],eid:e.id});}chart.lastSeries=out;}}
+function drawExtraCharts(){if(!_extraCharts.length)return;const win=Qall.slice(rangeSel.a,rangeSel.b+1),ws=new Set(win);for(const chart of _extraCharts)drawExtraChart(chart,win,ws);}
+function drawExtraChart(chart,win,ws){const host=document.getElementById('ec-panes-'+chart.id);if(!host)return;if(!chart.lastSeries.length){host.innerHTML='<p class="muted" style="font-size:13px">Click ▶ Add items, then a line item on the left.</p>';return;}const _m=measures;measures=chart.measures;let html='';try{const hasDol=chart.lastSeries.some(s=>!s.pct),hasPct=chart.lastSeries.some(s=>s.pct);if(hasDol&&hasPct){const lF=chart.lastSeries.filter(s=>!s.pct),rF=chart.lastSeries.filter(s=>s.pct);html+=paneDual(lF.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),rF.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),win);}else{const groups=[['$ thousands',chart.lastSeries.filter(s=>!s.pct)],['percent',chart.lastSeries.filter(s=>s.pct)]];for(const[unit,arr]of groups){if(!arr.length)continue;html+=pane(arr.map(s=>({...s,rows:s.rows.filter(r=>ws.has(r[0]))})),unit==='percent',unit,win,false);}}}finally{measures=_m;}host.innerHTML=html;}
 function pane(series,pct,unit,win,stacked){const W=1080,H=300,pad=64,n=win.length;const xi=Object.fromEntries(win.map((q,i)=>[q,i]));
  let mn=Infinity,mx=-Infinity;for(const s of series)for(const r of s.rows){mn=Math.min(mn,r[1]);mx=Math.max(mx,r[1]);}
  if(!isFinite(mn)){const aC=DK()?'#9aa3b2':'#5a6478';return `<svg viewBox="0 0 1080 300" width="100%" xmlns="http://www.w3.org/2000/svg"><text x="540" y="150" font-size="16" fill="${aC}" text-anchor="middle" dominant-baseline="middle">No data available for this entity / date range</text></svg>`;}
@@ -952,14 +1092,29 @@ function pane(series,pct,unit,win,stacked){const W=1080,H=300,pad=64,n=win.lengt
        const fwd=topPts.map((p,i)=>(i?'L':'M')+p.cx.toFixed(1)+' '+p.cy.toFixed(1)).join(' ');
        const rev=[...botPts].reverse().map(p=>'L'+p.cx.toFixed(1)+' '+p.cy.toFixed(1)).join(' ');
        areas+=`<path d="${fwd} ${rev} Z" fill="${s.color}" fill-opacity="0.72" stroke="${s.color}" stroke-width="0.5"></path>`;}
-     if(lastTopCx!=null){const pts2=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const sl=(nE>1&&nM===1?pts2[0]:(nE===1&&nM>1?short(pts2.slice(1).join(' \xb7 ')):short(s.label))).slice(0,22);_el.push({x:lastTopCx+5,y:lastTopCy+4,sl,color:s.color});}}
+     if(lastTopCx!=null){const pts2=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const sl=(nE>1&&nM===1?pts2[0]:(nE===1?short(pts2.slice(1).join(' \xb7 '))||short(s.label):short(s.label))).slice(0,34);_el.push({x:lastTopCx+5,y:lastTopCy+4,sl,color:s.color});}}
  }else{
    for(const s of series){let p='',firstCx,lastCx,lastCy;s.rows.forEach((r,k)=>{const cx=X(xi[r[0]]).toFixed(1),cy=Y(r[1]).toFixed(1);if(k===0)firstCx=cx;lastCx=cx;lastCy=cy;p+=(k?'L':'M')+cx+' '+cy+' ';
      const qi=xi[r[0]];(byQ[qi]=byQ[qi]||{x:+cx,q:r[0],items:[]}).items.push({cy:+cy,color:s.color,label:s.label,val:f(r[1])});
      pts+=`<circle class="pt" cx="${cx}" cy="${cy}" r="1.5" fill="${s.color}" stroke="${dotC}" stroke-width="1"></circle>`;});
      if(s.rows.length>1){const by=Y(Math.max(mn,0)).toFixed(1);areas+=`<path d="${p}L${lastCx} ${by} L${firstCx} ${by} Z" fill="${s.color}" fill-opacity="0.12" stroke="none"></path>`;}
      paths+=`<path d="${p}" fill="none" stroke="${s.color}" stroke-width="2"></path>`;
-     if(lastCx!=null){const pts2=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const sl=(nE>1&&nM===1?pts2[0]:(nE===1&&nM>1?short(pts2.slice(1).join(' \xb7 ')):short(s.label))).slice(0,22);_el.push({x:+lastCx+5,y:+lastCy+4,sl:sl,color:s.color});}}}
+     if(lastCx!=null){const pts2=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const sl=(nE>1&&nM===1?pts2[0]:(nE===1?short(pts2.slice(1).join(' \xb7 '))||short(s.label):short(s.label))).slice(0,34);_el.push({x:+lastCx+5,y:+lastCy+4,sl:sl,color:s.color});}}}
+ const want=Math.min(8,n),ix=[...new Set(Array.from({length:want},(_,k)=>Math.round(k*(n-1)/Math.max(1,want-1))))];
+ const lb=ix.map(i=>`<text x="${X(i)}" y="${H-pad+18}" font-size="10" fill="${aC}" text-anchor="${i===0?'start':(i===n-1?'end':'middle')}">${win[i]}</text>`).join('');
+ _el.sort((a,b)=>a.y-b.y);for(let _i=1;_i<_el.length;_i++){if(_el[_i].y<_el[_i-1].y+13)_el[_i].y=_el[_i-1].y+13;}const _ov=_el.length?Math.max(0,_el[_el.length-1].y-(H-4)):0;slbls=_el.map(e=>`<text x="${e.x.toFixed(1)}" y="${(e.y-_ov).toFixed(1)}" font-size="11" fill="${e.color}" font-weight="600">${e.sl}</text>`).join('');
+ let _lblEnd=W+96;for(const e of _el){_lblEnd=Math.max(_lblEnd,e.x+Math.ceil((e.sl||'').length*11*0.62)+10);}
+ const _vbw=Math.min(W+340,Math.max(W+96,_lblEnd));
+ // Nearest-X hover bands (crosshair): each quarter owns a full-height transparent .hit rect; CSS
+ // .qband:hover .reveal shows the dashed vertical line + point markers. Geometry uses X() so it is
+ // always aligned to data regardless of the right-label margin. Mirrored in paneDual for parity.
+ const _bi=Object.keys(byQ).map(Number).sort((a,b)=>a-b);let bands='';
+ _bi.forEach((qi,k)=>{const Q=byQ[qi],xc=Q.x;
+   const left=k===0?0:(byQ[_bi[k-1]].x+xc)/2,right=k===_bi.length-1?W:(xc+byQ[_bi[k+1]].x)/2;
+   let mk=`<line class="reveal" x1="${xc.toFixed(1)}" y1="${pad}" x2="${xc.toFixed(1)}" y2="${H-pad}" stroke="${aC}" stroke-width="1" stroke-dasharray="2 2"></line>`;
+   for(const it of Q.items)mk+=`<circle class="reveal" cx="${xc.toFixed(1)}" cy="${it.cy.toFixed(1)}" r="4" fill="${it.color}" stroke="${dotC}" stroke-width="1.5"></circle>`;
+   bands+=`<g class="qband" data-q="${Q.q}"><rect class="hit" x="${left.toFixed(1)}" y="0" width="${(right-left).toFixed(1)}" height="${H}"></rect>${mk}</g>`;});
+ return `<svg viewBox="0 0 ${_vbw} ${H}" width="100%" data-pl="${pad}" data-pw="${W-2*pad}" xmlns="http://www.w3.org/2000/svg">${tk}${areas}${paths}${pts}${slbls}${lb}<text x="14" y="18" font-size="13" fill="${tC}">${unit==='$ thousands'?'$':unit}</text>${bands}</svg>`;}
 function exportSeries(){if(!window._exp){showToast('Nothing to export.');return;}dl2(window._exp.head,window._exp.body,'series');}
 function exportChartSVG(){const svgs=[...document.querySelectorAll('#panes svg')];if(!svgs.length){showToast('No chart to export.');return;}let y=0;const bg=DK()?'#0f1825':'#fff';const gs=svgs.map(s=>{const vb=(s.getAttribute('viewBox')||'0 0 1080 300').split(' ').map(Number);const H=vb[3]||300;const g=`<g transform="translate(0,${y})">${s.innerHTML}</g>`;y+=H+8;return g;});const total=Math.max(y-8,1);const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 ${total}" width="1080" height="${total}"><rect width="1080" height="${total}" fill="${bg}"/>${gs.join('')}</svg>`;const a=document.createElement('a');a.href='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);a.download='chart.svg';a.click();}
 function paneDual(dol,pct,win){const W=1080,H=300,pad=64,padR=80,n=win.length;const xi=Object.fromEntries(win.map((q,i)=>[q,i]));
@@ -976,33 +1131,48 @@ function paneDual(dol,pct,win){const W=1080,H=300,pad=64,padR=80,n=win.length;co
  let tk=ticks0.map(v=>`<line x1="${pad}" y1="${Y0(v)}" x2="${W-padR}" y2="${Y0(v)}" stroke="${gC}"></line><text x="8" y="${Y0(v)+4}" font-size="11" fill="${aC}">${f0(v)}</text>`).join('');
  tk+=ticks1.map(v=>`<text x="${W-padR+4}" y="${Y1(v)+4}" font-size="11" fill="${aC}">${f1(v)}</text>`).join('');
  const dotC=DK()?'#0f1825':'#fff';
+ const byQ={};   // win-index -> {x,q,items:[{cy,color}]} for the hover crosshair bands (both axes)
  let areas='',paths='',pts='',slbls='',_el=[];
  const render=(arr,Yf,fmt)=>{for(const s of arr){let p='',firstCx,lastCx,lastCy;s.rows.forEach((r,k)=>{const cx=X(xi[r[0]]).toFixed(1),cy=Yf(r[1]).toFixed(1);if(k===0)firstCx=cx;lastCx=cx;lastCy=cy;p+=(k?'L':'M')+cx+' '+cy+' ';
+   const qi=xi[r[0]];(byQ[qi]=byQ[qi]||{x:+cx,q:r[0],items:[]}).items.push({cy:+cy,color:s.color});
    pts+=`<circle class="pt" cx="${cx}" cy="${cy}" r="1.5" fill="${s.color}" stroke="${dotC}" stroke-width="1"></circle>`;});
    if(s.rows.length>1){const by=Yf(Math.max(mn0,mn1,0)).toFixed(1);areas+=`<path d="${p}L${lastCx} ${by} L${firstCx} ${by} Z" fill="${s.color}" fill-opacity="0.12" stroke="none"></path>`;}
    paths+=`<path d="${p}" fill="none" stroke="${s.color}" stroke-width="2"></path>`;
-   if(lastCx!=null){const pts2=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const sl=(nE>1&&nM===1?pts2[0]:(nE===1&&nM>1?short(pts2.slice(1).join(' \xb7 ')):short(s.label))).slice(0,22);_el.push({x:+lastCx+5,y:+lastCy+4,sl:sl,color:s.color});}}};
+   if(lastCx!=null){const pts2=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const sl=(nE>1&&nM===1?pts2[0]:(nE===1?short(pts2.slice(1).join(' \xb7 '))||short(s.label):short(s.label))).slice(0,34);_el.push({x:+lastCx+5,y:+lastCy+4,sl:sl,color:s.color});}}};
  render(dol,Y0,f0);render(pct,Y1,f1);
  const want=Math.min(8,n),ix=[...new Set(Array.from({length:want},(_,k)=>Math.round(k*(n-1)/Math.max(1,want-1))))];
  const lb=ix.map(i=>`<text x="${X(i)}" y="${H-pad+18}" font-size="10" fill="${aC}" text-anchor="${i===0?'start':(i===n-1?'end':'middle')}">${win[i]}</text>`).join('');
- _el.sort((a,b)=>a.y-b.y);for(let _i=1;_i<_el.length;_i++){if(_el[_i].y<_el[_i-1].y+11)_el[_i].y=_el[_i-1].y+11;}const _ov=_el.length?Math.max(0,_el[_el.length-1].y-(H-4)):0;slbls=_el.map(e=>`<text x="${e.x.toFixed(1)}" y="${(e.y-_ov).toFixed(1)}" font-size="9" fill="${e.color}" font-weight="600">${e.sl}</text>`).join('');
- return `<svg viewBox="0 0 ${W+96} ${H}" width="100%" xmlns="http://www.w3.org/2000/svg"><text x="14" y="16" font-size="11" fill="${tC}">$ (left) \xb7 % (right)</text>${tk}${areas}${paths}${pts}${slbls}${lb}</svg>`;}
+ _el.sort((a,b)=>a.y-b.y);for(let _i=1;_i<_el.length;_i++){if(_el[_i].y<_el[_i-1].y+13)_el[_i].y=_el[_i-1].y+13;}const _ov=_el.length?Math.max(0,_el[_el.length-1].y-(H-4)):0;slbls=_el.map(e=>`<text x="${e.x.toFixed(1)}" y="${(e.y-_ov).toFixed(1)}" font-size="11" fill="${e.color}" font-weight="600">${e.sl}</text>`).join('');
+ let _lblEnd=W+96;for(const e of _el){_lblEnd=Math.max(_lblEnd,e.x+Math.ceil((e.sl||'').length*11*0.62)+10);}
+ const _vbw=Math.min(W+340,Math.max(W+96,_lblEnd));
+ // Hover crosshair bands — same mechanism as pane() so dual-axis gets the identical vertical
+ // tracking line + snap-to-quarter markers + pinned behavior.
+ const _bi=Object.keys(byQ).map(Number).sort((a,b)=>a-b);let bands='';
+ _bi.forEach((qi,k)=>{const Q=byQ[qi],xc=Q.x;
+   const left=k===0?0:(byQ[_bi[k-1]].x+xc)/2,right=k===_bi.length-1?W:(xc+byQ[_bi[k+1]].x)/2;
+   let mk=`<line class="reveal" x1="${xc.toFixed(1)}" y1="${pad}" x2="${xc.toFixed(1)}" y2="${H-pad}" stroke="${aC}" stroke-width="1" stroke-dasharray="2 2"></line>`;
+   for(const it of Q.items)mk+=`<circle class="reveal" cx="${xc.toFixed(1)}" cy="${it.cy.toFixed(1)}" r="4" fill="${it.color}" stroke="${dotC}" stroke-width="1.5"></circle>`;
+   bands+=`<g class="qband" data-q="${Q.q}"><rect class="hit" x="${left.toFixed(1)}" y="0" width="${(right-left).toFixed(1)}" height="${H}"></rect>${mk}</g>`;});
+ return `<svg viewBox="0 0 ${_vbw} ${H}" width="100%" data-pl="${pad}" data-pw="${W-pad-padR}" xmlns="http://www.w3.org/2000/svg"><text x="14" y="18" font-size="13" fill="${tC}">$ (left) \xb7 % (right)</text>${tk}${areas}${paths}${pts}${slbls}${lb}${bands}</svg>`;}
 
 // ---- league / rank table ----
 // NOTE (aggregation under review): per-filer values reuse the same coalesce(RCFD/RCON/RCFN)
 // + sum-then-divide ratio logic as seriesFor(). Each league row is ONE filer (no cross-entity
 // sum), but the ratio/coalesce pattern mirrors the engine logic currently being corrected in
 // Y-9C — keep this structurally identical so that fix can be reconciled here too.
-const LGMEAS=[
- {code:'COMB2170',label:'Total assets',pct:false},
- {code:'COMB2205',label:'Total deposits',pct:false},
- {code:'COMB2122',label:'Total loans',pct:false},
- {code:'COMB2944',label:'Net due TO related',pct:false},
- {code:'D_LOANSDEP',label:'Loans / Deposits %',pct:true},
- {code:'D_DEPASSETS',label:'Deposits / Assets %',pct:true},
- {code:'D_DUETO',label:'Net due TO related / Assets %',pct:true},
- {code:'D_NONCUR',label:'Noncurrent ratio %',pct:true},
-];
+let LGMEAS=[];
+function buildLGMEAS(){
+ const seed=[
+  {code:'COMB2170',label:'Total assets',pct:false},
+  {code:'COMB2205',label:'Total deposits',pct:false},
+  {code:'COMB2122',label:'Total loans',pct:false},
+  {code:'COMB2944',label:'Net due TO related',pct:false},
+ ];
+ const seen=new Set(seed.map(m=>m.code));const out=[...seed];
+ for(const[k,d] of Object.entries(DERIV)){if(seen.has(k))continue;seen.add(k);
+  const lbl=d.lbl||k;const parts=lbl.split(' ▸ ');const shortLbl=parts.length>1?parts.slice(1).join(' ▸ '):lbl;
+  out.push({code:k,label:shortLbl,pct:d.type!=='sum'});}
+ return out;}
 let lgSortField='v',lgSortDir=-1;   // league sort: field v/qoq/yoy, dir 1=asc -1=desc
 async function perFilerValues(measCode, quarters){
  // map: quarter -> Map(id_rssd -> per-filer value) for a COMB/raw code OR a DERIV ratio/sum
@@ -1050,27 +1220,28 @@ async function renderLeague(){
  const arr=f=>lgSortField===f?(lgSortDir<0?' ▼':' ▲'):'';
  const pcClr=pc=>pc>=75?'color:#1b7f3b':pc<25?'color:#c0392b':'';
  const ETCLR={IBF:'#6b46c1',BRANCH:'#2b6cb0',AGENCY:'#0f766e',BANK:'#1b7f3b'};
- const etBadge=ty=>{if(!ty)return '';const c=ETCLR[ty]||'#6b7280';return `<span style="font-size:9px;padding:1px 4px;border-radius:3px;background:${c};color:#fff;margin-left:4px;vertical-align:middle">${ty}</span>`;};
+ const etBadge=ty=>{if(!ty)return '';const c=ETCLR[ty]||'#6b7280';return `<span style="font-size:11px;padding:1px 4px;border-radius:3px;background:${c};color:#fff;margin-left:4px;vertical-align:middle">${ty}</span>`;};
  let h=`<table><tr><th>#</th><th style="text-align:left">Filer</th>`+
    `<th class="lgs" data-f="v" style="cursor:pointer" title="click to sort">${meas.label}${arr('v')}</th>`+
    `<th class="lgs" data-f="qoq" style="cursor:pointer" title="click to sort">QoQ${arr('qoq')}</th>`+
    `<th class="lgs" data-f="yoy" style="cursor:pointer" title="click to sort">YoY${arr('yoy')}</th>`+
    `<th title="Percentile rank by value this quarter — 99th = top 1%">Pctile</th>`+
    `<th title="8-quarter trend">Trend</th></tr>`;
- show.forEach((r,i)=>{const pc=pctileMap.get(r.rssd);const on=active.some(a=>a.id===`BANK:${r.rssd}`);const ty=(ROSTER.get(r.rssd)||{}).ty||'';h+=`<tr${on?' class="lgon-row"':''}><td>${i+1}</td><td class="lglink${on?' lgon':''}" data-id="BANK:${r.rssd}" data-nm="${r.name.replace(/"/g,'&quot;')}" style="text-align:left;cursor:pointer;text-decoration:underline dotted" title="${on?'In chart':'Click to add to chart'}">${r.name} <span style="color:#9aa3b2">(${r.rssd})</span>${etBadge(ty)}${on?' <span style="font-size:10px;color:#1b7f3b">✓</span>':''}</td><td>${fmtV(r.v)}</td><td class="${cls(r.qoq)}">${fmtD(r.qoq)}</td><td class="${cls(r.yoy)}">${fmtD(r.yoy)}</td><td style="${pcClr(pc)}">${pc!=null?pc+'th':'—'}</td><td>${spkFn(r.rssd)}</td></tr>`;});
+ show.forEach((r,i)=>{const pc=pctileMap.get(r.rssd);const on=active.some(a=>a.id===`BANK:${r.rssd}`);const ty=(ROSTER.get(r.rssd)||{}).ty||'';h+=`<tr${on?' class="lgon-row"':''}><td>${i+1}</td><td class="lglink${on?' lgon':''}" data-id="BANK:${r.rssd}" data-nm="${r.name.replace(/"/g,'&quot;')}" style="text-align:left;cursor:pointer;text-decoration:underline dotted" title="${on?'In chart':'Click to add to chart'}">${r.name} <span style="color:#9aa3b2">(${r.rssd})</span>${etBadge(ty)}${on?' <span style="font-size:12px;color:#1b7f3b">✓</span>':''}</td><td>${fmtV(r.v)}</td><td class="${cls(r.qoq)}">${fmtD(r.qoq)}</td><td class="${cls(r.yoy)}">${fmtD(r.yoy)}</td><td style="${pcClr(pc)}">${pc!=null?pc+'th':'—'}</td><td>${spkFn(r.rssd)}</td></tr>`;});
  h+=`</table><p class="muted">${show.length} of ${rows.length} filers · ${q}${meas.pct?' · QoQ/YoY in percentage points':''} · click a name to add to chart · click a header to sort</p>`;
  const body=document.getElementById('leaguebody'); body.innerHTML=h; window._lg={meas,q,rows:show,pctileMap};
  body.querySelectorAll('.lgs').forEach(th=>th.onclick=()=>{const f=th.dataset.f;if(lgSortField===f)lgSortDir*=-1;else{lgSortField=f;lgSortDir=-1;}renderLeague();});
  body.querySelectorAll('.lglink').forEach(td=>{td.onclick=()=>{const id=td.dataset.id,nm=td.dataset.nm;if(!active.find(a=>a.id===id))active.push({id,label:nm});renderChips();scheduleRecompute();};});}
 async function openLeague(){
+ LGMEAS=buildLGMEAS();
  const msel=document.getElementById('lgmeasure');
- if(!msel.options.length) msel.innerHTML=LGMEAS.map((m,i)=>`<option value="${i}">${m.label}</option>`).join('');
+ msel.innerHTML=LGMEAS.map((m,i)=>`<option value="${i}">${m.label}</option>`).join('');
  const qsel=document.getElementById('lgquarter');
  if(!qsel.options.length){qsel.innerHTML=ALLQ.map(q=>`<option>${q}</option>`).join(''); if(ALLQ.length)qsel.value=ALLQ[ALLQ.length-1];}
  document.getElementById('leaguemodal').style.display='flex'; await renderLeague();}
 
 // ---- call-report view ----
-function renderFentChips(){const c=document.getElementById('fent-chips');if(!c)return;const ents=window._feEnts||[];c.innerHTML=ents.map((ent,i)=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:2px 5px;background:var(--head,#eef2f7);border-radius:3px;font-size:11px">${ent.label}<span class="fent-del" data-i="${i}" style="cursor:pointer;color:#c0392b;margin-left:3px">×</span></span>`).join('');for(const d of document.querySelectorAll('.fent-del'))d.onclick=()=>{(window._feEnts||[]).splice(+d.dataset.i,1);renderFentChips();renderForm();};}
+function renderFentChips(){const c=document.getElementById('fent-chips');if(!c)return;const ents=window._feEnts||[];c.innerHTML=ents.map((ent,i)=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:2px 5px;background:var(--head,#eef2f7);border-radius:3px;font-size:13px">${ent.label}<span class="fent-del" data-i="${i}" style="cursor:pointer;color:#c0392b;margin-left:3px">×</span></span>`).join('');for(const d of document.querySelectorAll('.fent-del'))d.onclick=()=>{(window._feEnts||[]).splice(+d.dataset.i,1);renderFentChips();renderForm();};}
 function fentCond(){const ents=window._feEnts||[];if(!ents.length)return null;const rs=new Set();for(const ent of ents){if(ent.id==='ALL')return '1=1';if(ent.id.startsWith('ET:'))for(const r of(TYPES[ent.id.slice(3)]||[]))rs.add(r);else if(ent.id.startsWith('BANK:'))rs.add(+ent.id.slice(5));else if(ent.id.startsWith('PEER:'))for(const r of(peers[ent.id.slice(5)]||[]))rs.add(r);}return rs.size?`id_rssd IN (${[...rs].join(',')})`:null;}
 async function openForm(){if(!HIER){showToast('Hierarchy not loaded.');return;}
  const initE=active[0]||resolveEnt();if(!initE){showToast('Add an entity first.');return;}
@@ -1101,7 +1272,7 @@ function renderFormNodes(container,nodes,colsDesc,val){for(const nd of nodes){co
  const d=document.createElement('div');d.className='frow';d.dataset.depth=nd.depth;d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
  const car=has?`<span class="caret">▸</span>`:`<span class="caret" style="visibility:hidden">▸</span>`;
  const cells=colsDesc.map(q=>{const v=val[nd.code]&&val[nd.code][q];return `<span class="vcell">${v==null?'':Number(v).toLocaleString()}</span>`;}).join('');
- d.innerHTML=`<span class="lab">${car}${nd.num?`<b>${nd.num}</b> `:''}${nd.caption} <span style="color:#9aa3b2;font-size:11px">${nd.code}</span></span>${cells}`;
+ d.innerHTML=`<span class="lab">${car}${nd.num?`<b>${nd.num}</b> `:''}${nd.caption} <span style="color:#9aa3b2;font-size:13px">${nd.code}</span></span>${cells}`;
  d.querySelector('.caret').onclick=ev=>{ev.stopPropagation();if(has)toggleNode(d);};container.appendChild(d);
  if(has){const kids=document.createElement('div');kids.className='kids';kids.style.display='none';renderFormNodes(kids,nd.children,colsDesc,val);container.appendChild(kids);d._kids=kids;}}}
 function exportForm(){if(!window._fr||!window._fr.length){showToast('Nothing to export.');return;}dl2(['schedule','item','mdrm','caption',...(window._fcols||[])],window._fr,'callreport');}
@@ -1115,7 +1286,7 @@ async function openReport(entityId){
  const rssd=+entityId.slice(5);
  {const p=new URLSearchParams(location.hash.slice(1));p.set('report','1');history.replaceState(null,'','#'+p.toString());}
  document.getElementById('reportmodal').style.display='';
- document.getElementById('rpt-title').innerHTML=`${ROSTER.get(rssd)?.nm||String(rssd)} · RSSD ${rssd} <a href="https://www.ffiec.gov/nicpubweb/nicweb/InstitutionProfile.aspx?parID_RSSD=${rssd}&parDT_END=99991231" target="_blank" rel="noopener" style="font-size:11px;font-weight:400;color:inherit;opacity:0.55;text-decoration:none;margin-left:4px" title="FFIEC NIC institution profile">NIC ↗</a>`;
+ document.getElementById('rpt-title').innerHTML=`${ROSTER.get(rssd)?.nm||String(rssd)} · RSSD ${rssd} <a href="https://www.ffiec.gov/nicpubweb/nicweb/InstitutionProfile.aspx?parID_RSSD=${rssd}&parDT_END=99991231" target="_blank" rel="noopener" style="font-size:13px;font-weight:400;color:inherit;opacity:0.55;text-decoration:none;margin-left:4px" title="FFIEC NIC institution profile">NIC ↗</a>`;
  {const ac=document.getElementById('rpt-addchart');const ae=bankEnt(rssd);const on=active.some(a=>a.id===ae.id);ac.textContent=on?'✓ In chart':'📈 Add to chart';ac.style.opacity=on?'0.5':'';ac.onclick=()=>{const e=bankEnt(rssd);if(!active.find(a=>a.id===e.id)){active.push({id:e.id,label:e.label});renderChips();scheduleRecompute();}ac.textContent='✓ In chart';ac.style.opacity='0.5';};}
  document.getElementById('rpt-asof').textContent='';
  document.getElementById('rptbody').innerHTML='<p class="muted" style="padding:20px">Loading…</p>';
@@ -1169,17 +1340,17 @@ async function buildReport(rssd,latestQ,qtrs){
  const aQoQ=pctD(assets,prevQ?getR('2170',prevQ):null),aYoY=pctD(assets,yoyQ?getR('2170',yoyQ):null);
  const fA=v=>v==null?'—':v>=1e9?'$'+(v/1e9).toFixed(1)+'T':v>=1e6?'$'+(v/1e6).toFixed(1)+'B':'$'+Math.round(v/1e3)+'M';
  const fP=v=>v==null?'—':v.toFixed(2)+'%';
- const fD=v=>v==null?'':v>=0?`<span style="color:#1b7f3b;font-size:10px"> ▲${v.toFixed(1)}%</span>`:`<span style="color:#c0392b;font-size:10px"> ▼${Math.abs(v).toFixed(1)}%</span>`;
+ const fD=v=>v==null?'':v>=0?`<span style="color:#1b7f3b;font-size:12px"> ▲${v.toFixed(1)}%</span>`:`<span style="color:#c0392b;font-size:12px"> ▼${Math.abs(v).toFixed(1)}%</span>`;
  const pct=assetRank&&assetCount?Math.round((1-assetRank/assetCount)*100):null;
  const rnk=assetRank?`Rank #${assetRank} of ${assetCount}${pct!=null?' ('+pct+'th %ile)':''}`:null;
  const nm=ROSTER.get(rssd)?.nm||String(rssd);
- const hdr=`<div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:14px 18px;margin-bottom:14px;background:var(--head,#f7f8fc);color:var(--fg,#111)"><div style="font-size:20px;font-weight:700;color:var(--fg,#111)">${nm}</div><div class="muted" style="font-size:12px;margin-top:3px">RSSD ${rssd} · U.S. Branch/Agency of Foreign Bank · FFIEC 002</div><div style="font-size:13px;margin-top:7px;color:var(--fg,#111)">As of ${latestQ}${assets!=null?' &nbsp;·&nbsp; Total assets: '+fA(assets):''}${rnk?' &nbsp;·&nbsp; '+rnk:''}</div></div>`;
+ const hdr=`<div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:14px 18px;margin-bottom:14px;background:var(--head,#f7f8fc);color:var(--fg,#111)"><div style="font-size:20px;font-weight:700;color:var(--fg,#111)">${nm}</div><div class="muted" style="font-size:13px;margin-top:3px">RSSD ${rssd} · U.S. Branch/Agency of Foreign Bank · FFIEC 002</div><div style="font-size:14px;margin-top:7px;color:var(--fg,#111)">As of ${latestQ}${assets!=null?' &nbsp;·&nbsp; Total assets: '+fA(assets):''}${rnk?' &nbsp;·&nbsp; '+rnk:''}</div></div>`;
  // per-quarter helpers for sparklines and trend charts
  const nplQ=q=>{const l=getR('2122',q);const np=(getR('1403',q)||0)+(getR('1406',q)||0)+(getR('1407',q)||0);return l&&l>0?100*np/l:null;};
  const ncurQ=q=>{const l=getR('2122',q);const nc=(getR('1406',q)||0)+(getR('1407',q)||0);return l&&l>0?100*nc/l:null;};
  const dtaQ=q=>{const a=getR('2170',q),d=getR('2944',q);return a&&a>0&&d!=null?100*d/a:null;};
  const ldQ=q=>{const l=getR('2122',q),d=getR('2205',q);return l&&d&&d>0?100*l/d:null;};
- const pctileBar=(p)=>{if(p==null)return '';const c=p>=75?'#1b7f3b':p>=50?'#2980b9':p>=25?'#e67e22':'#c0392b';return `<div style="margin-top:4px"><div style="height:5px;background:var(--border,#e0e4ea);border-radius:3px;overflow:hidden"><div style="height:100%;width:${p}%;background:${c};border-radius:3px"></div></div><div style="font-size:9px;color:var(--fg2,#888);margin-top:1px">${p}th %ile among reporters</div></div>`;};
+ const pctileBar=(p)=>{if(p==null)return '';const c=p>=75?'#1b7f3b':p>=50?'#2980b9':p>=25?'#e67e22':'#c0392b';return `<div style="margin-top:4px"><div style="height:5px;background:var(--border,#e0e4ea);border-radius:3px;overflow:hidden"><div style="height:100%;width:${p}%;background:${c};border-radius:3px"></div></div><div style="font-size:11px;color:var(--fg2,#888);margin-top:1px">${p}th %ile among reporters</div></div>`;};
  const kpis=[
   {lbl:'Total Assets',val:fA(assets),spk:sparkline(qtrs.map(q=>[q,getR('2170',q)]),false,COLORS[0]),qoq:aQoQ,yoy:aYoY,pc:peerPctile['2170']},
   {lbl:'Total Loans',val:fA(loans),spk:sparkline(qtrs.map(q=>[q,getR('2122',q)]),false,COLORS[1]),qoq:null,yoy:null,pc:peerPctile['2122']},
@@ -1190,10 +1361,10 @@ async function buildReport(rssd,latestQ,qtrs){
   {lbl:'NPL Ratio',val:fP(nplRat),spk:sparkline(qtrs.map(q=>[q,nplQ(q)]),true,COLORS[6]),qoq:null,yoy:null,pc:peerPctile['1403']},
   {lbl:'Noncurrent Ratio',val:fP(noncurRat),spk:sparkline(qtrs.map(q=>[q,ncurQ(q)]),true,COLORS[7]),qoq:null,yoy:null,pc:null},
  ];
- const cards=kpis.map(k=>`<div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;min-width:148px;display:inline-block;vertical-align:top;margin:4px"><div style="font-size:10px;color:var(--fg2,#666);font-weight:600;letter-spacing:.3px;text-transform:uppercase">${k.lbl}</div><div style="font-size:26px;font-weight:700;line-height:1.1;margin-top:4px">${k.val}</div><div style="min-height:14px;margin-top:2px">${fD(k.qoq)}${k.yoy!=null?' &nbsp;YoY:'+fD(k.yoy):''}</div>${k.spk||''}${pctileBar(k.pc)}</div>`).join('');
- const kpiSec=`<h3 style="font-size:13px;font-weight:600;margin:0 0 6px">Key Metrics — as of ${latestQ}</h3><div style="margin-bottom:14px">${cards}</div>`;
+ const cards=kpis.map(k=>`<div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;min-width:148px;display:inline-block;vertical-align:top;margin:4px"><div style="font-size:12px;color:var(--fg2,#666);font-weight:600;letter-spacing:.3px;text-transform:uppercase">${k.lbl}</div><div style="font-size:26px;font-weight:700;line-height:1.1;margin-top:4px">${k.val}</div><div style="min-height:14px;margin-top:2px">${fD(k.qoq)}${k.yoy!=null?' &nbsp;YoY:'+fD(k.yoy):''}</div>${k.spk||''}${pctileBar(k.pc)}</div>`).join('');
+ const kpiSec=`<h3 style="font-size:14px;font-weight:600;margin:0 0 6px">Key Metrics — as of ${latestQ}</h3><div style="margin-bottom:14px">${cards}</div>`;
  // reserve coverage panel
- const resSec=alll!=null?`<div style="display:inline-block;vertical-align:top;border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;min-width:240px;margin-bottom:14px"><div style="font-size:12px;font-weight:600;margin-bottom:6px">Allowance / Reserve Coverage</div><table style="font-size:12px;border-collapse:collapse;width:100%"><tr><td style="padding:3px 0">ALLL / Total Loans</td><td style="text-align:right;font-weight:700">${fP(alllPct)}</td></tr><tr><td style="padding:3px 0">ALLL / Noncurrent Loans</td><td style="text-align:right;font-weight:700">${fP(rescov)}</td></tr><tr><td style="padding:3px 0">Noncurrent Loans</td><td style="text-align:right;font-weight:700">${noncur!=null?fA(noncur):'—'}</td></tr></table></div>`:'';
+ const resSec=alll!=null?`<div style="display:inline-block;vertical-align:top;border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;min-width:240px;margin-bottom:14px"><div style="font-size:13px;font-weight:600;margin-bottom:6px">Allowance / Reserve Coverage</div><table style="font-size:13px;border-collapse:collapse;width:100%"><tr><td style="padding:3px 0">ALLL / Total Loans</td><td style="text-align:right;font-weight:700">${fP(alllPct)}</td></tr><tr><td style="padding:3px 0">ALLL / Noncurrent Loans</td><td style="text-align:right;font-weight:700">${fP(rescov)}</td></tr><tr><td style="padding:3px 0">Noncurrent Loans</td><td style="text-align:right;font-weight:700">${noncur!=null?fA(noncur):'—'}</td></tr></table></div>`:'';
  // trend small-multiples — 2×2 grid (002 has no income statement)
  const mkS=(rows,color,lbl)=>({rows:rows.filter(r=>r[1]!=null),color,label:lbl,pct:false});
  const trends=[
@@ -1202,10 +1373,10 @@ async function buildReport(rssd,latestQ,qtrs){
   {t:'Balance Sheet Structure (%)',s:[mkS(qtrs.map(q=>[q,ldQ(q)]),COLORS[4],'Loans/Dep'),mkS(qtrs.map(q=>[q,dtaQ(q)]),COLORS[5],'Due-to/Assets')],u:'percent'},
   {t:'Credit Quality (%)',s:[mkS(qtrs.map(q=>[q,nplQ(q)]),COLORS[6],'NPL %'),mkS(qtrs.map(q=>[q,ncurQ(q)]),COLORS[7],'Noncurrent %')],u:'percent'},
  ];
- const trendCells=trends.map(t=>{if(!t.s.some(s=>s.rows.length>0))return '';const svg=pane(t.s,false,t.u,qtrs);return svg?`<div style="min-width:0"><div style="font-size:11px;font-weight:600;color:var(--fg2,#666);margin-bottom:3px">${t.t}</div>${svg}</div>`:''}).filter(Boolean);
- const trendSec=trendCells.length?`<h3 style="font-size:13px;font-weight:600;margin:14px 0 6px">Trends — last ${qtrs.length} quarters</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">${trendCells.join('')}</div>`:'';
+ const trendCells=trends.map(t=>{if(!t.s.some(s=>s.rows.length>0))return '';const svg=pane(t.s,false,t.u,qtrs);return svg?`<div style="min-width:0"><div style="font-size:13px;font-weight:600;color:var(--fg2,#666);margin-bottom:3px">${t.t}</div>${svg}</div>`:''}).filter(Boolean);
+ const trendSec=trendCells.length?`<h3 style="font-size:14px;font-weight:600;margin:14px 0 6px">Trends — last ${qtrs.length} quarters</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">${trendCells.join('')}</div>`:'';
  const nar=buildNarrative({nm,latestQ,assets,assetRank,assetCount,aQoQ,aYoY,nplRat,noncurRat,rescov,loanDep,duetoAssets});
- return hdr+kpiSec+resSec+trendSec+`<h3 style="font-size:13px;font-weight:600;margin:14px 0 6px">Summary</h3>`+nar;}
+ return hdr+kpiSec+resSec+trendSec+`<h3 style="font-size:14px;font-weight:600;margin:14px 0 6px">Summary</h3>`+nar;}
 function sparkline(rows,pct,color){
  const W=120,H=40;if(!rows||rows.every(r=>r[1]==null))return '';
  const vals=rows.map(r=>r[1]).filter(v=>v!=null);if(!vals.length)return '';
@@ -1239,7 +1410,7 @@ function rptPrint(){
  const content=document.getElementById('rptbody').innerHTML;
  const title=document.getElementById('rpt-title').textContent;
  const w=window.open('','_blank','width=900,height=700');if(!w)return;
- w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+title+' Tear Sheet<\/title><style>*{box-sizing:border-box}:root{--border:#ccc;--head:#f7f8fc;--fg2:#555}.muted{color:#555}body{font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;color:#1a202c;margin:24px 32px}svg{display:block}h3{font-size:13px;margin:12px 0 4px}p{margin:6px 0}@media print{body{margin:0}}<\/style><\/head><body>'+content+'<p style="margin-top:32px;font-size:10px;color:#888">Data: public FFIEC\/FRB filings · Generated '+new Date().toISOString().slice(0,10)+'<\/p><script>window.onload=()=>window.print();<\/script><\/body><\/html>');
+ w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>'+title+' Tear Sheet<\/title><style>*{box-sizing:border-box}:root{--border:#ccc;--head:#f7f8fc;--fg2:#555}.muted{color:#555}body{font-family:-apple-system,Segoe UI,sans-serif;font-size:13px;color:#1a202c;margin:24px 32px}svg{display:block}h3{font-size:14px;margin:12px 0 4px}p{margin:6px 0}@media print{body{margin:0}}<\/style><\/head><body>'+content+'<p style="margin-top:32px;font-size:12px;color:#888">Data: public FFIEC\/FRB filings · Generated '+new Date().toISOString().slice(0,10)+'<\/p><script>window.onload=()=>window.print();<\/script><\/body><\/html>');
  w.document.close();}
 // ---- export builder (V1) ----
 const _eb={entities:[],scope:'all',scheds:new Set(),codes:new Set(),fromQ:null,toQ:null,fmt:'long'};
@@ -1289,71 +1460,59 @@ async function ebEstimate(){
  return nR;}
 function openExportBuilder(){document.getElementById('exportmodal').style.display='flex';renderExportUI();}
 async function renderExportUI(){
- const body=document.getElementById('expbldbody');body.innerHTML='<p class="muted">Loading…</p>';
- let allQtrs=[];
- try{
-  const ec0=_eb.entities.length?ebEntityCond():null;
-  const cond=ec0?`WHERE ${ec0}`:'';
-  const res=(await conn.query(`SELECT DISTINCT quarter_end FROM t ${cond} ORDER BY quarter_end`)).toArray();
-  allQtrs=res.map(r=>String(r.quarter_end));
- }catch{}
- if(allQtrs.length&&!_eb.fromQ)_eb.fromQ=allQtrs[0];
- if(allQtrs.length&&!_eb.toQ)_eb.toQ=allQtrs[allQtrs.length-1];
- const inRange=allQtrs.filter(q=>(!_eb.fromQ||q>=_eb.fromQ)&&(!_eb.toQ||q<=_eb.toQ));
- const selF=allQtrs.map(q=>`<option value="${q}"${q===_eb.fromQ?' selected':''}>${q}</option>`).join('');
- const selT=allQtrs.map(q=>`<option value="${q}"${q===_eb.toQ?' selected':''}>${q}</option>`).join('');
+ const body=document.getElementById('expbldbody');
  const hierKeys=HIER?[...FORM_ORDER.filter(k=>HIER[k]),...Object.keys(HIER).filter(k=>SCHED_NAMES[k]&&!FORM_ORDER.includes(k))]:[];
- const schedHtml=hierKeys.map(sch=>{const cnt=(HIER[sch]||[]).filter(r=>REPORT.test(r.mdrm)).length;const chk=_eb.scheds.has(sch)?'checked':'';return `<label style="display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border:1px solid var(--border,#ccc);border-radius:4px;font-size:12px;cursor:pointer"><input type="checkbox" class="eb-sch" value="${sch}" ${chk}>${SCHED_NAMES[sch]||sch} <span class="muted" style="font-size:10px">(${cnt})</span></label>`;}).join(' ');
- const selCodes=[..._eb.codes].map(c=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:1px 5px;background:var(--head,#eef2f7);border-radius:3px;font-size:11px;margin:2px">${c}<span class="eb-del" data-c="${c}" style="cursor:pointer;color:#c0392b;margin-left:2px">×</span></span>`).join('');
- body.innerHTML=`<div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;margin-bottom:8px"><b>Entities</b> <span class="muted" style="font-size:11px">Add one or more banks, ALL filers, types, or peer groups</span>
+ const schedHtml=hierKeys.map(sch=>{const cnt=(HIER[sch]||[]).filter(r=>REPORT.test(r.mdrm)).length;const chk=_eb.scheds.has(sch)?'checked':'';return `<label style="display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border:1px solid var(--border,#ccc);border-radius:4px;font-size:13px;cursor:pointer"><input type="checkbox" class="eb-sch" value="${sch}" ${chk}>${SCHED_NAMES[sch]||sch} <span class="muted" style="font-size:12px">(${cnt})</span></label>`;}).join(' ');
+ const selCodes=[..._eb.codes].map(c=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:1px 5px;background:var(--head,#eef2f7);border-radius:3px;font-size:13px;margin:2px">${c}<span class="eb-del" data-c="${c}" style="cursor:pointer;color:#c0392b;margin-left:2px">×</span></span>`).join('');
+ body.innerHTML=`<div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;margin-bottom:8px"><b>Entities</b> <span class="muted" style="font-size:13px">Add one or more banks, ALL filers, types, or peer groups</span>
   <div id="eb-ent-chips" style="display:flex;flex-wrap:wrap;gap:3px;min-height:26px;padding:4px;border:1px solid var(--border,#ccc);border-radius:3px;margin:6px 0 6px"></div>
   <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-   <input id="eb-ent" list="entlist" autocomplete="off" placeholder="bank name, RSSD, type (UFB…), or ★ peer-group…" style="flex:1;min-width:200px;font:inherit;font-size:12px;border:1px solid var(--border,#ccc);border-radius:3px;padding:3px 6px;background:inherit;color:inherit">
+   <input id="eb-ent" list="entlist" autocomplete="off" placeholder="bank name, RSSD, type (UFB…), or ★ peer-group…" style="flex:1;min-width:200px;font:inherit;font-size:13px;border:1px solid var(--border,#ccc);border-radius:3px;padding:3px 6px;background:inherit;color:inherit">
    <button id="eb-ent-add" class="sec">Add</button>
    <button id="eb-ent-cur" class="sec" title="Add entities currently in the chart">+ From chart</button>
    <button id="eb-ent-all" class="sec" title="Export all filing institutions">All filers</button>
-   <span id="eb-ent-status" style="font-size:12px"></span>
+   <span id="eb-ent-status" style="font-size:13px"></span>
   </div></div>
  <div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;margin-bottom:8px"><b>Scope</b>
   <div style="margin-top:6px;display:flex;gap:16px;flex-wrap:wrap">
-   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-scope" value="all" ${_eb.scope==='all'?'checked':''}><span><b>All codes</b><br><span class="muted" style="font-size:11px">Every MDRM in site parquet</span></span></label>
-   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-scope" value="schedules" ${_eb.scope==='schedules'?'checked':''}><span><b>Selected schedules</b><br><span class="muted" style="font-size:11px">Choose by form schedule</span></span></label>
-   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-scope" value="codes" ${_eb.scope==='codes'?'checked':''}><span><b>Selected codes</b><br><span class="muted" style="font-size:11px">Custom MDRM / DERIV list</span></span></label>
+   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-scope" value="all" ${_eb.scope==='all'?'checked':''}><span><b>All codes</b><br><span class="muted" style="font-size:13px">Every MDRM in site parquet</span></span></label>
+   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-scope" value="schedules" ${_eb.scope==='schedules'?'checked':''}><span><b>Selected schedules</b><br><span class="muted" style="font-size:13px">Choose by form schedule</span></span></label>
+   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-scope" value="codes" ${_eb.scope==='codes'?'checked':''}><span><b>Selected codes</b><br><span class="muted" style="font-size:13px">Custom MDRM / DERIV list</span></span></label>
   </div>
   <div id="eb-sched-panel" style="display:${_eb.scope==='schedules'?'block':'none'};margin-top:8px">
    <div style="display:flex;flex-wrap:wrap;gap:4px">${schedHtml}</div>
-   <div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button id="eb-sall" class="sec" style="font-size:11px;padding:2px 7px">All</button><button id="eb-snone" class="sec" style="font-size:11px;padding:2px 7px">None</button><span class="muted" style="font-size:11px" id="eb-sched-cnt">${_eb.scheds.size} schedule${_eb.scheds.size!==1?'s':''} / ${ebScheduleCodes().length} codes</span></div>
+   <div style="margin-top:6px;display:flex;align-items:center;gap:8px"><button id="eb-sall" class="sec" style="font-size:13px;padding:2px 7px">All</button><button id="eb-snone" class="sec" style="font-size:13px;padding:2px 7px">None</button><span class="muted" style="font-size:13px" id="eb-sched-cnt">${_eb.scheds.size} schedule${_eb.scheds.size!==1?'s':''} / ${ebScheduleCodes().length} codes</span></div>
   </div>
   <div id="eb-code-panel" style="display:${_eb.scope==='codes'?'block':'none'};margin-top:8px">
-   <div style="display:flex;gap:6px;align-items:center"><input id="eb-csearch" autocomplete="off" placeholder="Search MDRM or description…" style="flex:1;min-width:200px;font:inherit;font-size:12px;border:1px solid var(--border,#ccc);border-radius:3px;padding:3px 6px;background:inherit;color:inherit"><button id="eb-cadd" class="sec" style="font-size:11px;padding:2px 7px">Add</button><button id="eb-caddfil" class="sec" style="font-size:11px;padding:2px 7px">Add all matching</button></div>
-   <div id="eb-cres" style="max-height:90px;overflow-y:auto;border:1px solid var(--border,#ccc);border-radius:3px;margin-top:4px;font-size:11px"></div>
+   <div style="display:flex;gap:6px;align-items:center"><input id="eb-csearch" autocomplete="off" placeholder="Search MDRM or description…" style="flex:1;min-width:200px;font:inherit;font-size:13px;border:1px solid var(--border,#ccc);border-radius:3px;padding:3px 6px;background:inherit;color:inherit"><button id="eb-cadd" class="sec" style="font-size:13px;padding:2px 7px">Add</button><button id="eb-caddfil" class="sec" style="font-size:13px;padding:2px 7px">Add all matching</button></div>
+   <div id="eb-cres" style="max-height:90px;overflow-y:auto;border:1px solid var(--border,#ccc);border-radius:3px;margin-top:4px;font-size:13px"></div>
    <div id="eb-selcodes" style="margin-top:6px;display:flex;flex-wrap:wrap">${selCodes}</div>
-   <div style="margin-top:4px;display:flex;align-items:center;gap:8px"><span class="muted" style="font-size:11px" id="eb-code-cnt">${_eb.codes.size} code${_eb.codes.size!==1?'s':''} selected</span><button id="eb-clrall" class="sec" style="font-size:11px;padding:1px 7px">Clear all</button></div>
+   <div style="margin-top:4px;display:flex;align-items:center;gap:8px"><span class="muted" style="font-size:13px" id="eb-code-cnt">${_eb.codes.size} code${_eb.codes.size!==1?'s':''} selected</span><button id="eb-clrall" class="sec" style="font-size:13px;padding:1px 7px">Clear all</button></div>
   </div>
  </div>
  <div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;margin-bottom:8px"><b>Date range</b>
   <div style="display:flex;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap">
-   <span class="muted">From</span><select id="eb-from" style="font:inherit;font-size:12px">${selF}</select>
-   <span class="muted">to</span><select id="eb-to" style="font:inherit;font-size:12px">${selT}</select>
+   <span class="muted">From</span><select id="eb-from" style="font:inherit;font-size:13px"></select>
+   <span class="muted">to</span><select id="eb-to" style="font:inherit;font-size:13px"></select>
    <button id="eb-full" class="sec">Full range</button>
-   <span class="muted" style="font-size:11px" id="eb-qcount">${inRange.length} quarter${inRange.length!==1?'s':''}</span>
+   <span class="muted" style="font-size:13px" id="eb-qcount">—</span>
   </div>
  </div>
  <div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:10px 14px;margin-bottom:8px"><b>Format</b>
   <div style="margin-top:6px;display:flex;gap:16px;flex-wrap:wrap">
-   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-fmt" value="long" ${_eb.fmt==='long'?'checked':''}><span><b>Long</b><br><span class="muted" style="font-size:11px">One row per entity-quarter-code</span></span></label>
-   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-fmt" value="wide" ${_eb.fmt==='wide'?'checked':''}><span><b>Wide</b><br><span class="muted" style="font-size:11px">Codes as rows, quarters as columns (one column per quarter)</span></span></label>
+   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-fmt" value="long" ${_eb.fmt==='long'?'checked':''}><span><b>Long</b><br><span class="muted" style="font-size:13px">One row per entity-quarter-code</span></span></label>
+   <label style="display:inline-flex;align-items:flex-start;gap:5px;cursor:pointer"><input type="radio" name="eb-fmt" value="wide" ${_eb.fmt==='wide'?'checked':''}><span><b>Wide</b><br><span class="muted" style="font-size:13px">Codes as rows, quarters as columns (one column per quarter)</span></span></label>
   </div>
  </div>
- <div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:8px 14px;font-size:12px" id="eb-estimate"><span class="muted">Set entity and scope to estimate row count.</span></div>`;
+ <div style="border:1px solid var(--border,#ccc);border-radius:6px;padding:8px 14px;font-size:13px" id="eb-estimate"><span class="muted">Set entity and scope to estimate row count.</span></div>`;
  function updSchedCnt(){const n=_eb.scheds.size,c=ebScheduleCodes().length;const el=document.getElementById('eb-sched-cnt');if(el)el.textContent=n+' schedule'+(n!==1?'s':'')+' / '+c+' codes';ebEstimate();}
  function updCodeCnt(){const n=_eb.codes.size;const el=document.getElementById('eb-code-cnt');if(el)el.textContent=n+' code'+(n!==1?'s':'')+' selected';ebEstimate();}
- function renderCodeTags(){document.getElementById('eb-selcodes').innerHTML=[..._eb.codes].map(c=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:1px 5px;background:var(--head,#eef2f7);border-radius:3px;font-size:11px;margin:2px">${c}<span class="eb-del" data-c="${c}" style="cursor:pointer;color:#c0392b;margin-left:2px">×</span></span>`).join('');for(const d of document.querySelectorAll('.eb-del'))d.onclick=()=>{_eb.codes.delete(d.dataset.c);renderCodeTags();updCodeCnt();};}
+ function renderCodeTags(){document.getElementById('eb-selcodes').innerHTML=[..._eb.codes].map(c=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:1px 5px;background:var(--head,#eef2f7);border-radius:3px;font-size:13px;margin:2px">${c}<span class="eb-del" data-c="${c}" style="cursor:pointer;color:#c0392b;margin-left:2px">×</span></span>`).join('');for(const d of document.querySelectorAll('.eb-del'))d.onclick=()=>{_eb.codes.delete(d.dataset.c);renderCodeTags();updCodeCnt();};}
  function buildCandidates(q){const q2=q.toLowerCase();const seen=new Set();const res=[];
   if(HIER)for(const sch of Object.keys(HIER))for(const r of (HIER[sch]||[])){if(!r.mdrm||seen.has(r.mdrm))continue;seen.add(r.mdrm);if((r.mdrm||'').toLowerCase().includes(q2)||(r.caption||'').toLowerCase().includes(q2))res.push({m:r.mdrm,c:r.caption||''});}
   for(const k of Object.keys(DERIV)){if(seen.has(k))continue;seen.add(k);const d=DERIV[k];if((k||'').toLowerCase().includes(q2)||(d.lbl||'').toLowerCase().includes(q2))res.push({m:k,c:d.lbl||''});}
   return res.slice(0,40);}
- function renderEbChips(){const c=document.getElementById('eb-ent-chips');if(!c)return;c.innerHTML=_eb.entities.map((ent,i)=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:2px 6px;background:var(--head,#eef2f7);border-radius:3px;font-size:11px">${ent.id==='ALL'?'All filers':ent.label}<span class="eb-edel" data-i="${i}" style="cursor:pointer;color:#c0392b;margin-left:3px">×</span></span>`).join('');for(const d of document.querySelectorAll('.eb-edel'))d.onclick=()=>{_eb.entities.splice(+d.dataset.i,1);renderEbChips();ebEstimate();};}
+ function renderEbChips(){const c=document.getElementById('eb-ent-chips');if(!c)return;c.innerHTML=_eb.entities.map((ent,i)=>`<span style="display:inline-flex;align-items:center;gap:2px;padding:2px 6px;background:var(--head,#eef2f7);border-radius:3px;font-size:13px">${ent.id==='ALL'?'All filers':ent.label}<span class="eb-edel" data-i="${i}" style="cursor:pointer;color:#c0392b;margin-left:3px">×</span></span>`).join('');for(const d of document.querySelectorAll('.eb-edel'))d.onclick=()=>{_eb.entities.splice(+d.dataset.i,1);renderEbChips();ebEstimate();};}
  function addEbEnt(v){v=v.trim();if(!v)return;const cv=v.replace(/^★\s*/,'');
   if(/^all$/i.test(v)){_eb.entities=[{id:'ALL',label:'All filers'}];renderEbChips();ebEstimate();return;}
   if(cv in peers){const id='PEER:'+cv;if(!_eb.entities.find(e=>e.id===id))_eb.entities.push({id,label:'★ '+cv});renderEbChips();ebEstimate();return;}
@@ -1374,10 +1533,27 @@ async function renderExportUI(){
  document.getElementById('eb-clrall').onclick=()=>{_eb.codes.clear();renderCodeTags();updCodeCnt();};
  for(const d of document.querySelectorAll('.eb-del'))d.onclick=()=>{_eb.codes.delete(d.dataset.c);renderCodeTags();updCodeCnt();};
  for(const el of document.querySelectorAll('[name=eb-fmt]'))el.addEventListener('change',e=>{_eb.fmt=e.target.value;});
+ renderEbChips();
+ // Async: load available date range (entity section already visible above)
+ let allQtrs=[];
+ try{
+  const ec0=_eb.entities.length?ebEntityCond():null;
+  const cond=ec0?`WHERE ${ec0}`:'';
+  const res=(await conn.query(`SELECT DISTINCT quarter_end FROM t ${cond} ORDER BY quarter_end`)).toArray();
+  allQtrs=res.map(r=>String(r.quarter_end));
+ }catch{}
+ if(allQtrs.length&&!_eb.fromQ)_eb.fromQ=allQtrs[0];
+ if(allQtrs.length&&!_eb.toQ)_eb.toQ=allQtrs[allQtrs.length-1];
+ const selF=allQtrs.map(q=>`<option value="${q}"${q===_eb.fromQ?' selected':''}>${q}</option>`).join('');
+ const selT=allQtrs.map(q=>`<option value="${q}"${q===_eb.toQ?' selected':''}>${q}</option>`).join('');
+ const fromEl=document.getElementById('eb-from');if(fromEl)fromEl.innerHTML=selF;
+ const toEl=document.getElementById('eb-to');if(toEl)toEl.innerHTML=selT;
+ const inRange=allQtrs.filter(q=>(!_eb.fromQ||q>=_eb.fromQ)&&(!_eb.toQ||q<=_eb.toQ));
+ const qcEl=document.getElementById('eb-qcount');if(qcEl)qcEl.textContent=inRange.length+' quarter'+(inRange.length!==1?'s':'');
  document.getElementById('eb-from').onchange=()=>{_eb.fromQ=document.getElementById('eb-from').value;const n=allQtrs.filter(q=>q>=_eb.fromQ&&q<=_eb.toQ).length;document.getElementById('eb-qcount').textContent=n+' quarter'+(n!==1?'s':'');ebEstimate();};
  document.getElementById('eb-to').onchange=()=>{_eb.toQ=document.getElementById('eb-to').value;const n=allQtrs.filter(q=>q>=_eb.fromQ&&q<=_eb.toQ).length;document.getElementById('eb-qcount').textContent=n+' quarter'+(n!==1?'s':'');ebEstimate();};
  document.getElementById('eb-full').onclick=()=>{if(allQtrs.length){_eb.fromQ=allQtrs[0];_eb.toQ=allQtrs[allQtrs.length-1];}renderExportUI();};
- renderEbChips();ebEstimate();}
+ ebEstimate();}
 async function runExport(preview=false){
  if(!_eb.entities.length){showToast('Add at least one entity first.');return null;}
  const ec=ebEntityCond();if(!ec){showToast('Could not resolve entities.');return null;}
@@ -1397,33 +1573,38 @@ async function runsql(){try{const r=(await conn.query(document.getElementById('s
   const tip=document.createElement('div');tip.id='charttip';document.body.appendChild(tip);
   const _ro=new ResizeObserver(()=>{if(window._pinnedQ){window._tipW=tip.offsetWidth+'px';window._tipH=tip.offsetHeight+'px';}});
   _ro.observe(tip);
+  const _hideHover=()=>{if(!window._pinnedQ)tip.style.display='none';};
   let _hovQ=null,_hovTx=null,_hovTy=null;window._pinnedQ=null;
   function showTip(e,svg){
-    if(!lastSeries.length){if(!window._pinnedQ)tip.style.display='none';return;}
+    if(!lastSeries.length){_hideHover();return;}
     const win=Qall.slice(rangeSel.a,rangeSel.b+1);
-    if(!win.length){if(!window._pinnedQ)tip.style.display='none';return;}
+    if(!win.length){_hideHover();return;}
     if(window._pinnedQ)return;
     const br=svg.getBoundingClientRect();
-    const vb=svg.viewBox.baseVal;const pad=64;const svgW=br.width;const W=vb.width;
+    // Map cursor→quarter from the SVG's TRUE plot geometry (data-pl/data-pw), not vb.width —
+    // keeps pin/crosshair exact regardless of the dynamic right-label margin (item 6) and works
+    // identically in single-axis pane() and dual-axis paneDual() (different plot widths).
+    const vb=svg.viewBox.baseVal;const svgW=br.width;const sc=svgW/vb.width;
+    const pl=+svg.dataset.pl||64,pw=+svg.dataset.pw||(vb.width-128);
     const mx=e.clientX-br.left;
-    const frac=(mx-pad*svgW/W)/((svgW*(W-2*pad))/W);
+    const frac=(mx-pl*sc)/(pw*sc);
     const qi=Math.max(0,Math.min(win.length-1,Math.round(frac*(win.length-1))));
     const q=win[qi];_hovQ=q;
-    const qSvgX=pad+qi*(W-2*pad)/Math.max(1,win.length-1);
-    const qScreenX=br.left+qSvgX*(svgW/W);
+    const qSvgX=pl+qi*pw/Math.max(1,win.length-1);
+    const qScreenX=br.left+qSvgX*sc;
     const maps=lastSeries.map(s=>Object.fromEntries(s.rows));
     let html=`<div class="tip-q">${q}</div>`;
     for(let i=0;i<lastSeries.length;i++){const s=lastSeries[i];const v=maps[i][q];if(v==null)continue;
       const fv=s.pct?(+v).toFixed(2)+'%':fmtUnit(v,false);
-      const tpts=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const tl=(nE>1&&nM===1?tpts[0]:(nE===1&&nM>1?tpts.slice(1).join(' · '):s.label));
+      const tpts=s.label.split(' \xb7 ');const nE=active.length,nM=measures.length;const tl=(nE>1&&nM===1?tpts[0]:(nE===1?tpts.slice(1).join(' · ')||s.label:s.label));
       html+=`<div class="tip-row"><span class="tip-sw" style="background:${s.color}"></span>${tl}: <b>${fv}</b></div>`;}
-    html+=`<div style="font-size:10px;color:#9aa3b2;margin-top:3px;opacity:.6">click to pin</div>`;
+    html+=`<div style="font-size:12px;color:#9aa3b2;margin-top:3px;opacity:.6">click to pin</div>`;
     tip.innerHTML=html;tip.style.display='block';
     let tx=qScreenX+14;if(tx+tip.offsetWidth>window.innerWidth-8)tx=qScreenX-14-tip.offsetWidth;if(tx<8)tx=8;
     const ty=Math.max(8,Math.min(br.top+14,window.innerHeight-tip.offsetHeight-8));
     tip.style.left=tx+'px';tip.style.top=ty+'px';_hovTx=tx+'px';_hovTy=ty+'px';}
-  document.getElementById('panes').addEventListener('pointermove',e=>{const svg=e.target.closest('svg');if(!svg){if(!window._pinnedQ)tip.style.display='none';return;}showTip(e,svg);});
-  document.getElementById('panes').addEventListener('pointerleave',()=>{if(!window._pinnedQ)tip.style.display='none';});
+  document.getElementById('panes').addEventListener('pointermove',e=>{const svg=e.target.closest('svg');if(!svg){_hideHover();return;}showTip(e,svg);});
+  document.getElementById('panes').addEventListener('pointerleave',()=>{_hideHover();});
   document.getElementById('panes').addEventListener('click',e=>{
     if(e.target.closest('#idxbasereset')){e.preventDefault();window._idxBase=null;draw();return;}
     const svg=e.target.closest('svg');if(!svg)return;
@@ -1437,11 +1618,11 @@ async function runsql(){try{const r=(await conn.query(document.getElementById('s
     }else if(_hovQ){
       window._pinnedQ=_hovQ;
       if(_hovTx){tip.style.left=_hovTx;tip.style.top=_hovTy;}
-      const cur=tip.innerHTML;tip.innerHTML=cur.replace(/<div style="font-size:10px[^"]*"[^>]*>click to pin<\/div>/,'');
+      const cur=tip.innerHTML;tip.innerHTML=cur.replace(/<div style="font-size:12px[^"]*"[^>]*>click to pin<\/div>/,'');
       tip.style.pointerEvents='auto';tip.style.resize='both';tip.style.overflow='auto';tip.style.boxSizing='border-box';
       if(window._tipW)tip.style.width=window._tipW;
       if(window._tipH)tip.style.height=window._tipH;
-      tip.innerHTML+=`<div style="font-size:10px;color:#9aa3b2;margin-top:3px">📌 click to unpin · drag corner to resize</div>`;
+      tip.innerHTML+=`<div style="font-size:12px;color:#9aa3b2;margin-top:3px">📌 click to unpin · drag corner to resize</div>`;
       tip.style.display='block';
       document.querySelectorAll(`#panes .qband[data-q="${window._pinnedQ}"]`).forEach(g=>g.classList.add('qband-pinned'));
     }});
