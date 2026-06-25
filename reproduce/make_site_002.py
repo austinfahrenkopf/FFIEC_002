@@ -617,7 +617,7 @@ async function saveFormulas(){const json=getFormulasJson();const el=document.get
    try{localStorage.setItem('ffiec002_formulas',json);}catch(_){}if(el)el.textContent='';showToast('Formulas saved.','ok');return;}
  catch(e){try{localStorage.setItem('ffiec002_formulas',json);if(el)el.textContent='';showToast('Formulas saved to this browser.','ok');}
    catch(e2){if(el)el.textContent='Save failed: '+e2.message;}}}
-async function loadFormulas(){try{const r=await fetch('/api/formulas');if(!r.ok)throw new Error('HTTP '+r.status);const obj=await r.json();const n=applyFormulas(obj);showToast('Loaded '+n+' formula'+(n===1?'':'s')+'.','ok');}catch(e){const el=document.getElementById('calcstatus');if(el)el.textContent='Load failed: '+e.message;}}
+async function loadFormulas(){try{const r=await fetch('/api/formulas');if(!r.ok)throw new Error('HTTP '+r.status);const obj=await r.json();const n=applyFormulas(obj);showToast('Loaded '+n+' formula'+(n===1?'':'s')+'.','ok');}catch(e){try{const s=localStorage.getItem('ffiec002_formulas');const obj=s?JSON.parse(s):{};const tot=Object.keys(obj).filter(k=>k.startsWith('CALC_')).length;applyFormulas(obj);if(tot>0)showToast('Restored '+tot+' formula'+(tot===1?'':'s')+' from this browser.','ok');else showToast('No saved formulas to load.','ok');}catch(le){showToast('No saved formulas to load.','ok');}}}
 async function autoLoadFormulas(){
  // Prefer the local server if present; otherwise restore the localStorage copy written by saveFormulas
  // (so Save→reload persists on hosted Pages). Silent — never errors.
