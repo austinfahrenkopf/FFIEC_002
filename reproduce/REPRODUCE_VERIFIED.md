@@ -1,6 +1,6 @@
 # FFIEC 002 Reproduce Kit — Verification Record
 
-**Date verified:** 2026-06-24  
+**Date verified:** 2026-06-25 (re-verified after Save→localStorage fix; original 2026-06-24)  
 **Environment:** Python 3.12.1 · pandas 3.0.3 · pyarrow 24.0.0 · duckdb 1.5.4 · Windows 11
 
 ---
@@ -55,16 +55,24 @@ The fresh hierarchy (119 KB) differs slightly from the shipped snapshot (135 KB)
 
 ---
 
-## Gaps found and fixed during this test
+## Gaps found and fixed during clean-room rebuilds
 
-| Gap | Found | Fixed |
+| Gap | Session found | Fixed |
 |---|---|---|
-| `ffiec002_hierarchy.json` missing from reproduce/ — only in repo root; `validate_build_002.py` exits without it | prev session | Added to reproduce/ |
-| `ffiec002_panel_long.parquet` missing from reproduce/ — 27.7 MB; within GitHub 100 MB limit | prev session | Added to reproduce/ |
-| `ReturnFinancialReportPDF.pdf` missing from reproduce/ — required by `build_hierarchy_002.py` | prev session | Added to reproduce/ |
-| `expected_items.json` stale (943 KB old version) | prev session | Updated to current 780 KB |
-| `RUNBOOK.md` had wrong script name `make_site.py` and missing `build_hierarchy_002.py` step | prev session | Fixed |
-| `ffiec002_filer_roster.csv` missing from reproduce/ — `make_site_002.py` produces 0 filers without it | this session | Added (47 KB) |
+| `ffiec002_hierarchy.json` missing from reproduce/ — only in repo root; `validate_build_002.py` exits without it | 2026-06-24 | Added to reproduce/ |
+| `ffiec002_panel_long.parquet` missing from reproduce/ — 27.7 MB; within GitHub 100 MB limit | 2026-06-24 | Added to reproduce/ |
+| `ReturnFinancialReportPDF.pdf` missing from reproduce/ — required by `build_hierarchy_002.py` | 2026-06-24 | Added to reproduce/ |
+| `expected_items.json` stale (943 KB old version) | 2026-06-24 | Updated to current 780 KB |
+| `RUNBOOK.md` had wrong script name `make_site.py` and missing `build_hierarchy_002.py` step | 2026-06-24 | Fixed |
+| `ffiec002_filer_roster.csv` missing from reproduce/ — `make_site_002.py` produces 0 filers without it | 2026-06-24 | Added (47 KB) |
+
+## Re-verification 2026-06-25 (Save→localStorage fix)
+
+`make_site_002.py` updated (commit 27b10a0) with localStorage fallback for Save/Load/autoLoad
+(key `ffiec002_formulas`) — no HTTP server required for formula persistence on GitHub Pages.
+
+Re-ran clean-room: `make_site_002.py` (35 s) → `validate_build_002.py` → **ALL CHECKS PASSED**.
+Golden cell MUFG Bank NY Branch (RSSD 444819) RCFD2170 @ 2026-03-31 = **245,557,856** ✓
 
 ---
 
