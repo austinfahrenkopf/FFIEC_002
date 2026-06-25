@@ -610,9 +610,19 @@ async function init(){try{
    document.getElementById('calcdiv').style.display='none';};
 function getFormulasJson(){const out={};for(const[k,v]of Object.entries(USERCALC))out[k]=v;return JSON.stringify(out);}
 function applyFormulas(obj){let n=0;for(const[code,entry]of Object.entries(obj)){if(!code.startsWith('CALC_'))continue;if(!entry?.type||!entry?.lbl)continue;if(!USERCALC[code]){USERCALC[code]=entry;toggleMeasure(code,entry.lbl,!!entry.pct);n++;}}return n;}
-async function saveFormulas(){try{const r=await fetch('/api/save-formulas',{method:'POST',headers:{'Content-Type':'application/json'},body:getFormulasJson()});if(!r.ok)throw new Error('HTTP '+r.status);showToast('Formulas saved.','ok');}catch(e){const el=document.getElementById('calcstatus');if(el)el.textContent='Save failed: '+e.message;}}
+async function saveFormulas(){const json=getFormulasJson();const el=document.getElementById('calcstatus');
+ // Try the local launcher (serve.ps1) first; on hosted GitHub Pages that endpoint 404/405s, so fall
+ // back to localStorage. Never surface a red HTTP error — Save works on both local AND Pages.
+ try{const r=await fetch('/api/save-formulas',{method:'POST',headers:{'Content-Type':'application/json'},body:json});if(!r.ok)throw new Error('HTTP '+r.status);
+   try{localStorage.setItem('ffiec002_formulas',json);}catch(_){}if(el)el.textContent='';showToast('Formulas saved.','ok');return;}
+ catch(e){try{localStorage.setItem('ffiec002_formulas',json);if(el)el.textContent='';showToast('Formulas saved to this browser.','ok');}
+   catch(e2){if(el)el.textContent='Save failed: '+e2.message;}}}
 async function loadFormulas(){try{const r=await fetch('/api/formulas');if(!r.ok)throw new Error('HTTP '+r.status);const obj=await r.json();const n=applyFormulas(obj);showToast('Loaded '+n+' formula'+(n===1?'':'s')+'.','ok');}catch(e){const el=document.getElementById('calcstatus');if(el)el.textContent='Load failed: '+e.message;}}
-async function autoLoadFormulas(){try{const r=await fetch('/api/formulas');if(!r.ok)return;const obj=await r.json();applyFormulas(obj);}catch(e){}}
+async function autoLoadFormulas(){
+ // Prefer the local server if present; otherwise restore the localStorage copy written by saveFormulas
+ // (so Save→reload persists on hosted Pages). Silent — never errors.
+ try{const r=await fetch('/api/formulas');if(r.ok){const obj=await r.json();applyFormulas(obj);return;}}catch(e){}
+ try{const s=localStorage.getItem('ffiec002_formulas');if(s)applyFormulas(JSON.parse(s));}catch(e){}}
 function exportFormulas(){const s=getFormulasJson();const b=new Blob([s],{type:'application/json'});const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download='formulas.json';a.click();URL.revokeObjectURL(u);}
  document.getElementById('calcSave').onclick=saveFormulas;
  document.getElementById('calcLoad').onclick=loadFormulas;
