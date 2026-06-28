@@ -738,7 +738,7 @@ function rowEl(nd,has,dispCap){
    return p;}
  if(nd.header){
    const d=document.createElement('div');d.className='trow hdr';
-   d.dataset.code=nd.code;d.dataset.depth=nd.depth;d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
+   d.dataset.code=nd.code;d.dataset.depth=nd.depth;d.dataset.txt=(nd.code+' '+(nd.caption||'')).toLowerCase();d.style.paddingLeft=(6+(nd.depth-1)*14)+'px';
    const car=`<span class="caret"${has?'':' style="visibility:hidden"'}>▸</span>`;
    const cap=`<span class="cap" title="${String(nd.caption||'').replace(/"/g,'&quot;')}">${dispCap||nd.caption||''}</span>`;
    d.innerHTML=`${car}${nd.num?`<span class=num>${nd.num}</span>`:''}${cap}`;
@@ -870,7 +870,7 @@ function filterTree(q){q=q.trim().toLowerCase();
  if(!q){document.querySelectorAll('#tree .trow').forEach(r=>r.style.display='');document.querySelectorAll('#tree .schsec').forEach(s=>s.style.display='');expandAll(false);return;}
  document.querySelectorAll('#tree .kids').forEach(k=>k.style.display='block');
  document.querySelectorAll('#tree .schsec').forEach(sec=>{const rows=sec.querySelector('.schrows');let any=false;
-   sec.querySelectorAll('.trow').forEach(r=>{const m=r.dataset.txt.includes(q);r.style.display=m?'':'none';if(m)any=true;});
+   sec.querySelectorAll('.trow').forEach(r=>{const m=(r.dataset.txt||'').includes(q);r.style.display=m?'':'none';if(m)any=true;});
    rows.style.display=any?'block':'none';sec.style.display=any?'':'none';});}
 // PART-B roll-up double-count fix (adapted from fry9c PART B for 002's schedules). 002 collapses
 // RCFD/RCON/RCFN col-pairs via COMB folding, so the residual header-Σ double-counts are:
