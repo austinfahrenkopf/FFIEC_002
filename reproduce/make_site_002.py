@@ -420,6 +420,7 @@ function elabel(id){if(id==='ALL')return 'ALL';if(id.startsWith('ET:'))return 'A
 function bankEnt(rssd){return {id:'BANK:'+rssd,label:elabel('BANK:'+rssd)};}
 function resolveEnt(){const v=document.getElementById('ent').value.trim();
  if(v.replace(/^★\s*/,'') in peers){const n=v.replace(/^★\s*/,'');return {id:'PEER:'+n,label:'★ '+n};}
+ const mb=v.match(/\((\d{3,})[\s,)]/);if(mb)return {id:'BANK:'+mb[1],label:elabel('BANK:'+mb[1])};
  const et=v.match(/\b(UFB|USB|UFA|USA|IFB|ISB)\b/i);if(et)return {id:'ET:'+et[1].toUpperCase(),label:'ALL '+et[1].toUpperCase()};
  if(/^all\b/i.test(v)||v.toUpperCase()==='ALL')return {id:'ALL',label:'ALL'};
  const m=v.match(/(\d{3,})/);if(m)return {id:'BANK:'+m[1],label:elabel('BANK:'+m[1])};return null;}
@@ -1526,6 +1527,7 @@ async function renderExportUI(){
  function addEbEnt(v){v=v.trim();if(!v)return;const cv=v.replace(/^★\s*/,'');
   if(/^all$/i.test(v)){_eb.entities=[{id:'ALL',label:'All filers'}];renderEbChips();ebEstimate();return;}
   if(cv in peers){const id='PEER:'+cv;if(!_eb.entities.find(e=>e.id===id))_eb.entities.push({id,label:'★ '+cv});renderEbChips();ebEstimate();return;}
+  const mb=v.match(/\((\d{3,})[\s,)]/);if(mb){const rid='BANK:'+mb[1];if(!_eb.entities.find(e=>e.id===rid))_eb.entities.push({id:rid,label:elabel(rid)});renderEbChips();ebEstimate();return;}
   const et=v.match(/\b(UFB|USB|UFA|USA|IFB|ISB)\b/i);if(et){const id='ET:'+et[1].toUpperCase();if(!_eb.entities.find(e=>e.id===id))_eb.entities.push({id,label:'ALL '+et[1].toUpperCase()});renderEbChips();ebEstimate();return;}
   const m=v.match(/(\d{3,})/);if(m){const rid='BANK:'+m[1];if(!_eb.entities.find(e=>e.id===rid))_eb.entities.push({id:rid,label:elabel(rid)});renderEbChips();ebEstimate();return;}
   document.getElementById('eb-ent-status').innerHTML='<span style="color:#c0392b">Not recognised</span>';}
