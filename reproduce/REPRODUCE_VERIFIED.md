@@ -1,6 +1,16 @@
 # FFIEC 002 Reproduce Kit — Verification Record
 
-**Date verified:** 2026-07-01 (re-verified against commit `08d7f55`, §NORMDEN-LEAGUE-002)
+**Current HEAD:** `bcb6360157674c24f915825c1d8a99186c3d0aae` (2026-07-01 — sigma calc fix)
+**Pages build:** ✅ SUCCESS 2026-07-01T19:32:27Z
+**Live URL:** https://austinfahrenkopf.github.io/FFIEC_002/app/index.html
+
+> **Reproduce verification was run against `08d7f55`** (§NORMDEN-LEAGUE-002). Commits since then
+> (`a68fa1a` extra-chart controls, `bbbaac1` app/ layout, `bcb6360` sigma calc fix) are JS-only
+> additions. The rebuild-pass and golden cell below remain valid; the features table has been
+> extended to include new features at HEAD. Re-run `_qa_final.py` from workspace root to confirm
+> current check count (was ALL PASSED at `08d7f55`; +5 checks added at `bbbaac1`).
+
+**Date verified (clean-room rebuild):** 2026-07-01 (against commit `08d7f55`)
 **Previous verifications:** 2026-06-25 (Save→localStorage fix), 2026-06-24 (initial)
 **Environment:** Python 3.12.1 · pandas 3.0.3 · pyarrow 24.0.0 · duckdb 1.5.4 · Windows 11
 
@@ -54,22 +64,17 @@ ALL CHECKS PASSED [OK]
 
 ---
 
-## Features confirmed in committed HTML (commit `08d7f55`)
+## Features confirmed at HEAD (commit `bcb6360`, updated 2026-07-01)
 
-All §NORMDEN-LEAGUE-002 features verified present:
-
-| Feature | Check | Status |
+| Feature | Commit | Status |
 |---|---|---|
-| `NORM_DEN_LABELS` (normden dropdown labels) | 4 occurrences in HTML | ✓ |
-| `#normden` select element | 12 occurrences | ✓ |
-| `buildLGMEAS` function | 2 occurrences | ✓ |
-| `COMB2205` deposits denominator | 7 occurrences | ✓ |
-| `_ND2205` pre-computed WASM workaround | 3 occurrences | ✓ |
-| `_ND2205_Q` quarterly lookup embedded in HTML | present | ✓ |
-| `DYN[measCode]` in `perFilerValues` | 1 occurrence | ✓ |
-| `.filter(r=>r[1]!==null)` null-filter in `draw()` | present | ✓ |
-| No `COMB3210` (equity intentionally absent) | not present | ✓ |
-| 190 league options (`buildLGMEAS`) | verified via Playwright 2026-07-01 | ✓ |
+| `NORM_DEN_LABELS` normden dropdown | `08d7f55` | ✓ 4 occurrences; COMB2170/2122/2205; NO COMB3210 |
+| `buildLGMEAS` full league (190 options) | `08d7f55` | ✓ Playwright-verified vs Deutsche Bank RSSD 112819 |
+| `_ND2205` pre-computed deposits WASM workaround | `08d7f55` | ✓ CRITICAL/PERMANENT — never revert to live DuckDB query |
+| `.filter(r=>r[1]!==null)` null-filter in `draw()` | `08d7f55` | ✓ Correctness fix; prevents TypeError on quarter-coverage gaps |
+| app/ layout + root redirect | `bbbaac1` | ✓ `app/index.html`; root `index.html` is 100-byte redirect |
+| Extra-chart controls (per-chart legend, Labels, snap-beside) | `a68fa1a` | ✓ `ec-legend-<id>` div; `renderEcLegend(chart)`; `#charts-flex`; Playwright 25/25 PASS |
+| **Sigma Calc fix** | `bcb6360` | ✓ DOM-safe code-search (`createElement`/`textContent`; `rawCode=r.m` closure); Save→Blob `ffiec002_formulas.json`; Load→file input; localStorage `ffiec002_formulas`. Playwright 25/25 PASS (RSSD 112819). |
 
 Playwright runtime verification (12/12 PASS, Deutsche Bank AG NY Branch, RSSD 112819):
 - F1: `['COMB2170','COMB2122','COMB2205']` present, `COMB3210` absent; loans % and deposits % via `_ND2205` correct

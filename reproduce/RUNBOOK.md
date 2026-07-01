@@ -3,9 +3,12 @@
 Quarterly panel of every U.S. branch & agency of a foreign bank (FFIEC 002 filers),
 **1999 Q1 → present**, all reported MDRM items, free public data.
 
-**Current state (2026-07-01, commit `08d7f55`):** Full feature parity with FRY9C and FFIEC Call —
-denominator dropdown (`#normden`: assets / loans / deposits), league table (190 options),
-`_ND2205` pre-computed deposits denominator (WASM workaround), Export Builder fidelity fix.
+**Current state (2026-07-01, commit `bcb6360`):** Full feature parity with FRY9C and FFIEC Call —
+sigma calc fix (DOM-safe code-search, file Save/Load), per-extra-chart legend + Labels checkbox +
+snap-beside layout, denominator dropdown (COMB2170/2122/2205 — no COMB3210), league table
+(190 options), `_ND2205` pre-computed deposits denominator (WASM workaround — PERMANENT, never
+revert), Export Builder fidelity fix. Pages ✅ 2026-07-01T19:32:27Z.
+Golden: RCFD2170=245,557,856 @ 2026-03-31 (MUFG Bank NY Branch RSSD 444819).
 
 ## Prerequisites (once)
 ```
