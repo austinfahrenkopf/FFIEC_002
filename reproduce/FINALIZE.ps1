@@ -2,6 +2,12 @@
 # Run from the "External Bank Data\" folder. ONE approval covers the whole script.
 # Usage:  cd "External Bank Data"; .\FINALIZE.ps1
 #
+# NOTE: This script is designed to run from the "External Bank Data\" development workspace,
+# NOT from a fresh clone of this repo. It references paths like "FR Y-9C\", "FFIEC 002\",
+# and "FFIEC 031\" that only exist in that workspace. Running it from a fresh clone of
+# FFIEC_002 (or any of the three repos) will produce path errors immediately.
+# From a fresh clone, use the per-step commands in RUNBOOK.md instead.
+#
 # WHAT THIS DOES (in order):
 #   1. FR Y-9C: rebuild hierarchy -> validate_build.py -> site (html-only)
 #   2. FFIEC 002: rebuild site (html-only) -> validate_build_002.py

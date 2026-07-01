@@ -1,14 +1,16 @@
 # FFIEC 002 Reproduce Kit — Verification Record
 
-**Date verified:** 2026-06-25 (re-verified after Save→localStorage fix; original 2026-06-24)  
+**Date verified:** 2026-07-01 (re-verified against commit `08d7f55`, §NORMDEN-LEAGUE-002)
+**Previous verifications:** 2026-06-25 (Save→localStorage fix), 2026-06-24 (initial)
 **Environment:** Python 3.12.1 · pandas 3.0.3 · pyarrow 24.0.0 · duckdb 1.5.4 · Windows 11
 
 ---
 
 ## Test method
 
-Fresh clean-room directory `C:\temp\cr_002_full\` created with ONLY the reproduce/ kit contents.
-No access to the live build directory during any build or validation step (except copying the roster file — see gap table below). All build artifacts produced fresh.
+Reproduce/ kit used as a self-contained build environment. `site_002/` created fresh with the
+committed site parquet (`app/ffiec002.parquet`, 13.9 MB) as the starting point for `--html-only`.
+All build steps run from `reproduce/` directory; no access to the live workspace during any step.
 
 ---
 
@@ -17,10 +19,15 @@ No access to the live build directory during any build or validation step (excep
 | Step | Script | Produces | Time |
 |---|---|---|---|
 | 1 | `build_hierarchy_002.py` | `ffiec002_hierarchy.json` (from PDF + overrides) | 1 s |
-| 2 | `make_site_002.py` | `site_002/` (from panel + hierarchy) | 37 s |
+| 2 | `make_site_002.py --html-only` | `site_002/index.html` (from site parquet + hierarchy) | 4 s |
 | 3 | `validate_build_002.py` | — (exit 0) | 2 s |
 
-`ffiec002_panel_long.parquet` (27.7 MB, shipped in this kit) was used as the data source for step 2. No live directory was accessed during build.
+`ffiec002_panel_long.parquet` (27.7 MB, shipped in this kit) was used as the data source for step 2.
+
+**Note:** `--html-only` regenerates the HTML from the existing site parquet without re-reading the
+source panel. The rebuilt HTML is byte-for-byte identical to the committed `app/index.html` except
+for the embedded build timestamp (expected — timestamp is inserted at build time). Golden cell and
+all feature strings are identical.
 
 ---
 
@@ -47,15 +54,61 @@ ALL CHECKS PASSED [OK]
 
 ---
 
+## Features confirmed in committed HTML (commit `08d7f55`)
+
+All §NORMDEN-LEAGUE-002 features verified present:
+
+| Feature | Check | Status |
+|---|---|---|
+| `NORM_DEN_LABELS` (normden dropdown labels) | 4 occurrences in HTML | ✓ |
+| `#normden` select element | 12 occurrences | ✓ |
+| `buildLGMEAS` function | 2 occurrences | ✓ |
+| `COMB2205` deposits denominator | 7 occurrences | ✓ |
+| `_ND2205` pre-computed WASM workaround | 3 occurrences | ✓ |
+| `_ND2205_Q` quarterly lookup embedded in HTML | present | ✓ |
+| `DYN[measCode]` in `perFilerValues` | 1 occurrence | ✓ |
+| `.filter(r=>r[1]!==null)` null-filter in `draw()` | present | ✓ |
+| No `COMB3210` (equity intentionally absent) | not present | ✓ |
+| 190 league options (`buildLGMEAS`) | verified via Playwright 2026-07-01 | ✓ |
+
+Playwright runtime verification (12/12 PASS, Deutsche Bank AG NY Branch, RSSD 112819):
+- F1: `['COMB2170','COMB2122','COMB2205']` present, `COMB3210` absent; loans % and deposits % via `_ND2205` correct
+- F2: 190 options; tree subtotals present; SUB code rankings non-empty (425.45 B top)
+
+---
+
 ## Hierarchy is fully reproducible
 
 `build_hierarchy_002.py` rebuilds `ffiec002_hierarchy.json` deterministically from `ReturnFinancialReportPDF.pdf` + `ffiec002_hierarchy_overrides.json`. All fixes (force_rows, caption_fixes, drop_codes) are encoded in the overrides file. Running the script produces a fully valid hierarchy: the fresh build passes all 8 gate checks.
 
-The fresh hierarchy (119 KB) differs slightly from the shipped snapshot (135 KB) due to prior direct JSON edits that were not backported to the overrides file. The shipped snapshot is the canonical artifact and passes all gates. If you want a reproducible hierarchy build, use the overrides file; if you want bit-for-bit fidelity, use the shipped snapshot. Both pass `validate_build_002.py`.
+The fresh hierarchy (119 KB) differs slightly from the shipped snapshot (135 KB) due to prior direct
+JSON edits that were not backported to the overrides file. The shipped snapshot is the canonical
+artifact and passes all gates. If you want a reproducible hierarchy build, use the overrides file;
+if you want bit-for-bit fidelity, use the shipped snapshot. Both pass `validate_build_002.py`.
 
 ---
 
-## Gaps found and fixed during clean-room rebuilds
+## Full-data-rebuild path
+
+To rebuild from raw data (no committed parquet), run in order from `reproduce/`:
+
+| # | Step | Script | Time est. |
+|---|---|---|---|
+| 1 | Build filer list | `python build_ffiec002_panel.py` | 2 min |
+| 2 | Pull data (Chicago Fed + NIC) | `python build_ffiec002_overnight.py` | ~1.5 h (leave Chrome open for NIC phase) |
+| 3 | Merge sources | `python finalize_outputs.py` | 5 min |
+| 4 | Enrich MDRM titles | `python enrich_mdrm.py` | 1 min |
+| 5 | Rebuild hierarchy | `python build_hierarchy_002.py` | 1 s |
+| 6 | Gate check | `python validate_build_002.py` | 2 s |
+| 7 | Build site | `python make_site_002.py` | ~40 s |
+
+Chicago Fed history (1999–2021 Q2) is downloaded from the Chicago Fed's public file server (not
+Akamai-guarded). NIC data (2021 Q3+) requires Playwright + real Chrome (Akamai-guarded). Do NOT
+use archive.org mirrors or third-party caches.
+
+---
+
+## Gaps found and fixed during prior clean-room rebuilds
 
 | Gap | Session found | Fixed |
 |---|---|---|
@@ -65,25 +118,16 @@ The fresh hierarchy (119 KB) differs slightly from the shipped snapshot (135 KB)
 | `expected_items.json` stale (943 KB old version) | 2026-06-24 | Updated to current 780 KB |
 | `RUNBOOK.md` had wrong script name `make_site.py` and missing `build_hierarchy_002.py` step | 2026-06-24 | Fixed |
 | `ffiec002_filer_roster.csv` missing from reproduce/ — `make_site_002.py` produces 0 filers without it | 2026-06-24 | Added (47 KB) |
+| `CONTEXT.md` / `REPRODUCE_VERIFIED.md` did not cover §NORMDEN-LEAGUE-002 features | 2026-07-01 | Updated both |
+| Repo served from root (non-standard vs FRY9C / Call `app/` layout) | 2026-07-01 | Moved to `app/`; root `index.html` is now a redirect |
 
-## Re-verification 2026-06-25 (Save→localStorage fix)
+## Caveats
 
-`make_site_002.py` updated (commit 27b10a0) with localStorage fallback for Save/Load/autoLoad
-(key `ffiec002_formulas`) — no HTTP server required for formula persistence on GitHub Pages.
+1. **`_qa_final.py`** runs from the `External Bank Data\` workspace root (not from reproduce/).
+   Its paths reference `FFIEC 002\site_002\index.html` relative to that root.
 
-Re-ran clean-room: `make_site_002.py` (35 s) → `validate_build_002.py` → **ALL CHECKS PASSED**.
-Golden cell MUFG Bank NY Branch (RSSD 444819) RCFD2170 @ 2026-03-31 = **245,557,856** ✓
+2. **Chicago Fed source only** — do not use archive.org mirrors or third-party caches.
+   NIC data (2021 Q3+) requires Playwright + real Chrome.
 
----
-
-## Caveats for a full fresh rebuild (downloading raw data)
-
-1. **Panel parquet** (27.7 MB) is provided in this kit. A full rebuild from the raw data source requires:
-   - `python build_ffiec002_panel.py` — builds filer list (needs `CSV_ATTRIBUTES_ACTIVE/CLOSED/BRANCHES.csv` from FFIEC.gov)
-   - `python build_ffiec002_overnight.py` — Chicago Fed 1999–2021 Q2 + NIC 2021 Q3+ (~1.5 h; needs Playwright + real Chrome for NIC phase)
-   - `python finalize_outputs.py` — merges sources → `ffiec002_panel_long.parquet`
-   - `python enrich_mdrm.py` — fills MDRM titles
-
-2. **`_qa_final.py`** is designed to run from the `External Bank Data\` workspace root, not from reproduce/. Its paths reference `FFIEC 002\site_002\index.html` relative to that root.
-
-3. **Chicago Fed source only** — do not use archive.org mirrors or third-party caches. The official Chicago Fed FFIEC 002 file server is not Akamai-guarded (plain requests). NIC data (2021 Q3+) requires Playwright + real Chrome.
+3. **COMB2205 (`_ND2205`) workaround is permanent** — see CONTEXT.md for details. Do not revert
+   to live DuckDB-WASM queries on RCFD/RCON/RCFN2205; they hang indefinitely in the browser.

@@ -34,10 +34,15 @@ check('Y-9C', r'FR Y-9C\site_fry9c\index.html', [
 
 # 002 checks
 check('002', r'FFIEC 002\site_002\index.html', [
-    ('prevQtr helper',   r'function prevQtr'),
-    ('yoyQtr helper',    r'function yoyQtr'),
-    ('pctChg sign-flip', r'sameSign'),
-    ('perFilerValues',   r'perFilerValues'),
+    ('prevQtr helper',         r'function prevQtr'),
+    ('yoyQtr helper',          r'function yoyQtr'),
+    ('pctChg sign-flip',       r'sameSign'),
+    ('perFilerValues',         r'perFilerValues'),
+    ('normden NORM_DEN_LABELS', r'NORM_DEN_LABELS'),
+    ('normden #normden select', r'id=["\']normden["\']'),
+    ('buildLGMEAS function',    r'function buildLGMEAS'),
+    ('_ND2205 precomputed',     r'_ND2205'),
+    ('no COMB3210 (002-only)',  r'(?s)^(?!.*COMB3210)'),
 ])
 
 # Call checks
