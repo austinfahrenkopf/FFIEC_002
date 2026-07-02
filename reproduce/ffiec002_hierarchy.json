@@ -2003,42 +2003,48 @@
    "caption": "Credit Derivatives: Notional Amounts-Total Return Swaps-Guarantor",
    "item": "6.a.(2)",
    "depth": 3,
-   "order": 12
+   "order": 12,
+   "col": true
   },
   {
    "mdrm": "RCFDC971",
    "caption": "Credit Derivatives: Notional Amounts-Total Return Swaps-Beneficiary",
-   "item": "6.a.(2).b",
-   "depth": 4,
-   "order": 13
+   "item": "6.a.(2)",
+   "depth": 3,
+   "order": 13,
+   "col": true
   },
   {
    "mdrm": "RCFDC972",
    "caption": "Credit Derivatives: Notional Amounts-Credit Options-Guarantor",
    "item": "6.a.(3)",
    "depth": 3,
-   "order": 14
+   "order": 14,
+   "col": true
   },
   {
    "mdrm": "RCFDC973",
    "caption": "Credit Derivatives: Notional Amounts-Credit Options-Beneficiary",
-   "item": "6.a.(3).b",
-   "depth": 4,
-   "order": 15
+   "item": "6.a.(3)",
+   "depth": 3,
+   "order": 15,
+   "col": true
   },
   {
    "mdrm": "RCFDC974",
    "caption": "Other credit derivatives (guarantor)",
    "item": "6.a.(4)",
    "depth": 3,
-   "order": 16
+   "order": 16,
+   "col": true
   },
   {
    "mdrm": "RCFDC975",
    "caption": "Other credit derivatives (beneficiary)",
-   "item": "6.a.(4).b",
-   "depth": 4,
-   "order": 17
+   "item": "6.a.(4)",
+   "depth": 3,
+   "order": 17,
+   "col": true
   },
   {
    "mdrm": "",
@@ -5542,42 +5548,48 @@
    "caption": "With original amounts of $100,000 or less: Number of loans",
    "item": "2.a",
    "depth": 2,
-   "order": 1
+   "order": 1,
+   "col": true
   },
   {
    "mdrm": "RCON5565",
    "caption": "With original amounts of $100,000 or less: Amount currently outstanding",
-   "item": "2.a.b",
-   "depth": 3,
-   "order": 2
+   "item": "2.a",
+   "depth": 2,
+   "order": 2,
+   "col": true
   },
   {
    "mdrm": "RCON5566",
    "caption": "With original amounts of more than $100,000 through $250,000: Number of loans",
    "item": "2.b",
    "depth": 2,
-   "order": 3
+   "order": 3,
+   "col": true
   },
   {
    "mdrm": "RCON5567",
    "caption": "With original amounts of more than $100,000 through $250,000: Amount currently outstanding",
-   "item": "2.b.b",
-   "depth": 3,
-   "order": 4
+   "item": "2.b",
+   "depth": 2,
+   "order": 4,
+   "col": true
   },
   {
    "mdrm": "RCON5568",
    "caption": "With original amounts of more than $250,000 through $1,000,000: Number of loans",
    "item": "2.c",
    "depth": 2,
-   "order": 5
+   "order": 5,
+   "col": true
   },
   {
    "mdrm": "RCON5569",
    "caption": "With original amounts of more than $250,000 through $1,000,000: Amount currently outstanding",
-   "item": "2.c.b",
-   "depth": 3,
-   "order": 6
+   "item": "2.c",
+   "depth": 2,
+   "order": 6,
+   "col": true
   },
   {
    "mdrm": "",
@@ -5591,42 +5603,48 @@
    "caption": "With original amounts of $100,000 or less: Number of loans",
    "item": "3.a",
    "depth": 2,
-   "order": 8
+   "order": 8,
+   "col": true
   },
   {
    "mdrm": "RCON5571",
    "caption": "With original amounts of $100,000 or less: Amount currently outstanding",
-   "item": "3.a.b",
-   "depth": 3,
-   "order": 9
+   "item": "3.a",
+   "depth": 2,
+   "order": 9,
+   "col": true
   },
   {
    "mdrm": "RCON5572",
    "caption": "With original amounts of more than $100,000 through $250,000: Number of loans",
    "item": "3.b",
    "depth": 2,
-   "order": 10
+   "order": 10,
+   "col": true
   },
   {
    "mdrm": "RCON5573",
    "caption": "With original amounts of more than $100,000 through $250,000: Amount currently outstanding",
-   "item": "3.b.b",
-   "depth": 3,
-   "order": 11
+   "item": "3.b",
+   "depth": 2,
+   "order": 11,
+   "col": true
   },
   {
    "mdrm": "RCON5574",
    "caption": "With original amounts of more than $250,000 through $1,000,000: Number of loans",
    "item": "3.c",
    "depth": 2,
-   "order": 12
+   "order": 12,
+   "col": true
   },
   {
    "mdrm": "RCON5575",
    "caption": "With original amounts of more than $250,000 through $1,000,000: Amount currently outstanding",
-   "item": "3.c.b",
-   "depth": 3,
-   "order": 13
+   "item": "3.c",
+   "depth": 2,
+   "order": 13,
+   "col": true
   },
   {
    "mdrm": "",

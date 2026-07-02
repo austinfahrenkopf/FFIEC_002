@@ -15,7 +15,7 @@ Output JSON: { "RAL":[{"mdrm","caption","item","depth","order"}, ...], "C":[...]
 Run:  python build_hierarchy_002.py
 """
 from __future__ import annotations
-import csv, json, re
+import csv, json, os, re
 import pypdf
 
 PDF="ReturnFinancialReportPDF.pdf"; DICT="ffiec002_mdrm_dictionary.csv"; OUT="ffiec002_hierarchy.json"
@@ -144,9 +144,13 @@ def main():
             seq.append({"mdrm":mdrm,"caption":cap,"item":it,"depth":depth(it),"order":len(seq)})
             seen.add(mdrm)
     apply_overrides(hier)
-    json.dump(hier, open(OUT,"w",encoding="utf-8"), ensure_ascii=False, indent=0)
+    tmp = OUT + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(hier, f, ensure_ascii=False, indent=0)
+    os.replace(tmp, OUT)
+    json.load(open(OUT, encoding="utf-8"))  # verify readable
     n=sum(len(v) for v in hier.values())
-    print(f"wrote {OUT}: {len(hier)} schedules, {n} items")
+    print(f"wrote {OUT}: {len(hier)} schedules, {n} items; verified, {os.path.getsize(OUT)} bytes")
     for k,v in hier.items(): print(f"  {k}: {len(v)}")
 
 if __name__=="__main__": main()
