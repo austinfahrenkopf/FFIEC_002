@@ -193,14 +193,19 @@ def run_gate(form_key, hier, here_dir):
                 if ed is not None and d != ed and str(it) not in sx:
                     nest_bad.append(f"{sch}[{it}] depth={d} expected={ed} ({n.get('mdrm') or 'hdr'})")
             # duplicate item numbers among real-MDRM leaves with DIFFERENT bare codes
-            byitem = {}
+            # col:true pairs intentionally share an item number (parallel columns, not sub-items)
+            byitem = {}   # item -> {'bases': set, 'all_col': bool}
             for n in nodes:
                 m = n.get('mdrm')
                 if m and not n.get('header'):
-                    byitem.setdefault(str(n.get('item')), set()).add(_bare(m))
-            for it, bases in byitem.items():
-                if len(bases) > 1 and it not in sx and it != 'None':
-                    dup_bad.append(f"{sch}[{it}] {sorted(bases)}")
+                    it_str = str(n.get('item'))
+                    info = byitem.setdefault(it_str, {'bases': set(), 'all_col': True})
+                    info['bases'].add(_bare(m))
+                    if not n.get('col'):
+                        info['all_col'] = False
+            for it, info in byitem.items():
+                if len(info['bases']) > 1 and not info['all_col'] and it not in sx and it != 'None':
+                    dup_bad.append(f"{sch}[{it}] {sorted(info['bases'])}")
         if nest_bad:
             fails.append(f"[NESTING] {len(nest_bad)} node(s) whose depth disagrees with their item "
                          f"number (mis-nesting): {nest_bad[:12]}")
