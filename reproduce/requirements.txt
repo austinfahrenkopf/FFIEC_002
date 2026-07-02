@@ -1,11 +1,14 @@
 # FFIEC 002 explorer — Python dependencies
+# Verified on Python 3.12 (the clean-room rebuild in REPRODUCE_VERIFIED.md used exactly these pins).
 # Install:  pip install -r requirements.txt
+#           playwright install chrome        # one-time, TIER 2 ONLY (data pipeline)
 #
+# Tier 1 (--html-only rebuild + validator) needs ONLY pandas + pyarrow.
 # pandas/pyarrow : parse Chicago Fed Complete files, build/read the parquet panel
-# playwright     : real-Chrome downloader for Akamai-guarded FFIEC endpoints
-# requests       : fallback HTTP for non-guarded endpoints
+# playwright     : real-Chrome downloader for Akamai-guarded FFIEC endpoints (Tier 2)
+# requests       : fallback HTTP for non-guarded endpoints (Tier 2)
 # (DuckDB runs client-side as DuckDB-WASM in the browser — no Python duckdb needed here.)
-pandas>=2.0
-pyarrow>=12.0
-playwright>=1.40
-requests>=2.28
+pandas==3.0.3
+pyarrow==24.0.0
+playwright==1.60.0
+requests==2.34.2

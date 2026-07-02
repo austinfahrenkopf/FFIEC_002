@@ -5,6 +5,18 @@ non-obvious implementation choices for the FFIEC 002 dashboard. Read this before
 substantive changes to `make_site_002.py`, `build_hierarchy_002.py`, or the curated
 input files (`ffiec002_hierarchy_overrides.json`).
 
+> **Start here (added 2026-07-02, M.1 packaging):**
+> - Every term of art (MDRM, COMB, DERIV, golden cell, NODATA, …) is defined in `../GLOSSARY.md`.
+> - **Three-clone rule:** this engine is one of three hand-synced clones —
+>   [Call_Reports](https://github.com/austinfahrenkopf/Call_Reports) ·
+>   [FFIEC_002](https://github.com/austinfahrenkopf/FFIEC_002) ·
+>   [FRY9C](https://github.com/austinfahrenkopf/FRY9C). An engine/UI fix here almost certainly
+>   belongs in the other two; a data CODE must never be copied across forms without proving it
+>   exists in that form's parquet.
+> - **Golden cell:** MUFG Bank NY Branch (RSSD 444819) `RCFD2170` @ 2026-03-31 = **245,557,856**.
+> - Before pushing any change: `../DID_I_BREAK_IT.md`. Current verified commit: see
+>   `REPRODUCE_VERIFIED.md` (which also records the sibling repos' SHAs for this cycle).
+
 ---
 
 ## What this project is
